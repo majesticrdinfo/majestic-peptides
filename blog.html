@@ -303,7 +303,7 @@ footer p{font-size:11px;letter-spacing:.1em;}
       <!-- SIDEBAR POSTS -->
       <div class="blog-sidebar">
 
-        <article class="post-card-sm" data-cat="regulatory" onclick="openPost('post-2')">
+        <article class="post-card-sm" data-cat="regulatory" style="cursor:pointer;">
           <span class="post-cat regulatory">REGULATORY</span>
           <h3 class="post-title">Compounded Semaglutide & the FDA: Where Things Stand in 2026</h3>
           <p class="post-excerpt">The FDA's ongoing enforcement posture on compounded GLP-1s is the single biggest operational risk for physician practices. Here's the current status and what it means for your program.</p>
@@ -314,7 +314,7 @@ footer p{font-size:11px;letter-spacing:.1em;}
           </div>
         </article>
 
-        <article class="post-card-sm" data-cat="physician" onclick="openPost('post-3')">
+        <article class="post-card-sm" data-cat="physician" style="cursor:pointer;">
           <span class="post-cat physician">PHYSICIAN EDUCATION</span>
           <h3 class="post-title">How to Read a Peptide COA — And Why Most Physicians Don't</h3>
           <p class="post-excerpt">A Certificate of Analysis is only useful if you know what it's actually telling you. We break down every field, what to verify, and the red flags that indicate a COA isn't worth the paper it's printed on.</p>
@@ -382,17 +382,6 @@ footer p{font-size:11px;letter-spacing:.1em;}
         <a href="#" class="post-read-more">Read More →</a>
       </article>
 
-      <article class="post-card" data-cat="regulatory">
-        <span class="post-cat regulatory">REGULATORY</span>
-        <h3 class="post-title">503A vs. 503B Compounding: What Physicians Actually Need to Know</h3>
-        <p class="post-excerpt">The distinction between 503A patient-specific compounding and 503B outsourcing facilities isn't academic — it directly affects what you can prescribe, how it's dispensed, and what your liability exposure looks like.</p>
-        <div class="post-meta" style="margin-bottom:16px;">
-          <span>February 2026</span>
-          <span class="post-meta-sep"></span>
-          <span>5 min read</span>
-        </div>
-        <a href="#" class="post-read-more">Read More →</a>
-      </article>
 
       <article class="post-card" data-cat="physician">
         <span class="post-cat physician">PHYSICIAN EDUCATION</span>
@@ -484,8 +473,7 @@ function filterPosts(cat, btn) {
 }
 
 function openPost(id) {
-  // Placeholder — full article pages to be added
-  alert('Full article coming soon. In the meantime, contact majesticrdinfo@gmail.com for more information.');
+  // Full article pages coming soon
 }
 
 function subscribeNewsletter() {
