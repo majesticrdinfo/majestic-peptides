@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Majestic Peptides — Physician & Investor Division | Majestic R&D</title>
+<meta name="description" content="USA-manufactured compounded GLP-1, dual agonist, and triple agonist peptides for physician practices. Independent third-party tested, SC facility, $0 out-of-pocket start via PNC Healthcare financing. Decision to first patient in 20 days."/>
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Majestic Peptides — Physician & Investor Division"/>
+<meta property="og:description" content="USA-manufactured compounded peptides for physician practices. Independent lab-tested. $0 out-of-pocket start. First patient in 20 days."/>
+<meta property="og:site_name" content="Majestic R&D"/>
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Majestic Peptides — Physician & Investor Division"/>
+<meta name="twitter:description" content="USA-manufactured compounded peptides for physician practices. Independent lab-tested. $0 out-of-pocket start. First patient in 20 days."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#0D1117; --paper:#F7F4EE; --cream:#EDEAD9; --white:#FFFFFF;
+  --gold:#B8943F; --gold-lt:#D4AD5C; --gold-pale:#F5EDD4;
+  --teal:#1A6B5E; --teal-lt:#259080; --teal-light:#259080; --teal-pale:#DFF0EC;
+  --slate:#4A5568; --muted:#8A9BB0; --red:#C0392B;
+  --border:rgba(0,0,0,0.09); --shadow:0 4px 32px rgba(0,0,0,0.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:'Instrument Sans','Helvetica Neue',sans-serif;font-weight:300;line-height:1.6;}
+::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:var(--gold);}
+img{max-width:100%;}
+a{color:inherit;text-decoration:none;}
+
+/* TYPE */
+.serif{font-family:'Playfair Display',Georgia,serif;}
+.mono{font-family:'Courier New',monospace;font-size:0.9em;}
+.label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;}
+.label-teal{color:var(--teal);}
+.label-gold{color:var(--gold);}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:900;height:62px;
+  display:flex;align-items:center;justify-content:space-between;padding:0 48px;
+  background:rgba(247,244,238,.97);backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);transition:box-shadow .3s;}
+#nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,.07);}
+.logo{display:flex;align-items:center;gap:11px;cursor:pointer;}
+.logo-mark{width:34px;height:34px;background:var(--ink);display:flex;align-items:center;
+  justify-content:center;font-family:'Playfair Display',serif;font-style:italic;
+  font-size:16px;color:var(--gold-lt);}
+.logo-txt{line-height:1.2;}
+.logo-top{font-size:11px;letter-spacing:.18em;font-weight:600;color:var(--ink);display:block;}
+.logo-sub{font-size:9px;letter-spacing:.14em;color:var(--gold);display:block;}
+.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links button,.nav-links a{background:none;border:none;cursor:pointer;
+  font-size:11px;letter-spacing:.13em;color:var(--slate);font-family:inherit;
+  font-weight:500;transition:color .2s;padding:0;text-decoration:none;}
+.nav-links button:hover,.nav-links a:hover{color:var(--ink);}
+.nav-cta{background:var(--teal)!important;color:#fff!important;
+  padding:8px 18px!important;border-radius:0!important;}
+.nav-cta:hover{background:var(--teal-lt)!important;color:#fff!important;}
+.nav-investor{background:var(--gold)!important;color:var(--ink)!important;
+  padding:8px 18px!important;}
+.nav-investor:hover{background:var(--gold-lt)!important;}
+
+/* HERO */
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;
+  gap:0;align-items:stretch;padding-top:62px;}
+.hero-left{padding:80px 64px;display:flex;flex-direction:column;justify-content:center;
+  background:var(--paper);position:relative;}
+.hero-left::after{content:'';position:absolute;top:15%;left:0;
+  width:3px;height:60px;background:var(--teal);}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;margin-bottom:24px;
+  background:var(--teal-pale);padding:6px 14px;width:fit-content;}
+.hero-tag span{font-size:9px;letter-spacing:.22em;color:var(--teal);font-weight:600;}
+.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(36px,4.5vw,58px);
+  font-weight:400;line-height:1.08;color:var(--ink);margin-bottom:24px;}
+.hero-h1 em{font-style:italic;color:var(--teal);}
+.hero-h1 strong{font-weight:700;}
+.hero-lead{font-size:15px;color:var(--slate);line-height:1.85;margin-bottom:36px;max-width:480px;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px;}
+.hero-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  border-top:1px solid var(--border);padding-top:32px;}
+.hero-proof-item{padding-right:24px;border-right:1px solid var(--border);}
+.hero-proof-item:last-child{border-right:none;padding-left:24px;padding-right:0;}
+.hero-proof-item:nth-child(2){padding:0 24px;}
+.hero-proof-num{font-family:'Playfair Display',serif;font-size:30px;color:var(--ink);margin-bottom:2px;}
+.hero-proof-lbl{font-size:10px;letter-spacing:.14em;color:var(--muted);font-weight:500;}
+
+.hero-right{background:var(--ink);padding:80px 56px;display:flex;flex-direction:column;justify-content:center;}
+.hero-panel-label{font-size:9px;letter-spacing:.24em;color:var(--gold);font-weight:600;margin-bottom:32px;display:block;}
+.compound-row{padding:24px 0;border-bottom:1px solid rgba(255,255,255,.06);}
+.compound-row:last-of-type{border-bottom:none;}
+.compound-name{font-family:'Playfair Display',serif;font-size:18px;color:#fff;margin-bottom:4px;}
+.compound-tag{font-size:9px;letter-spacing:.16em;color:var(--gold);font-weight:600;}
+.compound-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:14px;}
+.compound-meta-item{background:rgba(255,255,255,.04);padding:12px;}
+.compound-meta-item .val{font-size:15px;font-weight:600;color:var(--gold-lt);}
+.compound-meta-item .key{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.1em;margin-top:2px;}
+
+/* BUTTONS */
+.btn{display:inline-block;padding:13px 28px;font-size:11px;letter-spacing:.16em;
+  font-weight:600;border:none;cursor:pointer;font-family:inherit;transition:all .2s;text-decoration:none;}
+.btn-dark{background:var(--ink);color:var(--gold-lt);}
+.btn-dark:hover{background:#1e2a3a;color:var(--gold-lt);}
+.btn-teal{background:var(--teal);color:#fff;}
+.btn-teal:hover{background:var(--teal-lt);}
+.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--ink);}
+.btn-outline:hover{background:var(--ink);color:var(--paper);}
+.btn-gold{background:var(--gold);color:var(--ink);}
+.btn-gold:hover{background:var(--gold-lt);}
+.btn-sm{padding:9px 20px;font-size:10px;}
+
+/* SECTION */
+html{scroll-padding-top:66px;}
+section{padding:96px 48px;}
+.inner{max-width:1120px;margin:0 auto;}
+.section-header{margin-bottom:56px;}
+.section-header .label{display:block;margin-bottom:12px;}
+.section-h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);
+  font-weight:400;line-height:1.15;color:var(--ink);margin-bottom:16px;}
+.section-lead{font-size:15px;color:var(--slate);line-height:1.85;max-width:600px;}
+.divider{width:44px;height:2px;background:var(--gold);margin:18px 0 32px;}
+
+/* WHY SECTION */
+#why{background:var(--cream);}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.why-card{background:var(--paper);padding:36px 28px;border-top:3px solid transparent;
+  transition:border-color .25s,box-shadow .25s;}
+.why-card:hover{border-color:var(--teal);box-shadow:var(--shadow);}
+.why-icon{width:44px;height:44px;background:var(--teal-pale);display:flex;
+  align-items:center;justify-content:center;font-size:20px;margin-bottom:20px;}
+.why-card h3{font-family:'Playfair Display',serif;font-size:18px;font-weight:400;
+  margin-bottom:10px;color:var(--ink);}
+.why-card p{font-size:13px;color:var(--slate);line-height:1.8;}
+.why-card ul{margin-top:12px;padding-left:16px;}
+.why-card ul li{font-size:13px;color:var(--slate);line-height:1.8;margin-bottom:4px;}
+
+/* COMPOUNDS */
+#compounds{background:var(--paper);}
+.compound-table{width:100%;border-collapse:collapse;margin-top:40px;}
+.compound-table th{background:var(--ink);color:var(--gold-lt);font-size:10px;
+  letter-spacing:.16em;font-weight:600;padding:16px 20px;text-align:left;}
+.compound-table td{padding:20px;border-bottom:1px solid var(--border);font-size:14px;vertical-align:middle;}
+.compound-table tr:last-child td{border-bottom:none;}
+.compound-table tr:hover td{background:var(--cream);}
+.glp-badge{display:inline-block;padding:4px 10px;font-size:9px;letter-spacing:.16em;font-weight:700;}
+.glp1{background:var(--teal-pale);color:var(--teal);}
+.glp2{background:var(--gold-pale);color:var(--gold);}
+.glp3{background:#EEE5FF;color:#6A4CAB;}
+.compound-name-cell{font-family:'Playfair Display',serif;font-size:16px;}
+.compound-sub{font-size:11px;color:var(--muted);display:block;margin-top:2px;}
+.purity-bar{background:#eee;height:4px;border-radius:2px;width:100%;margin-top:6px;}
+.purity-fill{background:var(--teal);height:4px;border-radius:2px;}
+
+/* PHYSICIAN FUNNEL */
+#physicians{background:var(--ink);color:#fff;}
+#physicians .section-h2{color:#fff;}
+#physicians .section-lead{color:rgba(255,255,255,.5);}
+#physicians .divider{background:var(--gold);}
+.funnel-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:rgba(255,255,255,.05);margin-top:48px;}
+.funnel-card{background:#0D1117;padding:36px 32px;transition:background .2s;}
+.funnel-card:hover{background:#111820;}
+.funnel-step{width:36px;height:36px;background:var(--gold);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:16px;font-weight:700;margin-bottom:20px;}
+.funnel-card h3{font-size:15px;font-weight:600;color:#fff;margin-bottom:8px;}
+.funnel-card p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.8;}
+.funnel-card .funnel-note{font-size:11px;color:var(--gold);margin-top:12px;font-style:italic;}
+
+/* TIMELINE */
+#timeline{background:var(--cream);}
+.timeline-phases{display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  margin-top:48px;position:relative;}
+.timeline-phases::before{content:'';position:absolute;top:28px;left:16.6%;right:16.6%;
+  height:2px;background:linear-gradient(90deg,var(--teal),var(--gold),var(--teal));}
+.phase{padding:0 28px;text-align:center;}
+.phase-circle{width:56px;height:56px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;font-size:13px;font-weight:700;
+  position:relative;z-index:1;}
+.phase-1 .phase-circle{background:var(--teal);color:#fff;}
+.phase-2 .phase-circle{background:var(--gold);color:var(--ink);}
+.phase-3 .phase-circle{background:var(--teal);color:#fff;}
+.phase-label{font-size:10px;letter-spacing:.16em;color:var(--muted);font-weight:600;margin-bottom:8px;}
+.phase h3{font-family:'Playfair Display',serif;font-size:17px;font-weight:400;margin-bottom:12px;}
+.phase ul{list-style:none;text-align:left;}
+.phase ul li{font-size:12px;color:var(--slate);padding:5px 0;border-bottom:1px solid rgba(0,0,0,.06);
+  display:flex;gap:8px;align-items:flex-start;}
+.phase ul li::before{content:'→';color:var(--teal);flex-shrink:0;font-size:11px;margin-top:1px;}
+
+/* FINANCING */
+#financing{background:var(--paper);}
+.financing-split{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start;}
+.finance-card{background:var(--ink);padding:40px;}
+.finance-card h3{font-family:'Playfair Display',serif;font-size:22px;color:#fff;
+  font-weight:400;margin-bottom:8px;}
+.finance-card .subtitle{font-size:12px;color:var(--gold);letter-spacing:.12em;margin-bottom:28px;display:block;}
+.finance-row{display:flex;justify-content:space-between;align-items:center;
+  padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);}
+.finance-row:last-of-type{border-bottom:none;}
+.finance-row .key{font-size:12px;color:rgba(255,255,255,.45);letter-spacing:.06em;}
+.finance-row .val{font-size:14px;color:#fff;font-weight:600;}
+.finance-row .val.gold{color:var(--gold-lt);}
+.finance-highlight{background:rgba(184,148,63,.1);border:1px solid rgba(184,148,63,.25);
+  padding:20px;margin-top:24px;}
+.finance-highlight p{font-size:13px;color:var(--gold-lt);line-height:1.7;}
+.finance-right h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:400;
+  margin-bottom:8px;color:var(--ink);}
+.finance-right .lead{font-size:14px;color:var(--slate);line-height:1.8;margin-bottom:28px;}
+.roi-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.roi-box{background:var(--cream);padding:20px;border-left:3px solid var(--teal);}
+.roi-box .num{font-family:'Playfair Display',serif;font-size:28px;color:var(--ink);margin-bottom:4px;}
+.roi-box .lbl{font-size:10px;letter-spacing:.12em;color:var(--muted);font-weight:600;}
+
+/* METIS */
+#metis{background:var(--teal);color:#fff;}
+#metis .section-h2{color:#fff;}
+#metis .section-lead{color:rgba(255,255,255,.6);}
+#metis .divider{background:rgba(255,255,255,.3);}
+.metis-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;}
+.metis-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  padding:28px;transition:background .2s;}
+.metis-card:hover{background:rgba(255,255,255,.11);}
+.metis-card-icon{font-size:24px;margin-bottom:14px;}
+.metis-card h4{font-size:14px;font-weight:600;color:#fff;margin-bottom:8px;}
+.metis-card p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.75;}
+.metis-list{margin-top:10px;padding-left:16px;}
+.metis-list li{font-size:12px;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:3px;}
+.metis-badge{display:inline-block;background:rgba(184,148,63,.2);border:1px solid rgba(184,148,63,.4);
+  color:var(--gold-lt);font-size:9px;letter-spacing:.18em;padding:4px 10px;margin-bottom:16px;}
+
+/* QUALITY */
+#quality{background:var(--cream);}
+.quality-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:center;}
+.quality-points{display:flex;flex-direction:column;gap:0;margin-top:36px;}
+.quality-point{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--border);align-items:flex-start;}
+.quality-point:last-child{border-bottom:none;}
+.q-icon{width:40px;height:40px;background:var(--teal-pale);display:flex;
+  align-items:center;justify-content:center;flex-shrink:0;font-size:16px;}
+.q-text h4{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:5px;}
+.q-text p{font-size:13px;color:var(--slate);line-height:1.7;}
+.quality-callout{background:var(--ink);padding:40px;}
+.quality-callout blockquote{font-family:'Playfair Display',serif;font-size:22px;
+  font-style:italic;color:#fff;line-height:1.45;margin-bottom:18px;}
+.quality-callout cite{font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.12em;}
+.quality-callout .visit-cta{margin-top:28px;}
+
+/* RESEARCH */
+#research{background:var(--paper);}
+.research-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px;}
+.research-card{background:var(--cream);padding:36px;border-top:3px solid var(--gold);position:relative;}
+.research-card h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;margin-bottom:10px;}
+.research-card p{font-size:13px;color:var(--slate);line-height:1.8;margin-bottom:18px;}
+.research-tag{display:inline-block;background:var(--gold-pale);color:var(--gold);
+  font-size:9px;letter-spacing:.18em;padding:4px 10px;font-weight:700;margin-bottom:16px;}
+.research-future{opacity:.65;border-top-color:var(--muted);}
+
+/* CONTACT */
+#contact{background:var(--ink);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.contact-left h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);
+  font-weight:400;color:#fff;line-height:1.15;margin-bottom:20px;}
+.contact-left p{font-size:15px;color:rgba(255,255,255,.5);line-height:1.85;margin-bottom:32px;}
+.contact-rep{display:flex;flex-direction:column;gap:16px;}
+.rep-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
+  padding:24px;transition:border-color .2s;}
+.rep-card:hover{border-color:var(--gold);}
+.rep-name{font-size:14px;font-weight:600;color:#fff;margin-bottom:4px;}
+.rep-title{font-size:11px;color:var(--gold);letter-spacing:.1em;margin-bottom:12px;display:block;}
+.rep-detail{font-size:13px;color:rgba(255,255,255,.4);margin-bottom:3px;}
+.contact-form{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:36px;}
+.contact-form h3{font-family:'Playfair Display',serif;font-size:20px;color:#fff;
+  font-weight:400;margin-bottom:6px;}
+.contact-form p{font-size:13px;color:rgba(255,255,255,.4);margin-bottom:24px;}
+.form-group{margin-bottom:16px;}
+.form-group label{display:block;font-size:10px;letter-spacing:.14em;color:rgba(255,255,255,.4);
+  font-weight:600;margin-bottom:6px;}
+.form-group input,.form-group select,.form-group textarea{
+  width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+  color:#fff;padding:12px 14px;font-size:13px;font-family:inherit;outline:none;
+  transition:border-color .2s;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  border-color:var(--gold);}
+.form-group select option{background:#0D1117;color:#fff;}
+.form-group textarea{resize:vertical;min-height:90px;}
+.form-success{display:none;background:rgba(42,106,94,.2);border:1px solid rgba(42,106,94,.4);
+  padding:16px;color:var(--teal-lt);font-size:13px;margin-top:12px;}
+
+/* ── INVESTOR SECTION ── */
+#investor-section{background:var(--cream);position:relative;}
+.investor-gate{max-width:520px;margin:0 auto;text-align:center;padding:80px 0;}
+.lock-icon{font-size:48px;margin-bottom:24px;}
+.investor-gate h2{font-family:'Playfair Display',serif;font-size:32px;font-weight:400;
+  color:var(--ink);margin-bottom:14px;}
+.investor-gate p{font-size:14px;color:var(--slate);line-height:1.8;margin-bottom:32px;}
+.pw-form{display:flex;flex-direction:column;gap:12px;max-width:320px;margin:0 auto;}
+.pw-input{background:#fff;border:1.5px solid var(--border);color:var(--ink);
+  padding:13px 16px;font-size:14px;font-family:inherit;outline:none;
+  text-align:center;letter-spacing:.2em;transition:border-color .2s;}
+.pw-input:focus{border-color:var(--teal);}
+.pw-error{font-size:12px;color:var(--red);display:none;text-align:center;}
+.pw-error.show{display:block;}
+
+/* INVESTOR ROOM */
+#investor-room{display:none;}
+#investor-room.open{display:block;}
+.inv-header{background:var(--ink);padding:40px 48px;margin-bottom:48px;}
+.inv-header h2{font-family:'Playfair Display',serif;font-size:32px;color:#fff;
+  font-weight:400;margin-bottom:8px;}
+.inv-header p{font-size:14px;color:rgba(255,255,255,.45);}
+.inv-header .confidential{display:inline-flex;align-items:center;gap:8px;
+  background:rgba(192,57,43,.15);border:1px solid rgba(192,57,43,.3);
+  padding:6px 14px;margin-bottom:20px;}
+.inv-header .confidential span{font-size:10px;letter-spacing:.18em;color:#e74c3c;font-weight:700;}
+
+.inv-section{padding:0 0 48px;}
+.inv-section-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:400;
+  color:var(--ink);margin-bottom:8px;padding-bottom:12px;border-bottom:2px solid var(--gold);}
+.inv-section-sub{font-size:13px;color:var(--muted);margin-bottom:28px;}
+
+/* Scenario cards */
+.scenario-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px;}
+.scenario-card{background:var(--paper);border:1px solid var(--border);padding:32px;
+  border-top:3px solid transparent;}
+.scenario-card.s1{border-top-color:var(--teal);}
+.scenario-card.s2{border-top-color:var(--gold);}
+.scenario-card h4{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;
+  color:var(--ink);margin-bottom:4px;}
+.scenario-card .tagline{font-size:12px;color:var(--muted);margin-bottom:20px;display:block;}
+.scenario-metrics{display:flex;flex-direction:column;gap:0;}
+.s-metric{display:flex;justify-content:space-between;padding:10px 0;
+  border-bottom:1px solid var(--border);font-size:13px;}
+.s-metric:last-child{border-bottom:none;}
+.s-metric .sk{color:var(--slate);}
+.s-metric .sv{font-weight:600;color:var(--ink);}
+.s-metric .sv.green{color:var(--teal);}
+.s-metric .sv.gold{color:var(--gold);}
+
+/* Comparison table */
+.compare-table{width:100%;border-collapse:collapse;margin-bottom:40px;}
+.compare-table th{background:var(--ink);color:var(--gold-lt);font-size:10px;
+  letter-spacing:.16em;padding:16px 20px;text-align:left;font-weight:600;}
+.compare-table th:first-child{background:var(--ink);}
+.compare-table td{padding:16px 20px;border-bottom:1px solid var(--border);font-size:13px;}
+.compare-table tr:hover td{background:var(--gold-pale);}
+.compare-table .metric-col{font-weight:600;color:var(--slate);font-size:12px;letter-spacing:.04em;}
+.compare-table .highlight-col{color:var(--teal);font-weight:600;}
+
+/* Investment ask */
+.ask-box{background:var(--ink);padding:40px;margin-bottom:32px;}
+.ask-box h4{font-family:'Playfair Display',serif;font-size:24px;color:#fff;
+  font-weight:400;margin-bottom:24px;}
+.ask-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px;}
+.ask-item{background:rgba(255,255,255,.05);padding:20px;}
+.ask-item .ask-num{font-family:'Playfair Display',serif;font-size:28px;color:var(--gold-lt);margin-bottom:4px;}
+.ask-item .ask-lbl{font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);font-weight:600;}
+.ask-note{font-size:12px;color:rgba(255,255,255,.35);line-height:1.7;border-top:1px solid rgba(255,255,255,.07);padding-top:20px;}
+
+/* Ramp table */
+.ramp-table{width:100%;border-collapse:collapse;margin-bottom:12px;}
+.ramp-table th{background:#1a2535;color:rgba(255,255,255,.5);font-size:10px;
+  letter-spacing:.14em;padding:12px 16px;text-align:left;font-weight:600;}
+.ramp-table td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);
+  font-size:12px;color:rgba(255,255,255,.7);}
+.ramp-table tr.milestone td{background:rgba(42,106,94,.15);color:#fff;}
+.ramp-table tr.steady td{background:rgba(184,148,63,.1);color:var(--gold-lt);font-weight:600;}
+.ramp-wrap{background:#0D1117;padding:32px;margin-bottom:32px;}
+.ramp-wrap h5{font-size:13px;letter-spacing:.12em;color:var(--gold);margin-bottom:20px;font-weight:600;}
+
+/* Docs */
+.inv-docs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.inv-doc{background:var(--paper);border:1px solid var(--border);padding:20px;
+  display:flex;align-items:center;gap:14px;cursor:pointer;transition:border-color .2s;}
+.inv-doc:hover{border-color:var(--teal);}
+.doc-icon{width:40px;height:40px;background:var(--teal-pale);display:flex;
+  align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.doc-name{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px;}
+.doc-type{font-size:10px;color:var(--muted);letter-spacing:.1em;}
+
+/* FOOTER */
+footer{background:var(--ink);color:rgba(255,255,255,.35);padding:40px 48px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-logo{display:flex;align-items:center;gap:10px;}
+.footer-mark{width:28px;height:28px;background:var(--gold);display:flex;
+  align-items:center;justify-content:center;font-family:'Playfair Display',serif;
+  font-style:italic;font-size:13px;color:var(--ink);}
+footer p{font-size:11px;letter-spacing:.1em;}
+.footer-links{display:flex;gap:24px;}
+.footer-links span{font-size:10px;letter-spacing:.12em;cursor:pointer;transition:color .2s;}
+.footer-links span:hover{color:var(--gold);}
+
+/* HAMBURGER */
+.ham-line{display:block;width:24px;height:2px;background:var(--ink);transition:all .3s;}
+#hamburger.open .ham-line:nth-child(1){transform:translateY(7px) rotate(45deg);}
+#hamburger.open .ham-line:nth-child(2){opacity:0;}
+#hamburger.open .ham-line:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+#hamburger.open .ham-line{background:#fff;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  #nav-links{display:none!important;}
+  #hamburger{display:flex!important;}
+  #hero{grid-template-columns:1fr;}
+  .hero-right{display:none;}
+  .why-grid,.metis-grid,.research-grid,.financing-split,.quality-grid,
+  .contact-grid,.funnel-grid,.scenario-grid,.timeline-phases{grid-template-columns:1fr!important;}
+  .timeline-phases::before{display:none;}
+  .phase{text-align:left;padding:0 0 28px;}
+  .phase-circle{margin:0 0 16px;}
+  section{padding:64px 24px;}
+  #nav{padding:0 24px;}
+  .hero-left{padding:60px 24px;}
+  .nav-links .nav-investor,.nav-links a[onclick*="investor"]{display:none;}
+  .ask-grid{grid-template-columns:1fr 1fr;}
+  .inv-docs{grid-template-columns:1fr 1fr;}
+  /* Calculator responsive */
+  #calculator .calc-outer-grid{grid-template-columns:1fr!important;}
+  #calculator .calc-results-grid{grid-template-columns:1fr!important;}
+  #calculator .calc-results-burn{grid-template-columns:1fr!important;}
+  #calculator .calc-cta-row{grid-template-columns:1fr!important;}
+  /* Trust grid responsive */
+  #trust .trust-grid{grid-template-columns:1fr 1fr!important;}
+  #trust .trust-price-strip{grid-template-columns:1fr!important;}
+  #trust .trust-price-strip>div{border-right:none!important;border-bottom:1px solid var(--border);padding:16px 0!important;}
+}
+</style>
+</head>
+<body>
+
+<!-- EARLY ACCESS GATE -->
+<div id="early-access-gate" style="position:fixed;inset:0;background:#0D1117;z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px;">
+  <div style="max-width:460px;width:100%;text-align:center;">
+    <div style="font-size:10px;letter-spacing:.22em;color:#D4AD5C;margin-bottom:36px;font-weight:600;">MAJESTIC R&D</div>
+    <h1 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:400;color:#fff;margin-bottom:14px;line-height:1.35;">You've been granted<br/>early access.</h1>
+    <p style="font-size:13px;color:rgba(255,255,255,.42);line-height:1.85;margin-bottom:36px;">This platform is currently in private beta. All information is subject to change at any time and should be confirmed with your rep or Majestic contact. Available by invitation only — do not share your link or password. All information is confidential and intended solely for the named recipient.</p>
+    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:32px;margin-bottom:20px;">
+      <div style="font-size:10px;letter-spacing:.18em;color:rgba(255,255,255,.3);margin-bottom:18px;">ENTER YOUR ACCESS CODE</div>
+      <input id="access-input" type="text" placeholder="- - - - - - - -" onkeydown="if(event.key==='Enter')checkAccess()" style="width:100%;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.15);padding:10px 0;font-size:20px;letter-spacing:.2em;color:#fff;text-align:center;outline:none;font-family:inherit;box-sizing:border-box;margin-bottom:28px;"/>
+      <button onclick="checkAccess()" style="width:100%;background:#B8943F;border:none;padding:15px;font-size:11px;letter-spacing:.2em;font-weight:700;color:#0D1117;cursor:pointer;font-family:inherit;transition:background .2s;" onmouseover="this.style.background='#D4AD5C'" onmouseout="this.style.background='#B8943F'">ENTER PLATFORM</button>
+      <div id="access-error" style="display:none;margin-top:16px;font-size:12px;color:#E74C3C;letter-spacing:.04em;">Invalid code. Contact your Majestic R&D representative.</div>
+    </div>
+    <p style="font-size:10px;color:rgba(255,255,255,.18);line-height:1.8;max-width:360px;margin:0 auto;">Nothing on this platform constitutes medical advice, a solicitation, or an offer to sell securities. For practitioner and qualified investor use only.</p>
+    <div style="margin-top:24px;font-size:10px;color:rgba(255,255,255,.12);letter-spacing:.1em;">MARYLAND &nbsp;|&nbsp; PRIVATE BETA &nbsp;|&nbsp; CONFIDENTIAL</div>
+  </div>
+</div>
+
+<!-- BETA DISCLAIMER BAR (shown after gate is passed) -->
+<div id="beta-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:800;background:#0D1117;border-top:1px solid rgba(184,148,63,.2);padding:9px 24px;align-items:center;justify-content:space-between;gap:16px;">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <span style="background:rgba(184,148,63,.12);border:1px solid rgba(184,148,63,.3);color:#D4AD5C;font-size:9px;font-weight:700;letter-spacing:.18em;padding:3px 8px;flex-shrink:0;">EARLY ACCESS</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.38);line-height:1.5;">Beta platform. All information subject to change — confirm details with your rep. Not medical advice. Not a securities offering.</span>
+  </div>
+  <button onclick="document.getElementById('beta-banner').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,.25);cursor:pointer;font-size:18px;padding:0 4px;line-height:1;flex-shrink:0;" title="Dismiss">&times;</button>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="logo" onclick="navTo('hero')">
+    <div class="logo-mark">P</div>
+    <div class="logo-txt">
+      <span class="logo-top">MAJESTIC PEPTIDES</span>
+      <span class="logo-sub">A MAJESTIC R&D DIVISION</span>
+    </div>
+  </div>
+  <div class="nav-links" id="nav-links">
+    <button onclick="navTo('why')">Program</button>
+    <button onclick="navTo('compounds')">Compounds</button>
+    <button onclick="navTo('physicians')">For Physicians</button>
+    <button onclick="navTo('calculator')">Calculator</button>
+    <button onclick="navTo('financing')">Financing</button>
+    <button onclick="navTo('quality')">Quality</button>
+    <button onclick="navTo('research')">Research</button>
+    <a href="#investor-section" onclick="navTo('investor-section')" class="nav-investor btn btn-sm">Investor Access</a>
+    <button onclick="navTo('contact')" class="nav-cta">Contact Rep</button>
+  </div>
+  <button id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu" style="display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;">
+    <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU OVERLAY -->
+<div id="mobile-menu" style="display:none;position:fixed;inset:0;background:var(--ink);z-index:850;flex-direction:column;align-items:center;justify-content:center;gap:28px;padding-top:62px;">
+  <button onclick="navTo('why');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;letter-spacing:.04em;">Program</button>
+  <button onclick="navTo('compounds');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;">Compounds</button>
+  <button onclick="navTo('physicians');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;">For Physicians</button>
+  <button onclick="navTo('calculator');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:var(--teal-light);font-family:'Playfair Display',serif;font-weight:400;">Calculator</button>
+  <button onclick="navTo('financing');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;">Financing</button>
+  <button onclick="navTo('quality');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;">Quality</button>
+  <button onclick="navTo('research');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;">Research</button>
+  <button onclick="navTo('investor-section');closeMobileMenu()" style="background:var(--gold);border:none;cursor:pointer;font-size:14px;color:var(--ink);padding:12px 32px;letter-spacing:.14em;font-weight:700;margin-top:8px;">INVESTOR ACCESS</button>
+  <button onclick="navTo('contact');closeMobileMenu()" style="background:var(--teal);border:none;cursor:pointer;font-size:14px;color:#fff;padding:12px 32px;letter-spacing:.14em;font-weight:700;">CONTACT REP</button>
+</div>
+
+<!-- HERO -->
+<section id="hero" style="padding:0;">
+  <div class="hero-left">
+    <div class="hero-tag">
+      <div class="hero-tag-dot"></div>
+      <span>PHYSICIAN PROGRAM — ACTIVE LAUNCH</span>
+    </div>
+    <h1 class="hero-h1">
+      USA-Manufactured<br/><em>GLP Peptides</em> for<br/>Your <strong>Practice.</strong>
+    </h1>
+    <p class="hero-lead">
+      Compounded Semaglutide, Tirzepatide, and Retatrutide — sourced from our South Carolina manufacturing partner, tested by independent labs, and shipped directly to your practice. From decision to first patient in 20 days.
+    </p>
+    <div class="hero-actions">
+      <button class="btn btn-teal" onclick="navTo('contact')">Schedule Intro Call</button>
+      <button class="btn btn-outline" onclick="navTo('financing')">View Financing Options</button>
+    </div>
+    <div class="hero-proof">
+      <div class="hero-proof-item">
+        <div class="hero-proof-num">99.8%</div>
+        <div class="hero-proof-lbl">Average Purity</div>
+      </div>
+      <div class="hero-proof-item">
+        <div class="hero-proof-num">20</div>
+        <div class="hero-proof-lbl">Days to First Patient</div>
+      </div>
+      <div class="hero-proof-item">
+        <div class="hero-proof-num">$60K+</div>
+        <div class="hero-proof-lbl">Minimum Year-One Revenue (Entry Volume)</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <span class="hero-panel-label">CURRENT COMPOUND OFFERING</span>
+    <div class="compound-row">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <div>
+          <div class="compound-name">Semaglutide</div>
+          <div class="compound-tag">GLP-1 · WEIGHT MANAGEMENT & GLYCEMIC CONTROL</div>
+        </div>
+        <span class="glp-badge glp1">GLP-1</span>
+      </div>
+      <div class="compound-meta">
+        <div class="compound-meta-item"><div class="val">$8.75</div><div class="key">Per mg</div></div>
+        <div class="compound-meta-item"><div class="val">30 mg</div><div class="key">Vial size</div></div>
+        <div class="compound-meta-item"><div class="val">$262.50</div><div class="key">Per vial</div></div>
+      </div>
+    </div>
+    <div class="compound-row">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <div>
+          <div class="compound-name">Tirzepatide</div>
+          <div class="compound-tag">GIP/GLP-1 · DUAL AGONIST · SUPERIOR METABOLIC OUTCOMES</div>
+        </div>
+        <span class="glp-badge glp2">DUAL</span>
+      </div>
+      <div class="compound-meta">
+        <div class="compound-meta-item"><div class="val">$3.75</div><div class="key">Per mg</div></div>
+        <div class="compound-meta-item"><div class="val">200 mg</div><div class="key">Vial size</div></div>
+        <div class="compound-meta-item"><div class="val">$750.00</div><div class="key">Per vial</div></div>
+      </div>
+    </div>
+    <div class="compound-row">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <div>
+          <div class="compound-name">Retatrutide</div>
+          <div class="compound-tag">GIP/GLP-1/GLUCAGON · TRIPLE AGONIST · NEXT-GEN PIPELINE</div>
+          <div style="font-size:9px;color:var(--red);font-weight:600;letter-spacing:.1em;margin-top:4px;">⚠ INVESTIGATIONAL · NOT FDA-APPROVED</div>
+        </div>
+        <span class="glp-badge glp3">TRIPLE</span>
+      </div>
+      <div class="compound-meta">
+        <div class="compound-meta-item"><div class="val">$8.75</div><div class="key">Per mg</div></div>
+        <div class="compound-meta-item"><div class="val">60 mg</div><div class="key">Vial size</div></div>
+        <div class="compound-meta-item"><div class="val">$525.00</div><div class="key">Per vial</div></div>
+      </div>
+    </div>
+    <p style="font-size:11px;color:rgba(255,255,255,.2);margin-top:28px;letter-spacing:.08em;">More peptides expanding to catalog Q3–Q4 2026 · Pricing subject to volume</p>
+  </div>
+</section>
+
+<!-- WHY MAJESTIC -->
+<section id="why">
+  <div class="inner">
+    <div class="section-header">
+      <span class="label label-teal">Why Majestic R&D</span>
+      <h2 class="section-h2">The standard every<br/>program should meet.</h2>
+      <div class="divider"></div>
+      <p class="section-lead">Most peptide suppliers source overseas and won't show you their facility. We manufacture in South Carolina, test with independent labs, and welcome you to visit in person — because "trust us" is not a quality standard.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🏭</div>
+        <h3>USA Manufacturing</h3>
+        <p>All compounds manufactured and packaged at our partner facility in South Carolina — not repackaged from overseas API. Lab visits available and encouraged.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔬</div>
+        <h3>Independent Third-Party Testing</h3>
+        <p>Every lot tested by TrustPointe Analytics or Chromate Labs before it ships. COAs confirm identity, purity, and quantity — with QR codes that link directly to the issuing lab.</p>
+        <ul>
+          <li>99.75%–99.85% purity range</li>
+          <li>COAs verifiable at issuing laboratory</li>
+          <li>Lyophilized format for shelf stability</li>
+          <li>Lot-level documentation provided</li>
+        </ul>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📋</div>
+        <h3>Complete Launch Support</h3>
+        <p>You don't build a peptide program alone. Every starter package includes training, documentation, and 90 days of Metis analytics — all included at no extra cost.</p>
+        <ul>
+          <li>4-hour training with Christopher McDonald</li>
+          <li>Consent templates, AE forms, EMR guidance</li>
+          <li>90-day Metis Peptide Sprint Dashboard</li>
+          <li>Ongoing account manager support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPOUNDS -->
+<section id="compounds">
+  <div class="inner">
+    <div class="section-header">
+      <span class="label label-teal">Current Offering</span>
+      <h2 class="section-h2">GLP-1, Dual Agonist & Triple Agonist</h2>
+      <div class="divider"></div>
+      <p class="section-lead">Three compounds covering the full metabolic spectrum — from the most-prescribed GLP-1 therapy, to a dual GIP/GLP-1 agonist, to the next generation of triple agonists. More peptides added to catalog Q3–Q4 2026.</p>
+    </div>
+    <table class="compound-table">
+      <thead>
+        <tr>
+          <th>Compound</th>
+          <th>Classification</th>
+          <th>Vial Size</th>
+          <th>Price / Vial</th>
+          <th>Price / mg</th>
+          <th>Patient Pricing Range</th>
+          <th>Key Clinical Use</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="compound-name-cell">Semaglutide</div>
+            <span class="compound-sub">Pro Peptide Solutions, SC</span>
+          </td>
+          <td><span class="glp-badge glp1">GLP-1</span></td>
+          <td>30 mg</td>
+          <td><strong>$262.50</strong></td>
+          <td>$8.75</td>
+          <td>$60–$80/mo</td>
+          <td>Weight management, T2D glycemic control</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="compound-name-cell">Tirzepatide</div>
+            <span class="compound-sub">Pro Peptide Solutions, SC</span>
+          </td>
+          <td><span class="glp-badge glp2">DUAL AGONIST</span></td>
+          <td>200 mg</td>
+          <td><strong>$750.00</strong></td>
+          <td>$3.75</td>
+          <td>$200–$300/mo</td>
+          <td>Dual GIP/GLP-1 agonism, superior weight outcomes</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="compound-name-cell">Retatrutide</div>
+            <span class="compound-sub">Pro Peptide Solutions, SC</span>
+            <span class="compound-sub" style="color:var(--red);font-weight:600;margin-top:3px;display:block;">⚠ Investigational — Not FDA-Approved</span>
+          </td>
+          <td><span class="glp-badge glp3">TRIPLE AGONIST</span></td>
+          <td>60 mg</td>
+          <td><strong>$525.00</strong></td>
+          <td>$8.75</td>
+          <td>$350–$450/mo</td>
+          <td>Triple agonist (GIP/GLP-1/glucagon), next-gen metabolic<br/><span style="font-size:11px;color:var(--red);">Research/investigational use only. Not FDA-approved.</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="background:rgba(192,57,43,.06);border:1px solid rgba(192,57,43,.2);padding:14px 20px;margin-top:16px;display:flex;gap:12px;align-items:flex-start;">
+      <span style="color:var(--red);font-size:16px;flex-shrink:0;">⚠</span>
+      <p style="font-size:12px;color:var(--red);line-height:1.7;"><strong>Retatrutide Disclosure:</strong> Retatrutide is an investigational compound currently in Phase 3 clinical trials. It has not received FDA approval for any indication. It is offered for research and investigational use only. Practitioners assume full responsibility for appropriate use in compliance with applicable regulations.</p>
+    </div>
+    
+
+<!-- PHYSICIAN FUNNEL -->
+<section id="physicians">
+  <div class="inner">
+    <div class="section-header">
+      <span class="label" style="color:var(--gold);">For Practitioners</span>
+      <h2 class="section-h2">Built for your practice.<br/>Revenue from day one.</h2>
+      <div class="divider"></div>
+      <p class="section-lead">Whether you're new to peptides or looking to add a better supplier, the program is designed to close the gap between your first conversation and your first paying patient in 20 days.</p>
+    </div>
+    <div class="funnel-grid">
+      <div class="funnel-card">
+        <div class="funnel-step">1</div>
+        <h3>Book an Intro Call</h3>
+        <p>15 minutes with your Majestic R&D representative. We'll review the program, discuss your patient population, and confirm the program is right for your practice.</p>
+        <div class="funnel-note">→ Most practices qualify immediately</div>
+      </div>
+      <div class="funnel-card">
+        <div class="funnel-step">2</div>
+        <h3>Get Your Profit Snapshot</h3>
+        <p>Your rep forwards your patient count data to Metis. Within days, you receive a personalized profit projection — conservative, base case, and accelerated — based on your actual patient population.</p>
+        <div class="funnel-note">→ No commitment required to receive this</div>
+      </div>
+      <div class="funnel-card">
+        <div class="funnel-step">3</div>
+        <h3>Complete the Inventory Calculator</h3>
+        <p>Fill out expected patient volume per compound. The calculator shows your monthly burn rate and time to exhaust a $30,000 inventory. Target: 12 months or less.</p>
+        <div class="funnel-note">→ Takes under 10 minutes</div>
+      </div>
+      <div class="funnel-card">
+        <div class="funnel-step">4</div>
+        <h3>Submit PNC Healthcare Funding</h3>
+        <p>One-page application. 10–15 minutes. Credit decision in approximately 1 week. No collateral, no personal credit check. $30,000 at 10% APR fixed over 5 years — ~$650/month.</p>
+        <div class="funnel-note">→ $0 out of pocket to start</div>
+      </div>
+      <div class="funnel-card">
+        <div class="funnel-step">5</div>
+        <h3>Inventory Ships from SC</h3>
+        <p>Upon funding approval, Majestic places your order with Pro Peptide Solutions. Pro Peptide ships with COA documentation. Delivered to your practice within 5–7 business days.</p>
+        <div class="funnel-note">→ Days 5–12 from decision</div>
+      </div>
+      <div class="funnel-card">
+        <div class="funnel-step">6</div>
+        <h3>Training, Setup, First Patients</h3>
+        <p>Two 2-hour remote sessions with Christopher McDonald. Documentation toolkit delivered. Metis 90-day Dashboard activated. Begin treating patients and generating revenue that offsets your $650/month from day one.</p>
+        <div class="funnel-note">→ First patient by day 20</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;">
+      <button class="btn btn-gold" onclick="navTo('contact')" style="margin-right:12px;">Schedule My Intro Call</button>
+      <button class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.25);" onclick="navTo('contact')">Request Free Practice Analysis</button>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="inner">
+    <div class="section-header">
+      <span class="label label-teal">Launch Timeline</span>
+      <h2 class="section-h2">Decision to first patient:<br/>20 days.</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="timeline-phases">
+      <div class="phase phase-1">
+        <div class="phase-circle">1–5</div>
+        <div class="phase-label">PHASE 1 · DAYS 1–5</div>
+        <h3>Pre-Purchase Decision</h3>
+        <ul>
+          <li>Review materials & initial rep consultation</li>
+          <li>Complete Inventory Turnover Calculator</li>
+          <li>Receive Metis Profit Snapshot & Dashboard preview</li>
+          <li>Submit PNC Healthcare funding application</li>
+          <li>Schedule training sessions (mandatory for new practices)</li>
+        </ul>
+      </div>
+      <div class="phase phase-2">
+        <div class="phase-circle">5–12</div>
+        <div class="phase-label">PHASE 2 · DAYS 5–12</div>
+        <h3>Funding & Fulfillment</h3>
+        <ul>
+          <li>PNC approves funding (~1 week from application)</li>
+          <li>$30,000 disbursed directly to you</li>
+          <li>Confirm compound split with account manager</li>
+          <li>Order placed with Pro Peptide Solutions, SC</li>
+          <li>Delivery within 5–7 business days</li>
+        </ul>
+      </div>
+      <div class="phase phase-3">
+        <div class="phase-circle">12–20</div>
+        <div class="phase-label">PHASE 3 · DAYS 12–20</div>
+        <h3>Launch Ready</h3>
+        <ul>
+          <li>Complete 2x 2-hour training with Christopher McDonald</li>
+          <li>Receive full documentation toolkit</li>
+          <li>Metis 90-day Sprint Dashboard activated</li>
+          <li>Staff trained, workflows documented</li>
+          <li>Treat first patients — revenue begins immediately</li>
+        </ul>
+      </div>
+    </div>
+    <div style="background:var(--ink);padding:28px 32px;margin-top:48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+      <p style="color:rgba(255,255,255,.55);font-size:14px;max-width:580px;">90-day milestone: 10–30 patients treated, workflow documented, reorder cadence established, 3 Metis action items implemented. Revenue exceeds $650/month payment from target patient volumes.</p>
+      <button class="btn btn-gold" onclick="navTo('contact')">Start the Process</button>
+    </div>
+  </div>
+</section>
+
+<!-- FINANCING -->
+<section id="financing">
+  <div class="inner">
+    <div class="section-header">
+      <span class="label label-teal">Accessible Financing</span>
+      <h2 class="section-h2">$0 out of pocket.<br/>Revenue from month one.</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="financing-split">
+      <div>
+        <div class="finance-card">
+          <h3>PNC Healthcare Business Banking</h3>
+          <span class="subtitle">STANDARD STARTER PACKAGE</span>
+          <div class="finance-row"><span class="key">Loan Amount</span><span class="val gold">$30,000</span></div>
+          <div class="finance-row"><span class="key">Interest Rate</span><span class="val">10% APR (fixed)</span></div>
+          <div class="finance-row"><span class="key">Term</span><span class="val">5 years (60 months)</span></div>
+          <div class="finance-row"><span class="key">Monthly Payment</span><span class="val gold">~$650/month</span></div>
+          <div class="finance-row"><span class="key">Approval Timeline</span><span class="val">~1 week</span></div>
+          <div class="finance-row"><span class="key">Credit Check</span><span class="val">No personal credit check</span></div>
+          <div class="finance-row"><span class="key">Collateral Required</span><span class="val">None</span></div>
+          <div class="finance-row"><span class="key">Prepayment Penalty</span><span class="val">None</span></div>
+          <div class="finance-highlight">
+            <p>We provide ~$650 in peptide inventory monthly that you resell for ~$1,300 — more than covering your payment. The program effectively finances itself from the first reorder cycle.</p>
+          </div>
+        </div>
+      </div>
+      <div class="finance-right">
+        <h3>Revenue Potential</h3>
+        <p class="lead">At target patient volumes, revenue exceeds the monthly financing payment from day one. Year-one projections assume a standard 503A compounding partner relationship with typical cash-pay pricing architecture. The $60K figure represents entry-level volume — the minimum threshold for program qualification. Your Metis Profit Snapshot will project your specific practice at conservative, base, and accelerated scenarios.</p>
+        <div class="roi-grid">
+          <div class="roi-box">
+            <div class="num">$60K+</div>
+            <div class="lbl">Year-One Revenue at Entry Patient Volume</div>
+          </div>
+          <div class="roi-box">
+            <div class="num">100%</div>
+            <div class="lbl">ROI on Starter Package</div>
+          </div>
+          <div class="roi-box">
+            <div class="num">Day 1</div>
+            <div class="lbl">Revenue Starts</div>
+          </div>
+          <div class="roi-box">
+            <div class="num">$650</div>
+            <div class="lbl">Monthly Payment Covered by Inventory Offset</div>
+          </div>
+        </div>
+        <div style="background:var(--teal-pale);border-left:3px solid var(--teal);padding:16px 20px;margin-top:24px;">
+          <p style="font-size:13px;color:var(--teal);line-height:1.7;"><strong>Profit Snapshot included:</strong> Metis generates a personalized revenue projection based on your actual patient counts — conservative, base case, and accelerated — before you commit.</p>
+        </div>
+        <button class="btn btn-teal" style="margin-top:28px;width:100%;" onclick="navTo('contact')">Get My Profit Snapshot</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section id="calculator" style="background:var(--cream);border-top:1px solid var(--border);">
+  <div class="inner">
+    <div class="calc-outer-grid" style="display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start;">
+      <div>
+        <span class="label label-teal" style="display:block;margin-bottom:12px;">Inventory Turnover Calculator</span>
+        <h2 class="section-h2">See your numbers<br/>before you commit.</h2>
+        <div class="divider"></div>
+        <p style="font-size:14px;color:var(--slate);line-height:1.85;margin-bottom:20px;">Enter your expected patient volume for each compound. The calculator shows your monthly revenue, profit, and how long a $30,000 order will last — so you can confirm the program fits your practice before making any commitment.</p>
+        <div style="background:var(--paper);border:1px solid var(--border);padding:20px;margin-bottom:20px;">
+          <p style="font-size:12px;color:var(--muted);line-height:1.7;"><strong style="color:var(--ink);display:block;margin-bottom:4px;">How the math works:</strong>Patient pricing is set at 2× your cost — a standard cash-pay margin. You control your exact pricing. These are conservative estimates based on typical practice pricing architecture.</p>
+        </div>
+        <div style="background:var(--ink);padding:20px;">
+          <div style="font-size:10px;letter-spacing:.18em;color:var(--gold-lt);margin-bottom:12px;font-weight:600;">BURN RATE GUIDE</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;align-items:center;gap:10px;"><span style="width:10px;height:10px;border-radius:50%;background:#E74C3C;flex-shrink:0;"></span><span style="font-size:12px;color:rgba(255,255,255,.6);">Over 12 months — speak with your rep about patient acquisition first</span></div>
+            <div style="display:flex;align-items:center;gap:10px;"><span style="width:10px;height:10px;border-radius:50%;background:#F0A500;flex-shrink:0;"></span><span style="font-size:12px;color:rgba(255,255,255,.6);">6–12 months — solid fit, good to order</span></div>
+            <div style="display:flex;align-items:center;gap:10px;"><span style="width:10px;height:10px;border-radius:50%;background:var(--teal-light);flex-shrink:0;"></span><span style="font-size:12px;color:rgba(255,255,255,.6);">Under 6 months — ideal patient volume</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <!-- INPUTS -->
+        <div style="background:var(--paper);border:1px solid var(--border);padding:32px;margin-bottom:16px;">
+          <div style="font-size:10px;letter-spacing:.18em;color:var(--teal);font-weight:600;margin-bottom:20px;">STEP 1 — ENTER YOUR PATIENT MIX</div>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+
+            <div style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:16px;background:var(--teal-pale);border-left:3px solid var(--teal);">
+              <div>
+                <div style="font-size:14px;font-weight:600;color:var(--ink);margin-bottom:2px;">GLP-1 — Semaglutide</div>
+                <div style="font-size:11px;color:var(--muted);">$8.75/mg · 4mg avg/patient/mo · ~$35 est. gross margin/patient</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <button onclick="adjustPt('sema',-5)" style="width:28px;height:28px;border:1px solid var(--border);background:var(--white);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:var(--ink);">−</button>
+                <input type="number" id="sema-pts" value="20" min="0" max="500" oninput="calcResults()" style="width:64px;text-align:center;border:1.5px solid var(--teal);padding:6px;font-size:16px;font-weight:700;font-family:inherit;background:var(--white);color:var(--ink);outline:none;"/>
+                <button onclick="adjustPt('sema',5)" style="width:28px;height:28px;border:1px solid var(--border);background:var(--white);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:var(--ink);">+</button>
+                <span style="font-size:11px;color:var(--muted);">patients</span>
+              </div>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:16px;background:var(--gold-pale);border-left:3px solid var(--gold);">
+              <div>
+                <div style="font-size:14px;font-weight:600;color:var(--ink);margin-bottom:2px;">Dual Agonist — Tirzepatide</div>
+                <div style="font-size:11px;color:var(--muted);">$3.75/mg · 30mg avg/patient/mo · ~$112.50 est. gross margin/patient</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <button onclick="adjustPt('tirz',-5)" style="width:28px;height:28px;border:1px solid var(--border);background:var(--white);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:var(--ink);">−</button>
+                <input type="number" id="tirz-pts" value="5" min="0" max="200" oninput="calcResults()" style="width:64px;text-align:center;border:1.5px solid var(--gold);padding:6px;font-size:16px;font-weight:700;font-family:inherit;background:var(--white);color:var(--ink);outline:none;"/>
+                <button onclick="adjustPt('tirz',5)" style="width:28px;height:28px;border:1px solid var(--border);background:var(--white);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:var(--ink);">+</button>
+                <span style="font-size:11px;color:var(--muted);">patients</span>
+              </div>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:16px;background:#F0EBFC;border-left:3px solid #8B5CF6;">
+              <div>
+                <div style="font-size:14px;font-weight:600;color:var(--ink);margin-bottom:2px;">Triple Agonist — Retatrutide</div>
+                <div style="font-size:11px;color:var(--muted);">$8.75/mg · 24mg avg/patient/mo · ~$210 est. gross margin/patient</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <button onclick="adjustPt('reta',-5)" style="width:28px;height:28px;border:1px solid var(--border);background:var(--white);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:var(--ink);">−</button>
+                <input type="number" id="reta-pts" value="0" min="0" max="200" oninput="calcResults()" style="width:64px;text-align:center;border:1.5px solid #8B5CF6;padding:6px;font-size:16px;font-weight:700;font-family:inherit;background:var(--white);color:var(--ink);outline:none;"/>
+                <button onclick="adjustPt('reta',5)" style="width:28px;height:28px;border:1px solid var(--border);background:var(--white);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:var(--ink);">+</button>
+                <span style="font-size:11px;color:var(--muted);">patients</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div id="calc-results" style="background:var(--ink);padding:32px;">
+          <div style="font-size:10px;letter-spacing:.18em;color:var(--gold-lt);font-weight:600;margin-bottom:24px;">STEP 2 — YOUR PROJECTED RESULTS</div>
+          <div class="calc-results-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.08);margin-bottom:24px;">
+            <div style="background:var(--ink);padding:18px;">
+              <div id="res-monthly-rev" style="font-family:'Playfair Display',serif;font-size:28px;color:var(--gold-lt);margin-bottom:4px;">$—</div>
+              <div style="font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);">MONTHLY REVENUE</div>
+            </div>
+            <div style="background:var(--ink);padding:18px;">
+              <div id="res-monthly-profit" style="font-family:'Playfair Display',serif;font-size:28px;color:var(--teal-light);margin-bottom:4px;">$—</div>
+              <div style="font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);">MONTHLY PROFIT</div>
+            </div>
+            <div style="background:var(--ink);padding:18px;">
+              <div id="res-yr1" style="font-family:'Playfair Display',serif;font-size:28px;color:var(--gold-lt);margin-bottom:4px;">$—</div>
+              <div style="font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);">YEAR-ONE REVENUE</div>
+            </div>
+          </div>
+
+          <div class="calc-results-burn" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
+            <div style="background:rgba(255,255,255,.04);padding:18px;">
+              <div id="res-burn" style="font-size:22px;font-weight:700;color:var(--white);margin-bottom:4px;">—</div>
+              <div style="font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);">MONTHS TO BURN $30K ORDER</div>
+            </div>
+            <div style="background:rgba(255,255,255,.04);padding:18px;">
+              <div id="res-financing" style="font-size:22px;font-weight:700;color:var(--white);margin-bottom:4px;">—</div>
+              <div style="font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);">PAYMENT COVERED BY REVENUE IN</div>
+            </div>
+          </div>
+
+          <div id="burn-verdict" style="padding:14px 18px;margin-bottom:20px;font-size:13px;line-height:1.6;"></div>
+
+          <div class="calc-cta-row" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <button class="btn btn-gold" onclick="navTo('contact')" style="width:100%;text-align:center;">Talk to a Rep</button>
+            <button class="btn btn-outline" style="width:100%;color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.2);" onclick="navTo('contact')">Get Full Profit Snapshot</button>
+          </div>
+          <p style="font-size:11px;color:rgba(255,255,255,.2);margin-top:14px;font-style:italic;">Projections assume 2× patient pricing markup. Actual results vary by practice pricing, patient adherence, and compound mix. This calculator is for estimation purposes only.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST SIGNALS -->
+<section id="trust" style="background:var(--paper);border-top:1px solid var(--border);padding:64px 48px;">
+  <div class="inner">
+    <div style="text-align:center;margin-bottom:48px;">
+      <span class="label label-teal" style="display:block;margin-bottom:12px;">Verification & Transparency</span>
+      <h2 class="section-h2" style="max-width:520px;margin:0 auto 12px;">Trust isn't asked for.<br/>It's demonstrated.</h2>
+      <p style="font-size:14px;color:var(--muted);max-width:480px;margin:0 auto;">Everything below is verifiable. We've built the program so you never have to take our word for anything.</p>
+    </div>
+    <div class="trust-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);">
+
+      <div style="background:var(--paper);padding:28px;text-align:center;transition:background .2s;" onmouseenter="this.style.background='var(--teal-pale)'" onmouseleave="this.style.background='var(--paper)'">
+        <div style="font-size:32px;margin-bottom:12px;">🔬</div>
+        <h4 style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">Every Lot, Third-Party Tested</h4>
+        <p style="font-size:12px;color:var(--slate);line-height:1.7;">TrustPointe Analytics or Chromate Labs. COA confirms identity, purity, and quantity. QR code links directly to the issuing lab — not to us.</p>
+        <div style="margin-top:14px;font-size:11px;color:var(--teal);font-weight:600;letter-spacing:.1em;">99.75–99.85% PURITY</div>
+      </div>
+
+      <div style="background:var(--paper);padding:28px;text-align:center;transition:background .2s;" onmouseenter="this.style.background='var(--teal-pale)'" onmouseleave="this.style.background='var(--paper)'">
+        <div style="font-size:32px;margin-bottom:12px;">🏭</div>
+        <h4 style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">Come See the Facility</h4>
+        <p style="font-size:12px;color:var(--slate);line-height:1.7;">Pro Peptide Solutions, South Carolina. Lab visits are available to any practitioner or investor who wants to see production in person. We encourage it.</p>
+        <div style="margin-top:14px;font-size:11px;color:var(--teal);font-weight:600;letter-spacing:.1em;">OPEN DOOR POLICY</div>
+      </div>
+
+      <div style="background:var(--paper);padding:28px;text-align:center;transition:background .2s;" onmouseenter="this.style.background='var(--teal-pale)'" onmouseleave="this.style.background='var(--paper)'">
+        <div style="font-size:32px;margin-bottom:12px;">📋</div>
+        <h4 style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">Compliance Docs — Included</h4>
+        <p style="font-size:12px;color:var(--slate);line-height:1.7;">Informed consent templates, lot tracking logs, adverse event forms, reconstitution cards, EMR guidance. Ready to use before your first patient.</p>
+        <div style="margin-top:14px;font-size:11px;color:var(--teal);font-weight:600;letter-spacing:.1em;">FULL TOOLKIT INCLUDED</div>
+      </div>
+
+      <div style="background:var(--paper);padding:28px;text-align:center;transition:background .2s;" onmouseenter="this.style.background='var(--teal-pale)'" onmouseleave="this.style.background='var(--paper)'">
+        <div style="font-size:32px;margin-bottom:12px;">📊</div>
+        <h4 style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">Data Before You Decide</h4>
+        <p style="font-size:12px;color:var(--slate);line-height:1.7;">Metis builds your Profit Snapshot — a full revenue projection based on your actual patient counts — before you commit to anything. No pressure, just numbers.</p>
+        <div style="margin-top:14px;font-size:11px;color:var(--teal);font-weight:600;letter-spacing:.1em;">ZERO COMMITMENT REQUIRED</div>
+      </div>
+
+    </div>
+
+    <!-- Transparent pricing strip -->
+    <div class="trust-price-strip" style="background:var(--cream);border:1px solid var(--border);padding:28px 32px;margin-top:2px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;text-align:center;">
+      <div style="padding:0 24px;border-right:1px solid var(--border);">
+        <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--ink);margin-bottom:4px;">$262.50</div>
+        <div style="font-size:10px;letter-spacing:.14em;color:var(--muted);">SEMAGLUTIDE / VIAL — PUBLISHED</div>
+      </div>
+      <div style="padding:0 24px;border-right:1px solid var(--border);">
+        <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--ink);margin-bottom:4px;">$750.00</div>
+        <div style="font-size:10px;letter-spacing:.14em;color:var(--muted);">TIRZEPATIDE / VIAL — PUBLISHED</div>
+      </div>
+      <div style="padding:0 24px;">
+        <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--ink);margin-bottom:4px;">$525.00</div>
+        <div style="font-size:10px;letter-spacing:.14em;color:var(--muted);">RETATRUTIDE / VIAL — PUBLISHED</div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:12px;font-style:italic;">All pricing published upfront. No hidden fees, no surprise reorder costs. Volume pricing available — ask your rep.</p>
+  </div>
+</section>
+
+<!-- METIS -->
+<section id="metis">
+  <div class="inner">
+    <div class="section-header">
+      <span class="label" style="color:rgba(255,255,255,.45);">Powered by Metis Engine</span>
+      <h2 class="section-h2">Applied Intelligence.<br/>Built for your peptide program.</h2>
+      <div class="divider"></div>
+      <p class="section-lead">Every Majestic practitioner receives a complimentary 90-day Metis Peptide Sprint Dashboard — a custom analytics and optimization platform built specifically for your practice, activated the moment you commit to the program.</p>
+    </div>
+    <div class="metis-grid">
+      <div class="metis-card">
+        <div class="metis-badge">INCLUDED FREE · 90 DAYS</div>
+        <div class="metis-card-icon">📊</div>
+        <h4>Personalized Profit Snapshot</h4>
+        <p>Delivered before you commit. Metis builds a custom revenue projection using your patient count data — including conservative, base case, and accelerated scenarios.</p>
+        <ul class="metis-list">
+          <li>Year-1 revenue range & break-even timeline</li>
+          <li>Compound economics comparison (Semaglutide / Tirzepatide / Retatrutide)</li>
+          <li>12-month cash flow projection</li>
+          <li>Cash-pay pricing architecture analysis</li>
+        </ul>
+      </div>
+      <div class="metis-card">
+        <div class="metis-badge">INCLUDED FREE · 90 DAYS</div>
+        <div class="metis-card-icon">🎯</div>
+        <h4>Peptide Sprint Dashboard</h4>
+        <p>A customized interactive portal activated upon your inventory order. Your practice through data — for the first time.</p>
+        <ul class="metis-list">
+          <li>KPI strip, revenue projection, break-even scenarios</li>
+          <li>Patient pipeline tracker with 3-channel discovery system</li>
+          <li>Profit Leak Scorecard — 19 revenue levers across 6 categories</li>
+          <li>Month 1/2/3 action plans with revenue impact labels</li>
+        </ul>
+      </div>
+      <div class="metis-card">
+        <div class="metis-badge">INCLUDED FREE · 90 DAYS</div>
+        <div class="metis-card-icon">📋</div>
+        <h4>Patient Identification System</h4>
+        <p>A structured worksheet and EHR query protocol to identify your first 15–25 peptide candidates. Most practices find 40–80 candidates from chart review alone.</p>
+        <ul class="metis-list">
+          <li>7 EHR query templates (ICD-10 codes included)</li>
+          <li>In-office daily workflow for staff identification</li>
+          <li>Warm outreach protocol for lapsed patients</li>
+          <li>Month 1 goal: 5–8 active patients by Day 30</li>
+        </ul>
+      </div>
+      <div class="metis-card">
+        <div class="metis-badge">INCLUDED FREE · 90 DAYS</div>
+        <div class="metis-card-icon">🏆</div>
+        <h4>Network Intelligence</h4>
+        <p>You don't operate in a vacuum. Metis provides benchmark data from the Majestic practitioner network — pricing intelligence, ramp comparisons, and the top performer playbook.</p>
+        <ul class="metis-list">
+          <li>Patient volume & revenue benchmarks</li>
+          <li>Break-even speed comparisons</li>
+          <li>Subscription adoption rates</li>
+          <li>Early awareness of market changes & compound trends</li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;background:rgba(0,0,0,.15);padding:32px;">
+      <p style="font-size:13px;color:rgba(255,255,255,.45);margin-bottom:16px;">Metis services provided by Kevin Dixon — metisconsulting.ai | peptide@metisconsulting.com</p>
+      <p style="font-size:14px;color:rgba(255,255,255,.6);">The 90-day Sprint Dashboard is complimentary and exclusive to Majestic R&D practitioners. No additional purchase required.</p>
+    </div>
+  </div>
+</section>
+
+<!-- QUALITY -->
+<section id="quality">
+  <div class="inner">
+    <div class="quality-grid">
+      <div>
+        <span class="label label-teal" style="display:block;margin-bottom:12px;">Quality & Compliance</span>
+        <h2 class="section-h2">Every lot. Every time.<br/>No exceptions.</h2>
+        <div class="divider"></div>
+        <div class="quality-points">
+          <div class="quality-point">
+            <div class="q-icon">🏭</div>
+            <div class="q-text">
+              <h4>USA Manufacturing — South Carolina</h4>
+              <p>Pro Peptide Solutions. Lab visits available and encouraged. We don't ask you to trust us — we show you.</p>
+            </div>
+          </div>
+          <div class="quality-point">
+            <div class="q-icon">🧪</div>
+            <div class="q-text">
+              <h4>Independent Third-Party Testing</h4>
+              <p>Every lot tested by TrustPointe Analytics or Chromate Labs. COAs confirm identity, purity (99.75–99.85%), and quantity. Directly verifiable by QR code or URL.</p>
+            </div>
+          </div>
+          <div class="quality-point">
+            <div class="q-icon">📁</div>
+            <div class="q-text">
+              <h4>Complete Compliance Documentation</h4>
+              <p>Informed consent templates, lot tracking logs, adverse event forms, reconstitution cards, and EMR documentation guidance — all included with your starter package.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="quality-callout">
+          <blockquote>"Most suppliers source overseas and won't let you see their facilities. We manufacture in the USA and welcome lab visits — because 'trust us' is not enough."</blockquote>
+          <cite>— MAJESTIC R&D PROGRAM STANDARD</cite>
+          <div class="visit-cta">
+            <button class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.3);margin-top:4px;" onclick="navTo('contact')">Schedule a Lab Visit</button>
+          </div>
+        </div>
+        <div style="background:var(--cream);padding:28px;margin-top:2px;">
+          <div class="label label-teal" style="display:block;margin-bottom:16px;">TRAINING PROGRAM — COMPLIMENTARY</div>
+          <div style="margin-bottom:16px;">
+            <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px;">Session 1 — Clinical Foundations (2 hours)</div>
+            <div style="font-size:12px;color:var(--slate);line-height:1.7;">Mechanism of action, patient selection, contraindications, injection prep, reconstitution, storage, safety monitoring.</div>
+          </div>
+          <div style="margin-bottom:16px;">
+            <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px;">Session 2 — Practice Integration & Revenue (2 hours)</div>
+            <div style="font-size:12px;color:var(--slate);line-height:1.7;">EMR documentation, consent workflows, cash-pay pricing models, subscription setup, ROI optimization, expansion planning.</div>
+          </div>
+          <div style="background:var(--teal-pale);padding:12px 16px;font-size:12px;color:var(--teal);">On-demand recordings, dosing charts, titration guides, and protocol updates included.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="inner">
+    <div class="section-header">
+      <span class="label label-gold">Research Pipeline</span>
+      <h2 class="section-h2">Where we're going next.</h2>
+      <div class="divider"></div>
+      <p class="section-lead">The GLP physician program is Phase 1. The Majestic R&D peptide division is building toward expanded delivery modalities and a broader compound library.</p>
+    </div>
+    <div class="research-grid">
+      <div class="research-card">
+        <div class="research-tag">ACTIVE RESEARCH</div>
+        <h3>Intranasal Peptide Delivery</h3>
+        <p>Investigational program exploring intranasal routes for peptide administration — targeting CNS bioavailability, patient compliance advantages over injection-based protocols, and application to CNS-active peptide candidates beyond GLP compounds.</p>
+        <p style="font-size:12px;color:var(--muted);">Housed under Majestic R&D core research. Leverages LFDS ThermosPore/PsychroPore platform technology.</p>
+      </div>
+      <div class="research-card">
+        <div class="research-tag">ACTIVE RESEARCH</div>
+        <h3>Nebulizer-Based Peptide Delivery</h3>
+        <p>Pulmonary delivery of peptides via ultrasonic nebulizer systems. Investigates bioavailability, particle size compatibility with LFDS micellar formulations, and patient-friendly alternatives to subcutaneous injection for appropriate compound classes.</p>
+        <p style="font-size:12px;color:var(--muted);">Compatible with LFDS encapsulation platform. Research partnership pathways open.</p>
+      </div>
+      <div class="research-card research-future">
+        <div class="research-tag" style="background:#eee;color:var(--muted);">PIPELINE · 3–6 MO</div>
+        <h3>Expanded Peptide Catalog</h3>
+        <p>Addition of healing, recovery, and hormonal peptide classes to the physician offering — including BPC-157 analogs, TB-500 class compounds, sermorelin/ipamorelin family, and PT-141 type candidates. Manufacturing partner already capable.</p>
+        <p style="font-size:12px;color:var(--muted);">Timeline: Q3–Q4 2026. Physician partners will receive priority access.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="inner">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <span class="label" style="color:var(--gold);display:block;margin-bottom:14px;">Get Started</span>
+        <h2>Ready to add peptides to your practice?</h2>
+        <p>Reach out to your Majestic R&D representative directly, or fill out the form and we'll get back to you within one business day. No commitment required to receive your Profit Snapshot.</p>
+        <div class="contact-rep">
+          <div class="rep-card">
+            <div class="rep-name">Preet Patel</div>
+            <span class="rep-title">MAJESTIC R&D Peptide Program Lead</span>
+            <div class="rep-detail">📧 majesticrdinfo@gmail.com</div>
+            <div class="rep-detail">📍 North Carolina</div>
+          </div>
+          <div class="rep-card">
+            <div class="rep-name">Christopher McDonald</div>
+            <span class="rep-title">DIRECTOR OF PRACTITIONER SUPPORT</span>
+            <div class="rep-detail">Training sessions, clinical protocols, program onboarding</div>
+            <div class="rep-detail">4-hour training program · Remote sessions available</div>
+          </div>
+          <div class="rep-card">
+            <div class="rep-name">Metis Engine</div>
+            <span class="rep-title">ANALYTICS PARTNER — KEVIN DIXON</span>
+            <div class="rep-detail">📧 peptide@metisconsulting.com</div>
+            <div class="rep-detail">🌐 metisconsulting.ai</div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Request Information</h3>
+        <p>Intro call, free practice analysis, lab visit, or just a question — tell us what you need.</p>
+        <div id="contact-form-wrap">
+          <div class="form-group">
+            <label>Practice Name</label>
+            <input type="text" name="practice_name" placeholder="Your practice name"/>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div class="form-group">
+              <label>First Name</label>
+              <input id="cf-fname" type="text" name="first_name" placeholder="First"/>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" name="last_name" placeholder="Last"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input id="cf-email" type="email" name="email" placeholder="your@practice.com"/>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" name="phone" placeholder="(555) 000-0000"/>
+          </div>
+          <div class="form-group">
+            <label>I'm interested in...</label>
+            <select name="interest">
+              <option value="">Select one</option>
+              <option>Intro call with a representative</option>
+              <option>Receiving my Profit Snapshot</option>
+              <option>Requesting a free practice analysis</option>
+              <option>Downloading clinical protocols</option>
+              <option>Scheduling a lab visit (SC facility)</option>
+              <option>Investor information</option>
+              <option>General inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Approximate active patient count</label>
+            <select name="patient_count">
+              <option value="">Select range</option>
+              <option>Under 200 patients</option>
+              <option>200–500 patients</option>
+              <option>500–1,000 patients</option>
+              <option>1,000–2,500 patients</option>
+              <option>2,500+ patients</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Anything else?</label>
+            <textarea name="message" placeholder="Questions, specialty, current peptide experience..."></textarea>
+          </div>
+          <button class="btn btn-gold" style="width:100%;" id="cf-submit" onclick="submitForm(event)">SUBMIT REQUEST</button>
+          <div class="form-success" id="form-success"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTOR SECTION -->
+<section id="investor-section">
+  <div class="inner">
+
+    <!-- GATE -->
+    <div id="investor-gate">
+      <div class="investor-gate">
+        <div class="lock-icon">🔐</div>
+        <h2>Investor Access</h2>
+        <p>This section contains confidential investment materials including the full Capital Expenditure & Scenario Analysis, manufacturing buildout projections, and investment structure. Access requires a password.</p>
+        <p style="font-size:12px;color:var(--muted);margin-top:-16px;">To receive access credentials, contact Preet Patel at majesticrdinfo@gmail.com.</p>
+        <div class="pw-form">
+          <input class="pw-input" type="password" id="pw-input" placeholder="ENTER PASSWORD" onkeydown="if(event.key==='Enter')checkPassword()"/>
+          <button class="btn btn-dark" onclick="checkPassword()">ACCESS INVESTOR ROOM</button>
+          <div class="pw-error" id="pw-error">Incorrect password. Contact your representative for access.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INVESTOR ROOM -->
+    <div id="investor-room">
+      <div class="inv-header">
+        <div class="confidential"><span>⚠ CONFIDENTIAL — AUTHORIZED RECIPIENTS ONLY</span></div>
+        <h2>Majestic Peptides — Investor Materials</h2>
+        <p>Peptide Manufacturing Buildout · Capital Expenditure Analysis · April 2026 · UMBC Facility / Aurora Manufacturing Program</p>
+      </div>
+
+      <!-- OPPORTUNITY OVERVIEW -->
+      <div class="inv-section">
+        <h3 class="inv-section-title">The Opportunity</h3>
+        <p class="inv-section-sub">Why manufacturing is the moat — and why now is the moment to build it.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px;">
+          <div style="background:var(--paper);padding:28px;border-left:3px solid var(--teal);">
+            <p style="font-size:14px;color:var(--slate);line-height:1.85;">The GLP peptide market is the fastest-growing segment in compounded pharmaceuticals. Demand is outpacing supply infrastructure. Current distribution relies almost entirely on overseas-sourced API — a structural vulnerability that creates both a quality gap and a regulatory risk for practitioners.</p>
+            <p style="font-size:14px;color:var(--slate);line-height:1.85;margin-top:14px;">Majestic R&D is building the domestic manufacturing capability that closes this gap — and the physician program already underway creates the anchor client demand that makes the buildout economics unambiguous.</p>
+          </div>
+          <div style="background:var(--paper);padding:28px;border-left:3px solid var(--gold);">
+            <p style="font-size:14px;color:var(--slate);line-height:1.85;">The physician program is live. 12 practitioner conversations initiated in under 3 weeks, with 3 practices in the sample stage. Once the first physicians close, the anchor client commitment is met — and manufacturing investment becomes a compounding asset rather than a speculative one.</p>
+            <p style="font-size:14px;color:var(--slate);line-height:1.85;margin-top:14px;">We are not asking investors to bet on the market. We are asking them to fund the infrastructure to serve demand that already exists and is growing monthly.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- INVESTMENT ASK -->
+      <div class="inv-section">
+        <h3 class="inv-section-title">Current Investment Ask</h3>
+        <p class="inv-section-sub">Seed round to fund Scenario 1 buildout. Numbers firm once first physician closes.</p>
+        <div class="ask-box">
+          <h4>$5,000,000 Raise — Scenario 1 Standard Scale-Up</h4>
+          <div class="ask-grid">
+            <div class="ask-item"><div class="ask-num">$3.44M</div><div class="ask-lbl">Facility Buildout (CapEx)</div></div>
+            <div class="ask-item"><div class="ask-num">$1.44M</div><div class="ask-lbl">Operational Reserve & Buy-In</div></div>
+            <div class="ask-item"><div class="ask-num">7.5%</div><div class="ask-lbl">Equity for Full $5M</div></div>
+            <div class="ask-item"><div class="ask-num">&lt;1 mo</div><div class="ask-lbl">CapEx Payback at Steady State</div></div>
+          </div>
+          <div class="ask-note">Note: Investment terms and equity structure will be updated once the first physician account closes, establishing the anchor client relationship. Current figures represent pre-close projections. Majestic R&D retains the right to adjust structure as physician pipeline matures. Contact Preet Patel for current term sheet.</div>
+        </div>
+      </div>
+
+      <!-- SCENARIO COMPARISON -->
+      <div class="inv-section">
+        <h3 class="inv-section-title">Manufacturing Scenarios</h3>
+        <p class="inv-section-sub">Both scenarios use the UMBC facility via the Aurora manufacturing program. Both hit anchor client demand by Month 7.</p>
+        <div class="scenario-grid">
+          <div class="scenario-card s1">
+            <h4>Scenario 1 — Standard Scale-Up</h4>
+            <span class="tagline">Get to market fast. Prove the model. Expand from profits.</span>
+            <div class="scenario-metrics">
+              <div class="s-metric"><span class="sk">Total Investment</span><span class="sv teal">$3,440,000</span></div>
+              <div class="s-metric"><span class="sk">Build Timeline</span><span class="sv">10 months</span></div>
+              <div class="s-metric"><span class="sk">Steady-State Capacity</span><span class="sv">50 kg/month</span></div>
+              <div class="s-metric"><span class="sk">Anchor Client Met</span><span class="sv green">Month 7 — 27 kg/mo</span></div>
+              <div class="s-metric"><span class="sk">Monthly Revenue (full)</span><span class="sv green">$7,500,000</span></div>
+              <div class="s-metric"><span class="sk">Monthly Gross Profit</span><span class="sv green">$5,415,000</span></div>
+              <div class="s-metric"><span class="sk">Gross Margin</span><span class="sv">72%</span></div>
+              <div class="s-metric"><span class="sk">CapEx Payback</span><span class="sv green">&lt; 1 month at full scale</span></div>
+              <div class="s-metric"><span class="sk">Manufacturing Cost</span><span class="sv">$40,000/kg</span></div>
+              <div class="s-metric"><span class="sk">Client Price</span><span class="sv">$150,000/kg</span></div>
+            </div>
+          </div>
+          <div class="scenario-card s2">
+            <h4>Scenario 2 — Accelerated Scale-Up</h4>
+            <span class="tagline">Capture market leadership from Day 1. Lock the supply moat.</span>
+            <div class="scenario-metrics">
+              <div class="s-metric"><span class="sk">Total Investment</span><span class="sv gold">$10,400,000</span></div>
+              <div class="s-metric"><span class="sk">Build Timeline</span><span class="sv">18 months</span></div>
+              <div class="s-metric"><span class="sk">Steady-State Capacity</span><span class="sv">100 kg/month</span></div>
+              <div class="s-metric"><span class="sk">Anchor Client Met</span><span class="sv green">Month 7 — 27 kg/mo</span></div>
+              <div class="s-metric"><span class="sk">Monthly Revenue (full)</span><span class="sv green">$15,000,000</span></div>
+              <div class="s-metric"><span class="sk">Monthly Gross Profit</span><span class="sv green">$11,000,000</span></div>
+              <div class="s-metric"><span class="sk">Gross Margin</span><span class="sv">73%</span></div>
+              <div class="s-metric"><span class="sk">CapEx Payback</span><span class="sv green">&lt; 1 month at full scale</span></div>
+              <div class="s-metric"><span class="sk">3-Year Cumulative Revenue</span><span class="sv green">~$198M</span></div>
+              <div class="s-metric"><span class="sk">Expansion Path</span><span class="sv">200, 300+ kg/mo platform</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Scenario 1 — 50 kg/mo</th>
+              <th>Scenario 2 — 100 kg/mo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="metric-col">Total Investment</td><td>$3,440,000</td><td>$10,400,000</td></tr>
+            <tr><td class="metric-col">Build Timeline</td><td>10 months</td><td>18 months</td></tr>
+            <tr><td class="metric-col">Revenue Starts (Anchor Client)</td><td class="highlight-col">Month 7</td><td class="highlight-col">Month 7</td></tr>
+            <tr><td class="metric-col">Monthly Revenue at Steady State</td><td class="highlight-col">$7,500,000</td><td class="highlight-col">$15,000,000</td></tr>
+            <tr><td class="metric-col">Monthly Gross Profit</td><td class="highlight-col">$5,415,000</td><td class="highlight-col">$11,000,000</td></tr>
+            <tr><td class="metric-col">Gross Margin</td><td>72%</td><td>73%</td></tr>
+            <tr><td class="metric-col">CapEx Payback Period</td><td class="highlight-col">&lt; 1 month at full production</td><td class="highlight-col">&lt; 1 month at full production</td></tr>
+            <tr><td class="metric-col">Market Position</td><td>Defensible</td><td>Dominant</td></tr>
+            <tr><td class="metric-col">Expansion Platform</td><td>Add Scenario 2 from profits</td><td>200, 300+ kg/mo ready</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- RAMP SCHEDULE -->
+      <div class="inv-section">
+        <h3 class="inv-section-title">Scenario 1 — Production Ramp Schedule</h3>
+        <p class="inv-section-sub">Month-by-month from funding to steady-state production at 50 kg/month.</p>
+        <div class="ramp-wrap">
+          <h5>SCENARIO 1 · 10-MONTH BUILDOUT TIMELINE</h5>
+          <table class="ramp-table">
+            <thead>
+              <tr><th>Period</th><th>Phase / Milestones</th><th>Production</th><th>Revenue Potential</th><th>Spend / OpEx</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Months 1–2</td><td>Equipment acquisition, facility upgrades, team onboarding</td><td>0 kg</td><td>$0</td><td>$400K–$700K</td></tr>
+              <tr><td>Month 3</td><td>Process development begins, first peptide synthesis campaigns</td><td>1 kg</td><td>$0</td><td>$300K</td></tr>
+              <tr><td>Month 4</td><td>Second peptide synthesis campaign</td><td>1 kg</td><td>$0</td><td>$350K</td></tr>
+              <tr><td>Month 5</td><td>Purification and analytical qualification begins</td><td>2 kg</td><td>$300K</td><td>$300K</td></tr>
+              <tr><td>Month 6</td><td>Scale-up testing, batch analytics intensive</td><td>4 kg</td><td>$750K</td><td>$300K</td></tr>
+              <tr class="milestone"><td>Month 7 ★</td><td>Anchor client commitment met — 27 kg/month target reached</td><td>27 kg</td><td>$4,050,000</td><td>$250K</td></tr>
+              <tr><td>Month 8</td><td>Yield optimization and QC release cadence established</td><td>35 kg</td><td>$5,250,000</td><td>$200K</td></tr>
+              <tr><td>Month 9</td><td>Ramp continues, external sales capacity available</td><td>42 kg</td><td>$6,300,000</td><td>$100K</td></tr>
+              <tr class="steady"><td>Month 10+</td><td>Full steady-state — 50 kg/month | 72% gross margin</td><td>50 kg/mo</td><td>$7,500,000/mo</td><td>$85K/mo OpEx</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- CAPEX BREAKDOWN -->
+      <div class="inv-section">
+        <h3 class="inv-section-title">Scenario 1 — CapEx Breakdown</h3>
+        <p class="inv-section-sub">Total: $3,440,000. Analytics and batch quality constitute the largest technical risk-reduction block.</p>
+        <div style="background:var(--paper);border:1px solid var(--border);overflow:hidden;margin-bottom:32px;">
+          <table style="width:100%;border-collapse:collapse;">
+            <thead>
+              <tr style="background:var(--ink);">
+                <th style="color:var(--gold-lt);font-size:10px;letter-spacing:.14em;padding:14px 20px;text-align:left;font-weight:600;">Category</th>
+                <th style="color:var(--gold-lt);font-size:10px;letter-spacing:.14em;padding:14px 20px;text-align:right;font-weight:600;">Cost (USD)</th>
+                <th style="color:var(--gold-lt);font-size:10px;letter-spacing:.14em;padding:14px 20px;text-align:left;font-weight:600;">What It Covers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border);"><td style="padding:14px 20px;font-size:13px;">Core equipment + install/qualification</td><td style="padding:14px 20px;font-size:13px;font-weight:600;text-align:right;">$900,000</td><td style="padding:14px 20px;font-size:12px;color:var(--slate);">Synthesis reactors, cleavage/precip hardware, buffer exchange/UF-DF, utilities, safety upgrades</td></tr>
+              <tr style="border-bottom:1px solid var(--border);background:#fafaf7;"><td style="padding:14px 20px;font-size:13px;">Purification + lyophilization access</td><td style="padding:14px 20px;font-size:13px;font-weight:600;text-align:right;">$550,000</td><td style="padding:14px 20px;font-size:12px;color:var(--slate);">Leased prep HPLC time, columns/consumables, fraction handling, paid lyo runs/slots</td></tr>
+              <tr style="border-bottom:1px solid var(--border);"><td style="padding:14px 20px;font-size:13px;">Analytical standard development</td><td style="padding:14px 20px;font-size:13px;font-weight:600;text-align:right;">$520,000</td><td style="padding:14px 20px;font-size:12px;color:var(--slate);">Reference standards, impurity IDs, qualification/bridging for both peptides</td></tr>
+              <tr style="border-bottom:1px solid var(--border);background:#fafaf7;"><td style="padding:14px 20px;font-size:13px;">Batch analytics during ramp</td><td style="padding:14px 20px;font-size:13px;font-weight:600;text-align:right;">$520,000</td><td style="padding:14px 20px;font-size:12px;color:var(--slate);">In-process + release + stability checks; heavy sampling during scale-up</td></tr>
+              <tr style="border-bottom:1px solid var(--border);"><td style="padding:14px 20px;font-size:13px;">Synthesis consumables & raw materials</td><td style="padding:14px 20px;font-size:13px;font-weight:600;text-align:right;">$190,000</td><td style="padding:14px 20px;font-size:12px;color:var(--slate);">Resins, protected AAs, reagents, solvents, filters</td></tr>
+              <tr style="border-bottom:1px solid var(--border);background:#fafaf7;"><td style="padding:14px 20px;font-size:13px;">Fill/finish + labeling/packaging</td><td style="padding:14px 20px;font-size:13px;font-weight:600;text-align:right;">$70,000</td><td style="padding:14px 20px;font-size:12px;color:var(--slate);">API packaging, labels, reconciliation; not sterile drug product</td></tr>
+              <tr style="border-bottom:1px solid var(--border);"><td style="padding:14px 20px;font-size:13px;">QA/QMS + documentation</td><td style="padding:14px 20px;font-size:13px;font-weight:600;text-align:right;">$60,000</td><td style="padding:14px 20px;font-size:12px;color:var(--slate);">Batch records, deviations, CoA workflows, training</td></tr>
+              <tr style="border-bottom:1px solid var(--border);background:#fafaf7;"><td style="padding:14px 20px;font-size:13px;">External testing/consultants/calibration</td><td style="padding:14px 20px;font-size:13px;font-weight:600;text-align:right;">$45,000</td><td style="padding:14px 20px;font-size:12px;color:var(--slate);">Targeted impurity elucidation, calibration support</td></tr>
+              <tr style="border-bottom:1px solid var(--border);"><td style="padding:14px 20px;font-size:13px;">Aurora labor (PI/Senior/Tech)</td><td style="padding:14px 20px;font-size:13px;font-weight:600;text-align:right;">$245,000</td><td style="padding:14px 20px;font-size:12px;color:var(--slate);">Scientific team embedded in facility at $180/$120/$90/hr</td></tr>
+              <tr style="border-bottom:1px solid var(--border);background:#fafaf7;"><td style="padding:14px 20px;font-size:13px;">Reserve (contingency)</td><td style="padding:14px 20px;font-size:13px;font-weight:600;text-align:right;">$100,000</td><td style="padding:14px 20px;font-size:12px;color:var(--slate);">Unforeseen technical challenges, rework</td></tr>
+              <tr style="border-bottom:1px solid var(--border);"><td style="padding:14px 20px;font-size:13px;">Monthly OpEx (ongoing)</td><td style="padding:14px 20px;font-size:13px;font-weight:600;text-align:right;">$340,000/mo</td><td style="padding:14px 20px;font-size:12px;color:var(--slate);">Ongoing monthly operations at steady state</td></tr>
+              <tr style="background:var(--ink);"><td style="padding:16px 20px;font-size:14px;font-weight:700;color:#fff;">TOTAL — SCENARIO 1</td><td style="padding:16px 20px;font-size:16px;font-weight:700;color:var(--gold-lt);text-align:right;">$3,440,000</td><td style="padding:16px 20px;font-size:12px;color:rgba(255,255,255,.4);">10-month build to 50 kg/month steady state</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- INVESTMENT THESIS -->
+      <div class="inv-section">
+        <h3 class="inv-section-title">Investment Decision Framework</h3>
+        <p class="inv-section-sub">Both scenarios produce ~72–73% gross margin. Both break even in under one month of production relative to distributor pricing. The only variable is scale and market capture speed.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:32px;">
+          <div style="background:var(--paper);padding:24px;border-top:3px solid var(--teal);">
+            <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">Why now?</div>
+            <p style="font-size:12px;color:var(--slate);line-height:1.75;">GLP demand is at an all-time high and growing. Domestic manufacturing capacity is severely constrained. Every month without US-based infrastructure is market share left to overseas suppliers with inferior quality controls.</p>
+          </div>
+          <div style="background:var(--paper);padding:24px;border-top:3px solid var(--gold);">
+            <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">The moat</div>
+            <p style="font-size:12px;color:var(--slate);line-height:1.75;">At 100 kg/month, Majestic would supply a significant portion of the US compounding market. This position cannot be easily replicated — regulatory, technical, and capital barriers to entry are substantial and growing.</p>
+          </div>
+          <div style="background:var(--paper);padding:24px;border-top:3px solid var(--teal);">
+            <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">De-risked entry</div>
+            <p style="font-size:12px;color:var(--slate);line-height:1.75;">The physician program creates anchor client demand before the first manufacturing dollar is spent. Scenario 1 payback period is under one month at steady state — the capital risk window is narrow and bounded.</p>
+          </div>
+        </div>
+        <div style="background:var(--ink);padding:32px;text-align:center;">
+          <p style="font-family:'Playfair Display',serif;font-size:20px;font-style:italic;color:#fff;margin-bottom:16px;">"Scenario 1 is the lower-risk entry point that fulfills the anchor client commitment, proves the manufacturing model, and generates positive cash flow by Month 8. Profits from Scenario 1 can fund a Scenario 2 expansion without additional dilution."</p>
+          <p style="font-size:11px;color:rgba(255,255,255,.3);letter-spacing:.12em;">— MAJESTIC R&D CAPEX ANALYSIS · APRIL 2026</p>
+        </div>
+      </div>
+
+      <!-- CONTACT FOR INVESTMENT -->
+      <div class="inv-section">
+        <h3 class="inv-section-title">Next Steps for Investors</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+          <div style="background:var(--paper);padding:32px;border:1px solid var(--border);">
+            <h4 style="font-family:'Playfair Display',serif;font-size:18px;font-weight:400;margin-bottom:12px;">Preet Patel — Lead Contact</h4>
+            <p style="font-size:13px;color:var(--slate);margin-bottom:16px;">For investment inquiries, term sheet requests, and due diligence access.</p>
+            <div style="font-size:13px;color:var(--ink);margin-bottom:6px;">📞 (919) 333-4345</div>
+            <div style="font-size:13px;color:var(--ink);margin-bottom:20px;">📧 majesticrdinfo@gmail.com</div>
+            <a href="tel:9193334345" class="btn btn-dark btn-sm">Call Now</a>
+          </div>
+          <div style="background:var(--cream);padding:32px;border:1px solid var(--border);">
+            <h4 style="font-family:'Playfair Display',serif;font-size:18px;font-weight:400;margin-bottom:12px;">What to Request</h4>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+              <li style="font-size:13px;color:var(--slate);display:flex;gap:8px;"><span style="color:var(--teal);">→</span> Full CapEx & Scenario Analysis PDF</li>
+              <li style="font-size:13px;color:var(--slate);display:flex;gap:8px;"><span style="color:var(--teal);">→</span> Physician pipeline status update</li>
+              <li style="font-size:13px;color:var(--slate);display:flex;gap:8px;"><span style="color:var(--teal);">→</span> Aurora manufacturing program overview</li>
+              <li style="font-size:13px;color:var(--slate);display:flex;gap:8px;"><span style="color:var(--teal);">→</span> Current term sheet</li>
+              <li style="font-size:13px;color:var(--slate);display:flex;gap:8px;"><span style="color:var(--teal);">→</span> SC facility tour / lab visit</li>
+              <li style="font-size:13px;color:var(--slate);display:flex;gap:8px;"><span style="color:var(--teal);">→</span> Majestic R&D full portfolio overview</li>
+            </ul>
+          </div>
+        </div>
+        <div style="background:rgba(192,57,43,.06);border:1px solid rgba(192,57,43,.15);padding:16px 20px;margin-top:24px;">
+          <p style="font-size:12px;color:#c0392b;line-height:1.7;">This document is confidential and intended solely for authorized recipients. All figures are projections based on Aurora manufacturing program estimates and current market pricing. Actual results may vary. This does not constitute an offer of securities.</p>
+        </div>
+      </div>
+
+    </div><!-- end investor-room -->
+  </div><!-- end inner -->
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <div class="footer-mark">P</div>
+    <p>MAJESTIC PEPTIDES · A MAJESTIC R&D DIVISION · MARYLAND</p>
+  </div>
+  <div class="footer-links">
+    <span onclick="navTo('why')">Program</span>
+    <span onclick="navTo('compounds')">Compounds</span>
+    <span onclick="navTo('quality')">Quality</span>
+    <span onclick="navTo('research')">Research</span>
+    <span onclick="navTo('investor-section')">Investor Access</span>
+  </div>
+  <p>© 2026 Majestic R&D. All rights reserved. All compounds sourced from licensed 503A compounding partner.</p>
+</footer>
+
+<script>
+// ============================================================
+// MAJESTIC PEPTIDES - All JavaScript (pure ASCII)
+// ============================================================
+
+// --- EARLY ACCESS GATE -------------------------------------
+var ACCESS_CODES = ['MAJESTIC', 'PEPTIDE2025', 'EARLYACCESS', 'PREET', 'MAJESTICRD'];
+
+function checkAccess() {
+  var inputEl = document.getElementById('access-input');
+  var errorEl = document.getElementById('access-error');
+  if (!inputEl) return;
+  var val = inputEl.value.trim().toUpperCase().replace(/\s/g, '');
+  if (ACCESS_CODES.indexOf(val) !== -1) {
+    document.getElementById('early-access-gate').style.display = 'none';
+    var banner = document.getElementById('beta-banner');
+    if (banner) banner.style.display = 'flex';
+    document.body.style.overflow = '';
+  } else {
+    errorEl.style.display = 'block';
+    inputEl.value = '';
+    inputEl.style.borderBottomColor = '#E74C3C';
+    setTimeout(function () {
+      inputEl.style.borderBottomColor = 'rgba(255,255,255,.15)';
+    }, 2000);
+  }
+}
+
+// --- NAVIGATION ---------------------------------------------
+function navTo(id) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  var offset = 66; // height of fixed nav bar
+  var top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+  window.scrollTo({ top: top, behavior: 'smooth' });
+}
+
+window.addEventListener('scroll', function () {
+  var nav = document.getElementById('nav');
+  if (nav) nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// --- MOBILE MENU --------------------------------------------
+function toggleMobileMenu() {
+  var menu = document.getElementById('mobile-menu');
+  var btn  = document.getElementById('hamburger');
+  if (!menu || !btn) return;
+  var isOpen = menu.style.display === 'flex';
+  menu.style.display = isOpen ? 'none' : 'flex';
+  btn.classList.toggle('open', !isOpen);
+  document.body.style.overflow = isOpen ? '' : 'hidden';
+}
+
+function closeMobileMenu() {
+  var menu = document.getElementById('mobile-menu');
+  var btn  = document.getElementById('hamburger');
+  if (menu) menu.style.display = 'none';
+  if (btn)  btn.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// --- CONTACT FORM -------------------------------------------
+function submitForm(e) {
+  if (e) e.preventDefault();
+
+  var nameEl    = document.getElementById('cf-fname');
+  var emailEl   = document.getElementById('cf-email');
+  var submitEl  = document.getElementById('cf-submit');
+  var successEl = document.getElementById('form-success');
+
+  var name  = nameEl  ? nameEl.value.trim() : '';
+  var email = emailEl ? emailEl.value.trim() : '';
+
+  if (!name || !email) {
+    alert('Please fill in your first name and email before submitting.');
+    return;
+  }
+
+  // Collect all named fields
+  var wrap = document.getElementById('contact-form-wrap');
+  var fields = wrap.querySelectorAll('input[name], select[name], textarea[name]');
+  var data = {};
+  fields.forEach(function(el) { data[el.name] = el.value; });
+
+  // Loading state
+  if (submitEl) { submitEl.disabled = true; submitEl.textContent = 'SENDING...'; }
+  if (successEl) { successEl.style.display = 'none'; }
+
+  fetch('https://formspree.io/f/xojykarl', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(function(res) {
+    return res.json().then(function(json) { return { ok: res.ok, json: json }; });
+  })
+  .then(function(result) {
+    if (result.ok) {
+      fields.forEach(function(el) { el.value = ''; });
+      if (successEl) {
+        successEl.style.display = 'block';
+        successEl.style.color = '#259080';
+        successEl.textContent = '\u2713 Request received. We\u2019ll be in touch within one business day. \u2014 Majestic R&D';
+      }
+      if (submitEl) { submitEl.disabled = false; submitEl.textContent = 'SUBMIT REQUEST'; }
+    } else {
+      throw new Error(result.json.error || 'Submission failed');
+    }
+  })
+  .catch(function(err) {
+    if (successEl) {
+      successEl.style.display = 'block';
+      successEl.style.color = '#C0392B';
+      successEl.textContent = 'Something went wrong. Please email majesticrdinfo@gmail.com directly.';
+    }
+    if (submitEl) { submitEl.disabled = false; submitEl.textContent = 'SUBMIT REQUEST'; }
+    console.error('Formspree error:', err);
+  });
+}
+
+// --- INVESTOR PASSWORD GATE ---------------------------------
+var INVESTOR_PW = 'MAJESTIC2025';
+
+function checkPassword() {
+  var inputEl = document.getElementById('pw-input');
+  var errorEl = document.getElementById('pw-error');
+  if (!inputEl || !errorEl) return;
+  var val = inputEl.value.trim().toUpperCase();
+  if (val === INVESTOR_PW) {
+    var gate = document.getElementById('investor-gate');
+    var room = document.getElementById('investor-room');
+    if (gate) gate.style.display = 'none';
+    if (room) {
+      room.classList.add('open');
+      setTimeout(function () { room.scrollIntoView({ behavior: 'smooth' }); }, 120);
+    }
+    errorEl.classList.remove('show');
+  } else {
+    errorEl.classList.add('show');
+    inputEl.value = '';
+    inputEl.style.borderColor = '#c0392b';
+    setTimeout(function () { inputEl.style.borderColor = ''; }, 2000);
+  }
+}
+
+// --- CALCULATOR ---------------------------------------------
+var COMPOUNDS = {
+  sema: { mg: 4,  costMg: 8.75, ptMg: 17.5, mgVial: 30,  vialCost: 262.50 },
+  tirz: { mg: 30, costMg: 3.75, ptMg: 7.5,  mgVial: 200, vialCost: 750.00 },
+  reta: { mg: 24, costMg: 8.75, ptMg: 17.5, mgVial: 60,  vialCost: 525.00 }
+};
+var ORDER_SIZE = 30000;
+
+function adjustPt(cid, delta) {
+  var el = document.getElementById(cid + '-pts');
+  if (!el) return;
+  var cur = parseInt(el.value, 10);
+  if (isNaN(cur)) cur = 0;
+  el.value = Math.max(0, cur + delta);
+  calcResults();
+}
+
+function fmtMoney(n) {
+  if (!isFinite(n) || isNaN(n)) return '$0';
+  return '$' + Math.round(n).toLocaleString();
+}
+
+function calcResults() {
+  var semaEl = document.getElementById('sema-pts');
+  var tirzEl = document.getElementById('tirz-pts');
+  var retaEl = document.getElementById('reta-pts');
+  if (!semaEl || !tirzEl || !retaEl) return;
+
+  var pts = {
+    sema: Math.max(0, parseInt(semaEl.value, 10) || 0),
+    tirz: Math.max(0, parseInt(tirzEl.value, 10) || 0),
+    reta: Math.max(0, parseInt(retaEl.value, 10) || 0)
+  };
+
+  if (pts.sema > 500) { semaEl.value = pts.sema = 500; }
+  if (pts.tirz > 200) { tirzEl.value = pts.tirz = 200; }
+  if (pts.reta > 200) { retaEl.value = pts.reta = 200; }
+
+  var revEl  = document.getElementById('res-monthly-rev');
+  var profEl = document.getElementById('res-monthly-profit');
+  var yr1El  = document.getElementById('res-yr1');
+  var burnEl = document.getElementById('res-burn');
+  var finEl  = document.getElementById('res-financing');
+  var verdEl = document.getElementById('burn-verdict');
+  if (!revEl || !profEl || !yr1El || !burnEl || !finEl || !verdEl) return;
+
+  var totalPts = pts.sema + pts.tirz + pts.reta;
+
+  if (totalPts === 0) {
+    revEl.textContent  = '$0';
+    profEl.textContent = '$0';
+    yr1El.textContent  = '$0';
+    burnEl.textContent = '--';
+    finEl.textContent  = '--';
+    verdEl.innerHTML   = '';
+    verdEl.style.cssText = 'padding:0;margin-bottom:20px;background:transparent;border-left:none;';
+    return;
+  }
+
+  var keys = ['sema', 'tirz', 'reta'];
+  var monthlyRev  = 0;
+  var monthlyCost = 0;
+  for (var i = 0; i < keys.length; i++) {
+    var k = keys[i];
+    var c = COMPOUNDS[k];
+    monthlyRev  += pts[k] * c.mg * c.ptMg;
+    monthlyCost += pts[k] * c.mg * c.costMg;
+  }
+
+  var monthlyProfit = monthlyRev - monthlyCost;
+  var yr1           = monthlyRev * 12;
+  var burnMonths    = monthlyCost > 0 ? (ORDER_SIZE / monthlyCost) : 0;
+
+  revEl.textContent  = fmtMoney(monthlyRev);
+  profEl.textContent = fmtMoney(monthlyProfit);
+  yr1El.textContent  = fmtMoney(yr1);
+  burnEl.textContent = burnMonths > 0 ? burnMonths.toFixed(1) + ' months' : '--';
+
+  if (monthlyProfit >= 650) {
+    var coverDays = Math.ceil((650 / monthlyRev) * 30);
+    finEl.textContent = coverDays + ' days of revenue';
+  } else if (monthlyProfit > 0) {
+    finEl.textContent = 'Nearly covered - add patients';
+  } else {
+    finEl.textContent = 'Add patients';
+  }
+
+  verdEl.style.cssText = 'padding:14px 18px;margin-bottom:20px;font-size:13px;line-height:1.6;';
+
+  if (burnMonths === 0 || burnMonths > 12) {
+    verdEl.innerHTML = '<strong style="color:#E74C3C;">Over 12 months:</strong> <span style="color:rgba(255,255,255,.7);">Your current volume may not fully support a $30,000 order yet. Your rep can right-size the program or help build a patient acquisition strategy first.</span>';
+    verdEl.style.background = 'rgba(231,76,60,.09)';
+    verdEl.style.borderLeft = '3px solid #E74C3C';
+  } else if (burnMonths >= 6) {
+    verdEl.innerHTML = '<strong style="color:#F0A500;">Good fit (6-12 months):</strong> <span style="color:rgba(255,255,255,.7);">Solid volume. You\'ll cycle through inventory within a year while building consistent recurring revenue.</span>';
+    verdEl.style.background = 'rgba(240,165,0,.09)';
+    verdEl.style.borderLeft = '3px solid #F0A500';
+  } else {
+    verdEl.innerHTML = '<strong style="color:#25908E;">Ideal fit (under 6 months):</strong> <span style="color:rgba(255,255,255,.7);">Strong patient volume. Fast inventory cycling means maximum ROI and consistent reorders from day one.</span>';
+    verdEl.style.background = 'rgba(26,107,94,.1)';
+    verdEl.style.borderLeft = '3px solid #25908E';
+  }
+}
+
+// --- SCROLL REVEAL ------------------------------------------
+var revealObserver = new IntersectionObserver(function (entries) {
+  entries.forEach(function (e) {
+    if (e.isIntersecting) {
+      e.target.style.opacity   = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.07 });
+
+// --- DOM READY ----------------------------------------------
+document.addEventListener('DOMContentLoaded', function () {
+  calcResults();
+  var sel = '.why-card, .funnel-card, .metis-card, .research-card, .phase, .compound-row, .scenario-card, .roi-box';
+  document.querySelectorAll(sel).forEach(function (el) {
+    el.style.opacity    = '0';
+    el.style.transform  = 'translateY(20px)';
+    el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+    revealObserver.observe(el);
+  });
+});
+</script>
+</body>
+</html>
