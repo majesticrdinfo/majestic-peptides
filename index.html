@@ -4,7 +4,10 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Majestic Peptides — Physician & Investor Division | Majestic R&D</title>
-<meta name="description" content="USA-manufactured compounded GLP-1, dual agonist, and triple agonist peptides for physician practices. Independent third-party tested, SC facility, $0 out-of-pocket start via PNC Healthcare financing. Decision to first patient in 20 days."/>
+<meta name="description" content="USP-797 certified, sterile injectable-grade compounded GLP-1 peptides for physician practices. ISO Class 5 manufacturing in South Carolina. Independent third-party tested. $0 out-of-pocket start via PNC Healthcare financing."/>
+<meta name="theme-color" content="#0D1117"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 <!-- Open Graph -->
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Majestic Peptides — Physician & Investor Division"/>
@@ -25,7 +28,7 @@
   --border:rgba(0,0,0,0.09); --shadow:0 4px 32px rgba(0,0,0,0.08);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;scroll-padding-top:66px;}
 body{background:var(--paper);color:var(--ink);font-family:'Instrument Sans','Helvetica Neue',sans-serif;font-weight:300;line-height:1.6;}
 ::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:var(--gold);}
 img{max-width:100%;}
@@ -41,7 +44,7 @@ a{color:inherit;text-decoration:none;}
 /* NAV */
 #nav{position:fixed;top:0;left:0;right:0;z-index:900;height:62px;
   display:flex;align-items:center;justify-content:space-between;padding:0 48px;
-  background:rgba(247,244,238,.97);backdrop-filter:blur(18px);
+  background:rgba(247,244,238,.98);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
   border-bottom:1px solid var(--border);transition:box-shadow .3s;}
 #nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,.07);}
 .logo{display:flex;align-items:center;gap:11px;cursor:pointer;}
@@ -114,7 +117,6 @@ a{color:inherit;text-decoration:none;}
 .btn-sm{padding:9px 20px;font-size:10px;}
 
 /* SECTION */
-html{scroll-padding-top:66px;}
 section{padding:96px 48px;}
 .inner{max-width:1120px;margin:0 auto;}
 .section-header{margin-bottom:56px;}
@@ -250,7 +252,7 @@ section{padding:96px 48px;}
 
 /* RESEARCH */
 #research{background:var(--paper);}
-.research-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px;}
+.research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
 .research-card{background:var(--cream);padding:36px;border-top:3px solid var(--gold);position:relative;}
 .research-card h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;margin-bottom:10px;}
 .research-card p{font-size:13px;color:var(--slate);line-height:1.8;margin-bottom:18px;}
@@ -381,6 +383,9 @@ section{padding:96px 48px;}
 .doc-type{font-size:10px;color:var(--muted);letter-spacing:.1em;}
 
 /* FOOTER */
+.footer-links a{font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);
+  text-decoration:none;transition:color .2s;cursor:pointer;}
+.footer-links a:hover{color:var(--gold);}
 footer{background:var(--ink);color:rgba(255,255,255,.35);padding:40px 48px;
   display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
 .footer-logo{display:flex;align-items:center;gap:10px;}
@@ -400,13 +405,24 @@ footer p{font-size:11px;letter-spacing:.1em;}
 #hamburger.open .ham-line{background:#fff;}
 
 /* RESPONSIVE */
+/* Very small phones */
+@media(max-width:380px){
+  .hero-h1{font-size:30px!important;}
+  .hero-proof{grid-template-columns:1fr!important;}
+  .hero-proof-item{border-right:none!important;padding:8px 0!important;border-bottom:1px solid var(--border);}
+  .hero-proof-item:last-child{border-bottom:none;}
+  .funnel-grid{grid-template-columns:1fr!important;}
+  section{padding:48px 16px!important;}
+  #nav{padding:0 16px!important;}
+}
 @media(max-width:900px){
   #nav-links{display:none!important;}
   #hamburger{display:flex!important;}
   #hero{grid-template-columns:1fr;}
   .hero-right{display:none;}
-  .why-grid,.metis-grid,.research-grid,.financing-split,.quality-grid,
+  .why-grid,.metis-grid,.financing-split,.quality-grid,
   .contact-grid,.funnel-grid,.scenario-grid,.timeline-phases{grid-template-columns:1fr!important;}
+  .research-grid{grid-template-columns:1fr!important;}
   .timeline-phases::before{display:none;}
   .phase{text-align:left;padding:0 0 28px;}
   .phase-circle{margin:0 0 16px;}
@@ -416,16 +432,38 @@ footer p{font-size:11px;letter-spacing:.1em;}
   .nav-links .nav-investor,.nav-links a[onclick*="investor"]{display:none;}
   .ask-grid{grid-template-columns:1fr 1fr;}
   .inv-docs{grid-template-columns:1fr 1fr;}
+  /* Prevent table overflow on mobile */
+  .compare-table,.ramp-table,.compound-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  /* Prevent iOS zoom on form focus */
+  .form-group input,.form-group select,.form-group textarea{font-size:16px!important;}
   /* Calculator responsive */
   #calculator .calc-outer-grid{grid-template-columns:1fr!important;}
   #calculator .calc-results-grid{grid-template-columns:1fr!important;}
   #calculator .calc-results-burn{grid-template-columns:1fr!important;}
   #calculator .calc-cta-row{grid-template-columns:1fr!important;}
+  /* COA verification strip responsive */
+  #trust .coa-strip{grid-template-columns:1fr!important;}
+  #trust .coa-strip>div{border-left-width:3px;}
   /* Trust grid responsive */
   #trust .trust-grid{grid-template-columns:1fr 1fr!important;}
   #trust .trust-price-strip{grid-template-columns:1fr!important;}
   #trust .trust-price-strip>div{border-right:none!important;border-bottom:1px solid var(--border);padding:16px 0!important;}
 }
+/* JS reveal fallback - show content if intersection observer is slow */
+@media(prefers-reduced-motion:reduce){
+  .why-card,.funnel-card,.metis-card,.research-card,.phase,.compound-row,.scenario-card,.roi-box{
+    opacity:1!important;transform:none!important;transition:none!important;
+  }
+}
+/* Touch targets for mobile nav */
+.nav-links button,.nav-links a{min-height:44px;display:inline-flex;align-items:center;}
+/* Footer links as proper anchors on mobile */
+.footer-links span{min-height:44px;display:inline-flex;align-items:center;padding:4px 0;}
+/* Smooth tap on mobile */
+a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+/* Prevent content flash during reveal */
+.reveal-pending{opacity:0;transform:translateY(20px);transition:opacity 0.55s ease,transform 0.55s ease;}
+.reveal-pending.revealed{opacity:1!important;transform:translateY(0)!important;}
 </style>
 </head>
 <body>
@@ -473,6 +511,8 @@ footer p{font-size:11px;letter-spacing:.1em;}
     <button onclick="navTo('financing')">Financing</button>
     <button onclick="navTo('quality')">Quality</button>
     <button onclick="navTo('research')">Research</button>
+    <a href="team.html" style="font-size:11px;letter-spacing:.13em;color:var(--slate);font-weight:500;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--slate)'">Team</a>
+    <a href="blog.html" style="font-size:11px;letter-spacing:.13em;color:var(--slate);font-weight:500;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--slate)'">News</a>
     <a href="#investor-section" onclick="navTo('investor-section')" class="nav-investor btn btn-sm">Investor Access</a>
     <button onclick="navTo('contact')" class="nav-cta">Contact Rep</button>
   </div>
@@ -483,13 +523,15 @@ footer p{font-size:11px;letter-spacing:.1em;}
 
 <!-- MOBILE MENU OVERLAY -->
 <div id="mobile-menu" style="display:none;position:fixed;inset:0;background:var(--ink);z-index:850;flex-direction:column;align-items:center;justify-content:center;gap:28px;padding-top:62px;">
-  <button onclick="navTo('why');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;letter-spacing:.04em;">Program</button>
+  <button onclick="navTo('why');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;letter-spacing:.04em;padding:8px 0;min-height:52px;">Program</button>
   <button onclick="navTo('compounds');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;">Compounds</button>
   <button onclick="navTo('physicians');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;">For Physicians</button>
   <button onclick="navTo('calculator');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:var(--teal-light);font-family:'Playfair Display',serif;font-weight:400;">Calculator</button>
   <button onclick="navTo('financing');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;">Financing</button>
   <button onclick="navTo('quality');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;">Quality</button>
   <button onclick="navTo('research');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;">Research</button>
+  <a href="team.html" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Team</a>
+  <a href="blog.html" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">News &amp; Insights</a>
   <button onclick="navTo('investor-section');closeMobileMenu()" style="background:var(--gold);border:none;cursor:pointer;font-size:14px;color:var(--ink);padding:12px 32px;letter-spacing:.14em;font-weight:700;margin-top:8px;">INVESTOR ACCESS</button>
   <button onclick="navTo('contact');closeMobileMenu()" style="background:var(--teal);border:none;cursor:pointer;font-size:14px;color:#fff;padding:12px 32px;letter-spacing:.14em;font-weight:700;">CONTACT REP</button>
 </div>
@@ -505,7 +547,7 @@ footer p{font-size:11px;letter-spacing:.1em;}
       USA-Manufactured<br/><em>GLP Peptides</em> for<br/>Your <strong>Practice.</strong>
     </h1>
     <p class="hero-lead">
-      Compounded Semaglutide, Tirzepatide, and Retatrutide — sourced from our South Carolina manufacturing partner, tested by independent labs, and shipped directly to your practice. From decision to first patient in 20 days.
+      Compounded Semaglutide, Tirzepatide, and Retatrutide — manufactured in a USP-797 certified, ISO Class 5 sterile facility in South Carolina, tested by independent labs, and shipped directly to your practice. From decision to first patient in 20 days.
     </p>
     <div class="hero-actions">
       <button class="btn btn-teal" onclick="navTo('contact')">Schedule Intro Call</button>
@@ -514,7 +556,7 @@ footer p{font-size:11px;letter-spacing:.1em;}
     <div class="hero-proof">
       <div class="hero-proof-item">
         <div class="hero-proof-num">99.8%</div>
-        <div class="hero-proof-lbl">Average Purity</div>
+        <div class="hero-proof-lbl">Avg Purity · USP-797 Sterile</div>
       </div>
       <div class="hero-proof-item">
         <div class="hero-proof-num">20</div>
@@ -522,7 +564,7 @@ footer p{font-size:11px;letter-spacing:.1em;}
       </div>
       <div class="hero-proof-item">
         <div class="hero-proof-num">$60K+</div>
-        <div class="hero-proof-lbl">Minimum Year-One Revenue (Entry Volume)</div>
+        <div class="hero-proof-lbl">Min. Year-One Revenue</div>
       </div>
     </div>
   </div>
@@ -582,13 +624,13 @@ footer p{font-size:11px;letter-spacing:.1em;}
       <span class="label label-teal">Why Majestic R&D</span>
       <h2 class="section-h2">The standard every<br/>program should meet.</h2>
       <div class="divider"></div>
-      <p class="section-lead">Most peptide suppliers source overseas and won't show you their facility. We manufacture in South Carolina, test with independent labs, and welcome you to visit in person — because "trust us" is not a quality standard.</p>
+      <p class="section-lead">Most peptide suppliers source overseas and won't show you their facility. We manufacture in a USP-797 certified, ISO Class 5 sterile facility in South Carolina, test with independent labs, and welcome you to visit in person — because "trust us" is not a quality standard.</p>
     </div>
     <div class="why-grid">
       <div class="why-card">
         <div class="why-icon">🏭</div>
-        <h3>USA Manufacturing</h3>
-        <p>All compounds manufactured and packaged at our partner facility in South Carolina — not repackaged from overseas API. Lab visits available and encouraged.</p>
+        <h3>USP-797 Certified Manufacturing</h3>
+        <p>All compounds manufactured and packaged at our partner facility in South Carolina — not repackaged from overseas API. The facility is USP-797 certified, meaning every peptide is prepared in an ISO Class 5 sterile environment (laminar airflow hood or isolator) to injectable-grade standards. Lab visits available and encouraged.</p>
       </div>
       <div class="why-card">
         <div class="why-icon">🔬</div>
@@ -641,7 +683,7 @@ footer p{font-size:11px;letter-spacing:.1em;}
         <tr>
           <td>
             <div class="compound-name-cell">Semaglutide</div>
-            <span class="compound-sub">Pro Peptide Solutions, SC</span>
+            <span class="compound-sub">99.814% Purity</span>
           </td>
           <td><span class="glp-badge glp1">GLP-1</span></td>
           <td>30 mg</td>
@@ -653,7 +695,7 @@ footer p{font-size:11px;letter-spacing:.1em;}
         <tr>
           <td>
             <div class="compound-name-cell">Tirzepatide</div>
-            <span class="compound-sub">Pro Peptide Solutions, SC</span>
+            <span class="compound-sub">99.845% Purity</span>
           </td>
           <td><span class="glp-badge glp2">DUAL AGONIST</span></td>
           <td>200 mg</td>
@@ -665,7 +707,7 @@ footer p{font-size:11px;letter-spacing:.1em;}
         <tr>
           <td>
             <div class="compound-name-cell">Retatrutide</div>
-            <span class="compound-sub">Pro Peptide Solutions, SC</span>
+            <span class="compound-sub">99.822% Purity</span>
             <span class="compound-sub" style="color:var(--red);font-weight:600;margin-top:3px;display:block;">⚠ Investigational — Not FDA-Approved</span>
           </td>
           <td><span class="glp-badge glp3">TRIPLE AGONIST</span></td>
@@ -681,7 +723,8 @@ footer p{font-size:11px;letter-spacing:.1em;}
       <span style="color:var(--red);font-size:16px;flex-shrink:0;">⚠</span>
       <p style="font-size:12px;color:var(--red);line-height:1.7;"><strong>Retatrutide Disclosure:</strong> Retatrutide is an investigational compound currently in Phase 3 clinical trials. It has not received FDA approval for any indication. It is offered for research and investigational use only. Practitioners assume full responsibility for appropriate use in compliance with applicable regulations.</p>
     </div>
-    
+  </div>
+</section>
 
 <!-- PHYSICIAN FUNNEL -->
 <section id="physicians">
@@ -766,7 +809,7 @@ footer p{font-size:11px;letter-spacing:.1em;}
           <li>PNC approves funding (~1 week from application)</li>
           <li>$30,000 disbursed directly to you</li>
           <li>Confirm compound split with account manager</li>
-          <li>Order placed with Pro Peptide Solutions, SC</li>
+          <li>Order placed with Pro Peptide Solutions</li>
           <li>Delivery within 5–7 business days</li>
         </ul>
       </div>
@@ -977,7 +1020,7 @@ footer p{font-size:11px;letter-spacing:.1em;}
       <div style="background:var(--paper);padding:28px;text-align:center;transition:background .2s;" onmouseenter="this.style.background='var(--teal-pale)'" onmouseleave="this.style.background='var(--paper)'">
         <div style="font-size:32px;margin-bottom:12px;">🏭</div>
         <h4 style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">Come See the Facility</h4>
-        <p style="font-size:12px;color:var(--slate);line-height:1.7;">Pro Peptide Solutions, South Carolina. Lab visits are available to any practitioner or investor who wants to see production in person. We encourage it.</p>
+        <p style="font-size:12px;color:var(--slate);line-height:1.7;">Manufacturing based in South Carolina. USP-797 certified, ISO Class 5 sterile facility. Lab visits available to any practitioner or investor. We encourage it.</p>
         <div style="margin-top:14px;font-size:11px;color:var(--teal);font-weight:600;letter-spacing:.1em;">OPEN DOOR POLICY</div>
       </div>
 
@@ -1020,7 +1063,7 @@ footer p{font-size:11px;letter-spacing:.1em;}
         <span class="label label-teal">Verify Our Current Lots Yourself — Right Now</span>
         <p style="font-size:13px;color:var(--slate);margin-top:8px;line-height:1.7;">These are real lot numbers from our active inventory. Click any link to verify purity and identity directly at the issuing laboratory’s portal. No login required.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+      <div class="coa-strip" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
         <div style="background:var(--cream);padding:20px;border-left:3px solid var(--teal);">
           <div style="font-size:11px;font-weight:600;color:var(--teal);letter-spacing:.12em;margin-bottom:6px;">SEMAGLUTIDE · LOT SiSem042427</div>
           <div style="font-size:13px;color:var(--ink);font-weight:600;margin-bottom:4px;">99.814% Purity</div>
@@ -1126,8 +1169,8 @@ footer p{font-size:11px;letter-spacing:.1em;}
           <div class="quality-point">
             <div class="q-icon">🏭</div>
             <div class="q-text">
-              <h4>USA Manufacturing — South Carolina</h4>
-              <p><a href="https://www.propeptidesolutions.com/" target="_blank" style="color:var(--teal);text-decoration:underline;">Pro Peptide Solutions</a>, South Carolina. Lab visits available and encouraged. We don’t ask you to trust us — we show you.</p>
+              <h4>USP-797 Certified — South Carolina</h4>
+              <p>Manufacturing based in South Carolina. USP-797 certified facility — ISO Class 5 sterile environment, laminar airflow hoods, injectable-grade preparation standards. Lab visits available and encouraged. We don't ask you to trust us — we show you.</p>
             </div>
           </div>
           <div class="quality-point">
@@ -1148,14 +1191,18 @@ footer p{font-size:11px;letter-spacing:.1em;}
       </div>
       <div>
         <div class="quality-callout">
-          <blockquote>"Most suppliers source overseas and won't let you see their facilities. We manufacture in the USA and welcome lab visits — because 'trust us' is not enough."</blockquote>
+          <blockquote>"Most suppliers source overseas and won't let you see their facilities. We manufacture in a USP-797 certified, ISO Class 5 sterile facility in the USA and welcome lab visits — because 'trust us' is not enough."</blockquote>
           <cite>— MAJESTIC R&D PROGRAM STANDARD</cite>
           <div class="visit-cta">
             <button class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.3);margin-top:4px;" onclick="navTo('contact')">Schedule a Lab Visit</button>
           </div>
         </div>
         <div style="background:var(--cream);padding:28px;margin-top:2px;">
-          <div class="label label-teal" style="display:block;margin-bottom:16px;">TRAINING PROGRAM — COMPLIMENTARY</div>
+          <div style="background:var(--teal-pale);border-left:3px solid var(--teal);padding:14px 18px;margin-bottom:20px;">
+          <div style="font-size:10px;letter-spacing:.18em;font-weight:700;color:var(--teal);margin-bottom:6px;">USP-797 CERTIFIED FACILITY</div>
+          <p style="font-size:12px;color:var(--teal);line-height:1.7;">Sterile, injectable-grade preparation in an ISO Class 5 environment. Laminar airflow hoods or isolators eliminate microbial contamination risk during mixing, reconstitution, and vialing — the standard required for compounded injectables.</p>
+          </div>
+          <div class="label label-teal" style="display:block;margin-bottom:16px;margin-top:20px;">TRAINING PROGRAM — COMPLIMENTARY</div>
           <div style="margin-bottom:16px;">
             <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px;">Session 1 — Clinical Foundations (2 hours)</div>
             <div style="font-size:12px;color:var(--slate);line-height:1.7;">Mechanism of action, patient selection, contraindications, injection prep, reconstitution, storage, safety monitoring.</div>
@@ -1534,11 +1581,12 @@ footer p{font-size:11px;letter-spacing:.1em;}
     <p>MAJESTIC PEPTIDES · A MAJESTIC R&D DIVISION · MARYLAND</p>
   </div>
   <div class="footer-links">
-    <span onclick="navTo('why')">Program</span>
-    <span onclick="navTo('compounds')">Compounds</span>
-    <span onclick="navTo('quality')">Quality</span>
-    <span onclick="navTo('research')">Research</span>
-    <span onclick="navTo('investor-section')">Investor Access</span>
+    <a href="#why" onclick="navTo('why');return false;">Program</a>
+    <a href="#compounds" onclick="navTo('compounds');return false;">Compounds</a>
+    <a href="#quality" onclick="navTo('quality');return false;">Quality</a>
+    <a href="team.html">Team</a>
+    <a href="blog.html">News</a>
+    <a href="#investor-section" onclick="navTo('investor-section');return false;">Investor Access</a>
   </div>
   <p>© 2026 Majestic R&D. All rights reserved. All compounds sourced from licensed 503A compounding partner.</p>
 </footer>
@@ -1793,11 +1841,13 @@ function calcResults() {
 }
 
 // --- SCROLL REVEAL ------------------------------------------
+// Fallback: ensure elements are visible if observer fails
+document.documentElement.classList.add('js-loaded');
 var revealObserver = new IntersectionObserver(function (entries) {
   entries.forEach(function (e) {
     if (e.isIntersecting) {
-      e.target.style.opacity   = '1';
-      e.target.style.transform = 'translateY(0)';
+      e.target.classList.add('revealed');
+      revealObserver.unobserve(e.target);
     }
   });
 }, { threshold: 0.07 });
@@ -1807,9 +1857,7 @@ document.addEventListener('DOMContentLoaded', function () {
   calcResults();
   var sel = '.why-card, .funnel-card, .metis-card, .research-card, .phase, .compound-row, .scenario-card, .roi-box';
   document.querySelectorAll(sel).forEach(function (el) {
-    el.style.opacity    = '0';
-    el.style.transform  = 'translateY(20px)';
-    el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+    el.classList.add('reveal-pending');
     revealObserver.observe(el);
   });
 });

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>News & Insights — Majestic Peptides | Majestic R&D</title>
+<meta name="description" content="Industry news, regulatory updates, physician education, and company announcements from Majestic Peptides — the USA-manufactured compounded GLP-1 peptide program."/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="News & Insights — Majestic Peptides"/>
+<meta property="og:description" content="Industry news, regulatory updates, and physician education from Majestic Peptides."/>
+<meta property="og:site_name" content="Majestic R&D"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="News & Insights — Majestic Peptides"/>
+<meta name="twitter:description" content="Industry news, regulatory updates, and physician education from Majestic Peptides."/>
+<!-- Structured data: Blog -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Majestic Peptides News & Insights",
+  "url": "https://majestic-peptides.com/blog.html",
+  "description": "Industry news, regulatory updates, physician education, and company announcements from Majestic Peptides.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Majestic Peptides",
+    "url": "https://majestic-peptides.com"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#0D1117; --paper:#F7F4EE; --cream:#EDEAD9; --white:#FFFFFF;
+  --gold:#B8943F; --gold-lt:#D4AD5C; --gold-pale:#F5EDD4;
+  --teal:#1A6B5E; --teal-lt:#259080; --teal-light:#259080; --teal-pale:#DFF0EC;
+  --slate:#4A5568; --muted:#8A9BB0; --red:#C0392B;
+  --border:rgba(0,0,0,0.09); --shadow:0 4px 32px rgba(0,0,0,0.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;scroll-padding-top:66px;}
+body{background:var(--paper);color:var(--ink);font-family:'Instrument Sans','Helvetica Neue',sans-serif;font-weight:300;line-height:1.6;}
+::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:var(--gold);}
+img{max-width:100%;}
+a{color:inherit;text-decoration:none;}
+
+.label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;}
+.label-teal{color:var(--teal);}
+.label-gold{color:var(--gold);}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:900;height:62px;
+  display:flex;align-items:center;justify-content:space-between;padding:0 48px;
+  background:rgba(247,244,238,.97);backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);transition:box-shadow .3s;}
+#nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,.07);}
+.logo{display:flex;align-items:center;gap:11px;cursor:pointer;}
+.logo-mark{width:34px;height:34px;background:var(--ink);display:flex;align-items:center;
+  justify-content:center;font-family:'Playfair Display',serif;font-style:italic;
+  font-size:16px;color:var(--gold-lt);}
+.logo-txt{line-height:1.2;}
+.logo-top{font-size:11px;letter-spacing:.18em;font-weight:600;color:var(--ink);display:block;}
+.logo-sub{font-size:9px;letter-spacing:.14em;color:var(--gold);display:block;}
+.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links a,.nav-links button{background:none;border:none;cursor:pointer;
+  font-size:11px;letter-spacing:.13em;color:var(--slate);font-family:inherit;
+  font-weight:500;transition:color .2s;padding:0;text-decoration:none;}
+.nav-links a:hover,.nav-links button:hover{color:var(--ink);}
+.nav-links a.active{color:var(--teal);font-weight:600;}
+.nav-cta{background:var(--teal)!important;color:#fff!important;padding:8px 18px!important;}
+.nav-cta:hover{background:var(--teal-lt)!important;color:#fff!important;}
+.nav-investor{background:var(--gold)!important;color:var(--ink)!important;padding:8px 18px!important;}
+.nav-investor:hover{background:var(--gold-lt)!important;}
+
+.btn{display:inline-block;padding:13px 28px;font-size:11px;letter-spacing:.16em;
+  font-weight:600;border:none;cursor:pointer;font-family:inherit;transition:all .2s;text-decoration:none;}
+.btn-teal{background:var(--teal);color:#fff;}
+.btn-teal:hover{background:var(--teal-lt);}
+.btn-gold{background:var(--gold);color:var(--ink);}
+.btn-gold:hover{background:var(--gold-lt);}
+.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--ink);}
+.btn-outline:hover{background:var(--ink);color:var(--paper);}
+.btn-sm{padding:9px 20px;font-size:10px;}
+
+/* PAGE HERO */
+.page-hero{padding:120px 48px 80px;background:var(--cream);position:relative;}
+.page-hero-inner{max-width:1120px;margin:0 auto;}
+.page-hero .label{color:var(--teal);display:block;margin-bottom:16px;}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,4vw,54px);
+  font-weight:400;color:var(--ink);line-height:1.1;margin-bottom:20px;}
+.page-hero h1 em{font-style:italic;color:var(--teal);}
+.page-hero p{font-size:15px;color:var(--slate);line-height:1.85;max-width:560px;}
+
+/* FILTER BAR */
+.filter-bar{background:var(--white);border-bottom:1px solid var(--border);
+  padding:0 48px;display:flex;gap:0;align-items:center;position:sticky;top:62px;z-index:100;}
+.filter-btn{background:none;border:none;cursor:pointer;font-family:inherit;
+  font-size:11px;letter-spacing:.14em;font-weight:600;color:var(--muted);
+  padding:16px 20px;border-bottom:2px solid transparent;transition:all .2s;}
+.filter-btn:hover{color:var(--ink);}
+.filter-btn.active{color:var(--teal);border-bottom-color:var(--teal);}
+
+/* BLOG GRID */
+.blog-section{padding:64px 48px;}
+.blog-inner{max-width:1120px;margin:0 auto;}
+.blog-grid{display:grid;grid-template-columns:2fr 1fr;gap:40px;align-items:start;}
+
+/* FEATURED POST */
+.post-featured{background:var(--white);border:1px solid var(--border);
+  overflow:hidden;transition:box-shadow .25s;}
+.post-featured:hover{box-shadow:var(--shadow);}
+.post-featured-img{height:240px;background:var(--ink);display:flex;
+  align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.post-featured-img-inner{text-align:center;padding:32px;}
+.post-featured-img-inner .big-text{font-family:'Playfair Display',serif;
+  font-size:64px;font-style:italic;color:rgba(255,255,255,.08);line-height:1;}
+.post-featured-img-inner .icon{font-size:48px;position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);}
+.post-featured-body{padding:32px;}
+.post-cat{display:inline-block;font-size:9px;letter-spacing:.18em;font-weight:700;
+  padding:4px 10px;margin-bottom:14px;}
+.post-cat.physician{background:var(--teal-pale);color:var(--teal);}
+.post-cat.regulatory{background:var(--gold-pale);color:var(--gold);}
+.post-cat.company{background:#EEE5FF;color:#6A4CAB;}
+.post-cat.news{background:var(--cream);color:var(--slate);}
+.post-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:400;
+  color:var(--ink);line-height:1.25;margin-bottom:12px;}
+.post-title a{color:inherit;}
+.post-title a:hover{color:var(--teal);}
+.post-excerpt{font-size:13px;color:var(--slate);line-height:1.8;margin-bottom:20px;}
+.post-meta{display:flex;align-items:center;gap:16px;font-size:11px;color:var(--muted);}
+.post-meta-sep{width:3px;height:3px;border-radius:50%;background:var(--muted);}
+.post-read-more{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--teal);
+  text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s;}
+.post-read-more:hover{border-bottom-color:var(--teal);}
+
+/* SIDEBAR */
+.blog-sidebar{display:flex;flex-direction:column;gap:16px;}
+.post-card-sm{background:var(--white);border:1px solid var(--border);
+  padding:24px;transition:box-shadow .2s,border-color .2s;cursor:pointer;}
+.post-card-sm:hover{box-shadow:var(--shadow);border-color:var(--teal);}
+.post-card-sm .post-title{font-size:16px;margin-bottom:8px;}
+.post-card-sm .post-excerpt{font-size:12px;margin-bottom:12px;}
+
+/* ALL POSTS GRID */
+.all-posts-header{display:flex;justify-content:space-between;align-items:center;
+  margin:56px 0 32px;padding-top:40px;border-top:1px solid var(--border);}
+.all-posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.post-card{background:var(--white);border:1px solid var(--border);
+  padding:28px;border-top:3px solid var(--gold);transition:box-shadow .2s;}
+.post-card:hover{box-shadow:var(--shadow);}
+.post-card .post-title{font-size:18px;margin-bottom:10px;}
+.post-card .post-excerpt{font-size:12px;margin-bottom:16px;}
+
+/* NEWSLETTER STRIP */
+.newsletter-strip{background:var(--ink);padding:56px 48px;margin-top:0;}
+.newsletter-inner{max-width:1120px;margin:0 auto;display:grid;
+  grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+.newsletter-inner h3{font-family:'Playfair Display',serif;font-size:28px;
+  font-weight:400;color:#fff;line-height:1.2;}
+.newsletter-inner h3 em{font-style:italic;color:var(--gold-lt);}
+.newsletter-inner p{font-size:14px;color:rgba(255,255,255,.45);margin-top:8px;}
+.newsletter-form{display:flex;gap:0;}
+.newsletter-form input{flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+  border-right:none;color:#fff;padding:14px 16px;font-size:13px;font-family:inherit;
+  outline:none;transition:border-color .2s;}
+.newsletter-form input:focus{border-color:var(--gold);}
+.newsletter-form input::placeholder{color:rgba(255,255,255,.3);}
+.newsletter-form button{background:var(--gold);border:none;color:var(--ink);
+  padding:14px 24px;font-size:11px;letter-spacing:.16em;font-weight:700;
+  cursor:pointer;font-family:inherit;transition:background .2s;white-space:nowrap;}
+.newsletter-form button:hover{background:var(--gold-lt);}
+.newsletter-note{font-size:11px;color:rgba(255,255,255,.25);margin-top:10px;}
+
+/* FOOTER */
+footer{background:var(--ink);color:rgba(255,255,255,.35);padding:40px 48px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-logo{display:flex;align-items:center;gap:10px;}
+.footer-mark{width:28px;height:28px;background:var(--gold);display:flex;
+  align-items:center;justify-content:center;font-family:'Playfair Display',serif;
+  font-style:italic;font-size:13px;color:var(--ink);}
+footer p{font-size:11px;letter-spacing:.1em;}
+.footer-links{display:flex;gap:24px;}
+.footer-links a{font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);
+  text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--gold);}
+
+.ham-line{display:block;width:24px;height:2px;background:var(--ink);transition:all .3s;}
+#hamburger.open .ham-line:nth-child(1){transform:translateY(7px) rotate(45deg);}
+#hamburger.open .ham-line:nth-child(2){opacity:0;}
+#hamburger.open .ham-line:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+#hamburger.open .ham-line{background:#fff;}
+
+@media(max-width:900px){
+  #nav-links{display:none!important;}
+  #hamburger{display:flex!important;}
+  #nav{padding:0 24px;}
+  .page-hero{padding:100px 24px 60px;}
+  .filter-bar{padding:0 24px;overflow-x:auto;}
+  .blog-section{padding:48px 24px;}
+  .blog-grid{grid-template-columns:1fr;}
+  .all-posts-grid{grid-template-columns:1fr 1fr;}
+  .newsletter-strip{padding:40px 24px;}
+  .newsletter-inner{grid-template-columns:1fr;}
+  footer{padding:32px 24px;}
+}
+@media(max-width:560px){
+  .all-posts-grid{grid-template-columns:1fr;}
+  .newsletter-form{flex-direction:column;}
+  .newsletter-form input{border-right:1px solid rgba(255,255,255,.12);border-bottom:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="logo" onclick="window.location.href='index.html'">
+    <div class="logo-mark">P</div>
+    <div class="logo-txt">
+      <span class="logo-top">MAJESTIC PEPTIDES</span>
+      <span class="logo-sub">A MAJESTIC R&D DIVISION</span>
+    </div>
+  </div>
+  <div class="nav-links" id="nav-links">
+    <a href="index.html">Program</a>
+    <a href="index.html#compounds">Compounds</a>
+    <a href="index.html#physicians">For Physicians</a>
+    <a href="index.html#calculator">Calculator</a>
+    <a href="index.html#financing">Financing</a>
+    <a href="team.html">Team</a>
+    <a href="blog.html" class="active">News & Insights</a>
+    <a href="index.html#investor-section" class="nav-investor btn btn-sm">Investor Access</a>
+    <a href="index.html#contact" class="nav-cta btn btn-sm">Contact Rep</a>
+  </div>
+  <button id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu" style="display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;">
+    <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" style="display:none;position:fixed;inset:0;background:var(--ink);z-index:850;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding-top:62px;">
+  <a href="index.html" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;">Program</a>
+  <a href="index.html#compounds" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;">Compounds</a>
+  <a href="index.html#physicians" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;">For Physicians</a>
+  <a href="team.html" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;">Team</a>
+  <a href="blog.html" style="font-size:22px;color:var(--teal-light);font-family:'Playfair Display',serif;">News & Insights</a>
+  <a href="index.html#investor-section" style="background:var(--gold);font-size:14px;color:var(--ink);padding:12px 32px;letter-spacing:.14em;font-weight:700;margin-top:8px;">INVESTOR ACCESS</a>
+  <a href="index.html#contact" style="background:var(--teal);font-size:14px;color:#fff;padding:12px 32px;letter-spacing:.14em;font-weight:700;">CONTACT REP</a>
+  <button onclick="toggleMobileMenu()" style="position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;">&times;</button>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="label label-teal">News & Insights</span>
+    <h1>What's happening in<br/><em>peptides & compounding.</em></h1>
+    <p>Regulatory updates, physician education, industry news, and program announcements — everything a practitioner needs to stay current in the GLP peptide space.</p>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterPosts('all',this)">All</button>
+  <button class="filter-btn" onclick="filterPosts('physician',this)">Physician Education</button>
+  <button class="filter-btn" onclick="filterPosts('regulatory',this)">Regulatory</button>
+  <button class="filter-btn" onclick="filterPosts('company',this)">Company News</button>
+  <button class="filter-btn" onclick="filterPosts('news',this)">Industry News</button>
+</div>
+
+<!-- BLOG CONTENT -->
+<div class="blog-section">
+  <div class="blog-inner">
+
+    <!-- FEATURED + SIDEBAR -->
+    <div class="blog-grid">
+
+      <!-- FEATURED POST -->
+      <article class="post-featured" data-cat="physician">
+        <div class="post-featured-img" style="background:linear-gradient(135deg,#0D1117 0%,#1A2E28 100%);">
+          <div style="text-align:center;padding:32px;">
+            <div style="font-size:52px;margin-bottom:8px;">🔬</div>
+            <div style="font-family:'Playfair Display',serif;font-size:13px;font-style:italic;color:rgba(255,255,255,.3);letter-spacing:.12em;">PHYSICIAN EDUCATION</div>
+          </div>
+        </div>
+        <div class="post-featured-body">
+          <span class="post-cat physician">PHYSICIAN EDUCATION</span>
+          <h2 class="post-title">What Physicians Should Ask Any Peptide Supplier Before Signing</h2>
+          <p class="post-excerpt">The compounded GLP-1 market has grown faster than quality controls. Before committing to any supplier — including us — here are the seven questions every physician should be able to answer about their source. If you can't get a straight answer on all seven, keep looking.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+            <div class="post-meta">
+              <span>Majestic R&D Editorial</span>
+              <span class="post-meta-sep"></span>
+              <span>April 2026</span>
+              <span class="post-meta-sep"></span>
+              <span>5 min read</span>
+            </div>
+            <a href="#" class="post-read-more" onclick="openPost('post-1')">Read Article →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- SIDEBAR POSTS -->
+      <div class="blog-sidebar">
+
+        <article class="post-card-sm" data-cat="regulatory" onclick="openPost('post-2')">
+          <span class="post-cat regulatory">REGULATORY</span>
+          <h3 class="post-title">Compounded Semaglutide & the FDA: Where Things Stand in 2026</h3>
+          <p class="post-excerpt">The FDA's ongoing enforcement posture on compounded GLP-1s is the single biggest operational risk for physician practices. Here's the current status and what it means for your program.</p>
+          <div class="post-meta">
+            <span>April 2026</span>
+            <span class="post-meta-sep"></span>
+            <span>4 min read</span>
+          </div>
+        </article>
+
+        <article class="post-card-sm" data-cat="physician" onclick="openPost('post-3')">
+          <span class="post-cat physician">PHYSICIAN EDUCATION</span>
+          <h3 class="post-title">How to Read a Peptide COA — And Why Most Physicians Don't</h3>
+          <p class="post-excerpt">A Certificate of Analysis is only useful if you know what it's actually telling you. We break down every field, what to verify, and the red flags that indicate a COA isn't worth the paper it's printed on.</p>
+          <div class="post-meta">
+            <span>March 2026</span>
+            <span class="post-meta-sep"></span>
+            <span>6 min read</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ALL POSTS -->
+    <div class="all-posts-header">
+      <span class="label label-teal">All Articles</span>
+    </div>
+    <div class="all-posts-grid" id="all-posts-grid">
+
+      <article class="post-card" data-cat="company" style="border-top-color:var(--teal);">
+        <span class="post-cat company">COMPANY NEWS</span>
+        <h3 class="post-title">What USP-797 Certification Actually Means for Your Patients</h3>
+        <p class="post-excerpt">Our manufacturing partner is USP-797 certified — the federal standard for sterile compounded injectables. Here is what that means, why it matters clinically, and why most peptide suppliers cannot say the same.</p>
+        <div class="post-meta" style="margin-bottom:16px;">
+          <span>April 2026</span>
+          <span class="post-meta-sep"></span>
+          <span>4 min read</span>
+        </div>
+        <a href="usp797.html" class="post-read-more">Read Full Article →</a>
+      </article>
+
+      <article class="post-card" data-cat="company">
+        <span class="post-cat company">COMPANY NEWS</span>
+        <h3 class="post-title">Majestic Peptides Physician Program: Early Access Now Live</h3>
+        <p class="post-excerpt">The early access physician program is open. Here's what the first cohort of practices gets, what the timeline looks like, and how to request your free practice analysis.</p>
+        <div class="post-meta" style="margin-bottom:16px;">
+          <span>April 2026</span>
+          <span class="post-meta-sep"></span>
+          <span>3 min read</span>
+        </div>
+        <a href="#" class="post-read-more">Read More →</a>
+      </article>
+
+      <article class="post-card" data-cat="news">
+        <span class="post-cat news">INDUSTRY NEWS</span>
+        <h3 class="post-title">GLP-1 Demand Projections Through 2028: What It Means for Physician Practices</h3>
+        <p class="post-excerpt">Analyst forecasts put the GLP-1 market at over $130B by 2030. What portion of that flows through physician practices — and how compounders fit into the picture — depends on regulatory decisions being made right now.</p>
+        <div class="post-meta" style="margin-bottom:16px;">
+          <span>March 2026</span>
+          <span class="post-meta-sep"></span>
+          <span>5 min read</span>
+        </div>
+        <a href="#" class="post-read-more">Read More →</a>
+      </article>
+
+      <article class="post-card" data-cat="physician">
+        <span class="post-cat physician">PHYSICIAN EDUCATION</span>
+        <h3 class="post-title">Tirzepatide vs. Semaglutide: Clinical Differences That Affect Patient Selection</h3>
+        <p class="post-excerpt">Both are effective. But the mechanism differences between a GLP-1 agonist and a dual GIP/GLP-1 agonist matter when matching compound to patient. A practical overview for prescribing physicians.</p>
+        <div class="post-meta" style="margin-bottom:16px;">
+          <span>March 2026</span>
+          <span class="post-meta-sep"></span>
+          <span>7 min read</span>
+        </div>
+        <a href="#" class="post-read-more">Read More →</a>
+      </article>
+
+      <article class="post-card" data-cat="regulatory">
+        <span class="post-cat regulatory">REGULATORY</span>
+        <h3 class="post-title">503A vs. 503B Compounding: What Physicians Actually Need to Know</h3>
+        <p class="post-excerpt">The distinction between 503A patient-specific compounding and 503B outsourcing facilities isn't academic — it directly affects what you can prescribe, how it's dispensed, and what your liability exposure looks like.</p>
+        <div class="post-meta" style="margin-bottom:16px;">
+          <span>February 2026</span>
+          <span class="post-meta-sep"></span>
+          <span>5 min read</span>
+        </div>
+        <a href="#" class="post-read-more">Read More →</a>
+      </article>
+
+      <article class="post-card" data-cat="physician">
+        <span class="post-cat physician">PHYSICIAN EDUCATION</span>
+        <h3 class="post-title">Setting Up a Cash-Pay Peptide Program: Pricing Architecture That Works</h3>
+        <p class="post-excerpt">Cash-pay peptide programs succeed or fail on pricing. Too high and patients walk. Too low and your margin disappears. Here's the framework Majestic practices use to build sustainable pricing that patients accept.</p>
+        <div class="post-meta" style="margin-bottom:16px;">
+          <span>February 2026</span>
+          <span class="post-meta-sep"></span>
+          <span>6 min read</span>
+        </div>
+        <a href="#" class="post-read-more">Read More →</a>
+      </article>
+
+      <article class="post-card" data-cat="news">
+        <span class="post-cat news">INDUSTRY NEWS</span>
+        <h3 class="post-title">Overseas API vs. Domestic Manufacturing: The Quality Gap Nobody Talks About</h3>
+        <p class="post-excerpt">The majority of compounded peptides dispensed in the US are built from overseas-sourced API. The purity and identity testing standards applied to those imports vary enormously. Here's what the data shows.</p>
+        <div class="post-meta" style="margin-bottom:16px;">
+          <span>January 2026</span>
+          <span class="post-meta-sep"></span>
+          <span>6 min read</span>
+        </div>
+        <a href="#" class="post-read-more">Read More →</a>
+      </article>
+
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER STRIP -->
+<div class="newsletter-strip">
+  <div class="newsletter-inner">
+    <div>
+      <h3>Stay current on<br/><em>peptides & compounding.</em></h3>
+      <p>Regulatory updates, physician education, and program news — directly to your inbox. No spam. Unsubscribe any time.</p>
+    </div>
+    <div>
+      <div class="newsletter-form">
+        <input type="email" id="nl-email" placeholder="your@practice.com"/>
+        <button onclick="subscribeNewsletter()">SUBSCRIBE</button>
+      </div>
+      <p class="newsletter-note" id="nl-msg">For practitioners and qualified investors only.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <div class="footer-mark">P</div>
+    <p>MAJESTIC PEPTIDES · A MAJESTIC R&D DIVISION · MARYLAND</p>
+  </div>
+  <div class="footer-links">
+    <a href="index.html">Program</a>
+    <a href="index.html#compounds">Compounds</a>
+    <a href="team.html">Team</a>
+    <a href="blog.html">News & Insights</a>
+    <a href="index.html#investor-section">Investor Access</a>
+  </div>
+  <p>© 2026 Majestic R&D. All rights reserved. All compounds sourced from licensed 503A compounding partner.</p>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() {
+  var nav = document.getElementById('nav');
+  if (nav) nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+function toggleMobileMenu() {
+  var menu = document.getElementById('mobile-menu');
+  var btn  = document.getElementById('hamburger');
+  if (!menu || !btn) return;
+  var isOpen = menu.style.display === 'flex';
+  menu.style.display = isOpen ? 'none' : 'flex';
+  btn.classList.toggle('open', !isOpen);
+  document.body.style.overflow = isOpen ? '' : 'hidden';
+}
+
+function filterPosts(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.querySelectorAll('#all-posts-grid .post-card').forEach(function(card) {
+    if (cat === 'all' || card.dataset.cat === cat) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+function openPost(id) {
+  // Placeholder — full article pages to be added
+  alert('Full article coming soon. In the meantime, contact majesticrdinfo@gmail.com for more information.');
+}
+
+function subscribeNewsletter() {
+  var email = document.getElementById('nl-email').value.trim();
+  var msg   = document.getElementById('nl-msg');
+  if (!email || !email.includes('@')) {
+    msg.style.color = '#C0392B';
+    msg.textContent = 'Please enter a valid email address.';
+    return;
+  }
+  // Wire to Formspree same endpoint, tagged as newsletter
+  fetch('https://formspree.io/f/xojykarl', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({ email: email, interest: 'Newsletter subscription', first_name: 'Newsletter' })
+  })
+  .then(function(r){ return r.json().then(function(j){ return {ok:r.ok,j:j}; }); })
+  .then(function(res){
+    if (res.ok) {
+      msg.style.color = '#259080';
+      msg.textContent = '✓ Subscribed. You\'ll hear from us soon.';
+      document.getElementById('nl-email').value = '';
+    } else { throw new Error(); }
+  })
+  .catch(function(){
+    msg.style.color = '#C0392B';
+    msg.textContent = 'Something went wrong — email majesticrdinfo@gmail.com directly.';
+  });
+}
+</script>
+</body>
+</html>
