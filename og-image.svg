@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0D1117"/>
+  <!-- Gold accent line top -->
+  <rect x="0" y="0" width="1200" height="4" fill="#B8943F"/>
+  <!-- Left teal accent -->
+  <rect x="80" y="80" width="4" height="80" fill="#1A6B5E"/>
+  <!-- Logo mark -->
+  <rect x="80" y="200" width="56" height="56" fill="#0D1117" stroke="#B8943F" stroke-width="1.5"/>
+  <text x="108" y="238" font-family="Georgia, serif" font-style="italic" font-size="28" text-anchor="middle" fill="#D4AD5C">M</text>
+  <!-- Brand name -->
+  <text x="152" y="228" font-family="Arial, Helvetica, sans-serif" font-size="13" letter-spacing="3" font-weight="600" fill="#FFFFFF">MAJESTIC PEPTIDES</text>
+  <text x="152" y="248" font-family="Arial, Helvetica, sans-serif" font-size="10" letter-spacing="2" fill="#B8943F">A MAJESTIC R&amp;D DIVISION</text>
+  <!-- Main headline -->
+  <text x="80" y="330" font-family="Georgia, serif" font-size="52" font-weight="400" fill="#FFFFFF">USA-Manufactured</text>
+  <text x="80" y="398" font-family="Georgia, serif" font-size="52" font-style="italic" fill="#1A6B5E">GLP Peptides</text>
+  <text x="80" y="466" font-family="Georgia, serif" font-size="52" font-weight="400" fill="#FFFFFF">for Your Practice.</text>
+  <!-- Proof points -->
+  <rect x="80" y="510" width="1" height="1" fill="none"/>
+  <text x="80" y="545" font-family="Arial, sans-serif" font-size="14" letter-spacing="1" fill="rgba(255,255,255,0.45)">USP-797 CERTIFIED  ·  INDEPENDENT LAB TESTED  ·  $0 OUT OF POCKET  ·  FIRST PATIENT IN 20 DAYS</text>
+  <!-- URL -->
+  <text x="80" y="590" font-family="Arial, sans-serif" font-size="16" letter-spacing="2" fill="#B8943F">majestic-peptides.com</text>
+  <!-- Right side decorative element -->
+  <rect x="820" y="80" width="300" height="470" fill="rgba(26,107,94,0.08)" rx="0"/>
+  <rect x="820" y="80" width="3" height="470" fill="#1A6B5E" opacity="0.4"/>
+  <!-- Stats on right -->
+  <text x="900" y="190" font-family="Georgia, serif" font-size="48" fill="#D4AD5C" text-anchor="middle">99.8%</text>
+  <text x="900" y="220" font-family="Arial, sans-serif" font-size="11" letter-spacing="2" fill="rgba(255,255,255,0.35)" text-anchor="middle">AVG PURITY</text>
+  <line x1="860" y1="260" x2="940" y2="260" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="900" y="310" font-family="Georgia, serif" font-size="48" fill="#D4AD5C" text-anchor="middle">20</text>
+  <text x="900" y="340" font-family="Arial, sans-serif" font-size="11" letter-spacing="2" fill="rgba(255,255,255,0.35)" text-anchor="middle">DAYS TO LAUNCH</text>
+  <line x1="860" y1="380" x2="940" y2="380" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="900" y="430" font-family="Georgia, serif" font-size="36" fill="#D4AD5C" text-anchor="middle">$60K+</text>
+  <text x="900" y="460" font-family="Arial, sans-serif" font-size="11" letter-spacing="2" fill="rgba(255,255,255,0.35)" text-anchor="middle">YEAR-ONE REVENUE</text>
+</svg>
