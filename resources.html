@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Physician Resource Center — Majestic Peptides</title>
+<meta name="description" content="Download program documents, timelines, calculators, and clinical resources for the Majestic Peptides physician program."/>
+<meta name="theme-color" content="#0D1117"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Physician Resource Center — Majestic Peptides"/>
+<meta property="og:description" content="Program documents, timelines, calculators, and clinical tools for Majestic Peptides physicians."/>
+<meta property="og:site_name" content="Majestic R&D"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#0D1117; --paper:#F7F4EE; --cream:#EDEAD9; --white:#FFFFFF;
+  --gold:#B8943F; --gold-lt:#D4AD5C; --gold-pale:#F5EDD4;
+  --teal:#1A6B5E; --teal-lt:#259080; --teal-light:#259080; --teal-pale:#DFF0EC;
+  --slate:#4A5568; --muted:#8A9BB0; --red:#C0392B;
+  --border:rgba(0,0,0,0.09); --shadow:0 4px 32px rgba(0,0,0,0.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;scroll-padding-top:66px;}
+body{background:var(--paper);color:var(--ink);font-family:'Instrument Sans','Helvetica Neue',sans-serif;font-weight:300;line-height:1.6;}
+::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:var(--gold);}
+a{color:inherit;text-decoration:none;}
+a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+.label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;}
+.label-teal{color:var(--teal);}
+.label-gold{color:var(--gold);}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:900;height:62px;
+  display:flex;align-items:center;justify-content:space-between;padding:0 48px;
+  background:rgba(247,244,238,.98);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);transition:box-shadow .3s;}
+#nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,.07);}
+.logo{display:flex;align-items:center;gap:11px;cursor:pointer;}
+.logo-mark{width:34px;height:34px;background:var(--ink);display:flex;align-items:center;
+  justify-content:center;font-family:'Playfair Display',serif;font-style:italic;
+  font-size:16px;color:var(--gold-lt);}
+.logo-txt{line-height:1.2;}
+.logo-top{font-size:11px;letter-spacing:.18em;font-weight:600;color:var(--ink);display:block;}
+.logo-sub{font-size:9px;letter-spacing:.14em;color:var(--gold);display:block;}
+.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links a,.nav-links button{background:none;border:none;cursor:pointer;
+  font-size:11px;letter-spacing:.13em;color:var(--slate);font-family:inherit;
+  font-weight:500;transition:color .2s;padding:0;text-decoration:none;
+  min-height:44px;display:inline-flex;align-items:center;}
+.nav-links a:hover,.nav-links button:hover{color:var(--ink);}
+.nav-links a.active{color:var(--teal);font-weight:600;}
+.nav-cta{background:var(--teal)!important;color:#fff!important;padding:8px 18px!important;}
+.nav-cta:hover{background:var(--teal-lt)!important;color:#fff!important;}
+.nav-investor{background:var(--gold)!important;color:var(--ink)!important;padding:8px 18px!important;}
+.nav-investor:hover{background:var(--gold-lt)!important;}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;font-size:11px;
+  letter-spacing:.16em;font-weight:600;border:none;cursor:pointer;font-family:inherit;
+  transition:all .2s;text-decoration:none;}
+.btn-teal{background:var(--teal);color:#fff;}
+.btn-teal:hover{background:var(--teal-lt);}
+.btn-gold{background:var(--gold);color:var(--ink);}
+.btn-gold:hover{background:var(--gold-lt);}
+.btn-dark{background:var(--ink);color:var(--gold-lt);}
+.btn-dark:hover{background:#1e2a3a;}
+.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--ink);}
+.btn-outline:hover{background:var(--ink);color:var(--paper);}
+.btn-sm{padding:9px 18px;font-size:10px;}
+
+/* HAMBURGER */
+.ham-line{display:block;width:24px;height:2px;background:var(--ink);transition:all .3s;}
+#hamburger.open .ham-line:nth-child(1){transform:translateY(7px) rotate(45deg);}
+#hamburger.open .ham-line:nth-child(2){opacity:0;}
+#hamburger.open .ham-line:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+#hamburger.open .ham-line{background:#fff;}
+
+/* PAGE HERO */
+.page-hero{padding:120px 48px 72px;background:var(--ink);position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+  background:radial-gradient(ellipse at 75% 50%,rgba(184,148,63,.08) 0%,transparent 65%);}
+.page-hero-inner{max-width:1120px;margin:0 auto;position:relative;}
+.page-hero .label{color:var(--gold);display:block;margin-bottom:16px;}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);
+  font-weight:400;color:#fff;line-height:1.1;margin-bottom:20px;}
+.page-hero h1 em{font-style:italic;color:var(--gold-lt);}
+.page-hero p{font-size:15px;color:rgba(255,255,255,.5);line-height:1.85;max-width:540px;}
+
+/* SECTION */
+section{padding:80px 48px;}
+.inner{max-width:1120px;margin:0 auto;}
+.section-h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,36px);
+  font-weight:400;line-height:1.15;color:var(--ink);margin-bottom:16px;}
+.divider{width:44px;height:2px;background:var(--gold);margin:16px 0 40px;}
+
+/* RESOURCE CARDS */
+.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.resource-card{background:var(--white);border:1px solid var(--border);
+  padding:0;overflow:hidden;transition:box-shadow .25s,transform .2s;
+  display:flex;flex-direction:column;}
+.resource-card:hover{box-shadow:var(--shadow);transform:translateY(-2px);}
+.resource-card-top{padding:28px 28px 20px;flex:1;}
+.resource-type-bar{height:3px;width:100%;}
+.resource-type-bar.pdf{background:var(--teal);}
+.resource-type-bar.xlsx{background:var(--gold);}
+.resource-type-bar.tool{background:#8B5CF6;}
+.resource-type-bar.coming{background:var(--muted);}
+.resource-icon{width:48px;height:48px;display:flex;align-items:center;
+  justify-content:center;font-size:22px;margin:20px 0 16px;
+  background:var(--cream);}
+.resource-cat{font-size:9px;letter-spacing:.2em;font-weight:700;margin-bottom:8px;display:block;}
+.resource-cat.cat-program{color:var(--teal);}
+.resource-cat.cat-clinical{color:#8B5CF6;}
+.resource-cat.cat-financial{color:var(--gold);}
+.resource-cat.cat-analytics{color:#0891B2;}
+.resource-cat.cat-tool{color:#8B5CF6;}
+.resource-cat.cat-coming{color:var(--muted);}
+.resource-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:400;
+  color:var(--ink);line-height:1.3;margin-bottom:10px;}
+.resource-desc{font-size:12px;color:var(--slate);line-height:1.75;margin-bottom:16px;}
+.resource-meta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:0;}
+.resource-tag{font-size:9px;letter-spacing:.14em;font-weight:600;
+  padding:3px 8px;background:var(--cream);color:var(--muted);}
+.resource-card-bottom{padding:16px 28px 24px;border-top:1px solid var(--border);background:var(--paper);}
+.resource-card.coming-soon{opacity:.7;}
+.resource-card.coming-soon .resource-card-bottom{background:var(--cream);}
+
+/* GATED SECTION */
+#gated{background:var(--ink);}
+#gated .section-h2{color:#fff;}
+.gated-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
+  background:rgba(255,255,255,.04);margin-top:40px;}
+.gated-card{background:#0D1117;padding:32px 28px;}
+.gated-icon{font-size:24px;margin-bottom:14px;}
+.gated-title{font-size:14px;font-weight:600;color:#fff;margin-bottom:8px;}
+.gated-desc{font-size:12px;color:rgba(255,255,255,.4);line-height:1.75;margin-bottom:20px;}
+.gated-lock{display:inline-flex;align-items:center;gap:6px;
+  font-size:9px;letter-spacing:.16em;color:var(--gold);font-weight:700;}
+
+/* TOOLS SECTION */
+#tools{background:var(--cream);}
+.tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:40px;}
+.tool-card{background:var(--white);border:1px solid var(--border);padding:36px;
+  display:flex;gap:24px;align-items:flex-start;transition:box-shadow .2s;}
+.tool-card:hover{box-shadow:var(--shadow);}
+.tool-icon-wrap{width:56px;height:56px;background:var(--ink);display:flex;
+  align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+.tool-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:400;
+  color:var(--ink);margin-bottom:6px;}
+.tool-desc{font-size:13px;color:var(--slate);line-height:1.75;margin-bottom:20px;}
+
+/* GATED FORM */
+#gated-form-section{background:var(--paper);border-top:1px solid var(--border);}
+.gated-form-wrap{max-width:640px;margin:0 auto;text-align:center;}
+.gated-form-wrap h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,36px);
+  font-weight:400;color:var(--ink);margin-bottom:12px;}
+.gated-form-wrap p{font-size:14px;color:var(--slate);line-height:1.85;margin-bottom:36px;}
+.gf-form{background:var(--ink);padding:40px;}
+.gf-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.gf-group{display:flex;flex-direction:column;gap:6px;}
+.gf-group label{font-size:10px;letter-spacing:.14em;color:rgba(255,255,255,.4);font-weight:600;}
+.gf-group input,.gf-group select{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+  color:#fff;padding:12px 14px;font-size:16px;font-family:inherit;outline:none;
+  transition:border-color .2s;width:100%;}
+.gf-group input:focus,.gf-group select:focus{border-color:var(--gold);}
+.gf-group select option{background:#0D1117;}
+.gf-check-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px;text-align:left;}
+.gf-check{display:flex;align-items:center;gap:10px;cursor:pointer;}
+.gf-check input[type="checkbox"]{width:16px;height:16px;accent-color:var(--gold);cursor:pointer;}
+.gf-check span{font-size:12px;color:rgba(255,255,255,.5);}
+.gf-success{display:none;background:rgba(26,107,94,.2);border:1px solid rgba(26,107,94,.4);
+  padding:16px;color:var(--teal-light);font-size:13px;margin-top:12px;text-align:left;}
+
+/* CTA STRIP */
+.cta-strip{background:var(--teal);padding:56px 48px;}
+.cta-strip-inner{max-width:1120px;margin:0 auto;display:flex;
+  justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;}
+.cta-strip h3{font-family:'Playfair Display',serif;font-size:28px;font-weight:400;
+  color:#fff;line-height:1.2;}
+.cta-strip h3 em{font-style:italic;}
+.cta-strip p{font-size:14px;color:rgba(255,255,255,.55);margin-top:8px;max-width:480px;}
+
+/* FOOTER */
+footer{background:var(--ink);color:rgba(255,255,255,.35);padding:40px 48px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-logo{display:flex;align-items:center;gap:10px;}
+.footer-mark{width:28px;height:28px;background:var(--gold);display:flex;
+  align-items:center;justify-content:center;font-family:'Playfair Display',serif;
+  font-style:italic;font-size:13px;color:var(--ink);}
+footer p{font-size:11px;letter-spacing:.1em;}
+.footer-links{display:flex;gap:24px;}
+.footer-links a{font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);
+  text-decoration:none;transition:color .2s;min-height:44px;display:inline-flex;align-items:center;}
+.footer-links a:hover{color:var(--gold);}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  #nav-links{display:none!important;}
+  #hamburger{display:flex!important;}
+  #nav{padding:0 24px;}
+  .page-hero{padding:100px 24px 56px;}
+  section{padding:60px 24px;}
+  .resource-grid,.gated-grid,.tools-grid{grid-template-columns:1fr!important;}
+  .gf-grid,.gf-check-grid{grid-template-columns:1fr!important;}
+  .cta-strip{padding:40px 24px;}
+  footer{padding:32px 24px;flex-direction:column;align-items:flex-start;}
+  .footer-links{flex-wrap:wrap;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="logo" onclick="window.location.href='index.html'">
+    <div class="logo-mark">P</div>
+    <div class="logo-txt">
+      <span class="logo-top">MAJESTIC PEPTIDES</span>
+      <span class="logo-sub">A MAJESTIC R&D DIVISION</span>
+    </div>
+  </div>
+  <div class="nav-links" id="nav-links">
+    <a href="index.html">Program</a>
+    <a href="index.html#compounds">Compounds</a>
+    <a href="index.html#physicians">For Physicians</a>
+    <a href="index.html#calculator">Calculator</a>
+    <a href="index.html#financing">Financing</a>
+    <a href="team.html">Team</a>
+    <a href="resources.html" class="active">Resources</a>
+    <a href="index.html#investor-section" class="nav-investor btn btn-sm">Investor Access</a>
+    <a href="index.html#contact" class="nav-cta btn btn-sm">Contact Rep</a>
+  </div>
+  <button id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu" style="display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;">
+    <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" style="display:none;position:fixed;inset:0;background:var(--ink);z-index:850;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding-top:62px;">
+  <a href="index.html" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;text-decoration:none;">Program</a>
+  <a href="index.html#compounds" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;text-decoration:none;">Compounds</a>
+  <a href="index.html#physicians" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;text-decoration:none;">For Physicians</a>
+  <a href="team.html" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;text-decoration:none;">Team</a>
+  <a href="resources.html" style="font-size:22px;color:var(--gold-lt);font-family:'Playfair Display',serif;text-decoration:none;">Resources</a>
+  <a href="index.html#investor-section" style="background:var(--gold);font-size:14px;color:var(--ink);padding:12px 32px;letter-spacing:.14em;font-weight:700;margin-top:8px;">INVESTOR ACCESS</a>
+  <a href="index.html#contact" style="background:var(--teal);font-size:14px;color:#fff;padding:12px 32px;letter-spacing:.14em;font-weight:700;">CONTACT REP</a>
+  <button onclick="toggleMobileMenu()" style="position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;">&times;</button>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="label">Physician Resource Center</span>
+    <h1>Everything you need<br/>to <em>evaluate and launch.</em></h1>
+    <p>Program documents, clinical tools, timelines, and calculators — all in one place. Download what you need, review at your own pace, and come back whenever you need a reference.</p>
+  </div>
+</div>
+
+<!-- FREE DOWNLOADS -->
+<section style="background:var(--paper);">
+  <div class="inner">
+    <span class="label label-teal" style="display:block;margin-bottom:12px;">Program Documents</span>
+    <h2 class="section-h2">Download. Review. Keep.</h2>
+    <div class="divider"></div>
+    <p style="font-size:14px;color:var(--slate);line-height:1.85;max-width:600px;margin-bottom:48px;">All documents are available immediately — no email required. These are the same materials your representative walks through during the intro call.</p>
+
+    <div class="resource-grid">
+
+      <!-- 1 — ONE PAGER -->
+      <div class="resource-card">
+        <div class="resource-type-bar pdf"></div>
+        <div class="resource-card-top">
+          <div class="resource-icon">📄</div>
+          <span class="resource-cat cat-program">PROGRAM OVERVIEW</span>
+          <h3 class="resource-title">Program One-Pager</h3>
+          <p class="resource-desc">The complete Majestic Peptides program at a glance — quality standards, launch support, financing terms, and what your practice can expect in year one. Share with your office manager or billing team.</p>
+          <div class="resource-meta">
+            <span class="resource-tag">PDF</span>
+            <span class="resource-tag">1 PAGE</span>
+            <span class="resource-tag">SHAREABLE</span>
+          </div>
+        </div>
+        <div class="resource-card-bottom">
+          <a href="One_Pager_PDF.pdf" download class="btn btn-teal btn-sm" style="width:100%;justify-content:center;">
+            ↓ Download PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- 2 — TIMELINE -->
+      <div class="resource-card">
+        <div class="resource-type-bar pdf"></div>
+        <div class="resource-card-top">
+          <div class="resource-icon">📅</div>
+          <span class="resource-cat cat-program">ONBOARDING</span>
+          <h3 class="resource-title">20-Day Launch Timeline</h3>
+          <p class="resource-desc">Step-by-step from decision to first patient — all three phases, every action item, with time estimates. Includes funding steps, training schedule, compound pricing, and compliance standards.</p>
+          <div class="resource-meta">
+            <span class="resource-tag">PDF</span>
+            <span class="resource-tag">3 PAGES</span>
+            <span class="resource-tag">FULL DETAIL</span>
+          </div>
+        </div>
+        <div class="resource-card-bottom">
+          <a href="Timeline_PDF.pdf" download class="btn btn-teal btn-sm" style="width:100%;justify-content:center;">
+            ↓ Download PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- 3 — SIMPLIFIED STEPS -->
+      <div class="resource-card">
+        <div class="resource-type-bar pdf"></div>
+        <div class="resource-card-top">
+          <div class="resource-icon">✅</div>
+          <span class="resource-cat cat-program">ONBOARDING</span>
+          <h3 class="resource-title">Simplified Onboarding Steps</h3>
+          <p class="resource-desc">A condensed, plain-language walkthrough of the onboarding process — Day 1–5 and Day 5–10. Ideal for practitioners who want the essentials without the full detail document.</p>
+          <div class="resource-meta">
+            <span class="resource-tag">PDF</span>
+            <span class="resource-tag">1 PAGE</span>
+            <span class="resource-tag">QUICK READ</span>
+          </div>
+        </div>
+        <div class="resource-card-bottom">
+          <a href="Practitioner_Steps_-_Simplified.pdf" download class="btn btn-teal btn-sm" style="width:100%;justify-content:center;">
+            ↓ Download PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- 4 — CALCULATOR -->
+      <div class="resource-card">
+        <div class="resource-type-bar xlsx"></div>
+        <div class="resource-card-top">
+          <div class="resource-icon">🧮</div>
+          <span class="resource-cat cat-financial">FINANCIAL TOOL</span>
+          <h3 class="resource-title">Practitioner Inventory Calculator</h3>
+          <p class="resource-desc">Enter your expected patient volume by compound. The spreadsheet calculates monthly revenue, gross margin, and how long a $30,000 inventory order will last. Editable — use your own numbers.</p>
+          <div class="resource-meta">
+            <span class="resource-tag">XLSX</span>
+            <span class="resource-tag">EDITABLE</span>
+            <span class="resource-tag">EXCEL / SHEETS</span>
+          </div>
+        </div>
+        <div class="resource-card-bottom">
+          <a href="Practitioner_Calculator.xlsx" download class="btn btn-gold btn-sm" style="width:100%;justify-content:center;">
+            ↓ Download Spreadsheet
+          </a>
+        </div>
+      </div>
+
+      <!-- 5 — METIS OVERVIEW -->
+      <div class="resource-card">
+        <div class="resource-type-bar" style="background:#0891B2;"></div>
+        <div class="resource-card-top">
+          <div class="resource-icon">📊</div>
+          <span class="resource-cat cat-analytics">ANALYTICS</span>
+          <h3 class="resource-title">Metis Services Overview</h3>
+          <p class="resource-desc">The full breakdown of what the complimentary 90-day Metis Peptide Sprint Dashboard includes — Profit Snapshot, Sprint Dashboard, Patient ID System, and Network Intelligence. Provided free with every Majestic program.</p>
+          <div class="resource-meta">
+            <span class="resource-tag">PDF</span>
+            <span class="resource-tag">2 PAGES</span>
+            <span class="resource-tag">INCLUDED FREE</span>
+          </div>
+        </div>
+        <div class="resource-card-bottom">
+          <a href="Metis_Services_Overview.pdf" download class="btn btn-sm" style="width:100%;justify-content:center;background:#0891B2;color:#fff;">
+            ↓ Download PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- 6 — PATIENT ID SHEET -->
+      <div class="resource-card">
+        <div class="resource-type-bar" style="background:#8B5CF6;"></div>
+        <div class="resource-card-top">
+          <div class="resource-icon">🩺</div>
+          <span class="resource-cat cat-clinical">CLINICAL TOOL</span>
+          <h3 class="resource-title">Patient Identification Worksheet</h3>
+          <p class="resource-desc">A structured 3-part worksheet to find your first 15–25 peptide candidates — EHR query checklist with ICD-10 codes, in-office daily workflow, warm outreach protocol, and a candidate tracking sheet. Most practices find 40–80 candidates on first use.</p>
+          <div class="resource-meta">
+            <span class="resource-tag">PDF</span>
+            <span class="resource-tag">3 PAGES</span>
+            <span class="resource-tag">METIS · PRINT-READY</span>
+          </div>
+        </div>
+        <div class="resource-card-bottom">
+          <a href="Patient_ID_Sheet.pdf" download class="btn btn-sm" style="width:100%;justify-content:center;background:#8B5CF6;color:#fff;">
+            ↓ Download PDF
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ONLINE TOOLS -->
+<section id="tools">
+  <div class="inner">
+    <span class="label label-gold" style="display:block;margin-bottom:12px;">Online Tools</span>
+    <h2 class="section-h2">Use the live versions.</h2>
+    <div class="divider"></div>
+    <p style="font-size:14px;color:var(--slate);line-height:1.85;max-width:600px;margin-bottom:0;">These tools are built into the main program site and update in real time. Bookmark them for quick access.</p>
+    <div class="tools-grid">
+
+      <div class="tool-card">
+        <div class="tool-icon-wrap">🧮</div>
+        <div>
+          <h3 class="tool-title">Inventory Turnover Calculator</h3>
+          <p class="tool-desc">The live version of the calculator — adjust patient volumes by compound and see your projected monthly revenue, gross margin, and burn rate on a $30,000 order. Results update instantly.</p>
+          <a href="index.html#calculator" class="btn btn-dark btn-sm">Open Calculator →</a>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon-wrap">📊</div>
+        <div>
+          <h3 class="tool-title">Free Practice Analysis</h3>
+          <p class="tool-desc">Submit your practice information and Metis will build a personalized Profit Snapshot — conservative, base, and accelerated revenue projections based on your actual patient counts. No commitment required.</p>
+          <a href="index.html#contact" class="btn btn-teal btn-sm">Request Analysis →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GATED — COMING SOON RESOURCES -->
+<section id="gated" style="background:var(--ink);">
+  <div class="inner">
+    <span class="label" style="color:var(--gold);display:block;margin-bottom:12px;">Clinical Documentation</span>
+    <h2 class="section-h2" style="color:#fff;">Compliance toolkit.<br/>Coming soon.</h2>
+    <div class="divider" style="background:rgba(255,255,255,.15);"></div>
+    <p style="font-size:14px;color:rgba(255,255,255,.45);line-height:1.85;max-width:600px;margin-bottom:0;">The full compliance documentation toolkit is provided to every physician at program onboarding. The below documents will be available for direct download shortly. Submit your email below to be notified when they go live.</p>
+    <div class="gated-grid">
+
+      <div class="gated-card">
+        <div class="gated-icon">📋</div>
+        <div class="gated-title">Patient Informed Consent Templates</div>
+        <p class="gated-desc">EMR-ready consent forms for each compound — Semaglutide, Tirzepatide, and Retatrutide. Reviewed for compliance by clinical counsel.</p>
+        <div class="gated-lock">🔒 COMING SOON</div>
+      </div>
+
+      <div class="gated-card">
+        <div class="gated-icon">⚠️</div>
+        <div class="gated-title">Adverse Event Reporting Forms</div>
+        <p class="gated-desc">Standardized AE documentation and escalation protocol — intake forms, follow-up tracking, and reporting guidelines for your practice.</p>
+        <div class="gated-lock">🔒 COMING SOON</div>
+      </div>
+
+      <div class="gated-card">
+        <div class="gated-icon">💉</div>
+        <div class="gated-title">Reconstitution & Dosing Cards</div>
+        <p class="gated-desc">Laminated-ready reference cards for staff — reconstitution volumes, storage requirements, titration schedules, and injection technique guidance.</p>
+        <div class="gated-lock">🔒 COMING SOON</div>
+      </div>
+
+      <div class="gated-card">
+        <div class="gated-icon">🖥️</div>
+        <div class="gated-title">EMR Documentation Guidance</div>
+        <p class="gated-desc">Visit note templates, ICD-10 coding guidance, and billing documentation best practices for cash-pay peptide programs across major EMR platforms.</p>
+        <div class="gated-lock">🔒 COMING SOON</div>
+      </div>
+
+      <div class="gated-card">
+        <div class="gated-icon">📦</div>
+        <div class="gated-title">Lot Tracking & Chain of Custody Logs</div>
+        <p class="gated-desc">Per-lot tracking sheets that connect each vial to its COA, receiving date, storage condition log, and dispensing record. Ready to use from day one.</p>
+        <div class="gated-lock">🔒 COMING SOON</div>
+      </div>
+
+      <div class="gated-card">
+        <div class="gated-icon">💰</div>
+        <div class="gated-title">Cash-Pay Pricing Architecture Guide</div>
+        <p class="gated-desc">Per-dose, subscription, and bundled pricing model comparisons — with example structures from the Majestic practitioner network and margin analysis for each approach.</p>
+        <div class="gated-lock">🔒 COMING SOON</div>
+      </div>
+
+    </div>
+
+    <!-- NOTIFY FORM -->
+    <div style="max-width:560px;margin:48px auto 0;text-align:center;">
+      <p style="font-size:13px;color:rgba(255,255,255,.4);margin-bottom:20px;">Enter your email to be notified when the compliance toolkit goes live.</p>
+      <div style="display:flex;gap:0;">
+        <input type="email" id="notify-email" placeholder="your@practice.com"
+          style="flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+          border-right:none;color:#fff;padding:13px 16px;font-size:16px;font-family:inherit;
+          outline:none;transition:border-color .2s;"
+          onfocus="this.style.borderColor='var(--gold)'"
+          onblur="this.style.borderColor='rgba(255,255,255,.12)'"/>
+        <button onclick="notifyMe()" style="background:var(--gold);border:none;color:var(--ink);
+          padding:13px 24px;font-size:11px;letter-spacing:.16em;font-weight:700;
+          cursor:pointer;font-family:inherit;transition:background .2s;white-space:nowrap;"
+          onmouseover="this.style.background='#D4AD5C'"
+          onmouseout="this.style.background='var(--gold)'">NOTIFY ME</button>
+      </div>
+      <div id="notify-msg" style="font-size:12px;margin-top:10px;color:rgba(255,255,255,.3);min-height:20px;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<div class="cta-strip">
+  <div class="cta-strip-inner">
+    <div>
+      <h3>Ready to move forward?<br/><em>Your rep is one call away.</em></h3>
+      <p>Schedule a 15-minute intro call — no commitment required. We'll walk through the program, review your patient population, and confirm if it's the right fit before you take any further steps.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <a href="index.html#contact" class="btn btn-dark">Schedule Intro Call →</a>
+      <a href="index.html#contact" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.3);">Request Practice Analysis</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <div class="footer-mark">P</div>
+    <p>MAJESTIC PEPTIDES · A MAJESTIC R&D DIVISION · MARYLAND</p>
+  </div>
+  <div class="footer-links">
+    <a href="index.html">Program</a>
+    <a href="index.html#compounds">Compounds</a>
+    <a href="team.html">Team</a>
+    <a href="resources.html">Resources</a>
+    <a href="index.html#investor-section">Investor Access</a>
+  </div>
+  <p>© 2026 Majestic R&D. All rights reserved. All compounds sourced from licensed 503A compounding partner.</p>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() {
+  var nav = document.getElementById('nav');
+  if (nav) nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+function toggleMobileMenu() {
+  var menu = document.getElementById('mobile-menu');
+  var btn  = document.getElementById('hamburger');
+  if (!menu || !btn) return;
+  var isOpen = menu.style.display === 'flex';
+  menu.style.display = isOpen ? 'none' : 'flex';
+  btn.classList.toggle('open', !isOpen);
+  document.body.style.overflow = isOpen ? '' : 'hidden';
+}
+
+function notifyMe() {
+  var email = document.getElementById('notify-email').value.trim();
+  var msg   = document.getElementById('notify-msg');
+  if (!email || !email.includes('@')) {
+    msg.style.color = '#E74C3C';
+    msg.textContent = 'Please enter a valid email address.';
+    return;
+  }
+  fetch('https://formspree.io/f/xojykarl', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({ email: email, first_name: 'Resource Notify', interest: 'Compliance toolkit notification' })
+  })
+  .then(function(r){ return r.json().then(function(j){ return {ok:r.ok,j:j}; }); })
+  .then(function(res){
+    if (res.ok) {
+      msg.style.color = '#259080';
+      msg.textContent = "\u2713 Got it. We'll notify you when the compliance toolkit is live.";
+      document.getElementById('notify-email').value = '';
+    } else { throw new Error(); }
+  })
+  .catch(function(){
+    msg.style.color = '#E74C3C';
+    msg.textContent = 'Something went wrong — email majesticrdinfo@gmail.com directly.';
+  });
+}
+</script>
+</body>
+</html>
