@@ -1609,6 +1609,7 @@ function checkAccess() {
     var banner = document.getElementById('beta-banner');
     if (banner) banner.style.display = 'flex';
     document.body.style.overflow = '';
+    try { sessionStorage.setItem('mp_access', '1'); } catch(e) {}
   } else {
     errorEl.style.display = 'block';
     inputEl.value = '';
@@ -1863,6 +1864,16 @@ var revealObserver = new IntersectionObserver(function (entries) {
 
 // --- DOM READY ----------------------------------------------
 document.addEventListener('DOMContentLoaded', function () {
+  // Skip gate if already authenticated this session
+  try {
+    if (sessionStorage.getItem('mp_access') === '1') {
+      var gate = document.getElementById('early-access-gate');
+      var banner = document.getElementById('beta-banner');
+      if (gate) gate.style.display = 'none';
+      if (banner) banner.style.display = 'flex';
+      document.body.style.overflow = '';
+    }
+  } catch(e) {}
   calcResults();
   var sel = '.why-card, .funnel-card, .metis-card, .research-card, .phase, .compound-row, .scenario-card, .roi-box';
   document.querySelectorAll(sel).forEach(function (el) {
