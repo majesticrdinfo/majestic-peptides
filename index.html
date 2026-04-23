@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.svg"/>
 <link rel="alternate icon" href="favicon.svg"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Majestic Peptides — Physician & Investor Division | Majestic R&D</title>
@@ -599,10 +600,10 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
 .js-loaded .reveal-pending.revealed{opacity:1!important;transform:translateY(0)!important;}
 </style>
 </head>
-<body>
+<body style="overflow:auto;">
 
-<!-- EARLY ACCESS GATE -->
-<div id="early-access-gate" style="position:fixed;inset:0;background:#0D1117;z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px;">
+<!-- EARLY ACCESS GATE (disabled) -->
+<div id="early-access-gate" style="display:none;">
   <div style="max-width:460px;width:100%;text-align:center;">
     <div style="font-size:10px;letter-spacing:.22em;color:#D4AD5C;margin-bottom:36px;font-weight:600;">MAJESTIC R&D</div>
     <h1 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:400;color:#fff;margin-bottom:14px;line-height:1.35;">You've been granted<br/>early access.</h1>
@@ -667,6 +668,7 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
   <a href="team.html" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Team</a>
   <a href="resources.html" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Resources</a>
   <a href="blog.html" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">News &amp; Insights</a>
+  <a href="affiliates.html" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Partners</a>
   <button onclick="navTo('investor-section');closeMobileMenu()" style="background:var(--gold);border:none;cursor:pointer;font-size:14px;color:var(--ink);padding:12px 32px;letter-spacing:.14em;font-weight:700;margin-top:8px;">INVESTOR ACCESS</button>
   <button onclick="navTo('contact');closeMobileMenu()" style="background:var(--teal);border:none;cursor:pointer;font-size:14px;color:#fff;padding:12px 32px;letter-spacing:.14em;font-weight:700;">CONTACT REP</button>
 </div>
@@ -1726,6 +1728,7 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
     <a href="team.html">Team</a>
     <a href="resources.html">Resources</a>
     <a href="blog.html">News &amp; Insights</a>
+    <a href="affiliates.html">Partners</a>
     <a href="#investor-section" onclick="navTo('investor-section');return false;">Investor Access</a>
   </div>
   <p>© 2026 Majestic R&D. All rights reserved. All compounds sourced from licensed 503A compounding partner.</p>
@@ -2004,16 +2007,13 @@ var revealObserver = new IntersectionObserver(function (entries) {
 
 // --- DOM READY ----------------------------------------------
 document.addEventListener('DOMContentLoaded', function () {
-  // Skip gate if already authenticated this session
-  try {
-    if (sessionStorage.getItem('mp_access') === '1') {
-      var gate = document.getElementById('early-access-gate');
-      var banner = document.getElementById('beta-banner');
-      if (gate) gate.style.display = 'none';
-      if (banner) banner.style.display = 'flex';
-      document.body.style.overflow = '';
-    }
-  } catch(e) {}
+  // Gate disabled — auto-pass always
+  try { sessionStorage.setItem('mp_access', '1'); } catch(e) {}
+  var gate = document.getElementById('early-access-gate');
+  var banner = document.getElementById('beta-banner');
+  if (gate) gate.style.display = 'none';
+  if (banner) { banner.style.display = 'none'; } // also hide beta banner
+  document.body.style.overflow = '';
   calcResults();
   var sel = '.why-card, .funnel-card, .metis-card, .research-card, .phase, .compound-row, .scenario-card, .roi-box';
   document.querySelectorAll(sel).forEach(function (el) {

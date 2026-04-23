@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.svg"/>
 <link rel="alternate icon" href="favicon.svg"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>News & Insights — Majestic Peptides | Majestic R&D</title>
@@ -141,7 +142,8 @@ a{color:inherit;text-decoration:none;}
 .post-meta{display:flex;align-items:center;gap:16px;font-size:11px;color:var(--muted);}
 .post-meta-sep{width:3px;height:3px;border-radius:50%;background:var(--muted);}
 .post-read-more{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--teal);
-  text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s;}
+  text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s;
+  margin-top:auto;padding-top:16px;display:inline-block;}
 .post-read-more:hover{border-bottom-color:var(--teal);}
 
 /* SIDEBAR */
@@ -157,8 +159,10 @@ a{color:inherit;text-decoration:none;}
   margin:56px 0 32px;padding-top:40px;border-top:1px solid var(--border);}
 .all-posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .post-card{background:var(--white);border:1px solid var(--border);
-  padding:28px;border-top:3px solid var(--gold);transition:box-shadow .2s;}
+  padding:28px;border-top:3px solid var(--gold);transition:box-shadow .2s;
+  display:flex;flex-direction:column;}
 .post-card:hover{box-shadow:var(--shadow);}
+.post-card .post-excerpt{flex:1;}
 .post-card .post-title{font-size:18px;margin-bottom:10px;}
 .post-card .post-excerpt{font-size:12px;margin-bottom:16px;}
 
@@ -214,7 +218,14 @@ footer p{font-size:11px;letter-spacing:.1em;}
   .newsletter-inner{grid-template-columns:1fr;}
   footer{padding:32px 24px;}
 }
+@media(max-width:900px){
+  .blog-grid{grid-template-columns:1fr;}
+  .post-sidebar{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .all-posts-grid{grid-template-columns:repeat(2,1fr);}
+}
 @media(max-width:560px){
+  .blog-grid{grid-template-columns:1fr;}
+  .post-sidebar{grid-template-columns:1fr;}
   .all-posts-grid{grid-template-columns:1fr;}
   .newsletter-form{flex-direction:column;}
   .newsletter-form input{border-right:1px solid rgba(255,255,255,.12);border-bottom:none;}
@@ -240,6 +251,7 @@ footer p{font-size:11px;letter-spacing:.1em;}
     <a href="index.html#financing">Financing</a>
     <a href="team.html">Team</a>
     <a href="blog.html" class="active">News & Insights</a>
+    <a href="affiliates.html">Partners</a>
     <a href="index.html#investor-section" class="nav-investor btn btn-sm">Investor Access</a>
     <a href="index.html#contact" class="nav-cta btn btn-sm">Contact Rep</a>
   </div>
@@ -449,6 +461,7 @@ footer p{font-size:11px;letter-spacing:.1em;}
     <a href="index.html#compounds">Compounds</a>
     <a href="team.html">Team</a>
     <a href="blog.html">News & Insights</a>
+    <a href="affiliates.html">Partners</a>
     <a href="index.html#investor-section">Investor Access</a>
   </div>
   <p>© 2026 Majestic R&D. All rights reserved. All compounds sourced from licensed 503A compounding partner.</p>
