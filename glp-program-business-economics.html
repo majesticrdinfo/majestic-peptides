@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.svg"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Economics of a GLP Peptide Program: What the Numbers Actually Look Like — Majestic Peptides</title>
+<meta name="description" content="Most physicians evaluating a compounded GLP peptide program don't have a clear picture of the underlying economics. Here's the cost structure, margin math, and financial model in plain terms."/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="The Economics of a GLP Peptide Program: What the Numbers Actually Look Like"/>
+<meta property="og:description" content="Most physicians evaluating a compounded GLP peptide program don't have a clear picture of the underlying economics. Here's the cost structure and margin math in plain terms."/>
+<meta property="og:site_name" content="Majestic Peptides"/>
+<meta name="twitter:card" content="summary"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Economics of a GLP Peptide Program: What the Numbers Actually Look Like",
+  "description": "Most physicians evaluating a compounded GLP peptide program don't have a clear picture of the underlying economics. Here's the cost structure, margin math, and financial model in plain terms.",
+  "datePublished": "2026-04-24",
+  "dateModified": "2026-04-24",
+  "author": { "@type": "Organization", "name": "Majestic R&D Editorial" },
+  "publisher": { "@type": "Organization", "name": "Majestic Peptides", "url": "https://majestic-peptides.com" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://majestic-peptides.com/glp-program-business-economics.html" },
+  "keywords": ["GLP peptide program economics","compounded peptide practice revenue","cash-pay medicine physician","GLP-1 program ROI","peptide program financial model","physician practice revenue"]
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EE127Y9MQC"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EE127Y9MQC');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--ink:#0D1117;--paper:#F7F4EE;--cream:#EDEAD9;--white:#FFFFFF;--gold:#B8943F;--gold-lt:#D4AD5C;--gold-pale:#F5EDD4;--teal:#1A6B5E;--teal-lt:#259080;--teal-light:#259080;--teal-pale:#DFF0EC;--slate:#4A5568;--muted:#8A9BB0;--red:#C0392B;--border:rgba(0,0,0,0.09);--shadow:0 4px 32px rgba(0,0,0,0.08);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;scroll-padding-top:66px;}
+body{background:var(--paper);color:var(--ink);font-family:'Instrument Sans','Helvetica Neue',sans-serif;font-weight:300;line-height:1.6;}
+::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:var(--gold);}
+a{color:inherit;text-decoration:none;}
+.label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;}
+#nav{position:fixed;top:0;left:0;right:0;z-index:900;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(247,244,238,.97);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);transition:box-shadow .3s;}
+#nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,.07);}
+.logo{display:flex;align-items:center;gap:11px;cursor:pointer;text-decoration:none;}
+.logo-mark{width:34px;height:34px;background:var(--ink);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-style:italic;font-size:16px;color:var(--gold-lt);}
+.logo-txt{line-height:1.2;}.logo-top{font-size:11px;letter-spacing:.18em;font-weight:600;color:var(--ink);display:block;}.logo-sub{font-size:9px;letter-spacing:.14em;color:var(--gold);display:block;}
+.nav-links{display:flex;gap:6px;align-items:center;}
+.nav-links a{font-size:11px;letter-spacing:.13em;color:var(--slate);font-weight:500;transition:color .2s;text-decoration:none;padding:8px 10px;min-height:44px;display:inline-flex;align-items:center;}
+.nav-links a:hover{color:var(--ink);}
+.nav-cta{background:var(--teal)!important;color:#fff!important;padding:8px 18px!important;}
+.nav-cta:hover{background:var(--teal-lt)!important;}
+.nav-investor{background:var(--gold)!important;color:var(--ink)!important;padding:8px 18px!important;}
+.btn{display:inline-block;padding:13px 28px;font-size:11px;letter-spacing:.16em;font-weight:600;border:none;cursor:pointer;font-family:inherit;transition:all .2s;text-decoration:none;}
+.btn-teal{background:var(--teal);color:#fff;}.btn-teal:hover{background:var(--teal-lt);}
+.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--ink);}.btn-outline:hover{background:var(--ink);color:var(--paper);}
+.btn-sm{padding:9px 20px;font-size:10px;}
+.article-hero{padding:120px 48px 64px;background:var(--ink);position:relative;overflow:hidden;}
+.article-hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 80% 20%,rgba(184,148,63,.1) 0%,transparent 55%);}
+.article-hero-inner{max-width:800px;margin:0 auto;position:relative;}
+.article-breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:24px;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.3);}
+.article-breadcrumb a{color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s;}.article-breadcrumb a:hover{color:var(--gold-lt);}.article-breadcrumb span{color:rgba(255,255,255,.15);}
+.article-cat{display:inline-block;background:rgba(184,148,63,.2);border:1px solid rgba(184,148,63,.4);color:var(--gold-lt);font-size:9px;letter-spacing:.18em;font-weight:700;padding:4px 10px;margin-bottom:20px;}
+.article-title{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,48px);font-weight:400;color:#fff;line-height:1.1;margin-bottom:20px;}
+.article-title em{font-style:italic;color:var(--gold-lt);}
+.article-meta{display:flex;align-items:center;gap:16px;font-size:12px;color:rgba(255,255,255,.35);}
+.article-meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.2);}
+.article-body{max-width:800px;margin:0 auto;padding:64px 48px;}
+.article-body p{font-size:16px;color:var(--slate);line-height:1.9;margin-bottom:24px;}
+.article-body h2{font-family:'Playfair Display',serif;font-size:clamp(20px,2.5vw,28px);font-weight:400;color:var(--ink);line-height:1.2;margin:48px 0 16px;}
+.article-body h3{font-size:16px;font-weight:600;color:var(--ink);margin:32px 0 12px;letter-spacing:.04em;}
+.article-body strong{font-weight:600;color:var(--ink);}
+.article-body ul{margin:16px 0 24px;padding-left:0;list-style:none;}
+.article-body ul li{font-size:16px;color:var(--slate);line-height:1.9;padding:8px 0 8px 24px;border-bottom:1px solid var(--border);position:relative;}
+.article-body ul li::before{content:'→';position:absolute;left:0;color:var(--teal);font-size:13px;}
+.article-body ul li:last-child{border-bottom:none;}
+.callout{padding:24px 28px;margin:32px 0;border-left:3px solid var(--teal);background:var(--teal-pale);}
+.callout p{font-size:14px;color:var(--teal);line-height:1.8;margin:0;}
+.callout strong{color:var(--teal);}
+.callout-gold{border-left-color:var(--gold);background:var(--gold-pale);}
+.callout-gold p{color:#7a5f1a;}.callout-gold strong{color:#7a5f1a;}
+.callout-dark{border-left:none;background:var(--ink);padding:32px;}
+.callout-dark p{color:rgba(255,255,255,.6);font-size:15px;}
+.callout-dark strong{color:#fff;}
+.fact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin:40px 0;}
+.fact-box{background:var(--paper);padding:24px;text-align:center;}
+.fact-num{font-family:'Playfair Display',serif;font-size:32px;color:var(--gold);margin-bottom:6px;}
+.fact-lbl{font-size:10px;letter-spacing:.14em;color:var(--muted);font-weight:600;}
+.econ-table{width:100%;border-collapse:collapse;margin:32px 0;}
+.econ-table th{background:var(--ink);color:var(--gold-lt);font-size:10px;letter-spacing:.14em;font-weight:600;padding:14px 18px;text-align:left;}
+.econ-table td{padding:14px 18px;border-bottom:1px solid var(--border);font-size:14px;}
+.econ-table tr:last-child td{border-bottom:none;}
+.econ-table tr:hover td{background:var(--cream);}
+.econ-table .num{font-family:'Playfair Display',serif;font-size:16px;color:var(--teal);}
+.article-divider{width:44px;height:2px;background:var(--gold);margin:0 0 32px;}
+.article-cta{background:var(--ink);padding:40px;margin:48px 0;text-align:center;}
+.article-cta h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:400;color:#fff;margin-bottom:12px;}
+.article-cta p{font-size:14px;color:rgba(255,255,255,.45);margin-bottom:24px;line-height:1.7;}
+.article-cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.related{background:var(--cream);padding:56px 48px;}
+.related-inner{max-width:800px;margin:0 auto;}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:28px;}
+.related-card{background:var(--white);border:1px solid var(--border);padding:24px;transition:box-shadow .2s;display:block;text-decoration:none;}
+.related-card:hover{box-shadow:var(--shadow);}
+.related-cat{font-size:9px;letter-spacing:.16em;font-weight:700;margin-bottom:10px;display:block;}
+.related-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:400;color:var(--ink);line-height:1.3;margin-bottom:8px;}
+.related-meta{font-size:11px;color:var(--muted);}
+footer{background:var(--ink);color:rgba(255,255,255,.35);padding:40px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-logo{display:flex;align-items:center;gap:10px;}
+.footer-mark{width:28px;height:28px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:var(--ink);}
+footer p{font-size:11px;letter-spacing:.1em;}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap;}
+.footer-links a{font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--gold);}
+.ham-line{display:block;width:24px;height:2px;background:var(--ink);transition:all .3s;}
+#hamburger.open .ham-line:nth-child(1){transform:translateY(7px) rotate(45deg);}
+#hamburger.open .ham-line:nth-child(2){opacity:0;}
+#hamburger.open .ham-line:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+#hamburger.open .ham-line{background:#fff;}
+@media(max-width:900px){
+  #nav-links{display:none!important;}#hamburger{display:flex!important;}#nav{padding:0 24px;}
+  .article-hero{padding:100px 24px 48px;}.article-body{padding:48px 24px;}
+  .fact-grid{grid-template-columns:1fr;}.econ-table{display:block;overflow-x:auto;}
+  .related{padding:40px 24px;}.related-grid{grid-template-columns:1fr;}footer{padding:32px 24px;}
+}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a class="logo" href="index.html">
+    <div class="logo-mark">P</div>
+    <div class="logo-txt"><span class="logo-top">MAJESTIC PEPTIDES</span><span class="logo-sub">A MAJESTIC R&D DIVISION</span></div>
+  </a>
+  <div class="nav-links" id="nav-links">
+    <div class="nav-dropdown" id="nav-program-dd" style="position:relative;">
+      <button onclick="document.getElementById('nav-program-dd').classList.toggle('open')" style="background:none;border:none;cursor:pointer;font-size:11px;letter-spacing:.13em;color:var(--slate);font-family:inherit;font-weight:500;padding:8px 12px;display:inline-flex;align-items:center;gap:5px;min-height:44px;">Program <span style="display:inline-block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-bottom:2px;"></span></button>
+      <div id="prog-dd-menu" style="position:absolute;top:calc(100% + 4px);left:0;background:var(--paper);border:1px solid var(--border);box-shadow:0 12px 40px rgba(0,0,0,.12);min-width:220px;opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity .18s,transform .18s;z-index:999;">
+        <a href="index.html" style="display:flex;align-items:flex-start;gap:12px;padding:14px 18px;font-size:12px;color:var(--slate);border-bottom:1px solid var(--border);text-decoration:none;" onmouseover="this.style.background='var(--cream)'" onmouseout="this.style.background=''"><span>📋</span><span><b style="display:block;font-size:11px;letter-spacing:.1em;color:var(--ink);">HOW IT WORKS</b><span style="font-size:11px;color:var(--muted);">Program overview &amp; onboarding</span></span></a>
+        <a href="index.html#compounds-teaser" style="display:flex;align-items:flex-start;gap:12px;padding:14px 18px;font-size:12px;color:var(--slate);border-bottom:1px solid var(--border);text-decoration:none;" onmouseover="this.style.background='var(--cream)'" onmouseout="this.style.background=''"><span>💊</span><span><b style="display:block;font-size:11px;letter-spacing:.1em;color:var(--ink);">COMPOUNDS</b><span style="font-size:11px;color:var(--muted);">Sema · Tirz · Reta pricing &amp; specs</span></span></a>
+        <a href="index.html#quality-teaser" style="display:flex;align-items:flex-start;gap:12px;padding:14px 18px;font-size:12px;color:var(--slate);border-bottom:1px solid var(--border);text-decoration:none;" onmouseover="this.style.background='var(--cream)'" onmouseout="this.style.background=''"><span>🔬</span><span><b style="display:block;font-size:11px;letter-spacing:.1em;color:var(--ink);">QUALITY &amp; COMPLIANCE</b><span style="font-size:11px;color:var(--muted);">USP-797, COA verification, testing</span></span></a>
+        <a href="index.html#calculator-teaser" style="display:flex;align-items:flex-start;gap:12px;padding:14px 18px;font-size:12px;color:var(--slate);border-bottom:1px solid var(--border);text-decoration:none;" onmouseover="this.style.background='var(--cream)'" onmouseout="this.style.background=''"><span>📊</span><span><b style="display:block;font-size:11px;letter-spacing:.1em;color:var(--ink);">CALCULATOR</b><span style="font-size:11px;color:var(--muted);">Inventory &amp; revenue projections</span></span></a>
+        <a href="index.html#contact-strip" style="display:flex;align-items:flex-start;gap:12px;padding:14px 18px;font-size:12px;color:var(--slate);text-decoration:none;" onmouseover="this.style.background='var(--cream)'" onmouseout="this.style.background=''"><span>📞</span><span><b style="display:block;font-size:11px;letter-spacing:.1em;color:var(--ink);">CONTACT A REP</b><span style="font-size:11px;color:var(--muted);">Book intro call or get analysis</span></span></a>
+      </div>
+    </div>
+    <a href="resources.html">Resources</a>
+    <a href="blog.html" style="color:var(--teal);font-weight:600;">News</a>
+    <a href="affiliates.html">Partners</a>
+    <a href="team.html">Team</a>
+    <a href="index.html#investor-section" class="nav-investor btn btn-sm">Investor Access</a>
+    <a href="index.html#contact-strip" class="nav-cta btn btn-sm">Contact Rep</a>
+  </div>
+  <button id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu" style="display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;">
+    <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+  </button>
+</nav>
+<div id="mobile-menu" style="display:none;position:fixed;inset:0;background:var(--ink);z-index:850;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding-top:62px;">
+  <a href="index.html" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;text-decoration:none;">Program</a>
+  <a href="resources.html" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;text-decoration:none;">Resources</a>
+  <a href="blog.html" style="font-size:22px;color:var(--gold-lt);font-family:'Playfair Display',serif;text-decoration:none;">News &amp; Insights</a>
+  <a href="affiliates.html" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;text-decoration:none;">Partners</a>
+  <a href="team.html" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;text-decoration:none;">Team</a>
+  <a href="index.html#investor-section" style="background:var(--gold);font-size:14px;color:var(--ink);padding:12px 32px;letter-spacing:.14em;font-weight:700;">INVESTOR ACCESS</a>
+  <a href="index.html#contact-strip" style="background:var(--teal);font-size:14px;color:#fff;padding:12px 32px;letter-spacing:.14em;font-weight:700;">CONTACT REP</a>
+  <button onclick="closeMobileMenu()" style="position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;">&times;</button>
+</div>
+
+<div class="article-hero">
+  <div class="article-hero-inner">
+    <div class="article-breadcrumb">
+      <a href="index.html">Home</a><span>/</span>
+      <a href="blog.html">News &amp; Insights</a><span>/</span>
+      <span>Practice Economics</span>
+    </div>
+    <span class="article-cat">PRACTICE ECONOMICS</span>
+    <h1 class="article-title">The Economics of a<br/><em>GLP Peptide Program:</em><br/>What the Numbers Actually Look Like</h1>
+    <div class="article-meta">
+      <span>Majestic R&D Editorial</span>
+      <span class="article-meta-sep"></span>
+      <span>April 24, 2026</span>
+      <span class="article-meta-sep"></span>
+      <span>7 min read</span>
+      <span class="article-meta-sep"></span>
+      <span>Practice Business</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-body">
+  <div class="article-divider"></div>
+
+  <p>Most physicians evaluating a compounded GLP peptide program arrive at the conversation without a clear picture of what the underlying economics actually look like. The marketing language — "revenue from day one," "$60K year-one potential" — is directionally accurate but abstracted. What's missing is the cost structure: where the money comes from, where it goes, what the margins are on each compound, and how the financial model holds up at different patient volumes.</p>
+
+  <p>This article lays out the economics of a compounded GLP peptide program in plain terms. No sales pitch. Just the cost structure, the margin math, and an honest assessment of where the model is strong and where the variables matter.</p>
+
+  <h2>The cost structure: what you're actually buying</h2>
+
+  <p>A starter package in a compounded GLP program is fundamentally an inventory purchase. The practice buys a quantity of compounded peptide — typically structured around a $30,000 initial order — and resells it to patients as part of a clinical program. The economics are those of a product-based revenue stream layered on top of a service-based practice.</p>
+
+  <p>The three relevant cost categories are:</p>
+
+  <ul>
+    <li><strong>Inventory cost:</strong> The wholesale cost of the compounded peptide per unit (vial). This is the primary cost of goods. At Majestic published pricing: Semaglutide at $262.50 per 30mg vial, Tirzepatide at $750.00 per 200mg vial, Retatrutide at $525.00 per 60mg vial.</li>
+    <li><strong>Financing cost:</strong> If the practice uses PNC Healthcare financing for the starter order, the carrying cost is approximately $650/month over 60 months at 10% APR on a $30,000 draw. This is the baseline overhead the program must cover before it generates net revenue.</li>
+    <li><strong>Program overhead:</strong> Staff time for patient management, compliance documentation, storage, and administration. In established practices with efficient workflows, this is largely absorbed into existing overhead. In practices building the program from scratch, there is a startup cost in staff time during the first 30–60 days.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>The key insight on cost structure:</strong> Unlike most clinical services, the primary cost in a peptide program is inventory — a tangible asset with a shelf life, not a sunk cost. Inventory that moves quickly generates revenue. Inventory that doesn't move is capital tied up in product. The financial health of the program is therefore directly tied to patient volume and inventory velocity — how quickly the practice cycles through its initial order.</p>
+  </div>
+
+  <h2>Gross margin by compound: not all peptides are equal</h2>
+
+  <p>The three compounds have meaningfully different margin profiles, driven by their cost per mg and the volume of compound required per patient per month. Understanding this matters for how a practice thinks about its compound mix.</p>
+
+  <table class="econ-table">
+    <thead>
+      <tr>
+        <th>Compound</th>
+        <th>Cost/Vial</th>
+        <th>Vial Size</th>
+        <th>Cost/mg</th>
+        <th>Typical Patient Volume/mo</th>
+        <th>Est. Cost/Patient/mo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Semaglutide</strong></td>
+        <td class="num">$262.50</td>
+        <td>30 mg</td>
+        <td class="num">$8.75</td>
+        <td>Lower mg/mo</td>
+        <td class="num">Lower</td>
+      </tr>
+      <tr>
+        <td><strong>Tirzepatide</strong></td>
+        <td class="num">$750.00</td>
+        <td>200 mg</td>
+        <td class="num">$3.75</td>
+        <td>Higher mg/mo</td>
+        <td class="num">Moderate</td>
+      </tr>
+      <tr>
+        <td><strong>Retatrutide</strong></td>
+        <td class="num">$525.00</td>
+        <td>60 mg</td>
+        <td class="num">$8.75</td>
+        <td>Moderate mg/mo</td>
+        <td class="num">Higher</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Tirzepatide's $3.75/mg cost is the lowest of the three compounds despite its higher per-vial price — a consequence of its 200mg vial size. Practices that build a patient base weighted toward Tirzepatide will find the cost-per-patient-per-month economics favorable relative to the other compounds. This is worth understanding when evaluating compound mix, even though the clinical decision of which compound to use belongs entirely to the physician.</p>
+
+  <h2>The inventory velocity question</h2>
+
+  <p>The single most important variable in the financial model is how quickly the practice burns through its initial inventory. This is not simply a function of patient count — it is a function of patient count multiplied by compound mix and average monthly usage per patient.</p>
+
+  <div class="fact-grid">
+    <div class="fact-box">
+      <div class="fact-num">6 mo</div>
+      <div class="fact-lbl">Target Burn Rate for Ideal Program Fit</div>
+    </div>
+    <div class="fact-box">
+      <div class="fact-num">12 mo</div>
+      <div class="fact-lbl">Outer Limit Before Economics Get Uncomfortable</div>
+    </div>
+    <div class="fact-box">
+      <div class="fact-num">$650</div>
+      <div class="fact-lbl">Monthly Financing Overhead to Cover</div>
+    </div>
+  </div>
+
+  <p>A practice burning through a $30,000 inventory order in six months is cycling capital efficiently. Revenue exceeds the financing payment early, reorders build inventory depth, and the program develops momentum. A practice taking 18 months to move the same inventory has a different problem: carrying cost is accumulating against a slow-moving asset, and the program's financial case weakens with each passing month.</p>
+
+  <p>The inventory calculator on the Majestic program homepage runs this math in real time. Input your expected patient mix and it returns your projected burn rate — the most honest single indicator of whether the program makes financial sense for your specific practice before you commit to anything.</p>
+
+  <h2>Where the revenue actually comes from</h2>
+
+  <p>It is worth being precise about the revenue model, because it is different from most clinical revenue streams physicians are accustomed to.</p>
+
+  <p>Insurance-billed services generate revenue through a coding and reimbursement structure that is largely outside the physician's direct control. The practice bills, the payer adjudicates, and the practice collects some fraction of what it billed, on a timeline that can stretch weeks or months.</p>
+
+  <p>A cash-pay GLP peptide program operates on a fundamentally different model. The practice purchases inventory at wholesale cost and provides it to patients as part of a clinical program at a markup that reflects the value delivered. Revenue is collected at the point of service. There is no claims process, no adjudication, no 45-day collections cycle. The cash-pay structure is what makes the program's economics as clean as they are — and it is also what makes the patient volume variable so directly impactful on cash flow.</p>
+
+  <div class="callout callout-gold">
+    <p><strong>The compounding effect of retention:</strong> A patient who continues their program for 12 months generates substantially more revenue than the initial month implies. The startup cost of acquiring and onboarding a patient — intake, documentation, first visit — is a one-time cost. The monthly revenue from that patient is recurring. Programs with strong patient retention at months 3, 6, and 12 have dramatically better economics than programs with high early attrition, even at identical initial patient volumes.</p>
+  </div>
+
+  <h2>The financial case at different practice sizes</h2>
+
+  <p>The economics look different depending on the size and type of practice. A few honest observations:</p>
+
+  <h3>Small primary care or family medicine practices (under 500 active patients)</h3>
+  <p>The financial case is viable but depends heavily on identifying and converting the right subset of existing patients. The program's economics are tight at low patient volumes — the $650/month financing payment requires a minimum patient base to cover comfortably. The Metis Profit Snapshot is particularly valuable here: knowing your specific patient population's likely conversion rate before committing to the starter order is exactly the kind of information that makes the decision defensible.</p>
+
+  <h3>Mid-size practices (500–2,000 active patients)</h3>
+  <p>This is where the program's economics are most straightforward. A practice with 1,000 active patients likely has 80–150 individuals who meet a reasonable metabolic profile for a GLP program. Converting even 20–30 of those patients in the first 90 days produces inventory velocity and revenue that comfortably exceeds the financing overhead. This is the core target demographic for the program.</p>
+
+  <h3>Weight loss clinics and metabolic medicine practices</h3>
+  <p>For practices already focused on metabolic health, the program is effectively an inventory optimization play. The patient base is already pre-selected. The question is cost of goods and supply chain reliability, not patient conversion. These practices typically move inventory fastest and have the most mature financial picture from the program earliest.</p>
+
+  <h3>Med spas and aesthetics practices</h3>
+  <p>The cash-pay infrastructure is already built. Patients are already accustomed to paying out of pocket for clinical services. The marginal cost of adding a GLP program in terms of patient education and billing infrastructure is low. The constraint is typically physician or NP oversight requirements depending on the state, not the economics themselves.</p>
+
+  <h2>What the model does not account for</h2>
+
+  <p>An honest financial overview has to name what the projections don't include:</p>
+
+  <ul>
+    <li><strong>Patient attrition:</strong> Some patients discontinue within 90 days — cost intolerance, side effects, life circumstances. Programs that don't plan for attrition and build patient pipelines accordingly will find their inventory burn rate slowing at the 3-month mark.</li>
+    <li><strong>Regulatory changes:</strong> The compounded GLP-1 market has been subject to FDA scrutiny related to shortage list status. Changes to the regulatory landscape could affect the availability or legal basis for compounded GLP-1s. Practices should stay current on FDA guidance and work with compliant suppliers whose documentation is audit-ready.</li>
+    <li><strong>Competition:</strong> The compounded GLP market is competitive and getting more so. Practices that establish programs now benefit from first-mover advantage in their patient population, but pricing pressure from direct-to-consumer telehealth platforms is a real market dynamic.</li>
+    <li><strong>Staff time in year one:</strong> The first 60–90 days of a new program require disproportionate staff attention. Intake workflows, documentation templates, and patient communication protocols that feel efficient by month four are not efficient on day one. Factor this in honestly.</li>
+  </ul>
+
+  <div class="callout callout-dark">
+    <p><strong>The bottom line:</strong> The financial case for a well-run GLP peptide program at appropriate patient volumes is sound. The economics are not complicated — they are a function of wholesale cost, inventory velocity, and patient retention. The practices that perform best financially are those that approach the program with the same operational discipline they apply to any other revenue line: clear intake processes, consistent patient follow-through, and a realistic picture of the patient population before the first order is placed.</p>
+  </div>
+
+  <div class="article-cta">
+    <h3>See the numbers for your specific practice.</h3>
+    <p>The Majestic inventory calculator runs your compound mix and patient volume against the actual cost structure — burn rate, monthly revenue projection, and financing coverage — before you commit to anything. Your Metis Profit Snapshot goes deeper: a personalized financial model built on your actual patient population data.</p>
+    <div class="article-cta-btns">
+      <a class="btn btn-teal" href="index.html#calculator-teaser">Run the Calculator</a>
+      <a class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.3);" href="index.html#contact-strip">Get Your Profit Snapshot →</a>
+    </div>
+  </div>
+</div>
+
+<div class="related">
+  <div class="related-inner">
+    <span class="label" style="color:var(--teal);">Continue Reading</span>
+    <div class="related-grid">
+      <a class="related-card" href="peptide-eligible-patients.html">
+        <span class="related-cat" style="color:var(--gold);">PRACTICE GROWTH</span>
+        <h3 class="related-title">Why Most Practices Undercount Their GLP-Eligible Patients — And How to Find Them</h3>
+        <div class="related-meta">April 2026 · 6 min read</div>
+      </a>
+      <a class="related-card" href="physician-questions.html">
+        <span class="related-cat" style="color:var(--teal);">DUE DILIGENCE</span>
+        <h3 class="related-title">7 Questions to Ask Any Peptide Supplier Before You Order</h3>
+        <div class="related-meta">April 2026 · 5 min read</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo"><div class="footer-mark">P</div><p>MAJESTIC PEPTIDES · A MAJESTIC R&D DIVISION · MARYLAND</p></div>
+  <div class="footer-links">
+    <a href="index.html">Program</a><a href="index.html#compounds-teaser">Compounds</a>
+    <a href="index.html#quality-teaser">Quality</a><a href="team.html">Team</a>
+    <a href="resources.html">Resources</a><a href="blog.html">News &amp; Insights</a>
+    <a href="affiliates.html">Partners</a><a href="index.html#investor-section">Investor Access</a>
+  </div>
+  <p>© 2026 Majestic R&D. All rights reserved. All compounds sourced from licensed 503A compounding partner.</p>
+</footer>
+<script>
+window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40);},{passive:true});
+document.addEventListener('click',function(e){var dd=document.getElementById('nav-program-dd');var menu=document.getElementById('prog-dd-menu');if(!dd||!menu)return;if(dd.contains(e.target)){var open=menu.style.opacity==='1';menu.style.opacity=open?'0':'1';menu.style.pointerEvents=open?'none':'auto';menu.style.transform=open?'translateY(-8px)':'translateY(0)';}else{menu.style.opacity='0';menu.style.pointerEvents='none';menu.style.transform='translateY(-8px)';}});
+function toggleMobileMenu(){var m=document.getElementById('mobile-menu'),b=document.getElementById('hamburger');if(!m||!b)return;var o=m.style.display==='flex';m.style.display=o?'none':'flex';b.classList.toggle('open',!o);document.body.style.overflow=o?'':'hidden';}
+function closeMobileMenu(){var m=document.getElementById('mobile-menu'),b=document.getElementById('hamburger');if(m)m.style.display='none';if(b)b.classList.remove('open');document.body.style.overflow='';}
+</script>
+</body>
+</html>

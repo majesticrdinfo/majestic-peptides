@@ -6,12 +6,11 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.svg"/>
 <link rel="alternate icon" href="favicon.svg"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Majestic Peptides — Practice Portal | Majestic R&D</title>
+<title>Majestic Peptides — Physician GLP Program | Majestic R&D</title>
 <meta name="description" content="USP-797 certified, sterile injectable-grade compounded GLP-1 peptides for physician practices. ISO Class 5 manufacturing in South Carolina. Independent third-party tested. $0 out-of-pocket start via PNC Healthcare financing."/>
 <meta name="theme-color" content="#0D1117"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-<!-- Schema.org Organization markup -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -32,11 +31,9 @@
     "@type": "PostalAddress",
     "addressRegion": "MD",
     "addressCountry": "US"
-  },
-  "sameAs": []
+  }
 }
 </script>
-<!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EE127Y9MQC"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -44,19 +41,17 @@
   gtag('js', new Date());
   gtag('config', 'G-EE127Y9MQC');
 </script>
-<!-- Open Graph -->
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="Majestic Peptides — Physician & Investor Division"/>
+<meta property="og:title" content="Majestic Peptides — Physician GLP Program"/>
 <meta property="og:description" content="USA-manufactured compounded peptides for physician practices. Independent lab-tested. $0 out-of-pocket start. First patient in 20 days."/>
 <meta property="og:site_name" content="Majestic R&D"/>
 <meta property="og:image" content="https://majestic-peptides.com/og-image.svg"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
-<meta name="twitter:image" content="https://majestic-peptides.com/og-image.svg"/>
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Majestic Peptides — Physician & Investor Division"/>
+<meta name="twitter:title" content="Majestic Peptides — Physician GLP Program"/>
 <meta name="twitter:description" content="USA-manufactured compounded peptides for physician practices. Independent lab-tested. $0 out-of-pocket start. First patient in 20 days."/>
+<meta name="twitter:image" content="https://majestic-peptides.com/og-image.svg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
@@ -76,50 +71,94 @@ a{color:inherit;text-decoration:none;}
 
 /* TYPE */
 .serif{font-family:'Playfair Display',Georgia,serif;}
-.mono{font-family:'Courier New',monospace;font-size:0.9em;}
 .label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;}
 .label-teal{color:var(--teal);}
 .label-gold{color:var(--gold);}
 
-/* NAV */
-#nav{position:fixed;top:0;left:0;right:0;z-index:900;height:62px;
+/* ── NAV ── */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:900;height:62px;
   display:flex;align-items:center;justify-content:space-between;padding:0 48px;
   background:rgba(247,244,238,.98);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
-  border-bottom:1px solid var(--border);transition:box-shadow .3s;}
+  border-bottom:1px solid var(--border);transition:box-shadow .3s;
+}
 #nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,.07);}
-.logo{display:flex;align-items:center;gap:11px;cursor:pointer;}
+.logo{display:flex;align-items:center;gap:11px;cursor:pointer;text-decoration:none;}
 .logo-mark{width:34px;height:34px;background:var(--ink);display:flex;align-items:center;
   justify-content:center;font-family:'Playfair Display',serif;font-style:italic;
   font-size:16px;color:var(--gold-lt);}
 .logo-txt{line-height:1.2;}
 .logo-top{font-size:11px;letter-spacing:.18em;font-weight:600;color:var(--ink);display:block;}
 .logo-sub{font-size:9px;letter-spacing:.14em;color:var(--gold);display:block;}
-.nav-links{display:flex;gap:28px;align-items:center;}
-.nav-links button,.nav-links a{background:none;border:none;cursor:pointer;
+
+.nav-links{display:flex;gap:6px;align-items:center;}
+.nav-links > a, .nav-links > button{
+  background:none;border:none;cursor:pointer;
   font-size:11px;letter-spacing:.13em;color:var(--slate);font-family:inherit;
-  font-weight:500;transition:color .2s;padding:0;text-decoration:none;}
-.nav-links button:hover,.nav-links a:hover{color:var(--ink);}
+  font-weight:500;transition:color .2s;padding:8px 12px;text-decoration:none;
+  display:inline-flex;align-items:center;gap:5px;min-height:44px;
+}
+.nav-links > a:hover, .nav-links > button:hover{color:var(--ink);}
+.nav-links > a.active{color:var(--teal);font-weight:600;}
+
+/* Program dropdown */
+.nav-dropdown{position:relative;}
+.nav-dropdown-toggle{cursor:pointer;}
+.nav-dropdown-toggle .arrow{
+  display:inline-block;width:6px;height:6px;border-right:1.5px solid currentColor;
+  border-bottom:1.5px solid currentColor;transform:rotate(45deg);
+  margin-bottom:2px;transition:transform .2s;
+}
+.nav-dropdown:hover .arrow,
+.nav-dropdown.open .arrow{transform:rotate(-135deg);margin-bottom:-2px;}
+.nav-dropdown-menu{
+  position:absolute;top:calc(100% + 4px);left:0;
+  background:var(--paper);border:1px solid var(--border);
+  box-shadow:0 12px 40px rgba(0,0,0,.12);
+  min-width:220px;opacity:0;pointer-events:none;
+  transform:translateY(-8px);transition:opacity .18s,transform .18s;
+  z-index:999;
+}
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown.open .nav-dropdown-menu{opacity:1;pointer-events:auto;transform:translateY(0);}
+.nav-dropdown-menu a{
+  display:flex;align-items:flex-start;gap:12px;
+  padding:14px 18px;font-size:12px;color:var(--slate);
+  letter-spacing:.06em;border-bottom:1px solid var(--border);
+  transition:background .15s,color .15s;
+}
+.nav-dropdown-menu a:last-child{border-bottom:none;}
+.nav-dropdown-menu a:hover{background:var(--cream);color:var(--ink);}
+.nav-dropdown-menu a .dd-icon{font-size:15px;flex-shrink:0;margin-top:1px;}
+.nav-dropdown-menu a .dd-text b{display:block;font-weight:600;font-size:11px;letter-spacing:.1em;color:var(--ink);margin-bottom:2px;}
+.nav-dropdown-menu a .dd-text span{font-size:11px;color:var(--muted);letter-spacing:.03em;}
+
 .nav-cta{background:var(--teal)!important;color:#fff!important;
-  padding:8px 18px!important;border-radius:0!important;}
+  padding:8px 18px!important;letter-spacing:.12em!important;}
 .nav-cta:hover{background:var(--teal-lt)!important;color:#fff!important;}
 .nav-investor{background:var(--gold)!important;color:var(--ink)!important;
-  padding:8px 18px!important;}
+  padding:8px 18px!important;letter-spacing:.12em!important;}
 .nav-investor:hover{background:var(--gold-lt)!important;}
 
-/* HERO */
-#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;
-  gap:0;align-items:stretch;padding-top:62px;}
-.hero-left{padding:80px 64px;display:flex;flex-direction:column;justify-content:center;
-  background:var(--paper);position:relative;}
-.hero-left::after{content:'';position:absolute;top:15%;left:0;
-  width:3px;height:60px;background:var(--teal);}
+/* ── HERO (HUB VERSION) ── */
+#hero{
+  min-height:100vh;display:grid;grid-template-columns:1fr 1fr;
+  gap:0;align-items:stretch;padding-top:62px;
+}
+.hero-left{
+  padding:80px 64px;display:flex;flex-direction:column;justify-content:center;
+  background:var(--paper);position:relative;
+}
+.hero-left::after{content:'';position:absolute;top:15%;left:0;width:3px;height:60px;background:var(--teal);}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;margin-bottom:24px;
   background:var(--teal-pale);padding:6px 14px;width:fit-content;}
 .hero-tag span{font-size:9px;letter-spacing:.22em;color:var(--teal);font-weight:600;}
 .hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
-.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(36px,4.5vw,58px);
-  font-weight:400;line-height:1.08;color:var(--ink);margin-bottom:24px;}
+.hero-h1{
+  font-family:'Playfair Display',serif;font-size:clamp(36px,4.5vw,58px);
+  font-weight:400;line-height:1.08;color:var(--ink);margin-bottom:24px;
+}
 .hero-h1 em{font-style:italic;color:var(--teal);}
 .hero-h1 strong{font-weight:700;}
 .hero-lead{font-size:15px;color:var(--slate);line-height:1.85;margin-bottom:36px;max-width:480px;}
@@ -143,7 +182,7 @@ a{color:inherit;text-decoration:none;}
 .compound-meta-item .val{font-size:15px;font-weight:600;color:var(--gold-lt);}
 .compound-meta-item .key{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.1em;margin-top:2px;}
 
-/* BUTTONS */
+/* ── BUTTONS ── */
 .btn{display:inline-block;padding:13px 28px;font-size:11px;letter-spacing:.16em;
   font-weight:600;border:none;cursor:pointer;font-family:inherit;transition:all .2s;text-decoration:none;}
 .btn-dark{background:var(--ink);color:var(--gold-lt);}
@@ -156,187 +195,131 @@ a{color:inherit;text-decoration:none;}
 .btn-gold:hover{background:var(--gold-lt);}
 .btn-sm{padding:9px 20px;font-size:10px;}
 
-/* SECTION */
-section{padding:96px 48px;}
+/* ── HUB SECTIONS ── */
+section{padding:80px 48px;}
 .inner{max-width:1120px;margin:0 auto;}
-.section-header{margin-bottom:56px;}
+.section-header{margin-bottom:48px;}
 .section-header .label{display:block;margin-bottom:12px;}
-.section-h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);
+.section-h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,40px);
   font-weight:400;line-height:1.15;color:var(--ink);margin-bottom:16px;}
-.section-lead{font-size:15px;color:var(--slate);line-height:1.85;max-width:600px;}
-.divider{width:44px;height:2px;background:var(--gold);margin:18px 0 32px;}
+.section-lead{font-size:14px;color:var(--slate);line-height:1.85;max-width:580px;}
+.divider{width:44px;height:2px;background:var(--gold);margin:14px 0 28px;}
+.section-link{
+  display:inline-flex;align-items:center;gap:8px;font-size:11px;
+  letter-spacing:.14em;font-weight:600;color:var(--teal);margin-top:24px;
+  text-decoration:none;transition:gap .2s;
+}
+.section-link:hover{gap:14px;}
+.section-link::after{content:'→';}
 
-/* WHY SECTION */
-#why{background:var(--cream);}
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.why-card{background:var(--paper);padding:36px 28px;border-top:3px solid transparent;
-  transition:border-color .25s,box-shadow .25s;}
-.why-card:hover{border-color:var(--teal);box-shadow:var(--shadow);}
-.why-icon{width:44px;height:44px;background:var(--teal-pale);display:flex;
-  align-items:center;justify-content:center;font-size:20px;margin-bottom:20px;}
-.why-card h3{font-family:'Playfair Display',serif;font-size:18px;font-weight:400;
-  margin-bottom:10px;color:var(--ink);}
-.why-card p{font-size:13px;color:var(--slate);line-height:1.8;}
-.why-card ul{margin-top:12px;padding-left:16px;}
-.why-card ul li{font-size:13px;color:var(--slate);line-height:1.8;margin-bottom:4px;}
+/* ── PROGRAM TEASER ── */
+#program-teaser{background:var(--cream);}
+.program-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.program-card{
+  background:var(--paper);padding:32px 28px;
+  border-top:3px solid transparent;transition:border-color .25s,box-shadow .25s;
+}
+.program-card:hover{border-color:var(--teal);box-shadow:var(--shadow);}
+.program-card-icon{width:44px;height:44px;background:var(--teal-pale);
+  display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:20px;}
+.program-card h3{font-family:'Playfair Display',serif;font-size:17px;font-weight:400;margin-bottom:10px;}
+.program-card p{font-size:13px;color:var(--slate);line-height:1.8;}
 
-/* COMPOUNDS */
-#compounds{background:var(--paper);}
-.compound-table{width:100%;border-collapse:collapse;margin-top:40px;}
-.compound-table th{background:var(--ink);color:var(--gold-lt);font-size:10px;
-  letter-spacing:.16em;font-weight:600;padding:16px 20px;text-align:left;}
-.compound-table td{padding:20px;border-bottom:1px solid var(--border);font-size:14px;vertical-align:middle;}
-.compound-table tr:last-child td{border-bottom:none;}
-.compound-table tr:hover td{background:var(--cream);}
-.glp-badge{display:inline-block;padding:4px 10px;font-size:9px;letter-spacing:.16em;font-weight:700;}
-.glp1{background:var(--teal-pale);color:var(--teal);}
-.glp2{background:var(--gold-pale);color:var(--gold);}
-.glp3{background:#EEE5FF;color:#6A4CAB;}
-.compound-name-cell{font-family:'Playfair Display',serif;font-size:16px;}
-.compound-sub{font-size:11px;color:var(--muted);display:block;margin-top:2px;}
-.purity-bar{background:#eee;height:4px;border-radius:2px;width:100%;margin-top:6px;}
-.purity-fill{background:var(--teal);height:4px;border-radius:2px;}
+/* ── COMPOUNDS TEASER ── */
+#compounds-teaser{background:var(--paper);}
+.compounds-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);margin-top:40px;}
+.compound-tile{background:var(--paper);padding:32px;transition:background .2s;}
+.compound-tile:hover{background:var(--cream);}
+.compound-tile-badge{display:inline-block;padding:4px 10px;font-size:9px;letter-spacing:.16em;font-weight:700;margin-bottom:16px;}
+.badge-glp1{background:var(--teal-pale);color:var(--teal);}
+.badge-dual{background:var(--gold-pale);color:var(--gold);}
+.badge-triple{background:#EEE5FF;color:#6A4CAB;}
+.compound-tile h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;margin-bottom:6px;}
+.compound-tile .sub{font-size:11px;color:var(--muted);margin-bottom:16px;display:block;}
+.compound-tile .price{font-family:'Playfair Display',serif;font-size:26px;color:var(--ink);margin-bottom:4px;}
+.compound-tile .price-sub{font-size:11px;color:var(--muted);letter-spacing:.08em;}
+.compound-tile .purity{margin-top:16px;padding-top:16px;border-top:1px solid var(--border);}
+.purity-bar{background:#eee;height:3px;border-radius:2px;width:100%;margin-top:6px;}
+.purity-fill{background:var(--teal);height:3px;border-radius:2px;}
+.compound-tile .purity-label{font-size:10px;letter-spacing:.12em;color:var(--teal);font-weight:600;}
 
-/* PHYSICIAN FUNNEL */
-#physicians{background:var(--ink);color:#fff;}
-#physicians .section-h2{color:#fff;}
-#physicians .section-lead{color:rgba(255,255,255,.5);}
-#physicians .divider{background:var(--gold);}
-.funnel-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:rgba(255,255,255,.05);margin-top:48px;}
-.funnel-card{background:#0D1117;padding:36px 32px;transition:background .2s;}
-.funnel-card:hover{background:#111820;}
-.funnel-step{width:36px;height:36px;background:var(--gold);color:var(--ink);
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Playfair Display',serif;font-size:16px;font-weight:700;margin-bottom:20px;}
-.funnel-card h3{font-size:15px;font-weight:600;color:#fff;margin-bottom:8px;}
-.funnel-card p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.8;}
-.funnel-card .funnel-note{font-size:11px;color:var(--gold);margin-top:12px;font-style:italic;}
+/* ── QUALITY TEASER ── */
+#quality-teaser{background:var(--ink);color:#fff;}
+#quality-teaser .section-h2{color:#fff;}
+#quality-teaser .section-lead{color:rgba(255,255,255,.5);}
+#quality-teaser .divider{background:var(--gold);}
+.quality-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.05);margin-top:48px;}
+.quality-tile{background:#0D1117;padding:28px;transition:background .2s;}
+.quality-tile:hover{background:#111820;}
+.quality-tile-icon{font-size:28px;margin-bottom:14px;}
+.quality-tile h4{font-size:13px;font-weight:600;color:#fff;margin-bottom:8px;letter-spacing:.04em;}
+.quality-tile p{font-size:12px;color:rgba(255,255,255,.4);line-height:1.75;}
+.quality-tile .badge{display:inline-block;margin-top:12px;font-size:9px;letter-spacing:.16em;color:var(--gold);font-weight:600;}
+#quality-teaser .section-link{color:var(--gold-lt);}
 
-/* TIMELINE */
-#timeline{background:var(--cream);}
-.timeline-phases{display:grid;grid-template-columns:repeat(3,1fr);gap:0;
-  margin-top:48px;position:relative;}
-.timeline-phases::before{content:'';position:absolute;top:28px;left:16.6%;right:16.6%;
-  height:2px;background:linear-gradient(90deg,var(--teal),var(--gold),var(--teal));}
-.phase{padding:0 28px;text-align:center;}
-.phase-circle{width:56px;height:56px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  margin:0 auto 20px;font-size:13px;font-weight:700;
-  position:relative;z-index:1;}
-.phase-1 .phase-circle{background:var(--teal);color:#fff;}
-.phase-2 .phase-circle{background:var(--gold);color:var(--ink);}
-.phase-3 .phase-circle{background:var(--teal);color:#fff;}
-.phase-label{font-size:10px;letter-spacing:.16em;color:var(--muted);font-weight:600;margin-bottom:8px;}
-.phase h3{font-family:'Playfair Display',serif;font-size:17px;font-weight:400;margin-bottom:12px;}
-.phase ul{list-style:none;text-align:left;}
-.phase ul li{font-size:12px;color:var(--slate);padding:5px 0;border-bottom:1px solid rgba(0,0,0,.06);
-  display:flex;gap:8px;align-items:flex-start;}
-.phase ul li::before{content:'→';color:var(--teal);flex-shrink:0;font-size:11px;margin-top:1px;}
+/* ── CALCULATOR TEASER ── */
+#calculator-teaser{background:var(--cream);border-top:1px solid var(--border);}
+.calc-teaser-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+.calc-teaser-left h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,38px);font-weight:400;margin-bottom:16px;}
+.calc-teaser-left p{font-size:14px;color:var(--slate);line-height:1.85;margin-bottom:28px;}
+.calc-teaser-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px;}
+.calc-stat{background:var(--paper);padding:20px;border-left:3px solid var(--teal);}
+.calc-stat .num{font-family:'Playfair Display',serif;font-size:28px;color:var(--ink);margin-bottom:4px;}
+.calc-stat .lbl{font-size:10px;letter-spacing:.12em;color:var(--muted);font-weight:600;}
+.calc-teaser-right{background:var(--ink);padding:40px;}
+.mini-calc-label{font-size:9px;letter-spacing:.22em;color:var(--gold);font-weight:600;margin-bottom:24px;display:block;}
+.mini-slider-row{margin-bottom:20px;}
+.mini-slider-row label{font-size:10px;letter-spacing:.14em;color:rgba(255,255,255,.4);font-weight:600;display:flex;justify-content:space-between;margin-bottom:8px;}
+.mini-slider-row label span{color:#fff;}
+input[type=range]{width:100%;-webkit-appearance:none;height:3px;background:rgba(255,255,255,.1);outline:none;}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;background:var(--gold);border-radius:50%;cursor:pointer;}
+.mini-result{background:rgba(255,255,255,.04);padding:20px;margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.mini-result-item .val{font-family:'Playfair Display',serif;font-size:22px;color:var(--gold-lt);}
+.mini-result-item .lbl{font-size:10px;letter-spacing:.1em;color:rgba(255,255,255,.3);margin-top:3px;}
+.full-calc-cta{margin-top:20px;display:flex;gap:10px;}
 
-/* FINANCING */
-#financing{background:var(--paper);}
-.financing-split{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start;}
-.finance-card{background:var(--ink);padding:40px;}
-.finance-card h3{font-family:'Playfair Display',serif;font-size:22px;color:#fff;
-  font-weight:400;margin-bottom:8px;}
-.finance-card .subtitle{font-size:12px;color:var(--gold);letter-spacing:.12em;margin-bottom:28px;display:block;}
-.finance-row{display:flex;justify-content:space-between;align-items:center;
-  padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);}
-.finance-row:last-of-type{border-bottom:none;}
-.finance-row .key{font-size:12px;color:rgba(255,255,255,.45);letter-spacing:.06em;}
-.finance-row .val{font-size:14px;color:#fff;font-weight:600;}
-.finance-row .val.gold{color:var(--gold-lt);}
-.finance-highlight{background:rgba(184,148,63,.1);border:1px solid rgba(184,148,63,.25);
-  padding:20px;margin-top:24px;}
-.finance-highlight p{font-size:13px;color:var(--gold-lt);line-height:1.7;}
-.finance-right h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:400;
-  margin-bottom:8px;color:var(--ink);}
-.finance-right .lead{font-size:14px;color:var(--slate);line-height:1.8;margin-bottom:28px;}
-.roi-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.roi-box{background:var(--cream);padding:20px;border-left:3px solid var(--teal);}
-.roi-box .num{font-family:'Playfair Display',serif;font-size:28px;color:var(--ink);margin-bottom:4px;}
-.roi-box .lbl{font-size:10px;letter-spacing:.12em;color:var(--muted);font-weight:600;}
+/* ── NEWS TEASER ── */
+#news-teaser{background:var(--paper);}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
+.news-card{background:var(--cream);padding:0;border-top:3px solid var(--gold);overflow:hidden;transition:box-shadow .2s;}
+.news-card:hover{box-shadow:var(--shadow);}
+.news-card-body{padding:28px;}
+.news-card-tag{font-size:9px;letter-spacing:.18em;color:var(--gold);font-weight:700;margin-bottom:12px;display:block;}
+.news-card h3{font-family:'Playfair Display',serif;font-size:17px;font-weight:400;line-height:1.35;margin-bottom:10px;}
+.news-card p{font-size:12px;color:var(--slate);line-height:1.8;}
+.news-card-footer{padding:16px 28px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+.news-card-date{font-size:10px;color:var(--muted);letter-spacing:.08em;}
+.news-card-read{font-size:10px;letter-spacing:.14em;font-weight:600;color:var(--teal);}
 
-/* METIS */
-#metis{background:var(--teal);color:#fff;}
-#metis .section-h2{color:#fff;}
-#metis .section-lead{color:rgba(255,255,255,.6);}
-#metis .divider{background:rgba(255,255,255,.3);}
-.metis-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;}
-.metis-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
-  padding:28px;transition:background .2s;}
-.metis-card:hover{background:rgba(255,255,255,.11);}
-.metis-card-icon{font-size:24px;margin-bottom:14px;}
-.metis-card h4{font-size:14px;font-weight:600;color:#fff;margin-bottom:8px;}
-.metis-card p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.75;}
-.metis-list{margin-top:10px;padding-left:16px;}
-.metis-list li{font-size:12px;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:3px;}
-.metis-badge{display:inline-block;background:rgba(184,148,63,.2);border:1px solid rgba(184,148,63,.4);
-  color:var(--gold-lt);font-size:9px;letter-spacing:.18em;padding:4px 10px;margin-bottom:16px;}
+/* ── RESOURCES TEASER ── */
+#resources-teaser{background:var(--cream);}
+.resources-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;}
+.resource-tile{background:var(--paper);border:1px solid var(--border);padding:24px;
+  display:flex;align-items:flex-start;gap:16px;transition:border-color .2s;}
+.resource-tile:hover{border-color:var(--teal);}
+.resource-tile-icon{width:44px;height:44px;background:var(--teal-pale);
+  display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.resource-tile h4{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px;}
+.resource-tile p{font-size:12px;color:var(--slate);line-height:1.6;}
+.resource-tile .tag{font-size:9px;letter-spacing:.14em;color:var(--teal);font-weight:600;margin-top:8px;display:block;}
 
-/* QUALITY */
-#quality{background:var(--cream);}
-.quality-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:center;}
-.quality-points{display:flex;flex-direction:column;gap:0;margin-top:36px;}
-.quality-point{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--border);align-items:flex-start;}
-.quality-point:last-child{border-bottom:none;}
-.q-icon{width:40px;height:40px;background:var(--teal-pale);display:flex;
-  align-items:center;justify-content:center;flex-shrink:0;font-size:16px;}
-.q-text h4{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:5px;}
-.q-text p{font-size:13px;color:var(--slate);line-height:1.7;}
-.quality-callout{background:var(--ink);padding:40px;}
-.quality-callout blockquote{font-family:'Playfair Display',serif;font-size:22px;
-  font-style:italic;color:#fff;line-height:1.45;margin-bottom:18px;}
-.quality-callout cite{font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.12em;}
-.quality-callout .visit-cta{margin-top:28px;}
+/* ── CONTACT STRIP ── */
+#contact-strip{background:var(--teal);}
+.contact-strip-inner{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
+.contact-strip-left h2{font-family:'Playfair Display',serif;font-size:clamp(24px,2.5vw,34px);
+  color:#fff;font-weight:400;margin-bottom:10px;}
+.contact-strip-left p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.7;}
+.contact-strip-right{display:flex;gap:12px;align-items:center;flex-shrink:0;}
+.btn-white{background:#fff;color:var(--teal);}
+.btn-white:hover{background:var(--cream);color:var(--teal);}
+.btn-white-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);}
+.btn-white-outline:hover{background:rgba(255,255,255,.1);}
 
-/* RESEARCH */
-#research{background:var(--paper);}
-.research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
-.research-card{background:var(--cream);padding:36px;border-top:3px solid var(--gold);position:relative;}
-.research-card h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;margin-bottom:10px;}
-.research-card p{font-size:13px;color:var(--slate);line-height:1.8;margin-bottom:18px;}
-.research-tag{display:inline-block;background:var(--gold-pale);color:var(--gold);
-  font-size:9px;letter-spacing:.18em;padding:4px 10px;font-weight:700;margin-bottom:16px;}
-.research-future{opacity:.65;border-top-color:var(--muted);}
-
-/* CONTACT */
-#contact{background:var(--ink);}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
-.contact-left h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);
-  font-weight:400;color:#fff;line-height:1.15;margin-bottom:20px;}
-.contact-left p{font-size:15px;color:rgba(255,255,255,.5);line-height:1.85;margin-bottom:32px;}
-.contact-rep{display:flex;flex-direction:column;gap:16px;}
-.rep-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
-  padding:24px;transition:border-color .2s;}
-.rep-card:hover{border-color:var(--gold);}
-.rep-name{font-size:14px;font-weight:600;color:#fff;margin-bottom:4px;}
-.rep-title{font-size:11px;color:var(--gold);letter-spacing:.1em;margin-bottom:12px;display:block;}
-.rep-detail{font-size:13px;color:rgba(255,255,255,.4);margin-bottom:3px;}
-.contact-form{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:36px;}
-.contact-form h3{font-family:'Playfair Display',serif;font-size:20px;color:#fff;
-  font-weight:400;margin-bottom:6px;}
-.contact-form p{font-size:13px;color:rgba(255,255,255,.4);margin-bottom:24px;}
-.form-group{margin-bottom:16px;}
-.form-group label{display:block;font-size:10px;letter-spacing:.14em;color:rgba(255,255,255,.4);
-  font-weight:600;margin-bottom:6px;}
-.form-group input,.form-group select,.form-group textarea{
-  width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
-  color:#fff;padding:12px 14px;font-size:13px;font-family:inherit;outline:none;
-  transition:border-color .2s;}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
-  border-color:var(--gold);}
-.form-group select option{background:#0D1117;color:#fff;}
-.form-group textarea{resize:vertical;min-height:90px;}
-.form-success{display:none;background:rgba(42,106,94,.2);border:1px solid rgba(42,106,94,.4);
-  padding:16px;color:var(--teal-lt);font-size:13px;margin-top:12px;}
-
-/* ── INVESTOR SECTION ── */
+/* ── INVESTOR GATE (preserved full) ── */
 #investor-section{background:var(--cream);position:relative;}
 .investor-gate{max-width:520px;margin:0 auto;text-align:center;padding:80px 0;}
 .lock-icon{font-size:48px;margin-bottom:24px;}
-.investor-gate h2{font-family:'Playfair Display',serif;font-size:32px;font-weight:400;
-  color:var(--ink);margin-bottom:14px;}
+.investor-gate h2{font-family:'Playfair Display',serif;font-size:32px;font-weight:400;color:var(--ink);margin-bottom:14px;}
 .investor-gate p{font-size:14px;color:var(--slate);line-height:1.8;margin-bottom:32px;}
 .pw-form{display:flex;flex-direction:column;gap:12px;max-width:320px;margin:0 auto;}
 .pw-input{background:#fff;border:1.5px solid var(--border);color:var(--ink);
@@ -345,87 +328,42 @@ section{padding:96px 48px;}
 .pw-input:focus{border-color:var(--teal);}
 .pw-error{font-size:12px;color:var(--red);display:none;text-align:center;}
 .pw-error.show{display:block;}
-
-/* INVESTOR ROOM */
 #investor-room{display:none;}
 #investor-room.open{display:block;}
 .inv-header{background:var(--ink);padding:40px 48px;margin-bottom:48px;}
-.inv-header h2{font-family:'Playfair Display',serif;font-size:32px;color:#fff;
-  font-weight:400;margin-bottom:8px;}
+.inv-header h2{font-family:'Playfair Display',serif;font-size:32px;color:#fff;font-weight:400;margin-bottom:8px;}
 .inv-header p{font-size:14px;color:rgba(255,255,255,.45);}
 .inv-header .confidential{display:inline-flex;align-items:center;gap:8px;
   background:rgba(192,57,43,.15);border:1px solid rgba(192,57,43,.3);
   padding:6px 14px;margin-bottom:20px;}
 .inv-header .confidential span{font-size:10px;letter-spacing:.18em;color:#e74c3c;font-weight:700;}
-
 .inv-section{padding:0 0 48px;}
 .inv-section-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:400;
   color:var(--ink);margin-bottom:8px;padding-bottom:12px;border-bottom:2px solid var(--gold);}
 .inv-section-sub{font-size:13px;color:var(--muted);margin-bottom:28px;}
-
-/* Scenario cards */
 .scenario-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px;}
-.scenario-card{background:var(--paper);border:1px solid var(--border);padding:32px;
-  border-top:3px solid transparent;}
+.scenario-card{background:var(--paper);border:1px solid var(--border);padding:32px;border-top:3px solid transparent;}
 .scenario-card.s1{border-top-color:var(--teal);}
 .scenario-card.s2{border-top-color:var(--gold);}
-.scenario-card h4{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;
-  color:var(--ink);margin-bottom:4px;}
+.scenario-card h4{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;color:var(--ink);margin-bottom:4px;}
 .scenario-card .tagline{font-size:12px;color:var(--muted);margin-bottom:20px;display:block;}
 .scenario-metrics{display:flex;flex-direction:column;gap:0;}
-.s-metric{display:flex;justify-content:space-between;padding:10px 0;
-  border-bottom:1px solid var(--border);font-size:13px;}
+.s-metric{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px;}
 .s-metric:last-child{border-bottom:none;}
 .s-metric .sk{color:var(--slate);}
 .s-metric .sv{font-weight:600;color:var(--ink);}
 .s-metric .sv.green{color:var(--teal);}
 .s-metric .sv.gold{color:var(--gold);}
-
-/* Comparison table */
-.compare-table{width:100%;border-collapse:collapse;margin-bottom:40px;}
-.compare-table th{background:var(--ink);color:var(--gold-lt);font-size:10px;
-  letter-spacing:.16em;padding:16px 20px;text-align:left;font-weight:600;}
-.compare-table th:first-child{background:var(--ink);}
-.compare-table td{padding:16px 20px;border-bottom:1px solid var(--border);font-size:13px;}
-.compare-table tr:hover td{background:var(--gold-pale);}
-.compare-table .metric-col{font-weight:600;color:var(--slate);font-size:12px;letter-spacing:.04em;}
-.compare-table .highlight-col{color:var(--teal);font-weight:600;}
-
-/* Investment ask */
 .ask-box{background:var(--ink);padding:40px;margin-bottom:32px;}
-.ask-box h4{font-family:'Playfair Display',serif;font-size:24px;color:#fff;
-  font-weight:400;margin-bottom:24px;}
+.ask-box h4{font-family:'Playfair Display',serif;font-size:24px;color:#fff;font-weight:400;margin-bottom:24px;}
 .ask-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px;}
 .ask-item{background:rgba(255,255,255,.05);padding:20px;}
 .ask-item .ask-num{font-family:'Playfair Display',serif;font-size:28px;color:var(--gold-lt);margin-bottom:4px;}
 .ask-item .ask-lbl{font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);font-weight:600;}
 .ask-note{font-size:12px;color:rgba(255,255,255,.35);line-height:1.7;border-top:1px solid rgba(255,255,255,.07);padding-top:20px;}
-
-/* Ramp table */
-.ramp-table{width:100%;border-collapse:collapse;margin-bottom:12px;}
-.ramp-table th{background:#1a2535;color:rgba(255,255,255,.5);font-size:10px;
-  letter-spacing:.14em;padding:12px 16px;text-align:left;font-weight:600;}
-.ramp-table td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);
-  font-size:12px;color:rgba(255,255,255,.7);}
-.ramp-table tr.milestone td{background:rgba(42,106,94,.15);color:#fff;}
-.ramp-table tr.steady td{background:rgba(184,148,63,.1);color:var(--gold-lt);font-weight:600;}
-.ramp-wrap{background:#0D1117;padding:32px;margin-bottom:32px;}
-.ramp-wrap h5{font-size:13px;letter-spacing:.12em;color:var(--gold);margin-bottom:20px;font-weight:600;}
-
-/* Docs */
 .inv-docs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-.inv-doc{background:var(--paper);border:1px solid var(--border);padding:20px;
-  display:flex;align-items:center;gap:14px;cursor:pointer;transition:border-color .2s;}
-.inv-doc:hover{border-color:var(--teal);}
-.doc-icon{width:40px;height:40px;background:var(--teal-pale);display:flex;
-  align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
-.doc-name{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px;}
-.doc-type{font-size:10px;color:var(--muted);letter-spacing:.1em;}
 
-/* FOOTER */
-.footer-links a{font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);
-  text-decoration:none;transition:color .2s;cursor:pointer;}
-.footer-links a:hover{color:var(--gold);}
+/* ── FOOTER ── */
 footer{background:var(--ink);color:rgba(255,255,255,.35);padding:40px 48px;
   display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
 .footer-logo{display:flex;align-items:center;gap:10px;}
@@ -433,132 +371,32 @@ footer{background:var(--ink);color:rgba(255,255,255,.35);padding:40px 48px;
   align-items:center;justify-content:center;font-family:'Playfair Display',serif;
   font-style:italic;font-size:13px;color:var(--ink);}
 footer p{font-size:11px;letter-spacing:.1em;}
-.footer-links{display:flex;gap:24px;}
-.footer-links span{font-size:10px;letter-spacing:.12em;cursor:pointer;transition:color .2s;}
-.footer-links span:hover{color:var(--gold);}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap;}
+.footer-links a{font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);
+  text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--gold);}
 
-/* HAMBURGER */
+/* ── HAMBURGER ── */
 .ham-line{display:block;width:24px;height:2px;background:var(--ink);transition:all .3s;}
 #hamburger.open .ham-line:nth-child(1){transform:translateY(7px) rotate(45deg);}
 #hamburger.open .ham-line:nth-child(2){opacity:0;}
 #hamburger.open .ham-line:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 #hamburger.open .ham-line{background:#fff;}
 
-/* RESPONSIVE */
-/* Very small phones */
-@media(max-width:380px){
-  .hero-h1{font-size:30px!important;}
-  .hero-proof{grid-template-columns:1fr!important;}
-  .hero-proof-item{border-right:none!important;padding:8px 0!important;border-bottom:1px solid var(--border);}
-  .hero-proof-item:last-child{border-bottom:none;}
-  .funnel-grid{grid-template-columns:1fr!important;}
-  section{padding:48px 16px!important;}
-  #nav{padding:0 16px!important;}
-}
-@media(max-width:900px){
-  #nav-links{display:none!important;}
-  #hamburger{display:flex!important;}
-  #hero{grid-template-columns:1fr;}
-  .hero-right{display:none;}
-  .why-grid,.metis-grid,.financing-split,.quality-grid,
-  .contact-grid,.funnel-grid,.scenario-grid,.timeline-phases{grid-template-columns:1fr!important;}
-  .research-grid{grid-template-columns:1fr!important;}
-  .timeline-phases::before{display:none;}
-  .phase{text-align:left;padding:0 0 28px;}
-  .phase-circle{margin:0 0 16px;}
-  section{padding:64px 24px;}
-  #nav{padding:0 24px;}
-  .hero-left{padding:60px 24px;}
-  .nav-links .nav-investor,.nav-links a[onclick*="investor"]{display:none;}
-  .ask-grid{grid-template-columns:1fr 1fr;}
-  .inv-docs{grid-template-columns:1fr 1fr;}
-  /* Prevent table overflow on mobile */
-  .compare-table,.ramp-table,.compound-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
-  /* Prevent iOS zoom on form focus */
-  .form-group input,.form-group select,.form-group textarea{font-size:16px!important;}
-  /* Calculator responsive */
-  #calculator .calc-outer-grid{grid-template-columns:1fr!important;}
-  #calculator .calc-results-grid{grid-template-columns:1fr!important;}
-  #calculator .calc-results-burn{grid-template-columns:1fr!important;}
-  #calculator .calc-cta-row{grid-template-columns:1fr!important;}
-  /* COA verification strip responsive */
-  #trust .coa-strip{grid-template-columns:1fr!important;}
-  #trust .coa-strip>div{border-left-width:3px;}
-  /* Trust grid responsive */
-  #trust .trust-grid{grid-template-columns:1fr 1fr!important;}
-  #trust .trust-price-strip{grid-template-columns:1fr!important;}
-  #trust .trust-price-strip>div{border-right:none!important;border-bottom:1px solid var(--border);padding:16px 0!important;}
-}
-
-
-
-/* ── SPECIALTY TOGGLE ── */
-.specialty-toggle{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;}
-.spec-btn{background:none;border:1.5px solid var(--border);color:var(--slate);
-  font-size:10px;letter-spacing:.12em;font-weight:600;padding:7px 14px;
-  cursor:pointer;font-family:inherit;transition:all .2s;border-radius:0;}
-.spec-btn:hover{border-color:var(--teal);color:var(--teal);}
-.spec-btn.active{background:var(--teal);border-color:var(--teal);color:#fff;}
-.specialty-label{font-size:10px;letter-spacing:.16em;color:var(--muted);
-  font-weight:600;margin-bottom:8px;display:block;}
-
-/* ── EXIT INTENT POPUP ── */
-#exit-overlay{
-  position:fixed;inset:0;background:rgba(13,17,23,.85);z-index:9000;
-  display:none;align-items:center;justify-content:center;padding:24px;
-  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
-}
-#exit-overlay.active{display:flex;}
-.exit-modal{
-  background:var(--paper);max-width:520px;width:100%;position:relative;
-  padding:48px 40px;text-align:center;
-}
-.exit-modal::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--teal);}
-.exit-close{position:absolute;top:16px;right:20px;background:none;border:none;
-  cursor:pointer;font-size:22px;color:var(--muted);line-height:1;}
-.exit-close:hover{color:var(--ink);}
-.exit-label{font-size:9px;letter-spacing:.22em;color:var(--teal);font-weight:700;margin-bottom:16px;display:block;}
-.exit-title{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,30px);
-  font-weight:400;color:var(--ink);line-height:1.2;margin-bottom:12px;}
-.exit-title em{font-style:italic;color:var(--teal);}
-.exit-body{font-size:14px;color:var(--slate);line-height:1.8;margin-bottom:28px;}
-.exit-form{display:flex;flex-direction:column;gap:10px;max-width:380px;margin:0 auto 16px;}
-.exit-form input{background:var(--cream);border:1.5px solid var(--border);
-  color:var(--ink);padding:13px 16px;font-size:16px;font-family:inherit;
-  outline:none;transition:border-color .2s;width:100%;}
-.exit-form input:focus{border-color:var(--teal);}
-.exit-skip{font-size:11px;color:var(--muted);cursor:pointer;text-decoration:underline;
-  background:none;border:none;font-family:inherit;}
-.exit-skip:hover{color:var(--slate);}
-.exit-success{display:none;background:var(--teal-pale);border:1px solid var(--teal);
-  padding:14px;color:var(--teal);font-size:13px;margin-top:8px;}
-@media(max-width:560px){.exit-modal{padding:36px 24px;}}
-
-/* ── WHATSAPP FLOATING BUTTON ── */
+/* ── WHATSAPP ── */
 #whatsapp-float{
   position:fixed;bottom:28px;right:24px;z-index:780;
   width:54px;height:54px;background:#25D366;border-radius:50%;
   display:flex;align-items:center;justify-content:center;
   box-shadow:0 4px 20px rgba(37,211,102,.35);
-  cursor:pointer;transition:transform .2s,box-shadow .2s;
-  text-decoration:none;
+  cursor:pointer;transition:transform .2s,box-shadow .2s;text-decoration:none;
 }
 #whatsapp-float:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,.5);}
 #whatsapp-float svg{width:28px;height:28px;fill:#fff;}
-.whatsapp-tooltip{
-  position:absolute;right:62px;top:50%;transform:translateY(-50%);
+.whatsapp-tooltip{position:absolute;right:62px;top:50%;transform:translateY(-50%);
   background:var(--ink);color:#fff;font-size:11px;letter-spacing:.08em;
-  padding:6px 12px;white-space:nowrap;opacity:0;pointer-events:none;
-  transition:opacity .2s;font-family:inherit;font-weight:500;
-}
+  padding:6px 12px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;}
 #whatsapp-float:hover .whatsapp-tooltip{opacity:1;}
-/* Shift up when sticky bar is visible */
-#sticky-cta.visible ~ #whatsapp-float,
-body.sticky-active #whatsapp-float{bottom:72px;}
-@media(max-width:600px){
-  #whatsapp-float{bottom:72px;right:16px;width:48px;height:48px;}
-  #whatsapp-float svg{width:24px;height:24px;}
-}
 
 /* ── STICKY CTA BAR ── */
 #sticky-cta{
@@ -566,114 +404,166 @@ body.sticky-active #whatsapp-float{bottom:72px;}
   background:var(--ink);border-top:1px solid rgba(184,148,63,.25);
   padding:12px 32px;display:none;
   align-items:center;justify-content:space-between;gap:16px;
-  transition:transform .3s ease;
 }
 #sticky-cta.visible{display:flex;}
-#sticky-cta.hidden{transform:translateY(100%);}
 .sticky-cta-text{font-size:13px;color:rgba(255,255,255,.55);line-height:1.4;}
 .sticky-cta-text strong{color:#fff;font-weight:600;}
 .sticky-cta-btns{display:flex;gap:10px;flex-shrink:0;}
-.sticky-cta-close{background:none;border:none;color:rgba(255,255,255,.25);
-  cursor:pointer;font-size:20px;padding:0 4px;line-height:1;flex-shrink:0;}
+.sticky-cta-close{background:none;border:none;color:rgba(255,255,255,.25);cursor:pointer;font-size:20px;padding:0 4px;line-height:1;}
+
+/* ── EXIT POPUP ── */
+#exit-overlay{
+  position:fixed;inset:0;background:rgba(13,17,23,.85);z-index:9000;
+  display:none;align-items:center;justify-content:center;padding:24px;
+  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+}
+#exit-overlay.active{display:flex;}
+.exit-modal{background:var(--paper);max-width:520px;width:100%;position:relative;padding:48px 40px;text-align:center;}
+.exit-modal::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--teal);}
+.exit-close{position:absolute;top:16px;right:20px;background:none;border:none;cursor:pointer;font-size:22px;color:var(--muted);}
+.exit-label{font-size:9px;letter-spacing:.22em;color:var(--teal);font-weight:700;margin-bottom:16px;display:block;}
+.exit-title{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,30px);font-weight:400;color:var(--ink);line-height:1.2;margin-bottom:12px;}
+.exit-title em{font-style:italic;color:var(--teal);}
+.exit-body{font-size:14px;color:var(--slate);line-height:1.8;margin-bottom:28px;}
+.exit-form{display:flex;flex-direction:column;gap:10px;max-width:380px;margin:0 auto 16px;}
+.exit-form input{background:var(--cream);border:1.5px solid var(--border);color:var(--ink);padding:13px 16px;font-size:16px;font-family:inherit;outline:none;transition:border-color .2s;width:100%;}
+.exit-form input:focus{border-color:var(--teal);}
+.exit-skip{font-size:11px;color:var(--muted);cursor:pointer;text-decoration:underline;background:none;border:none;font-family:inherit;}
+.exit-success{display:none;background:var(--teal-pale);border:1px solid var(--teal);padding:14px;color:var(--teal);font-size:13px;margin-top:8px;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  #nav{padding:0 24px;}
+  #nav-links{display:none!important;}
+  #hamburger{display:flex!important;}
+  #hero{grid-template-columns:1fr;}
+  .hero-right{display:none;}
+  .hero-left{padding:60px 24px;}
+  .program-grid,.news-grid,.resources-strip,.quality-strip,
+  .compounds-strip,.calc-teaser-grid,.contact-strip-inner,
+  .scenario-grid,.ask-grid{grid-template-columns:1fr!important;}
+  .ask-grid{grid-template-columns:1fr 1fr!important;}
+  section{padding:56px 24px;}
+  .contact-strip-right{flex-direction:column;width:100%;}
+  .contact-strip-right .btn{text-align:center;}
+}
+@media(max-width:380px){
+  .hero-h1{font-size:30px!important;}
+  .hero-proof{grid-template-columns:1fr!important;}
+  .hero-proof-item{border-right:none!important;padding:8px 0!important;border-bottom:1px solid var(--border);}
+  section{padding:40px 16px!important;}
+}
 @media(max-width:600px){
+  #whatsapp-float{bottom:72px;right:16px;width:48px;height:48px;}
   #sticky-cta{padding:10px 16px;flex-wrap:wrap;}
   .sticky-cta-text{font-size:12px;width:100%;}
   .sticky-cta-btns{width:100%;}
-  .sticky-cta-btns .btn{flex:1;justify-content:center;text-align:center;font-size:10px;padding:10px 12px;}
+  .sticky-cta-btns .btn{flex:1;text-align:center;font-size:10px;padding:10px 12px;}
+  .form-group input,.form-group select,.form-group textarea{font-size:16px!important;}
 }
-
-/* JS reveal fallback - show content if intersection observer is slow */
+a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.js-loaded .reveal-pending{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease;}
+.js-loaded .reveal-pending.revealed{opacity:1!important;transform:translateY(0)!important;}
 @media(prefers-reduced-motion:reduce){
-  .why-card,.funnel-card,.metis-card,.research-card,.phase,.compound-row,.scenario-card,.roi-box{
+  .program-card,.compound-tile,.quality-tile,.news-card,.resource-tile{
     opacity:1!important;transform:none!important;transition:none!important;
   }
 }
-/* Touch targets for mobile nav */
-.nav-links button,.nav-links a{min-height:44px;display:inline-flex;align-items:center;}
-/* Footer links as proper anchors on mobile */
-.footer-links span{min-height:44px;display:inline-flex;align-items:center;padding:4px 0;}
-/* Smooth tap on mobile */
-a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
-/* Prevent content flash during reveal */
-.js-loaded .reveal-pending{opacity:0;transform:translateY(20px);transition:opacity 0.55s ease,transform 0.55s ease;}
-.js-loaded .reveal-pending.revealed{opacity:1!important;transform:translateY(0)!important;}
+
+/* ── SPECIALTY TOGGLE ── */
+.specialty-toggle{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;}
+.spec-btn{background:none;border:1.5px solid var(--border);color:var(--slate);
+  font-size:10px;letter-spacing:.12em;font-weight:600;padding:7px 14px;
+  cursor:pointer;font-family:inherit;transition:all .2s;}
+.spec-btn:hover{border-color:var(--teal);color:var(--teal);}
+.spec-btn.active{background:var(--teal);border-color:var(--teal);color:#fff;}
+.specialty-label{font-size:10px;letter-spacing:.16em;color:var(--muted);font-weight:600;margin-bottom:8px;display:block;}
+
+/* Contact form (in full program page, preserved here for anchor links) */
+.form-group{margin-bottom:16px;}
+.form-group label{display:block;font-size:10px;letter-spacing:.14em;color:rgba(255,255,255,.4);font-weight:600;margin-bottom:6px;}
+.form-group input,.form-group select,.form-group textarea{
+  width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+  color:#fff;padding:12px 14px;font-size:13px;font-family:inherit;outline:none;transition:border-color .2s;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold);}
+.form-group select option{background:#0D1117;color:#fff;}
+.form-group textarea{resize:vertical;min-height:90px;}
+.form-success{display:none;background:rgba(42,106,94,.2);border:1px solid rgba(42,106,94,.4);padding:16px;color:var(--teal-lt);font-size:13px;margin-top:12px;}
 </style>
 </head>
-<body style="overflow:auto;">
-
-<!-- EARLY ACCESS GATE (disabled) -->
-<div id="early-access-gate" style="display:none;">
-  <div style="max-width:460px;width:100%;text-align:center;">
-    <div style="font-size:10px;letter-spacing:.22em;color:#D4AD5C;margin-bottom:36px;font-weight:600;">MAJESTIC R&D</div>
-    <h1 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:400;color:#fff;margin-bottom:14px;line-height:1.35;">You've been granted<br/>early access.</h1>
-    <p style="font-size:13px;color:rgba(255,255,255,.42);line-height:1.85;margin-bottom:36px;">This platform is currently in private beta. All information is subject to change at any time and should be confirmed with your rep or Majestic contact. Available by invitation only — do not share your link or password. All information is confidential and intended solely for the named recipient.</p>
-    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:32px;margin-bottom:20px;">
-      <div style="font-size:10px;letter-spacing:.18em;color:rgba(255,255,255,.3);margin-bottom:18px;">ENTER YOUR ACCESS CODE</div>
-      <input id="access-input" type="text" placeholder="- - - - - - - -" onkeydown="if(event.key==='Enter')checkAccess()" style="width:100%;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.15);padding:10px 0;font-size:20px;letter-spacing:.2em;color:#fff;text-align:center;outline:none;font-family:inherit;box-sizing:border-box;margin-bottom:28px;"/>
-      <button onclick="checkAccess()" style="width:100%;background:#B8943F;border:none;padding:15px;font-size:11px;letter-spacing:.2em;font-weight:700;color:#0D1117;cursor:pointer;font-family:inherit;transition:background .2s;" onmouseover="this.style.background='#D4AD5C'" onmouseout="this.style.background='#B8943F'">ENTER PLATFORM</button>
-      <div id="access-error" style="display:none;margin-top:16px;font-size:12px;color:#E74C3C;letter-spacing:.04em;">Invalid code. Contact your Majestic R&D representative.</div>
-    </div>
-    <p style="font-size:10px;color:rgba(255,255,255,.18);line-height:1.8;max-width:360px;margin:0 auto;">Nothing on this platform constitutes medical advice, a solicitation, or an offer to sell securities. For practitioner and qualified investor use only.</p>
-    <div style="margin-top:24px;font-size:10px;color:rgba(255,255,255,.12);letter-spacing:.1em;">MARYLAND &nbsp;|&nbsp; PRIVATE BETA &nbsp;|&nbsp; CONFIDENTIAL</div>
-  </div>
-</div>
-
-<!-- BETA DISCLAIMER BAR (shown after gate is passed) -->
-<div id="beta-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:800;background:#0D1117;border-top:1px solid rgba(184,148,63,.2);padding:9px 24px;align-items:center;justify-content:space-between;gap:16px;">
-  <div style="display:flex;align-items:center;gap:10px;">
-    <span style="background:rgba(184,148,63,.12);border:1px solid rgba(184,148,63,.3);color:#D4AD5C;font-size:9px;font-weight:700;letter-spacing:.18em;padding:3px 8px;flex-shrink:0;">EARLY ACCESS</span>
-    <span style="font-size:11px;color:rgba(255,255,255,.38);line-height:1.5;">Beta platform. All information subject to change — confirm details with your rep. Not medical advice. Not a securities offering.</span>
-  </div>
-  <button onclick="document.getElementById('beta-banner').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,.25);cursor:pointer;font-size:18px;padding:0 4px;line-height:1;flex-shrink:0;" title="Dismiss">&times;</button>
-</div>
+<body>
 
 <!-- NAV -->
 <nav id="nav">
-  <div class="logo" onclick="navTo('hero')">
+  <a class="logo" href="index.html">
     <div class="logo-mark">P</div>
     <div class="logo-txt">
       <span class="logo-top">MAJESTIC PEPTIDES</span>
       <span class="logo-sub">A MAJESTIC R&D DIVISION</span>
     </div>
-  </div>
+  </a>
   <div class="nav-links" id="nav-links">
-    <button onclick="navTo('why')">Program</button>
-    <button onclick="navTo('compounds')">Compounds</button>
-    <button onclick="navTo('physicians')">For Physicians</button>
-    <button onclick="navTo('calculator')">Calculator</button>
-    <button onclick="navTo('financing')">Financing</button>
-    <button onclick="navTo('quality')">Quality</button>
-    <button onclick="navTo('research')">Research</button>
-    <a href="team.html" style="font-size:11px;letter-spacing:.13em;color:var(--slate);font-weight:500;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--slate)'">Team</a>
-    <a href="resources.html" style="font-size:11px;letter-spacing:.13em;color:var(--slate);font-weight:500;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--slate)'">Resources</a>
-    <a href="blog.html" style="font-size:11px;letter-spacing:.13em;color:var(--slate);font-weight:500;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--slate)'">News</a>
-    <a href="affiliates.html" style="font-size:11px;letter-spacing:.13em;color:var(--slate);font-weight:500;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--slate)'">Partners</a>
-    <a href="#investor-section" onclick="navTo('investor-section')" class="nav-investor btn btn-sm">Investor Access</a>
-    <button onclick="navTo('contact')" class="nav-cta">Contact Rep</button>
+
+    <!-- Program dropdown -->
+    <div class="nav-dropdown" id="nav-program-dd">
+      <button class="nav-dropdown-toggle" onclick="toggleDropdown('nav-program-dd')" aria-haspopup="true">
+        Program <span class="arrow"></span>
+      </button>
+      <div class="nav-dropdown-menu">
+        <a href="index.html#program-teaser">
+          <span class="dd-icon">📋</span>
+          <span class="dd-text"><b>HOW IT WORKS</b><span>Program overview & onboarding</span></span>
+        </a>
+        <a href="index.html#compounds-teaser">
+          <span class="dd-icon">💊</span>
+          <span class="dd-text"><b>COMPOUNDS</b><span>Sema · Tirz · Reta pricing & specs</span></span>
+        </a>
+        <a href="index.html#quality-teaser">
+          <span class="dd-icon">🔬</span>
+          <span class="dd-text"><b>QUALITY & COMPLIANCE</b><span>USP-797, COA verification, testing</span></span>
+        </a>
+        <a href="index.html#calculator-teaser">
+          <span class="dd-icon">📊</span>
+          <span class="dd-text"><b>CALCULATOR</b><span>Inventory & revenue projections</span></span>
+        </a>
+        <a href="index.html#contact-strip">
+          <span class="dd-icon">📞</span>
+          <span class="dd-text"><b>CONTACT A REP</b><span>Book intro call or get analysis</span></span>
+        </a>
+      </div>
+    </div>
+
+    <a href="resources.html">Resources</a>
+    <a href="blog.html">News</a>
+    <a href="affiliates.html">Partners</a>
+    <a href="team.html">Team</a>
+    <a href="index.html#investor-section" class="nav-investor btn btn-sm">Investor Access</a>
+    <a href="index.html#contact-strip" class="nav-cta btn btn-sm">Contact Rep</a>
   </div>
-  <button id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu" style="display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;">
+  <button id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu"
+    style="display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;">
     <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
   </button>
 </nav>
 
-<!-- MOBILE MENU OVERLAY -->
-<div id="mobile-menu" style="display:none;position:fixed;inset:0;background:var(--ink);z-index:850;flex-direction:column;align-items:center;justify-content:center;gap:28px;padding-top:62px;">
-  <button onclick="navTo('why');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;letter-spacing:.04em;padding:8px 0;min-height:52px;">Program</button>
-  <button onclick="navTo('compounds');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;">Compounds</button>
-  <button onclick="navTo('physicians');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;">For Physicians</button>
-  <button onclick="navTo('calculator');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:var(--teal-light);font-family:'Playfair Display',serif;font-weight:400;">Calculator</button>
-  <button onclick="navTo('financing');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;">Financing</button>
-  <button onclick="navTo('quality');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;">Quality</button>
-  <button onclick="navTo('research');closeMobileMenu()" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;">Research</button>
-  <a href="team.html" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Team</a>
-  <a href="resources.html" style="background:none;border:none;cursor:pointer;font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Resources</a>
-  <a href="blog.html" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">News &amp; Insights</a>
-  <a href="affiliates.html" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Partners</a>
-  <button onclick="navTo('investor-section');closeMobileMenu()" style="background:var(--gold);border:none;cursor:pointer;font-size:14px;color:var(--ink);padding:12px 32px;letter-spacing:.14em;font-weight:700;margin-top:8px;">INVESTOR ACCESS</button>
-  <button onclick="navTo('contact');closeMobileMenu()" style="background:var(--teal);border:none;cursor:pointer;font-size:14px;color:#fff;padding:12px 32px;letter-spacing:.14em;font-weight:700;">CONTACT REP</button>
+<!-- MOBILE MENU -->
+<div id="mobile-menu" style="display:none;position:fixed;inset:0;background:var(--ink);z-index:850;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding-top:62px;">
+  <a href="index.html" onclick="closeMobileMenu()" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Program</a>
+  <a href="index.html#compounds-teaser" onclick="closeMobileMenu()" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Compounds</a>
+  <a href="index.html#quality-teaser" onclick="closeMobileMenu()" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Quality</a>
+  <a href="index.html#calculator-teaser" onclick="closeMobileMenu()" style="font-size:22px;color:var(--teal-light);font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Calculator</a>
+  <a href="resources.html" onclick="closeMobileMenu()" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Resources</a>
+  <a href="blog.html" onclick="closeMobileMenu()" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">News &amp; Insights</a>
+  <a href="affiliates.html" onclick="closeMobileMenu()" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Partners</a>
+  <a href="team.html" onclick="closeMobileMenu()" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Team</a>
+  <a href="index.html#investor-section" onclick="closeMobileMenu()" style="background:var(--gold);font-size:14px;color:var(--ink);padding:12px 32px;letter-spacing:.14em;font-weight:700;">INVESTOR ACCESS</a>
+  <a href="index.html#contact-strip" onclick="closeMobileMenu()" style="background:var(--teal);font-size:14px;color:#fff;padding:12px 32px;letter-spacing:.14em;font-weight:700;">CONTACT REP</a>
+  <button onclick="closeMobileMenu()" style="position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;">&times;</button>
 </div>
 
-<!-- HERO -->
+<!-- ═══════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
 <section id="hero" style="padding:0;">
   <div class="hero-left">
     <div class="hero-tag">
@@ -681,13 +571,12 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
       <span>PHYSICIAN PROGRAM — ACTIVE LAUNCH</span>
     </div>
 
-    <!-- SPECIALTY TOGGLE -->
     <span class="specialty-label">I PRACTICE...</span>
     <div class="specialty-toggle">
-      <button class="spec-btn active" onclick="setSpecialty('general')">Family Medicine</button>
-      <button class="spec-btn" onclick="setSpecialty('weightloss')">Weight Loss</button>
-      <button class="spec-btn" onclick="setSpecialty('medspa')">Med Spa / Aesthetics</button>
-      <button class="spec-btn" onclick="setSpecialty('internal')">Internal Medicine</button>
+      <button class="spec-btn active" onclick="setSpecialty(this,'general')">Family Medicine</button>
+      <button class="spec-btn" onclick="setSpecialty(this,'weightloss')">Weight Loss</button>
+      <button class="spec-btn" onclick="setSpecialty(this,'medspa')">Med Spa / Aesthetics</button>
+      <button class="spec-btn" onclick="setSpecialty(this,'internal')">Internal Medicine</button>
     </div>
 
     <h1 class="hero-h1" id="hero-headline">
@@ -697,8 +586,8 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
       Compounded Semaglutide, Tirzepatide, and Retatrutide — manufactured in a USP-797 certified, ISO Class 5 sterile facility in South Carolina, tested by independent labs, and shipped directly to your practice. From decision to first patient in 20 days.
     </p>
     <div class="hero-actions">
-      <button class="btn btn-teal" onclick="navTo('contact')">Schedule Intro Call</button>
-      <button class="btn btn-outline" onclick="navTo('financing')">View Financing Options</button>
+      <a class="btn btn-teal" href="#contact-strip">Schedule Intro Call</a>
+      <a class="btn btn-outline" href="#calculator-teaser">See Your Numbers</a>
     </div>
     <div class="hero-proof">
       <div class="hero-proof-item">
@@ -723,7 +612,7 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
           <div class="compound-name">Semaglutide</div>
           <div class="compound-tag">GLP-1 · WEIGHT MANAGEMENT & GLYCEMIC CONTROL</div>
         </div>
-        <span class="glp-badge glp1">GLP-1</span>
+        <span style="display:inline-block;padding:4px 10px;font-size:9px;letter-spacing:.16em;font-weight:700;background:var(--teal-pale);color:var(--teal);">GLP-1</span>
       </div>
       <div class="compound-meta">
         <div class="compound-meta-item"><div class="val">$8.75</div><div class="key">Per mg</div></div>
@@ -737,7 +626,7 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
           <div class="compound-name">Tirzepatide</div>
           <div class="compound-tag">GIP/GLP-1 · DUAL AGONIST · SUPERIOR METABOLIC OUTCOMES</div>
         </div>
-        <span class="glp-badge glp2">DUAL</span>
+        <span style="display:inline-block;padding:4px 10px;font-size:9px;letter-spacing:.16em;font-weight:700;background:var(--gold-pale);color:var(--gold);">DUAL</span>
       </div>
       <div class="compound-meta">
         <div class="compound-meta-item"><div class="val">$3.75</div><div class="key">Per mg</div></div>
@@ -749,10 +638,10 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
       <div style="display:flex;justify-content:space-between;align-items:flex-start;">
         <div>
           <div class="compound-name">Retatrutide</div>
-          <div class="compound-tag">GIP/GLP-1/GLUCAGON · TRIPLE AGONIST · NEXT-GEN PIPELINE</div>
+          <div class="compound-tag">GIP/GLP-1/GLUCAGON · TRIPLE AGONIST · NEXT-GEN</div>
           <div style="font-size:9px;color:var(--red);font-weight:600;letter-spacing:.1em;margin-top:4px;">⚠ INVESTIGATIONAL · NOT FDA-APPROVED</div>
         </div>
-        <span class="glp-badge glp3">TRIPLE</span>
+        <span style="display:inline-block;padding:4px 10px;font-size:9px;letter-spacing:.16em;font-weight:700;background:#EEE5FF;color:#6A4CAB;">TRIPLE</span>
       </div>
       <div class="compound-meta">
         <div class="compound-meta-item"><div class="val">$8.75</div><div class="key">Per mg</div></div>
@@ -764,785 +653,389 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
   </div>
 </section>
 
-<!-- WHY MAJESTIC -->
-<section id="why">
+<!-- ═══════════════════════════════════════════
+     PROGRAM TEASER
+════════════════════════════════════════════ -->
+<section id="program-teaser">
   <div class="inner">
     <div class="section-header">
-      <span class="label label-teal">Why Majestic R&D</span>
-      <h2 class="section-h2">How we ensure<br/>your practice's success.</h2>
+      <span class="label label-teal">The Program</span>
+      <h2 class="section-h2">Built for your practice.<br/>Revenue from day one.</h2>
       <div class="divider"></div>
-      <p class="section-lead">Most peptide suppliers source overseas and won't show you their facility. We manufacture in a USP-797 certified, ISO Class 5 sterile facility in South Carolina, test with independent labs, and welcome you to visit in person — because "trust us" is not a quality standard.</p>
+      <p class="section-lead">Whether you're new to peptides or evaluating a new supplier, the program closes the gap between your first conversation and your first paying patient in 20 days. $0 out of pocket via PNC Healthcare financing.</p>
     </div>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon">🏭</div>
-        <h3>USP-797 Certified Manufacturing</h3>
-        <p>All compounds manufactured and packaged at our partner facility in South Carolina — not repackaged from overseas API. The facility is USP-797 certified, meaning every peptide is prepared in an ISO Class 5 sterile environment (laminar airflow hood or isolator) to injectable-grade standards. Lab visits available and encouraged.</p>
+    <div class="program-grid">
+      <div class="program-card">
+        <div class="program-card-icon">📞</div>
+        <h3>Intro Call → Profit Snapshot</h3>
+        <p>15 minutes with your rep. Metis builds a personalized revenue projection based on your actual patient population — conservative, base case, and accelerated. No commitment required.</p>
       </div>
-      <div class="why-card">
-        <div class="why-icon">🔬</div>
-        <h3>Independent Third-Party Testing</h3>
-        <p>Every lot tested by <a href="https://trustpointeanalytics.com/" target="_blank" style="color:var(--teal);text-decoration:underline;">TrustPointe Analytics LLC</a> (Dorr, MI) or <a href="https://chromate.org/" target="_blank" style="color:var(--teal);text-decoration:underline;">Chromate</a> before it ships. COAs confirm identity, purity, and quantity — QR codes and access keys link directly to the issuing lab's verification portal.</p>
-        <ul>
-          <li>99.75%–99.85% purity across all active lots</li>
-          <li>Verify at TrustPointeLIMS.com or chromate.org/verify</li>
-          <li>Lyophilized format for shelf stability</li>
-          <li>Lot-level documentation provided with every order</li>
-        </ul>
+      <div class="program-card">
+        <div class="program-card-icon">💳</div>
+        <h3>$0 Out of Pocket via PNC</h3>
+        <p>One-page application. $30,000 at 10% APR over 5 years — approximately $650/month. No personal credit check, no collateral. Approval in about one week. The monthly payment is covered by your reorder revenue.</p>
       </div>
-      <div class="why-card">
-        <div class="why-icon">📋</div>
-        <h3>Complete Launch Support</h3>
-        <p>It's difficult to build a peptide program alone. Every Majestic Peptides starter package includes training, documentation, and 90 days of Metis analytics, all included at no extra cost.</p>
-        <ul>
-          <li>4-hour training with Christopher McDonald</li>
-          <li>Consent templates, AE forms, EMR guidance</li>
-          <li>90-day Metis Peptide Sprint Dashboard</li>
-          <li>Ongoing account manager support</li>
-        </ul>
+      <div class="program-card">
+        <div class="program-card-icon">🚀</div>
+        <h3>Inventory Ships · Training Starts</h3>
+        <p>Inventory ships from South Carolina within 5–7 days of funding. Two 2-hour training sessions with Christopher McDonald. Full compliance documentation included. First patient by day 20.</p>
       </div>
+    </div>
+    <div style="display:flex;gap:12px;margin-top:36px;flex-wrap:wrap;">
+      <a class="btn btn-teal" href="#contact-strip">Schedule Intro Call</a>
+      <a class="btn btn-outline" href="#calculator-teaser">Run the Numbers First</a>
     </div>
   </div>
 </section>
 
-<!-- COMPOUNDS -->
-<section id="compounds">
+<!-- ═══════════════════════════════════════════
+     COMPOUNDS TEASER
+════════════════════════════════════════════ -->
+<section id="compounds-teaser">
   <div class="inner">
     <div class="section-header">
       <span class="label label-teal">Current Offering</span>
-      <h2 class="section-h2">GLP-1, Dual Agonist & Triple Agonist</h2>
+      <h2 class="section-h2">Three compounds.<br/>The full metabolic spectrum.</h2>
       <div class="divider"></div>
-      <p class="section-lead">Three compounds covering the full metabolic spectrum, from the most-prescribed GLP-1 therapy, to a dual GIP/GLP-1 agonist, to the next generation of triple agonists. More peptides added to catalog Q3–Q4 2026.</p>
+      <p class="section-lead">GLP-1, Dual GIP/GLP-1, and Triple GIP/GLP-1/Glucagon agonists — all manufactured in our USP-797 certified partner facility in South Carolina and independently verified before shipment.</p>
     </div>
-    <table class="compound-table">
-      <thead>
-        <tr>
-          <th>Compound</th>
-          <th>Classification</th>
-          <th>Vial Size</th>
-          <th>Price / Vial</th>
-          <th>Price / mg</th>
-          <th>Patient Pricing Range</th>
-          <th>Key Clinical Use</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <div class="compound-name-cell">Semaglutide</div>
-            <span class="compound-sub">99.814% Purity</span>
-          </td>
-          <td><span class="glp-badge glp1">GLP-1</span></td>
-          <td>30 mg</td>
-          <td><strong>$262.50</strong></td>
-          <td>$8.75</td>
-          <td>$60–$80/mo</td>
-          <td>Weight management, T2D glycemic control</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="compound-name-cell">Tirzepatide</div>
-            <span class="compound-sub">99.845% Purity</span>
-          </td>
-          <td><span class="glp-badge glp2">DUAL AGONIST</span></td>
-          <td>200 mg</td>
-          <td><strong>$750.00</strong></td>
-          <td>$3.75</td>
-          <td>$200–$300/mo</td>
-          <td>Dual GIP/GLP-1 agonism, superior weight outcomes</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="compound-name-cell">Retatrutide</div>
-            <span class="compound-sub">99.822% Purity</span>
-            <span class="compound-sub" style="color:var(--red);font-weight:600;margin-top:3px;display:block;">⚠ Investigational — Not FDA-Approved</span>
-          </td>
-          <td><span class="glp-badge glp3">TRIPLE AGONIST</span></td>
-          <td>60 mg</td>
-          <td><strong>$525.00</strong></td>
-          <td>$8.75</td>
-          <td>$350–$450/mo</td>
-          <td>Triple agonist (GIP/GLP-1/glucagon), next-gen metabolic<br/><span style="font-size:11px;color:var(--red);">Research/investigational use only. Not FDA-approved.</span></td>
-        </tr>
-      </tbody>
-    </table>
-    <div style="background:rgba(192,57,43,.06);border:1px solid rgba(192,57,43,.2);padding:14px 20px;margin-top:16px;display:flex;gap:12px;align-items:flex-start;">
+    <div class="compounds-strip">
+      <div class="compound-tile">
+        <span class="compound-tile-badge badge-glp1">GLP-1</span>
+        <h3>Semaglutide</h3>
+        <span class="sub">Weight management · T2D glycemic control</span>
+        <div class="price">$262.50</div>
+        <div class="price-sub">PER VIAL · 30 MG · $8.75/MG</div>
+        <div class="purity">
+          <div class="purity-label">99.814% PURITY — LOT SiSem042427</div>
+          <div class="purity-bar"><div class="purity-fill" style="width:99.8%;"></div></div>
+        </div>
+        <div style="margin-top:16px;font-size:12px;color:var(--slate);">Patient pricing range: <strong>$60–$80/mo</strong></div>
+      </div>
+      <div class="compound-tile">
+        <span class="compound-tile-badge badge-dual">DUAL AGONIST</span>
+        <h3>Tirzepatide</h3>
+        <span class="sub">Dual GIP/GLP-1 · Superior weight outcomes</span>
+        <div class="price">$750.00</div>
+        <div class="price-sub">PER VIAL · 200 MG · $3.75/MG</div>
+        <div class="purity">
+          <div class="purity-label">99.845% PURITY — LOT BWiTir091227</div>
+          <div class="purity-bar"><div class="purity-fill" style="width:99.8%;background:var(--gold);"></div></div>
+        </div>
+        <div style="margin-top:16px;font-size:12px;color:var(--slate);">Patient pricing range: <strong>$200–$300/mo</strong></div>
+      </div>
+      <div class="compound-tile">
+        <span class="compound-tile-badge badge-triple">TRIPLE AGONIST</span>
+        <h3>Retatrutide</h3>
+        <span class="sub">GIP/GLP-1/Glucagon · Next-gen pipeline</span>
+        <div class="price">$525.00</div>
+        <div class="price-sub">PER VIAL · 60 MG · $8.75/MG</div>
+        <div class="purity">
+          <div class="purity-label">99.822% PURITY — LOT CoRet081427</div>
+          <div class="purity-bar"><div class="purity-fill" style="width:99.8%;background:#8B5CF6;"></div></div>
+        </div>
+        <div style="margin-top:16px;font-size:12px;color:var(--red);font-weight:600;">⚠ Investigational · Not FDA-Approved</div>
+      </div>
+    </div>
+    <div style="background:rgba(192,57,43,.06);border:1px solid rgba(192,57,43,.2);padding:14px 20px;margin-top:2px;display:flex;gap:12px;align-items:flex-start;">
       <span style="color:var(--red);font-size:16px;flex-shrink:0;">⚠</span>
-      <p style="font-size:12px;color:var(--red);line-height:1.7;"><strong>Retatrutide Disclosure:</strong> Retatrutide is an investigational compound currently in Phase 3 clinical trials. It has not received FDA approval for any indication. It is offered for research and investigational use only. Practitioners assume full responsibility for appropriate use in compliance with applicable regulations.</p>
+      <p style="font-size:12px;color:var(--red);line-height:1.7;"><strong>Retatrutide Disclosure:</strong> Currently in Phase 3 clinical trials. Not FDA-approved for any indication. Offered for research and investigational use only. Practitioners assume full responsibility for appropriate use in compliance with applicable regulations.</p>
+    </div>
+    <div style="margin-top:28px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
+      <a class="section-link" href="resources.html">Download Full COA Docs</a>
+      <span style="font-size:11px;color:var(--muted);">Verify live lots at TrustPointeLIMS.com · chromate.org/verify</span>
     </div>
   </div>
 </section>
 
-<!-- PHYSICIAN FUNNEL -->
-<section id="physicians">
+<!-- ═══════════════════════════════════════════
+     QUALITY TEASER
+════════════════════════════════════════════ -->
+<section id="quality-teaser">
   <div class="inner">
     <div class="section-header">
-      <span class="label" style="color:var(--gold);">For Practitioners</span>
-      <h2 class="section-h2">Built for your practice.<br/>Revenue from day one.</h2>
+      <span class="label" style="color:rgba(255,255,255,.4);">Quality & Compliance</span>
+      <h2 class="section-h2">Tested at dispatch.<br/>Verifiable by you.</h2>
       <div class="divider"></div>
-      <p class="section-lead">Whether you're new to peptides or looking to evaluate a new supplier, the program is designed to close the gap between your first conversation and your first paying patient in 20 days.</p>
+      <p class="section-lead">Most suppliers source overseas and won't show you their facility. We manufacture in a USP-797 certified, ISO Class 5 sterile facility in South Carolina, test with independent labs, and welcome you to visit in person.</p>
     </div>
-    <div class="funnel-grid">
-      <div class="funnel-card">
-        <div class="funnel-step">1</div>
-        <h3>Book an Intro Call</h3>
-        <p>15 minutes with your Majestic R&D representative. We'll review the program, discuss your patient population, and confirm the program is right for your practice.</p>
-        <div class="funnel-note">→ Most practices qualify immediately</div>
+    <div class="quality-strip">
+      <div class="quality-tile">
+        <div class="quality-tile-icon">🏭</div>
+        <h4>USP-797 Certified Facility</h4>
+        <p>ISO Class 5 sterile environment in South Carolina. Laminar airflow hoods, injectable-grade preparation. Lab visits available and encouraged — we don't ask you to trust us.</p>
+        <div class="badge">OPEN DOOR POLICY</div>
       </div>
-      <div class="funnel-card">
-        <div class="funnel-step">2</div>
-        <h3>Get Your Profit Snapshot</h3>
-        <p>Your rep forwards your patient count data to Metis. Within days, you receive a personalized profit projection - conservative, base case, and accelerated — based on your actual patient population.</p>
-        <div class="funnel-note">→ No commitment required to receive this</div>
+      <div class="quality-tile">
+        <div class="quality-tile-icon">🔬</div>
+        <h4>Every Lot, Third-Party Tested</h4>
+        <p>TrustPointe Analytics LLC (Dorr, MI) or Chromate. COA confirms identity, purity, and quantity. QR code links directly to the lab's own verification portal — not to us.</p>
+        <div class="badge">99.75–99.85% PURITY</div>
       </div>
-      <div class="funnel-card">
-        <div class="funnel-step">3</div>
-        <h3>Complete the Inventory Calculator</h3>
-        <p>Fill out expected patient volume per compound. The calculator shows your monthly burn rate and time to exhaust a $30,000 inventory. Target: 12 months or less.</p>
-        <div class="funnel-note">→ Takes under 10 minutes</div>
+      <div class="quality-tile">
+        <div class="quality-tile-icon">📋</div>
+        <h4>Full Compliance Toolkit</h4>
+        <p>Informed consent templates, lot tracking logs, adverse event forms, reconstitution cards, EMR guidance. Ready to use before your first patient. Included at no extra cost.</p>
+        <div class="badge">INCLUDED WITH STARTER PACKAGE</div>
       </div>
-      <div class="funnel-card">
-        <div class="funnel-step">4</div>
-        <h3>Submit PNC Healthcare Funding</h3>
-        <p>One-page application. 10–15 minutes. Credit decision in approximately 1 week. No collateral, no personal credit check. $30,000 at 10% APR fixed over 5 years — ~$650/month.</p>
-        <div class="funnel-note">→ $0 out of pocket to start</div>
-      </div>
-      <div class="funnel-card">
-        <div class="funnel-step">5</div>
-        <h3>Inventory Ships from SC</h3>
-        <p>Upon funding approval, Majestic places your order with Pro Peptide Solutions. Pro Peptide ships with COA documentation. Delivered to your practice within 5–7 business days.</p>
-        <div class="funnel-note">→ Days 5–12 from decision</div>
-      </div>
-      <div class="funnel-card">
-        <div class="funnel-step">6</div>
-        <h3>Training, Setup, First Patients</h3>
-        <p>Two 2-hour remote sessions with Christopher McDonald. Documentation toolkit delivered. Metis 90-day Dashboard activated. Begin treating patients and generating revenue that offsets your $650/month from day one.</p>
-        <div class="funnel-note">→ First patient by day 20</div>
+      <div class="quality-tile">
+        <div class="quality-tile-icon">📊</div>
+        <h4>Metis Analytics — Complimentary</h4>
+        <p>90-day Peptide Sprint Dashboard activated on your first order. Profit Snapshot, patient pipeline tracker, KPI strip, and 19-lever Revenue Leak Scorecard — built for your practice.</p>
+        <div class="badge">FREE 90 DAYS INCLUDED</div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:48px;">
-      <button class="btn btn-gold" onclick="navTo('contact')" style="margin-right:12px;">Schedule My Intro Call</button>
-      <button class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.25);" onclick="navTo('contact')">Request Free Practice Analysis</button>
-    </div>
-  </div>
-</section>
 
-<!-- TIMELINE -->
-<section id="timeline">
-  <div class="inner">
-    <div class="section-header">
-      <span class="label label-teal">Launch Timeline</span>
-      <h2 class="section-h2">Decision to first patient:<br/>20 days.</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="timeline-phases">
-      <div class="phase phase-1">
-        <div class="phase-circle">1–5</div>
-        <div class="phase-label">PHASE 1 · DAYS 1–5</div>
-        <h3>Pre-Purchase Decision</h3>
-        <ul>
-          <li>Review materials & initial rep consultation</li>
-          <li>Complete Inventory Turnover Calculator</li>
-          <li>Receive Metis Profit Snapshot & Dashboard preview</li>
-          <li>Submit PNC Healthcare funding application</li>
-          <li>Schedule training sessions (mandatory for new practices)</li>
-        </ul>
-      </div>
-      <div class="phase phase-2">
-        <div class="phase-circle">5–12</div>
-        <div class="phase-label">PHASE 2 · DAYS 5–12</div>
-        <h3>Funding & Fulfillment</h3>
-        <ul>
-          <li>PNC approves funding (~1 week from application)</li>
-          <li>$30,000 disbursed directly to you</li>
-          <li>Confirm compound split with account manager</li>
-          <li>Order placed with Pro Peptide Solutions</li>
-          <li>Delivery within 5–7 business days</li>
-        </ul>
-      </div>
-      <div class="phase phase-3">
-        <div class="phase-circle">12–20</div>
-        <div class="phase-label">PHASE 3 · DAYS 12–20</div>
-        <h3>Launch Ready</h3>
-        <ul>
-          <li>Complete 2x 2-hour training with Christopher McDonald</li>
-          <li>Receive full documentation toolkit</li>
-          <li>Metis 90-day Sprint Dashboard activated</li>
-          <li>Staff trained, workflows documented</li>
-          <li>Treat first patients — revenue begins immediately</li>
-        </ul>
-      </div>
-    </div>
-    <div style="background:var(--ink);padding:28px 32px;margin-top:48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
-      <p style="color:rgba(255,255,255,.55);font-size:14px;max-width:580px;">90-day milestone: 10–30 patients treated, workflow documented, reorder cadence established, 3 Metis action items implemented. Revenue exceeds $650/month payment from target patient volumes.</p>
-      <button class="btn btn-gold" onclick="navTo('contact')">Start the Process</button>
-    </div>
-  </div>
-</section>
-
-<!-- FINANCING -->
-<section id="financing">
-  <div class="inner">
-    <div class="section-header">
-      <span class="label label-teal">Accessible Financing</span>
-      <h2 class="section-h2">$0 out of pocket.<br/>Revenue from month one.</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="financing-split">
-      <div>
-        <div class="finance-card">
-          <h3>PNC Healthcare Business Banking</h3>
-          <span class="subtitle">STANDARD STARTER PACKAGE</span>
-          <div class="finance-row"><span class="key">Loan Amount</span><span class="val gold">$30,000</span></div>
-          <div class="finance-row"><span class="key">Interest Rate</span><span class="val">10% APR (fixed)</span></div>
-          <div class="finance-row"><span class="key">Term</span><span class="val">5 years (60 months)</span></div>
-          <div class="finance-row"><span class="key">Monthly Payment</span><span class="val gold">~$650/month</span></div>
-          <div class="finance-row"><span class="key">Approval Timeline</span><span class="val">~1 week</span></div>
-          <div class="finance-row"><span class="key">Credit Check</span><span class="val">No personal credit check</span></div>
-          <div class="finance-row"><span class="key">Collateral Required</span><span class="val">None</span></div>
-          <div class="finance-row"><span class="key">Prepayment Penalty</span><span class="val">None</span></div>
-          <div class="finance-highlight">
-            <p>Currently, we provide ~$650 in peptide inventory monthly that you resell for ~$1,300 — more than covering your payment. The program effectively finances itself from the first reorder cycle.</p>
-          </div>
-        </div>
-      </div>
-      <div class="finance-right">
-        <h3>Revenue Potential</h3>
-        <p class="lead">At target patient volumes, revenue exceeds the monthly financing payment from day one. Year-one projections assume a standard 503A compounding partner relationship with typical cash-pay pricing architecture. The $60K figure represents entry-level volume — the minimum threshold for program qualification. Your Metis Profit Snapshot will project your specific practice at conservative, base, and accelerated scenarios.</p>
-        <div class="roi-grid">
-          <div class="roi-box">
-            <div class="num">$60K+</div>
-            <div class="lbl">Year-One Revenue at Entry Patient Volume</div>
-          </div>
-          <div class="roi-box">
-            <div class="num">100%</div>
-            <div class="lbl">ROI on Starter Package</div>
-          </div>
-          <div class="roi-box">
-            <div class="num">Day 1</div>
-            <div class="lbl">Revenue Starts</div>
-          </div>
-          <div class="roi-box">
-            <div class="num">$650</div>
-            <div class="lbl">Monthly Payment Covered by Inventory Offset</div>
-          </div>
-        </div>
-        <div style="background:var(--teal-pale);border-left:3px solid var(--teal);padding:16px 20px;margin-top:24px;">
-          <p style="font-size:13px;color:var(--teal);line-height:1.7;"><strong>Profit Snapshot included:</strong> Metis generates a personalized revenue projection based on your actual patient counts — conservative, base case, and accelerated — before you commit.</p>
-        </div>
-        <button class="btn btn-teal" style="margin-top:28px;width:100%;" onclick="navTo('contact')">Get My Profit Snapshot</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CALCULATOR -->
-<section id="calculator" style="background:var(--cream);border-top:1px solid var(--border);">
-  <div class="inner">
-    <div class="calc-outer-grid" style="display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start;">
-      <div>
-        <span class="label label-teal" style="display:block;margin-bottom:12px;">Inventory Turnover Calculator</span>
-        <h2 class="section-h2">See your numbers<br/>before you commit.</h2>
-        <div class="divider"></div>
-        <p style="font-size:14px;color:var(--slate);line-height:1.85;margin-bottom:20px;">Enter your expected patient volume for each compound. The calculator shows your monthly revenue, profit, and how long a $30,000 order will last — so you can confirm the program fits your practice before making any commitment.</p>
-        <div style="background:var(--paper);border:1px solid var(--border);padding:20px;margin-bottom:20px;">
-          <p style="font-size:12px;color:var(--muted);line-height:1.7;"><strong style="color:var(--ink);display:block;margin-bottom:4px;">How the math works:</strong>Patient pricing is set at 2× your cost — a standard cash-pay margin. You control your exact pricing. These are conservative estimates based on typical practice pricing architecture.</p>
-        </div>
-        <div style="background:var(--ink);padding:20px;">
-          <div style="font-size:10px;letter-spacing:.18em;color:var(--gold-lt);margin-bottom:12px;font-weight:600;">BURN RATE GUIDE</div>
-          <div style="display:flex;flex-direction:column;gap:8px;">
-            <div style="display:flex;align-items:center;gap:10px;"><span style="width:10px;height:10px;border-radius:50%;background:#E74C3C;flex-shrink:0;"></span><span style="font-size:12px;color:rgba(255,255,255,.6);">Over 12 months — speak with your rep about patient acquisition first</span></div>
-            <div style="display:flex;align-items:center;gap:10px;"><span style="width:10px;height:10px;border-radius:50%;background:#F0A500;flex-shrink:0;"></span><span style="font-size:12px;color:rgba(255,255,255,.6);">6–12 months — solid fit, good to order</span></div>
-            <div style="display:flex;align-items:center;gap:10px;"><span style="width:10px;height:10px;border-radius:50%;background:var(--teal-light);flex-shrink:0;"></span><span style="font-size:12px;color:rgba(255,255,255,.6);">Under 6 months — ideal patient volume</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <!-- INPUTS -->
-        <div style="background:var(--paper);border:1px solid var(--border);padding:32px;margin-bottom:16px;">
-          <div style="font-size:10px;letter-spacing:.18em;color:var(--teal);font-weight:600;margin-bottom:20px;">STEP 1 — ENTER YOUR PATIENT MIX</div>
-          <div style="display:flex;flex-direction:column;gap:16px;">
-
-            <div style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:16px;background:var(--teal-pale);border-left:3px solid var(--teal);">
-              <div>
-                <div style="font-size:14px;font-weight:600;color:var(--ink);margin-bottom:2px;">GLP-1 — Semaglutide</div>
-                <div style="font-size:11px;color:var(--muted);">$8.75/mg · 4mg avg/patient/mo · ~$35 est. gross margin/patient</div>
-              </div>
-              <div style="display:flex;align-items:center;gap:8px;">
-                <button onclick="adjustPt('sema',-5)" style="width:28px;height:28px;border:1px solid var(--border);background:var(--white);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:var(--ink);">−</button>
-                <input type="number" id="sema-pts" value="20" min="0" max="500" oninput="calcResults()" style="width:64px;text-align:center;border:1.5px solid var(--teal);padding:6px;font-size:16px;font-weight:700;font-family:inherit;background:var(--white);color:var(--ink);outline:none;"/>
-                <button onclick="adjustPt('sema',5)" style="width:28px;height:28px;border:1px solid var(--border);background:var(--white);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:var(--ink);">+</button>
-                <span style="font-size:11px;color:var(--muted);">patients</span>
-              </div>
-            </div>
-
-            <div style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:16px;background:var(--gold-pale);border-left:3px solid var(--gold);">
-              <div>
-                <div style="font-size:14px;font-weight:600;color:var(--ink);margin-bottom:2px;">Dual Agonist — Tirzepatide</div>
-                <div style="font-size:11px;color:var(--muted);">$3.75/mg · 30mg avg/patient/mo · ~$112.50 est. gross margin/patient</div>
-              </div>
-              <div style="display:flex;align-items:center;gap:8px;">
-                <button onclick="adjustPt('tirz',-5)" style="width:28px;height:28px;border:1px solid var(--border);background:var(--white);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:var(--ink);">−</button>
-                <input type="number" id="tirz-pts" value="5" min="0" max="200" oninput="calcResults()" style="width:64px;text-align:center;border:1.5px solid var(--gold);padding:6px;font-size:16px;font-weight:700;font-family:inherit;background:var(--white);color:var(--ink);outline:none;"/>
-                <button onclick="adjustPt('tirz',5)" style="width:28px;height:28px;border:1px solid var(--border);background:var(--white);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:var(--ink);">+</button>
-                <span style="font-size:11px;color:var(--muted);">patients</span>
-              </div>
-            </div>
-
-            <div style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:16px;background:#F0EBFC;border-left:3px solid #8B5CF6;">
-              <div>
-                <div style="font-size:14px;font-weight:600;color:var(--ink);margin-bottom:2px;">Triple Agonist — Retatrutide</div>
-                <div style="font-size:11px;color:var(--muted);">$8.75/mg · 24mg avg/patient/mo · ~$210 est. gross margin/patient</div>
-              </div>
-              <div style="display:flex;align-items:center;gap:8px;">
-                <button onclick="adjustPt('reta',-5)" style="width:28px;height:28px;border:1px solid var(--border);background:var(--white);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:var(--ink);">−</button>
-                <input type="number" id="reta-pts" value="0" min="0" max="200" oninput="calcResults()" style="width:64px;text-align:center;border:1.5px solid #8B5CF6;padding:6px;font-size:16px;font-weight:700;font-family:inherit;background:var(--white);color:var(--ink);outline:none;"/>
-                <button onclick="adjustPt('reta',5)" style="width:28px;height:28px;border:1px solid var(--border);background:var(--white);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:var(--ink);">+</button>
-                <span style="font-size:11px;color:var(--muted);">patients</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- RESULTS -->
-        <div id="calc-results" style="background:var(--ink);padding:32px;">
-          <div style="font-size:10px;letter-spacing:.18em;color:var(--gold-lt);font-weight:600;margin-bottom:24px;">STEP 2 — YOUR PROJECTED RESULTS</div>
-          <div class="calc-results-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.08);margin-bottom:24px;">
-            <div style="background:var(--ink);padding:18px;">
-              <div id="res-monthly-rev" style="font-family:'Playfair Display',serif;font-size:28px;color:var(--gold-lt);margin-bottom:4px;">$—</div>
-              <div style="font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);">MONTHLY REVENUE</div>
-            </div>
-            <div style="background:var(--ink);padding:18px;">
-              <div id="res-monthly-profit" style="font-family:'Playfair Display',serif;font-size:28px;color:var(--teal-light);margin-bottom:4px;">$—</div>
-              <div style="font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);">MONTHLY PROFIT</div>
-            </div>
-            <div style="background:var(--ink);padding:18px;">
-              <div id="res-yr1" style="font-family:'Playfair Display',serif;font-size:28px;color:var(--gold-lt);margin-bottom:4px;">$—</div>
-              <div style="font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);">YEAR-ONE REVENUE</div>
-            </div>
-          </div>
-
-          <div class="calc-results-burn" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
-            <div style="background:rgba(255,255,255,.04);padding:18px;">
-              <div id="res-burn" style="font-size:22px;font-weight:700;color:var(--white);margin-bottom:4px;">—</div>
-              <div style="font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);">MONTHS TO BURN $30K ORDER</div>
-            </div>
-            <div style="background:rgba(255,255,255,.04);padding:18px;">
-              <div id="res-financing" style="font-size:22px;font-weight:700;color:var(--white);margin-bottom:4px;">—</div>
-              <div style="font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);">PAYMENT COVERED BY REVENUE IN</div>
-            </div>
-          </div>
-
-          <div id="burn-verdict" style="padding:14px 18px;margin-bottom:20px;font-size:13px;line-height:1.6;"></div>
-
-          <div class="calc-cta-row" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-            <button class="btn btn-gold" onclick="navTo('contact')" style="width:100%;text-align:center;">Talk to a Rep</button>
-            <button class="btn btn-outline" style="width:100%;color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.2);" onclick="navTo('contact')">Get Full Profit Snapshot</button>
-          </div>
-
-          <!-- CALCULATOR LEAD CAPTURE -->
-          <div id="calc-capture" style="display:none;margin-top:20px;background:rgba(184,148,63,.08);border:1px solid rgba(184,148,63,.2);padding:20px;">
-            <p style="font-size:12px;color:var(--gold-lt);font-weight:600;margin-bottom:4px;letter-spacing:.06em;">SAVE YOUR RESULTS</p>
-            <p style="font-size:12px;color:rgba(255,255,255,.5);margin-bottom:14px;line-height:1.6;">Enter your email and we'll send your projection plus a personalized breakdown from Metis — including compound mix recommendations for your patient volume.</p>
-            <div style="display:flex;gap:0;">
-              <input type="email" id="calc-email" placeholder="your@practice.com"
-                style="flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);
-                border-right:none;color:#fff;padding:11px 14px;font-size:16px;
-                font-family:inherit;outline:none;"/>
-              <button onclick="submitCalcCapture()"
-                style="background:var(--gold);border:none;color:var(--ink);padding:11px 18px;
-                font-size:10px;letter-spacing:.14em;font-weight:700;cursor:pointer;
-                font-family:inherit;white-space:nowrap;">SEND RESULTS</button>
-            </div>
-            <div id="calc-capture-msg" style="font-size:11px;color:rgba(255,255,255,.3);margin-top:8px;min-height:16px;"></div>
-          </div>
-
-          <p style="font-size:11px;color:rgba(255,255,255,.2);margin-top:14px;font-style:italic;">Projections assume 2× patient pricing markup. Actual results vary by practice pricing, patient adherence, and compound mix. This calculator is for estimation purposes only.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST SIGNALS -->
-<section id="trust" style="background:var(--paper);border-top:1px solid var(--border);padding:64px 48px;">
-  <div class="inner">
-    <div style="text-align:center;margin-bottom:48px;">
-      <span class="label label-teal" style="display:block;margin-bottom:12px;">Verification & Transparency</span>
-      <h2 class="section-h2" style="max-width:520px;margin:0 auto 12px;">How we validate quality.</h2>
-      <p style="font-size:14px;color:var(--muted);max-width:480px;margin:0 auto;">Everything below is verifiable. We've built the program so you never have to take our word for anything.</p>
-    </div>
-    <div class="trust-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);">
-
-      <div style="background:var(--paper);padding:28px;text-align:center;transition:background .2s;" onmouseenter="this.style.background='var(--teal-pale)'" onmouseleave="this.style.background='var(--paper)'">
-        <div style="font-size:32px;margin-bottom:12px;">🔬</div>
-        <h4 style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">Every Lot, Third-Party Tested</h4>
-        <p style="font-size:12px;color:var(--slate);line-height:1.7;"><a href="https://trustpointeanalytics.com/" target="_blank" style="color:var(--teal);">TrustPointe Analytics LLC</a> or <a href="https://chromate.org/" target="_blank" style="color:var(--teal);">Chromate</a>. COA confirms identity, purity, and quantity. QR code and access key link directly to the lab’s own verification portal — not to us.</p>
-        <div style="margin-top:14px;font-size:11px;color:var(--teal);font-weight:600;letter-spacing:.1em;">99.75–99.85% PURITY</div>
-      </div>
-
-      <div style="background:var(--paper);padding:28px;text-align:center;transition:background .2s;" onmouseenter="this.style.background='var(--teal-pale)'" onmouseleave="this.style.background='var(--paper)'">
-        <div style="font-size:32px;margin-bottom:12px;">🏭</div>
-        <h4 style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">Come See the Facility</h4>
-        <p style="font-size:12px;color:var(--slate);line-height:1.7;">Manufacturing based in South Carolina. USP-797 certified, ISO Class 5 sterile facility. Lab visits available to any practitioner or investor. We encourage it.</p>
-        <div style="margin-top:14px;font-size:11px;color:var(--teal);font-weight:600;letter-spacing:.1em;">OPEN DOOR POLICY</div>
-      </div>
-
-      <div style="background:var(--paper);padding:28px;text-align:center;transition:background .2s;" onmouseenter="this.style.background='var(--teal-pale)'" onmouseleave="this.style.background='var(--paper)'">
-        <div style="font-size:32px;margin-bottom:12px;">📋</div>
-        <h4 style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">Compliance Docs — Included</h4>
-        <p style="font-size:12px;color:var(--slate);line-height:1.7;">Informed consent templates, lot tracking logs, adverse event forms, reconstitution cards, EMR guidance. Ready to use before your first patient.</p>
-        <div style="margin-top:14px;font-size:11px;color:var(--teal);font-weight:600;letter-spacing:.1em;">FULL TOOLKIT INCLUDED</div>
-      </div>
-
-      <div style="background:var(--paper);padding:28px;text-align:center;transition:background .2s;" onmouseenter="this.style.background='var(--teal-pale)'" onmouseleave="this.style.background='var(--paper)'">
-        <div style="font-size:32px;margin-bottom:12px;">📊</div>
-        <h4 style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">Data Before You Decide</h4>
-        <p style="font-size:12px;color:var(--slate);line-height:1.7;">Metis builds your Profit Snapshot — a full revenue projection based on your actual patient counts — before you commit to anything. No pressure, just numbers.</p>
-        <div style="margin-top:14px;font-size:11px;color:var(--teal);font-weight:600;letter-spacing:.1em;">ZERO COMMITMENT REQUIRED</div>
-      </div>
-
-    </div>
-
-    <!-- Transparent pricing strip -->
-    <div class="trust-price-strip" style="background:var(--cream);border:1px solid var(--border);padding:28px 32px;margin-top:2px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;text-align:center;">
-      <div style="padding:0 24px;border-right:1px solid var(--border);">
-        <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--ink);margin-bottom:4px;">$262.50</div>
-        <div style="font-size:10px;letter-spacing:.14em;color:var(--muted);">SEMAGLUTIDE / VIAL — PUBLISHED</div>
-      </div>
-      <div style="padding:0 24px;border-right:1px solid var(--border);">
-        <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--ink);margin-bottom:4px;">$750.00</div>
-        <div style="font-size:10px;letter-spacing:.14em;color:var(--muted);">TIRZEPATIDE / VIAL — PUBLISHED</div>
-      </div>
-      <div style="padding:0 24px;">
-        <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--ink);margin-bottom:4px;">$525.00</div>
-        <div style="font-size:10px;letter-spacing:.14em;color:var(--muted);">RETATRUTIDE / VIAL — PUBLISHED</div>
-      </div>
-    </div>
-    <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:12px;font-style:italic;">All pricing published upfront. No hidden fees, no surprise reorder costs. Volume pricing available — ask your rep.</p>
-
-    <!-- LIVE COA VERIFICATION STRIP -->
-    <div style="margin-top:32px;border:1px solid var(--border);padding:28px 32px;background:var(--paper);">
+    <!-- Live COA strip -->
+    <div style="margin-top:2px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);padding:28px 32px;">
       <div style="text-align:center;margin-bottom:20px;">
-        <span class="label label-teal">Verify Our Current Lots Yourself — Right Now</span>
-        <p style="font-size:13px;color:var(--slate);margin-top:8px;line-height:1.7;">These are real lot numbers from our active inventory. Click any link to verify purity and identity directly at the issuing laboratory’s portal. No login required.</p>
+        <span class="label" style="color:rgba(255,255,255,.4);display:block;margin-bottom:8px;">Verify Our Current Lots Right Now</span>
+        <p style="font-size:13px;color:rgba(255,255,255,.35);line-height:1.7;max-width:560px;margin:0 auto;">Real lot numbers from active inventory. Click any link to verify purity directly at the issuing laboratory's portal. No login required.</p>
       </div>
-      <div class="coa-strip" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
-        <div style="background:var(--cream);padding:20px;border-left:3px solid var(--teal);">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+        <div style="background:rgba(255,255,255,.04);padding:20px;border-left:3px solid var(--teal);">
           <div style="font-size:11px;font-weight:600;color:var(--teal);letter-spacing:.12em;margin-bottom:6px;">SEMAGLUTIDE · LOT SiSem042427</div>
-          <div style="font-size:13px;color:var(--ink);font-weight:600;margin-bottom:4px;">99.814% Purity</div>
-          <div style="font-size:11px;color:var(--muted);margin-bottom:12px;">Tested by Chromate · COA #26057</div>
-          <a href="https://chromate.org/verify" target="_blank" style="font-size:11px;color:var(--teal);font-weight:600;letter-spacing:.08em;text-decoration:underline;">VERIFY AT CHROMATE.ORG/VERIFY →</a>
-          <div style="font-size:10px;color:var(--muted);margin-top:4px;">Access code: SHC1DAA4EK92</div>
+          <div style="font-size:13px;color:#fff;font-weight:600;margin-bottom:4px;">99.814% Purity</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.3);margin-bottom:12px;">Tested by Chromate · COA #26057</div>
+          <a href="https://chromate.org/verify" target="_blank" style="font-size:11px;color:var(--teal-lt);font-weight:600;letter-spacing:.08em;text-decoration:underline;">VERIFY AT CHROMATE.ORG →</a>
+          <div style="font-size:10px;color:rgba(255,255,255,.25);margin-top:4px;">Access code: SHC1DAA4EK92</div>
         </div>
-        <div style="background:var(--cream);padding:20px;border-left:3px solid var(--gold);">
+        <div style="background:rgba(255,255,255,.04);padding:20px;border-left:3px solid var(--gold);">
           <div style="font-size:11px;font-weight:600;color:var(--gold);letter-spacing:.12em;margin-bottom:6px;">TIRZEPATIDE · LOT BWiTir091227</div>
-          <div style="font-size:13px;color:var(--ink);font-weight:600;margin-bottom:4px;">99.845% Purity</div>
-          <div style="font-size:11px;color:var(--muted);margin-bottom:12px;">Tested by TrustPointe Analytics</div>
-          <a href="https://trustpointelims.com/" target="_blank" style="font-size:11px;color:var(--teal);font-weight:600;letter-spacing:.08em;text-decoration:underline;">VERIFY AT TRUSTPOINTELIMS.COM →</a>
-          <div style="font-size:10px;color:var(--muted);margin-top:4px;">Key: LCVKATII070C</div>
+          <div style="font-size:13px;color:#fff;font-weight:600;margin-bottom:4px;">99.845% Purity</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.3);margin-bottom:12px;">Tested by TrustPointe Analytics</div>
+          <a href="https://trustpointelims.com/" target="_blank" style="font-size:11px;color:var(--teal-lt);font-weight:600;letter-spacing:.08em;text-decoration:underline;">VERIFY AT TRUSTPOINTELIMS.COM →</a>
+          <div style="font-size:10px;color:rgba(255,255,255,.25);margin-top:4px;">Key: LCVKATII070C</div>
         </div>
-        <div style="background:var(--cream);padding:20px;border-left:3px solid #8B5CF6;">
+        <div style="background:rgba(255,255,255,.04);padding:20px;border-left:3px solid #8B5CF6;">
           <div style="font-size:11px;font-weight:600;color:#8B5CF6;letter-spacing:.12em;margin-bottom:6px;">RETATRUTIDE · LOT CoRet081427</div>
-          <div style="font-size:13px;color:var(--ink);font-weight:600;margin-bottom:4px;">99.822% Purity</div>
-          <div style="font-size:11px;color:var(--muted);margin-bottom:12px;">Tested by TrustPointe Analytics</div>
-          <a href="https://trustpointelims.com/" target="_blank" style="font-size:11px;color:var(--teal);font-weight:600;letter-spacing:.08em;text-decoration:underline;">VERIFY AT TRUSTPOINTELIMS.COM →</a>
-          <div style="font-size:10px;color:var(--muted);margin-top:4px;">Key: HUPO1PBP1AB0</div>
+          <div style="font-size:13px;color:#fff;font-weight:600;margin-bottom:4px;">99.822% Purity</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.3);margin-bottom:12px;">Tested by TrustPointe Analytics</div>
+          <a href="https://trustpointelims.com/" target="_blank" style="font-size:11px;color:var(--teal-lt);font-weight:600;letter-spacing:.08em;text-decoration:underline;">VERIFY AT TRUSTPOINTELIMS.COM →</a>
+          <div style="font-size:10px;color:rgba(255,255,255,.25);margin-top:4px;">Key: HUPO1PBP1AB0</div>
         </div>
       </div>
-      <p style="text-align:center;font-size:11px;color:var(--muted);margin-top:16px;font-style:italic;">Lot numbers and verification keys update with each new inventory order. Current lots reflect active physician inventory.</p>
+    </div>
+    <div style="margin-top:24px;">
+      <a class="section-link" href="read-a-coa.html">Learn how to read a COA</a>
     </div>
   </div>
 </section>
 
-<!-- METIS -->
-<section id="metis">
+<!-- ═══════════════════════════════════════════
+     CALCULATOR TEASER
+════════════════════════════════════════════ -->
+<section id="calculator-teaser">
   <div class="inner">
-    <div class="section-header">
-      <span class="label" style="color:rgba(255,255,255,.45);">Powered by Metis Engine</span>
-      <h2 class="section-h2">Applied Intelligence.<br/>Built for your peptide program.</h2>
-      <div class="divider"></div>
-      <p class="section-lead">Every Majestic practitioner receives a complimentary 90-day Metis Peptide Sprint Dashboard — a custom analytics and optimization platform built specifically for your practice, activated the moment you commit to the program.</p>
-    </div>
-    <div class="metis-grid">
-      <div class="metis-card">
-        <div class="metis-badge">INCLUDED FREE · 90 DAYS</div>
-        <div class="metis-card-icon">📊</div>
-        <h4>Personalized Profit Snapshot</h4>
-        <p>Delivered before you commit. Metis builds a custom revenue projection using your patient count data — including conservative, base case, and accelerated scenarios.</p>
-        <ul class="metis-list">
-          <li>Year-1 revenue range & break-even timeline</li>
-          <li>Compound economics comparison (Semaglutide / Tirzepatide / Retatrutide)</li>
-          <li>12-month cash flow projection</li>
-          <li>Cash-pay pricing architecture analysis</li>
-        </ul>
-      </div>
-      <div class="metis-card">
-        <div class="metis-badge">INCLUDED FREE · 90 DAYS</div>
-        <div class="metis-card-icon">🎯</div>
-        <h4>Peptide Sprint Dashboard</h4>
-        <p>A customized interactive portal activated upon your inventory order. Your practice through data — for the first time.</p>
-        <ul class="metis-list">
-          <li>KPI strip, revenue projection, break-even scenarios</li>
-          <li>Patient pipeline tracker with 3-channel discovery system</li>
-          <li>Profit Leak Scorecard — 19 revenue levers across 6 categories</li>
-          <li>Month 1/2/3 action plans with revenue impact labels</li>
-        </ul>
-      </div>
-      <div class="metis-card">
-        <div class="metis-badge">INCLUDED FREE · 90 DAYS</div>
-        <div class="metis-card-icon">📋</div>
-        <h4>Patient Identification System</h4>
-        <p>A structured worksheet and EHR query protocol to identify your first 15–25 peptide candidates. Most practices find 40–80 candidates from chart review alone.</p>
-        <ul class="metis-list">
-          <li>7 EHR query templates (ICD-10 codes included)</li>
-          <li>In-office daily workflow for staff identification</li>
-          <li>Warm outreach protocol for lapsed patients</li>
-          <li>Month 1 goal: 5–8 active patients by Day 30</li>
-        </ul>
-      </div>
-      <div class="metis-card">
-        <div class="metis-badge">INCLUDED FREE · 90 DAYS</div>
-        <div class="metis-card-icon">🏆</div>
-        <h4>Network Intelligence</h4>
-        <p>You don't operate in a vacuum. Metis provides benchmark data from the Majestic practitioner network — pricing intelligence, ramp comparisons, and the top performer playbook.</p>
-        <ul class="metis-list">
-          <li>Patient volume & revenue benchmarks</li>
-          <li>Break-even speed comparisons</li>
-          <li>Subscription adoption rates</li>
-          <li>Early awareness of market changes & compound trends</li>
-        </ul>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:48px;background:rgba(0,0,0,.15);padding:32px;">
-      <p style="font-size:13px;color:rgba(255,255,255,.45);margin-bottom:16px;">Metis services provided by Kevin Dixon — metisconsulting.ai | peptide@metisconsulting.com</p>
-      <p style="font-size:14px;color:rgba(255,255,255,.6);">The 90-day Sprint Dashboard is complimentary and exclusive to Majestic R&D practitioners. No additional purchase required.</p>
-    </div>
-  </div>
-</section>
-
-<!-- QUALITY -->
-<section id="quality">
-  <div class="inner">
-    <div class="quality-grid">
-      <div>
-        <span class="label label-teal" style="display:block;margin-bottom:12px;">Quality & Compliance</span>
-        <h2 class="section-h2">Tested at dispatch.<br/>Verifiable by you.</h2>
+    <div class="calc-teaser-grid">
+      <div class="calc-teaser-left">
+        <span class="label label-teal" style="display:block;margin-bottom:12px;">Inventory Calculator</span>
+        <h2>See your numbers<br/>before you commit.</h2>
         <div class="divider"></div>
-        <div class="quality-points">
-          <div class="quality-point">
-            <div class="q-icon">🏭</div>
-            <div class="q-text">
-              <h4>USP-797 Certified — South Carolina</h4>
-              <p>Manufacturing based in South Carolina. USP-797 certified facility — ISO Class 5 sterile environment, laminar airflow hoods, injectable-grade preparation standards. Lab visits available and encouraged. We don't ask you to trust us — we show you.</p>
-            </div>
+        <p>Enter your expected patient volume. The calculator shows monthly revenue, profit, and how long a $30,000 starter order lasts — so you know the program fits before making any commitment.</p>
+        <div class="calc-teaser-stats">
+          <div class="calc-stat">
+            <div class="num">$60K+</div>
+            <div class="lbl">MIN YEAR-ONE REVENUE</div>
           </div>
-          <div class="quality-point">
-            <div class="q-icon">🧪</div>
-            <div class="q-text">
-              <h4>Independent Third-Party Testing</h4>
-              <p>Every lot tested by <a href="https://trustpointeanalytics.com/" target="_blank" style="color:var(--teal);text-decoration:underline;">TrustPointe Analytics LLC</a> (Dorr, MI) or <a href="https://chromate.org/" target="_blank" style="color:var(--teal);text-decoration:underline;">Chromate</a>. COAs confirm identity, purity (99.75–99.85%), and quantity. Verify any lot directly at <a href="https://trustpointelims.com/" target="_blank" style="color:var(--teal);text-decoration:underline;">TrustPointeLIMS.com</a> or <a href="https://chromate.org/verify" target="_blank" style="color:var(--teal);text-decoration:underline;">chromate.org/verify</a> using the key on your COA.</p>
-            </div>
+          <div class="calc-stat">
+            <div class="num">~$650</div>
+            <div class="lbl">MONTHLY FINANCING PAYMENT</div>
           </div>
-          <div class="quality-point">
-            <div class="q-icon">📁</div>
-            <div class="q-text">
-              <h4>Complete Compliance Documentation</h4>
-              <p>Informed consent templates, lot tracking logs, adverse event forms, reconstitution cards, and EMR documentation guidance — all included with your starter package.</p>
-            </div>
+          <div class="calc-stat">
+            <div class="num">Day 1</div>
+            <div class="lbl">REVENUE STARTS</div>
+          </div>
+          <div class="calc-stat">
+            <div class="num">100%</div>
+            <div class="lbl">TARGET ROI ON STARTER PKG</div>
           </div>
         </div>
       </div>
-      <div>
-        <div class="quality-callout">
-          <blockquote>"Most suppliers source overseas and won't let you see their facilities. We manufacture in a USP-797 certified, ISO Class 5 sterile facility in the USA and welcome lab visits — because 'trust us' is not enough."</blockquote>
-          <cite>— MAJESTIC R&D PROGRAM STANDARD</cite>
-          <div class="visit-cta">
-            <button class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.3);margin-top:4px;" onclick="navTo('contact')">Schedule a Lab Visit</button>
+      <div class="calc-teaser-right">
+        <span class="mini-calc-label">QUICK ESTIMATE — ADJUST PATIENT MIX</span>
+
+        <div class="mini-slider-row">
+          <label>Semaglutide patients <span id="sema-val">20</span></label>
+          <input type="range" id="sema-slider" min="0" max="200" value="20" oninput="updateMiniCalc()"/>
+        </div>
+        <div class="mini-slider-row">
+          <label>Tirzepatide patients <span id="tirz-val">5</span></label>
+          <input type="range" id="tirz-slider" min="0" max="200" value="5" oninput="updateMiniCalc()"/>
+        </div>
+        <div class="mini-slider-row">
+          <label>Retatrutide patients <span id="reta-val">0</span></label>
+          <input type="range" id="reta-slider" min="0" max="200" value="0" oninput="updateMiniCalc()"/>
+        </div>
+
+        <div class="mini-result">
+          <div class="mini-result-item">
+            <div class="val" id="mini-rev">$—</div>
+            <div class="lbl">MONTHLY REVENUE</div>
+          </div>
+          <div class="mini-result-item">
+            <div class="val" id="mini-profit">$—</div>
+            <div class="lbl">MONTHLY PROFIT</div>
+          </div>
+          <div class="mini-result-item">
+            <div class="val" id="mini-yr1">$—</div>
+            <div class="lbl">YEAR-ONE REVENUE</div>
+          </div>
+          <div class="mini-result-item">
+            <div class="val" id="mini-burn">—</div>
+            <div class="lbl">MONTHS TO BURN ORDER</div>
           </div>
         </div>
-        <div style="background:var(--cream);padding:28px;margin-top:2px;">
-          <div style="background:var(--teal-pale);border-left:3px solid var(--teal);padding:14px 18px;margin-bottom:20px;">
-          <div style="font-size:10px;letter-spacing:.18em;font-weight:700;color:var(--teal);margin-bottom:6px;">USP-797 CERTIFIED FACILITY</div>
-          <p style="font-size:12px;color:var(--teal);line-height:1.7;">Sterile, injectable-grade preparation in an ISO Class 5 environment. Laminar airflow hoods or isolators eliminate microbial contamination risk during mixing, reconstitution, and vialing — the standard required for compounded injectables.</p>
-          </div>
-          <div class="label label-teal" style="display:block;margin-bottom:16px;margin-top:20px;">TRAINING PROGRAM — COMPLIMENTARY</div>
-          <div style="margin-bottom:16px;">
-            <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px;">Session 1 — Clinical Foundations (2 hours)</div>
-            <div style="font-size:12px;color:var(--slate);line-height:1.7;">Mechanism of action, patient selection, contraindications, injection prep, reconstitution, storage, safety monitoring.</div>
-          </div>
-          <div style="margin-bottom:16px;">
-            <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px;">Session 2 — Practice Integration & Revenue (2 hours)</div>
-            <div style="font-size:12px;color:var(--slate);line-height:1.7;">EMR documentation, consent workflows, cash-pay pricing models, subscription setup, ROI optimization, expansion planning.</div>
-          </div>
-          <div style="background:var(--teal-pale);padding:12px 16px;font-size:12px;color:var(--teal);">On-demand recordings, dosing charts, titration guides, and protocol updates included.</div>
+        <div class="full-calc-cta">
+          <a class="btn btn-gold" href="#contact-strip">Talk to a Rep</a>
+          <a class="btn btn-sm" href="#contact-strip" style="background:rgba(255,255,255,.07);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.15);">Get Full Profit Snapshot</a>
         </div>
+        <p style="font-size:10px;color:rgba(255,255,255,.2);margin-top:12px;font-style:italic;">Assumes 2× patient pricing markup. Estimation only — actual results vary.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- RESEARCH -->
-<section id="research">
+<!-- ═══════════════════════════════════════════
+     NEWS TEASER
+════════════════════════════════════════════ -->
+<section id="news-teaser">
   <div class="inner">
     <div class="section-header">
-      <span class="label label-gold">Research Pipeline</span>
-      <h2 class="section-h2">Where we're going next.</h2>
+      <span class="label label-gold">News &amp; Insights</span>
+      <h2 class="section-h2">Stay current on<br/>the science and the market.</h2>
       <div class="divider"></div>
-      <p class="section-lead">The GLP physician program is Phase 1. The Majestic R&D peptide division is building toward expanded delivery modalities and a broader compound library.</p>
     </div>
-    <div class="research-grid">
-      <div class="research-card">
-        <div class="research-tag">ACTIVE RESEARCH</div>
-        <h3>Intranasal Peptide Delivery</h3>
-        <p>Investigational program exploring intranasal routes for peptide administration, targeting CNS bioavailability, patient compliance advantages over injection-based protocols, and application to CNS-active peptide candidates beyond GLP compounds.</p>
-        <p style="font-size:12px;color:var(--muted);">Housed under Majestic R&D core research. Leverages LFDS ThermosPore/PsychroPore platform technology.</p>
+    <div class="news-grid">
+      <a class="news-card" href="tirzepatide-vs-semaglutide.html" style="display:block;">
+        <div class="news-card-body">
+          <span class="news-card-tag">CLINICAL COMPARISON</span>
+          <h3>Tirzepatide vs. Semaglutide: What the Data Actually Shows</h3>
+          <p>A head-to-head look at efficacy, mechanism, and clinical outcomes — so your prescribing decisions are grounded in evidence, not marketing.</p>
+        </div>
+        <div class="news-card-footer">
+          <span class="news-card-date">2026</span>
+          <span class="news-card-read">READ →</span>
+        </div>
+      </a>
+      <a class="news-card" href="glp-program-business-economics.html" style="display:block;">
+        <div class="news-card-body">
+          <span class="news-card-tag">PRACTICE ECONOMICS</span>
+          <h3>The Economics of a GLP Peptide Program: What the Numbers Actually Look Like</h3>
+          <p>Cost structure, compound margin profiles, inventory velocity, and an honest assessment of where the financial model is strong — by practice type.</p>
+        </div>
+        <div class="news-card-footer">
+          <span class="news-card-date">April 2026</span>
+          <span class="news-card-read">READ →</span>
+        </div>
+      </a>
+      <a class="news-card" href="peptide-eligible-patients.html" style="display:block;">
+        <div class="news-card-body">
+          <span class="news-card-tag">PRACTICE GROWTH</span>
+          <h3>Why Most Practices Undercount Their GLP-Eligible Patients</h3>
+          <p>The eligible population in most practices is 3–5x larger than the intuitive estimate. Why documentation gaps produce an undercount, and how to find the actual number.</p>
+        </div>
+        <div class="news-card-footer">
+          <span class="news-card-date">April 2026</span>
+          <span class="news-card-read">READ →</span>
+        </div>
+      </a>
+    </div>
+    <a class="section-link" href="blog.html">View all articles</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     RESOURCES TEASER
+════════════════════════════════════════════ -->
+<section id="resources-teaser">
+  <div class="inner">
+    <div class="section-header">
+      <span class="label label-teal">Physician Resources</span>
+      <h2 class="section-h2">Everything you need<br/>before your first patient.</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="resources-strip">
+      <div class="resource-tile">
+        <div class="resource-tile-icon">📄</div>
+        <div>
+          <h4>Program One-Pager</h4>
+          <p>Full program overview — compounds, pricing, timeline, and financing — on a single page.</p>
+          <span class="tag">PDF DOWNLOAD</span>
+        </div>
       </div>
-      <div class="research-card">
-        <div class="research-tag">ACTIVE RESEARCH</div>
-        <h3>Nebulizer-Based Peptide Delivery</h3>
-        <p>Pulmonary delivery of peptides via ultrasonic nebulizer systems. Investigates bioavailability, particle size compatibility with LFDS micellar formulations, and patient-friendly alternatives to subcutaneous injection for appropriate compound classes.</p>
-        <p style="font-size:12px;color:var(--muted);">Compatible with LFDS encapsulation platform. Research partnership pathways open.</p>
+      <div class="resource-tile">
+        <div class="resource-tile-icon">📊</div>
+        <div>
+          <h4>Inventory Calculator (Excel)</h4>
+          <p>Full spreadsheet model. Enter your patient mix and see month-by-month inventory burn and revenue projections.</p>
+          <span class="tag">XLSX DOWNLOAD</span>
+        </div>
       </div>
-      <div class="research-card research-future">
-        <div class="research-tag" style="background:#eee;color:var(--muted);">PIPELINE · 3–6 MO</div>
-        <h3>Expanded Peptide Catalog</h3>
-        <p>Addition of healing, recovery, and hormonal peptide classes to the physician offering, including BPC-157 analogs, TB-500 class compounds, sermorelin/ipamorelin family, and PT-141 type candidates. Manufacturing partner already capable.</p>
-        <p style="font-size:12px;color:var(--muted);">Timeline: Q3–Q4 2026. Physician partners will receive priority access.</p>
+      <div class="resource-tile">
+        <div class="resource-tile-icon">🏥</div>
+        <div>
+          <h4>Practitioner Steps Guide</h4>
+          <p>Step-by-step onboarding workflow — from application to first patient — built for your practice staff.</p>
+          <span class="tag">PDF DOWNLOAD</span>
+        </div>
+      </div>
+      <div class="resource-tile">
+        <div class="resource-tile-icon">📈</div>
+        <div>
+          <h4>Metis Analytics Overview</h4>
+          <p>What's included in the 90-day Sprint Dashboard — KPIs, patient pipeline, profit leak scorecard, and more.</p>
+          <span class="tag">PDF DOWNLOAD</span>
+        </div>
+      </div>
+      <div class="resource-tile">
+        <div class="resource-tile-icon">📅</div>
+        <div>
+          <h4>20-Day Launch Timeline</h4>
+          <p>Phase-by-phase breakdown from decision to first patient — what happens when, and what you need to do.</p>
+          <span class="tag">PDF DOWNLOAD</span>
+        </div>
+      </div>
+      <div class="resource-tile">
+        <div class="resource-tile-icon">🔬</div>
+        <div>
+          <h4>How to Read a COA</h4>
+          <p>A plain-language guide to certificate of analysis documents — what each field means and what to look for.</p>
+          <span class="tag">ARTICLE</span>
+        </div>
+      </div>
+    </div>
+    <a class="section-link" href="resources.html">Access the full resource center</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CONTACT STRIP
+════════════════════════════════════════════ -->
+<section id="contact-strip" style="padding:64px 48px;">
+  <div class="inner">
+    <div class="contact-strip-inner">
+      <div class="contact-strip-left">
+        <h2>Ready to add peptides<br/>to your practice?</h2>
+        <p>15-minute intro call with Preet Patel. No commitment required to receive your free Profit Snapshot from Metis. First patient in 20 days from your decision.</p>
+        <div style="margin-top:20px;font-size:13px;color:rgba(255,255,255,.6);">
+          <div>📞 <a href="tel:9193334345" style="color:rgba(255,255,255,.8);">(919) 333-4345</a></div>
+          <div style="margin-top:6px;">📧 <a href="mailto:majesticrdinfo@gmail.com" style="color:rgba(255,255,255,.8);">majesticrdinfo@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="contact-strip-right">
+        <a class="btn btn-white" href="mailto:majesticrdinfo@gmail.com">Schedule Intro Call</a>
+        <a class="btn btn-white-outline" href="resources.html">Download Resources</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+<!-- ═══════════════════════════════════════════
+     INVESTOR SECTION (full, preserved)
+════════════════════════════════════════════ -->
+<section id="investor-section" style="background:var(--cream);">
   <div class="inner">
-    <div class="contact-grid">
-      <div class="contact-left">
-        <span class="label" style="color:var(--gold);display:block;margin-bottom:14px;">Get Started</span>
-        <h2>Ready to add peptides to your practice?</h2>
-        <p>Reach out to your Majestic R&D representative directly, or fill out the form and we'll get back to you within one business day. No commitment required to receive your Profit Snapshot.</p>
-        <div class="contact-rep">
-          <div class="rep-card">
-            <div class="rep-name">Preet Patel</div>
-            <span class="rep-title">MAJESTIC R&D Peptide Program Lead</span>
-            <div class="rep-detail">📧 majesticrdinfo@gmail.com</div>
-            <div class="rep-detail">📍 North Carolina</div>
-          </div>
-          <div class="rep-card">
-            <div class="rep-name">Christopher McDonald</div>
-            <span class="rep-title">DIRECTOR OF PRACTITIONER SUPPORT</span>
-            <div class="rep-detail">Training sessions, clinical protocols, program onboarding</div>
-            <div class="rep-detail">4-hour training program · Remote sessions available</div>
-          </div>
-          <div class="rep-card">
-            <div class="rep-name">Metis Engine</div>
-            <span class="rep-title">ANALYTICS PARTNER — KEVIN DIXON</span>
-            <div class="rep-detail">📧 peptide@metisconsulting.com</div>
-            <div class="rep-detail">🌐 metisconsulting.ai</div>
-          </div>
-        </div>
-      </div>
-      <div class="contact-form">
-        <!-- BOOKING TABS -->
-        <div style="display:flex;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:28px;gap:0;">
-          <button id="tab-form" onclick="switchTab('form')"
-            style="flex:1;background:none;border:none;border-bottom:2px solid var(--gold);
-            color:#fff;padding:12px 16px;font-size:11px;letter-spacing:.14em;font-weight:600;
-            cursor:pointer;font-family:inherit;transition:all .2s;">REQUEST INFO</button>
-          <button id="tab-book" onclick="switchTab('book')"
-            style="flex:1;background:none;border:none;border-bottom:2px solid transparent;
-            color:rgba(255,255,255,.4);padding:12px 16px;font-size:11px;letter-spacing:.14em;
-            font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s;">BOOK A CALL</button>
-        </div>
-
-        <!-- FORM TAB -->
-        <div id="contact-tab-form">
-        <h3>Request Information</h3>
-        <p>Intro call, free practice analysis, lab visit, or just a question — tell us what you need.</p>
-        <div id="contact-form-wrap">
-          <div class="form-group">
-            <label>Practice Name</label>
-            <input type="text" name="practice_name" placeholder="Your practice name"/>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-            <div class="form-group">
-              <label>First Name</label>
-              <input id="cf-fname" type="text" name="first_name" placeholder="First"/>
-            </div>
-            <div class="form-group">
-              <label>Last Name</label>
-              <input type="text" name="last_name" placeholder="Last"/>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Email</label>
-            <input id="cf-email" type="email" name="email" placeholder="your@practice.com"/>
-          </div>
-          <div class="form-group">
-            <label>Phone</label>
-            <input type="tel" name="phone" placeholder="(555) 000-0000"/>
-          </div>
-          <div class="form-group">
-            <label>I'm interested in...</label>
-            <select name="interest">
-              <option value="">Select one</option>
-              <option>Intro call with a representative</option>
-              <option>Receiving my Profit Snapshot</option>
-              <option>Requesting a free practice analysis</option>
-              <option>Downloading clinical protocols</option>
-              <option>Scheduling a lab visit (SC facility)</option>
-              <option>Investor information</option>
-              <option>General inquiry</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Approximate active patient count</label>
-            <select name="patient_count">
-              <option value="">Select range</option>
-              <option>Under 200 patients</option>
-              <option>200–500 patients</option>
-              <option>500–1,000 patients</option>
-              <option>1,000–2,500 patients</option>
-              <option>2,500+ patients</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Anything else?</label>
-            <textarea name="message" placeholder="Questions, specialty, current peptide experience..."></textarea>
-          </div>
-          <button class="btn btn-gold" style="width:100%;" id="cf-submit" onclick="submitForm(event)">SUBMIT REQUEST</button>
-          <div class="form-success" id="form-success"></div>
-        </div>
-        </div><!-- end contact-tab-form -->
-
-        <!-- BOOK TAB -->
-        <div id="contact-tab-book" style="display:none;">
-          <h3>Book an Intro Call</h3>
-          <p style="font-size:13px;color:rgba(255,255,255,.4);margin-bottom:24px;">15 minutes with Preet Patel. Pick a time that works for you — no back-and-forth required.</p>
-          <!-- CALENDLY PLACEHOLDER — replace the div below with your Calendly inline embed -->
-          <div id="calendly-placeholder" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:40px;text-align:center;">
-            <div style="font-size:36px;margin-bottom:16px;">📅</div>
-            <p style="font-size:13px;color:rgba(255,255,255,.5);margin-bottom:20px;line-height:1.7;">Live calendar booking coming soon.<br/>For now, request a call time using the form →</p>
-            <button class="btn btn-gold btn-sm" onclick="switchTab('form')" style="margin:0 auto;">Fill Out Request Form</button>
-          </div>
-          <!-- TO ACTIVATE: Replace the div above with:
-          <div class="calendly-inline-widget" data-url="YOUR_CALENDLY_URL?hide_gdpr_banner=1&background_color=0d1117&text_color=ffffff&primary_color=B8943F" style="min-width:320px;height:630px;"></div>
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-          -->
-        </div><!-- end contact-tab-book -->
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- INVESTOR SECTION -->
-<section id="investor-section">
-  <div class="inner">
-
-    <!-- GATE -->
     <div id="investor-gate">
       <div class="investor-gate">
         <div class="lock-icon">🔐</div>
@@ -1557,7 +1050,6 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
       </div>
     </div>
 
-    <!-- INVESTOR ROOM -->
     <div id="investor-room">
       <div class="inv-header">
         <div class="confidential"><span>⚠ CONFIDENTIAL — AUTHORIZED RECIPIENTS ONLY</span></div>
@@ -1565,7 +1057,6 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
         <p>Peptide Manufacturing Buildout · Capital Expenditure Analysis · April 2026 · UMBC Facility / Aurora Manufacturing Program</p>
       </div>
 
-      <!-- OPPORTUNITY OVERVIEW -->
       <div class="inv-section">
         <h3 class="inv-section-title">The Opportunity</h3>
         <p class="inv-section-sub">Why manufacturing is the moat — and why now is the moment to build it.</p>
@@ -1575,13 +1066,12 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
             <p style="font-size:14px;color:var(--slate);line-height:1.85;margin-top:14px;">Majestic R&D is building the domestic manufacturing capability that closes this gap — and the physician program already underway creates the anchor client demand that makes the buildout economics unambiguous.</p>
           </div>
           <div style="background:var(--paper);padding:28px;border-left:3px solid var(--gold);">
-            <p style="font-size:14px;color:var(--slate);line-height:1.85;">The physician program is live with active practitioner conversations underway. In parallel, Majestic has established B2B distribution relationships — including with established peptide suppliers — that provide meaningful demand anchors independent of the physician channel. Break-even timeline specifics are being finalized and will be updated as the pipeline matures.</p>
+            <p style="font-size:14px;color:var(--slate);line-height:1.85;">The physician program is live with active practitioner conversations underway. In parallel, Majestic has established B2B distribution relationships — including with established peptide suppliers — that provide meaningful demand anchors independent of the physician channel.</p>
             <p style="font-size:14px;color:var(--slate);line-height:1.85;margin-top:14px;">We are not asking investors to bet on the market. We are asking them to fund the infrastructure to serve demand that already exists, is diversified across channels, and is growing monthly.</p>
           </div>
         </div>
       </div>
 
-      <!-- INVESTMENT ASK -->
       <div class="inv-section">
         <h3 class="inv-section-title">Current Investment Ask</h3>
         <p class="inv-section-sub">Seed round to fund Scenario 1 buildout. Numbers firm once first physician closes.</p>
@@ -1589,7 +1079,7 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
           <h4>$5,000,000 Raise — Scenario 1 Standard Scale-Up</h4>
           <div class="ask-grid">
             <div class="ask-item"><div class="ask-num">$3.44M</div><div class="ask-lbl">Facility Buildout (CapEx)</div></div>
-            <div class="ask-item"><div class="ask-num">$1.44M</div><div class="ask-lbl">Operational Reserve & Buy-In</div></div>
+            <div class="ask-item"><div class="ask-num">$1.44M</div><div class="ask-lbl">Operational Reserve &amp; Buy-In</div></div>
             <div class="ask-item"><div class="ask-num">7.5%</div><div class="ask-lbl">Equity for Full $5M</div></div>
             <div class="ask-item"><div class="ask-num">&lt;1 mo</div><div class="ask-lbl">CapEx Payback at Steady State</div></div>
           </div>
@@ -1597,16 +1087,15 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
         </div>
       </div>
 
-      <!-- SCENARIO COMPARISON -->
       <div class="inv-section">
         <h3 class="inv-section-title">Manufacturing Scenarios</h3>
-        <p class="inv-section-sub">Both scenarios use the UMBC facility via the Aurora manufacturing program. Break-even timelines and anchor client details available upon request — contact Preet Patel directly.</p>
+        <p class="inv-section-sub">Both scenarios use the UMBC facility via the Aurora manufacturing program. Break-even timelines and anchor client details available upon request.</p>
         <div class="scenario-grid">
           <div class="scenario-card s1">
             <h4>Scenario 1 — Standard Scale-Up</h4>
             <span class="tagline">Get to market fast. Prove the model. Expand from profits.</span>
             <div class="scenario-metrics">
-              <div class="s-metric"><span class="sk">Total Investment</span><span class="sv teal">$3,440,000</span></div>
+              <div class="s-metric"><span class="sk">Total Investment</span><span class="sv green">$3,440,000</span></div>
               <div class="s-metric"><span class="sk">Build Timeline</span><span class="sv">10 months</span></div>
               <div class="s-metric"><span class="sk">Steady-State Capacity</span><span class="sv">50 kg/month</span></div>
               <div class="s-metric"><span class="sk">Monthly Revenue at Capacity</span><span class="sv green">$7,500,000</span></div>
@@ -1626,17 +1115,15 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
             </div>
           </div>
         </div>
-
       </div>
 
-      <!-- PHASES & MILESTONES — PRIVATE -->
       <div class="inv-section">
         <h3 class="inv-section-title">Production Phases &amp; Milestones</h3>
-        <p class="inv-section-sub">Detailed phase-by-phase production ramp, milestone targets, and break-even timeline are available to qualified investors upon request.</p>
+        <p class="inv-section-sub">Detailed phase-by-phase production ramp and break-even timeline available to qualified investors upon request.</p>
         <div style="background:var(--ink);padding:40px;text-align:center;">
           <div style="font-size:36px;margin-bottom:16px;">📋</div>
           <p style="font-family:'Playfair Display',serif;font-size:20px;font-style:italic;color:#fff;margin-bottom:8px;line-height:1.4;">The full production ramp schedule, milestone targets, and updated break-even analysis are available directly from Preet Patel.</p>
-          <p style="font-size:13px;color:rgba(255,255,255,.4);margin-bottom:28px;line-height:1.7;">This information is shared selectively with qualified investors during the due diligence process.</p>
+          <p style="font-size:13px;color:rgba(255,255,255,.4);margin-bottom:28px;line-height:1.7;">Shared selectively with qualified investors during the due diligence process.</p>
           <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
             <a href="tel:9193334345" class="btn btn-gold">📞 (919) 333-4345</a>
             <a href="mailto:majesticrdinfo@gmail.com" class="btn btn-sm" style="background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.2);">📧 majesticrdinfo@gmail.com</a>
@@ -1644,37 +1131,21 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
         </div>
       </div>
 
-      <!-- CAPEX BREAKDOWN -->
-      <div class="inv-section">
-        <h3 class="inv-section-title">CapEx Breakdown</h3>
-        <p class="inv-section-sub">Detailed line-item breakdown available to qualified investors upon request.</p>
-        <div style="background:var(--paper);border:1px solid var(--border);padding:36px;text-align:center;">
-          <div style="font-size:32px;margin-bottom:16px;">📊</div>
-          <p style="font-size:15px;color:var(--slate);line-height:1.8;max-width:480px;margin:0 auto 8px;">The full CapEx breakdown — including line-item equipment costs, labor, analytics, contingency, and ongoing OpEx — is available directly from Preet Patel for qualified investors.</p>
-          <p style="font-size:13px;color:var(--muted);margin-bottom:28px;">Scenario 1: $3,440,000 total · Scenario 2: $10,400,000 total</p>
-          <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-            <a href="tel:9193334345" class="btn btn-dark btn-sm">📞 (919) 333-4345</a>
-            <a href="mailto:majesticrdinfo@gmail.com" class="btn btn-sm" style="background:var(--teal);color:#fff;">📧 majesticrdinfo@gmail.com</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- INVESTMENT THESIS -->
       <div class="inv-section">
         <h3 class="inv-section-title">Investment Decision Framework</h3>
-        <p class="inv-section-sub">Both scenarios share a compelling investment thesis with significant market capture potential. The only variable is scale and speed. Contact Preet Patel for the full financial model.</p>
+        <p class="inv-section-sub">Both scenarios share a compelling thesis. The only variable is scale and speed.</p>
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:32px;">
           <div style="background:var(--paper);padding:24px;border-top:3px solid var(--teal);">
             <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">Why now?</div>
-            <p style="font-size:12px;color:var(--slate);line-height:1.75;">GLP-1 peptide demand is at an all-time high — and growing. The US compounding market is expanding rapidly as patients seek cost-effective alternatives to branded GLP drugs. Domestic manufacturing infrastructure has not kept pace with that demand, creating a clear window for a purpose-built domestic supplier to establish position before the gap closes.</p>
+            <p style="font-size:12px;color:var(--slate);line-height:1.75;">GLP-1 peptide demand is at an all-time high and growing. The US compounding market is expanding as patients seek cost-effective alternatives to branded GLP drugs. Domestic manufacturing has not kept pace — creating a clear window for a purpose-built domestic supplier to establish position before the gap closes.</p>
           </div>
           <div style="background:var(--paper);padding:24px;border-top:3px solid var(--gold);">
             <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">The moat</div>
-            <p style="font-size:12px;color:var(--slate);line-height:1.75;">At 100 kg/month steady-state capacity, Scenario 2 positions Majestic to supply an estimated 10–15% of the total US compounded GLP peptide market by volume. At 50 kg/month under Scenario 1, that figure is approximately 5–8%. Regulatory qualification, technical infrastructure, and capital requirements create meaningful barriers to replication once this position is established.</p>
+            <p style="font-size:12px;color:var(--slate);line-height:1.75;">At 100 kg/month steady-state, Scenario 2 positions Majestic to supply an estimated 10–15% of the total US compounded GLP peptide market by volume. At 50 kg/month under Scenario 1, approximately 5–8%. Regulatory qualification, infrastructure, and capital requirements create meaningful barriers to replication once this position is established.</p>
           </div>
           <div style="background:var(--paper);padding:24px;border-top:3px solid var(--teal);">
             <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">De-risked entry</div>
-            <p style="font-size:12px;color:var(--slate);line-height:1.75;">The physician program is actively generating distribution demand ahead of manufacturing buildout. Existing B2B supply relationships — including established peptide distributors — provide additional demand anchors. The capital risk window is narrow: revenue begins flowing at first production, with payback timelines available to qualified investors upon request.</p>
+            <p style="font-size:12px;color:var(--slate);line-height:1.75;">The physician program is actively generating distribution demand ahead of manufacturing buildout. Existing B2B supply relationships provide additional demand anchors. The capital risk window is narrow: revenue begins flowing at first production, with payback timelines available to qualified investors upon request.</p>
           </div>
         </div>
         <div style="background:var(--ink);padding:32px;text-align:center;">
@@ -1683,7 +1154,6 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
         </div>
       </div>
 
-      <!-- CONTACT FOR INVESTMENT -->
       <div class="inv-section">
         <h3 class="inv-section-title">Next Steps for Investors</h3>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
@@ -1697,7 +1167,7 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
           <div style="background:var(--cream);padding:32px;border:1px solid var(--border);">
             <h4 style="font-family:'Playfair Display',serif;font-size:18px;font-weight:400;margin-bottom:12px;">What to Request</h4>
             <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
-              <li style="font-size:13px;color:var(--slate);display:flex;gap:8px;"><span style="color:var(--teal);">→</span> Full CapEx & Scenario Analysis PDF</li>
+              <li style="font-size:13px;color:var(--slate);display:flex;gap:8px;"><span style="color:var(--teal);">→</span> Full CapEx &amp; Scenario Analysis PDF</li>
               <li style="font-size:13px;color:var(--slate);display:flex;gap:8px;"><span style="color:var(--teal);">→</span> Physician pipeline status update</li>
               <li style="font-size:13px;color:var(--slate);display:flex;gap:8px;"><span style="color:var(--teal);">→</span> Aurora manufacturing program overview</li>
               <li style="font-size:13px;color:var(--slate);display:flex;gap:8px;"><span style="color:var(--teal);">→</span> Current term sheet</li>
@@ -1710,9 +1180,8 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
           <p style="font-size:12px;color:#c0392b;line-height:1.7;">This document is confidential and intended solely for authorized recipients. All figures are projections based on Aurora manufacturing program estimates and current market pricing. Actual results may vary. This does not constitute an offer of securities.</p>
         </div>
       </div>
-
-    </div><!-- end investor-room -->
-  </div><!-- end inner -->
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
@@ -1722,71 +1191,79 @@ a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
     <p>MAJESTIC PEPTIDES · A MAJESTIC R&D DIVISION · MARYLAND</p>
   </div>
   <div class="footer-links">
-    <a href="#why" onclick="navTo('why');return false;">Program</a>
-    <a href="#compounds" onclick="navTo('compounds');return false;">Compounds</a>
-    <a href="#quality" onclick="navTo('quality');return false;">Quality</a>
+    <a href="index.html">Program</a>
+    <a href="index.html#compounds-teaser">Compounds</a>
+    <a href="index.html#quality-teaser">Quality</a>
     <a href="team.html">Team</a>
     <a href="resources.html">Resources</a>
     <a href="blog.html">News &amp; Insights</a>
     <a href="affiliates.html">Partners</a>
-    <a href="#investor-section" onclick="navTo('investor-section');return false;">Investor Access</a>
+    <a href="index.html#investor-section">Investor Access</a>
   </div>
   <p>© 2026 Majestic R&D. All rights reserved. All compounds sourced from licensed 503A compounding partner.</p>
 </footer>
 
+<!-- WHATSAPP -->
+<a id="whatsapp-float" href="https://wa.me/19193334345?text=Hi%20Preet%2C%20I%27m%20interested%20in%20learning%20more%20about%20the%20Majestic%20Peptides%20physician%20program." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <div class="whatsapp-tooltip">Text Preet directly</div>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- EXIT POPUP -->
+<div id="exit-overlay">
+  <div class="exit-modal">
+    <button class="exit-close" onclick="closeExitPopup()">&times;</button>
+    <span class="exit-label">BEFORE YOU GO</span>
+    <h2 class="exit-title">Get your free<br/><em>Practice Analysis.</em></h2>
+    <p class="exit-body">Enter your email and we'll have Metis build a personalized revenue projection for your practice — based on your patient volume, compound mix, and local market. No commitment. Takes 48 hours.</p>
+    <div class="exit-form">
+      <input type="text" id="exit-name" placeholder="Your first name" autocomplete="given-name"/>
+      <input type="email" id="exit-email" placeholder="your@practice.com" autocomplete="email"/>
+      <button class="btn btn-teal" style="width:100%;text-align:center;" onclick="submitExitForm()">SEND MY FREE ANALYSIS</button>
+    </div>
+    <div class="exit-success" id="exit-success">&#x2713; Got it. Metis will have your practice analysis ready within 48 hours.</div>
+    <button class="exit-skip" onclick="closeExitPopup()">No thanks, I'll skip the analysis</button>
+  </div>
+</div>
+
+<!-- STICKY CTA BAR -->
+<div id="sticky-cta">
+  <div class="sticky-cta-text">
+    <strong>Ready to add peptides to your practice?</strong> 15-minute intro call · No commitment required
+  </div>
+  <div class="sticky-cta-btns">
+    <a class="btn btn-gold btn-sm" href="#contact-strip" onclick="hideStickyForever()">Schedule Intro Call</a>
+    <a class="btn btn-sm" href="#contact-strip" style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.15);" onclick="hideStickyForever()">Get Free Analysis</a>
+  </div>
+  <button class="sticky-cta-close" onclick="hideStickyForever()" title="Dismiss">&times;</button>
+</div>
+
 <script>
 // ============================================================
-// MAJESTIC PEPTIDES - All JavaScript (pure ASCII)
+// MAJESTIC PEPTIDES — INDEX HUB PAGE JS
 // ============================================================
 
-// --- EARLY ACCESS GATE -------------------------------------
-var ACCESS_CODES = ['MAJESTIC', 'PEPTIDE2025', 'EARLYACCESS', 'PREET', 'MAJESTICRD'];
+// --- NAV SCROLL SHADOW ---
+window.addEventListener('scroll', function() {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
 
-function checkAccess() {
-  var inputEl = document.getElementById('access-input');
-  var errorEl = document.getElementById('access-error');
-  if (!inputEl) return;
-  var val = inputEl.value.trim().toUpperCase().replace(/\s/g, '');
-  if (ACCESS_CODES.indexOf(val) !== -1) {
-    document.getElementById('early-access-gate').style.display = 'none';
-    var banner = document.getElementById('beta-banner');
-    if (banner) banner.style.display = 'flex';
-    document.body.style.overflow = '';
-    try { sessionStorage.setItem('mp_access', '1'); } catch(e) {}
-  } else {
-    errorEl.style.display = 'block';
-    inputEl.value = '';
-    inputEl.style.borderBottomColor = '#E74C3C';
-    setTimeout(function () {
-      inputEl.style.borderBottomColor = 'rgba(255,255,255,.15)';
-    }, 2000);
-  }
+// --- DROPDOWN ---
+function toggleDropdown(id) {
+  var dd = document.getElementById(id);
+  if (!dd) return;
+  dd.classList.toggle('open');
 }
-
-// --- SAFETY: Release overflow lock if gate fails silently ---
-setTimeout(function() {
-  var gate = document.getElementById('early-access-gate');
-  if (gate && gate.style.display === 'none') return; // gate passed, fine
-  // Gate still showing - make sure body isn't stuck
-  // Don't remove the gate, but ensure body scrolls
-  document.body.style.overflow = '';
-}, 8000); // 8 second safety release
-
-// --- NAVIGATION ---------------------------------------------
-function navTo(id) {
-  var el = document.getElementById(id);
-  if (!el) return;
-  var offset = 66; // height of fixed nav bar
-  var top = el.getBoundingClientRect().top + window.pageYOffset - offset;
-  window.scrollTo({ top: top, behavior: 'smooth' });
-}
-
-window.addEventListener('scroll', function () {
-  var nav = document.getElementById('nav');
-  if (nav) nav.classList.toggle('scrolled', window.scrollY > 40);
+document.addEventListener('click', function(e) {
+  var dds = document.querySelectorAll('.nav-dropdown');
+  dds.forEach(function(dd) {
+    if (!dd.contains(e.target)) dd.classList.remove('open');
+  });
 });
 
-// --- MOBILE MENU --------------------------------------------
+// --- MOBILE MENU ---
 function toggleMobileMenu() {
   var menu = document.getElementById('mobile-menu');
   var btn  = document.getElementById('hamburger');
@@ -1796,7 +1273,6 @@ function toggleMobileMenu() {
   btn.classList.toggle('open', !isOpen);
   document.body.style.overflow = isOpen ? '' : 'hidden';
 }
-
 function closeMobileMenu() {
   var menu = document.getElementById('mobile-menu');
   var btn  = document.getElementById('hamburger');
@@ -1805,386 +1281,28 @@ function closeMobileMenu() {
   document.body.style.overflow = '';
 }
 
-// --- CONTACT FORM -------------------------------------------
-function submitForm(e) {
-  if (e) e.preventDefault();
-
-  var nameEl    = document.getElementById('cf-fname');
-  var emailEl   = document.getElementById('cf-email');
-  var submitEl  = document.getElementById('cf-submit');
-  var successEl = document.getElementById('form-success');
-
-  var name  = nameEl  ? nameEl.value.trim() : '';
-  var email = emailEl ? emailEl.value.trim() : '';
-
-  if (!name || !email) {
-    alert('Please fill in your first name and email before submitting.');
-    return;
-  }
-
-  // Collect all named fields
-  var wrap = document.getElementById('contact-form-wrap');
-  var fields = wrap.querySelectorAll('input[name], select[name], textarea[name]');
-  var data = {};
-  fields.forEach(function(el) { data[el.name] = el.value; });
-
-  // Loading state
-  if (submitEl) { submitEl.disabled = true; submitEl.textContent = 'SENDING...'; }
-  if (successEl) { successEl.style.display = 'none'; }
-
-  fetch('https://formspree.io/f/xojykarl', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify(data)
-  })
-  .then(function(res) {
-    return res.json().then(function(json) { return { ok: res.ok, json: json }; });
-  })
-  .then(function(result) {
-    if (result.ok) {
-      fields.forEach(function(el) { el.value = ''; });
-      if (successEl) {
-        successEl.style.display = 'block';
-        successEl.style.color = '#259080';
-        successEl.textContent = '\u2713 Request received. We\u2019ll be in touch within one business day. \u2014 Majestic R&D';
-      }
-      if (submitEl) { submitEl.disabled = false; submitEl.textContent = 'SUBMIT REQUEST'; }
-    } else {
-      throw new Error(result.json.error || 'Submission failed');
-    }
-  })
-  .catch(function(err) {
-    if (successEl) {
-      successEl.style.display = 'block';
-      successEl.style.color = '#C0392B';
-      successEl.textContent = 'Something went wrong. Please email majesticrdinfo@gmail.com directly.';
-    }
-    if (submitEl) { submitEl.disabled = false; submitEl.textContent = 'SUBMIT REQUEST'; }
-    console.error('Formspree error:', err);
-  });
-}
-
-// --- INVESTOR PASSWORD GATE ---------------------------------
+// --- INVESTOR PASSWORD ---
 var INVESTOR_PW = 'MAJESTIC2025';
-
 function checkPassword() {
   var inputEl = document.getElementById('pw-input');
   var errorEl = document.getElementById('pw-error');
   if (!inputEl || !errorEl) return;
   var val = inputEl.value.trim().toUpperCase();
   if (val === INVESTOR_PW) {
-    var gate = document.getElementById('investor-gate');
+    document.getElementById('investor-gate').style.display = 'none';
     var room = document.getElementById('investor-room');
-    if (gate) gate.style.display = 'none';
-    if (room) {
-      room.classList.add('open');
-      setTimeout(function () { room.scrollIntoView({ behavior: 'smooth' }); }, 120);
-    }
+    room.classList.add('open');
+    setTimeout(function() { room.scrollIntoView({ behavior: 'smooth' }); }, 120);
     errorEl.classList.remove('show');
   } else {
     errorEl.classList.add('show');
     inputEl.value = '';
     inputEl.style.borderColor = '#c0392b';
-    setTimeout(function () { inputEl.style.borderColor = ''; }, 2000);
+    setTimeout(function() { inputEl.style.borderColor = ''; }, 2000);
   }
 }
 
-// --- CALCULATOR ---------------------------------------------
-var COMPOUNDS = {
-  sema: { mg: 4,  costMg: 8.75, ptMg: 17.5, mgVial: 30,  vialCost: 262.50 },
-  tirz: { mg: 30, costMg: 3.75, ptMg: 7.5,  mgVial: 200, vialCost: 750.00 },
-  reta: { mg: 24, costMg: 8.75, ptMg: 17.5, mgVial: 60,  vialCost: 525.00 }
-};
-var ORDER_SIZE = 30000;
-
-function adjustPt(cid, delta) {
-  var el = document.getElementById(cid + '-pts');
-  if (!el) return;
-  var cur = parseInt(el.value, 10);
-  if (isNaN(cur)) cur = 0;
-  el.value = Math.max(0, cur + delta);
-  calcResults();
-}
-
-function fmtMoney(n) {
-  if (!isFinite(n) || isNaN(n)) return '$0';
-  return '$' + Math.round(n).toLocaleString();
-}
-
-function calcResults() {
-  var semaEl = document.getElementById('sema-pts');
-  var tirzEl = document.getElementById('tirz-pts');
-  var retaEl = document.getElementById('reta-pts');
-  if (!semaEl || !tirzEl || !retaEl) return;
-
-  var pts = {
-    sema: Math.max(0, parseInt(semaEl.value, 10) || 0),
-    tirz: Math.max(0, parseInt(tirzEl.value, 10) || 0),
-    reta: Math.max(0, parseInt(retaEl.value, 10) || 0)
-  };
-
-  if (pts.sema > 500) { semaEl.value = pts.sema = 500; }
-  if (pts.tirz > 200) { tirzEl.value = pts.tirz = 200; }
-  if (pts.reta > 200) { retaEl.value = pts.reta = 200; }
-
-  var revEl  = document.getElementById('res-monthly-rev');
-  var profEl = document.getElementById('res-monthly-profit');
-  var yr1El  = document.getElementById('res-yr1');
-  var burnEl = document.getElementById('res-burn');
-  var finEl  = document.getElementById('res-financing');
-  var verdEl = document.getElementById('burn-verdict');
-  if (!revEl || !profEl || !yr1El || !burnEl || !finEl || !verdEl) return;
-
-  var totalPts = pts.sema + pts.tirz + pts.reta;
-
-  if (totalPts === 0) {
-    revEl.textContent  = '$0';
-    profEl.textContent = '$0';
-    yr1El.textContent  = '$0';
-    burnEl.textContent = '--';
-    finEl.textContent  = '--';
-    verdEl.innerHTML   = '';
-    verdEl.style.cssText = 'padding:0;margin-bottom:20px;background:transparent;border-left:none;';
-    return;
-  }
-
-  var keys = ['sema', 'tirz', 'reta'];
-  var monthlyRev  = 0;
-  var monthlyCost = 0;
-  for (var i = 0; i < keys.length; i++) {
-    var k = keys[i];
-    var c = COMPOUNDS[k];
-    monthlyRev  += pts[k] * c.mg * c.ptMg;
-    monthlyCost += pts[k] * c.mg * c.costMg;
-  }
-
-  var monthlyProfit = monthlyRev - monthlyCost;
-  var yr1           = monthlyRev * 12;
-  var burnMonths    = monthlyCost > 0 ? (ORDER_SIZE / monthlyCost) : 0;
-
-  revEl.textContent  = fmtMoney(monthlyRev);
-  profEl.textContent = fmtMoney(monthlyProfit);
-  yr1El.textContent  = fmtMoney(yr1);
-  burnEl.textContent = burnMonths > 0 ? burnMonths.toFixed(1) + ' months' : '--';
-
-  if (monthlyProfit >= 650) {
-    var coverDays = Math.ceil((650 / monthlyRev) * 30);
-    finEl.textContent = coverDays + ' days of revenue';
-  } else if (monthlyProfit > 0) {
-    finEl.textContent = 'Nearly covered - add patients';
-  } else {
-    finEl.textContent = 'Add patients';
-  }
-
-  verdEl.style.cssText = 'padding:14px 18px;margin-bottom:20px;font-size:13px;line-height:1.6;';
-
-  if (burnMonths === 0 || burnMonths > 12) {
-    verdEl.innerHTML = '<strong style="color:#E74C3C;">Over 12 months:</strong> <span style="color:rgba(255,255,255,.7);">Your current volume may not fully support a $30,000 order yet. Your rep can right-size the program or help build a patient acquisition strategy first.</span>';
-    verdEl.style.background = 'rgba(231,76,60,.09)';
-    verdEl.style.borderLeft = '3px solid #E74C3C';
-  } else if (burnMonths >= 6) {
-    verdEl.innerHTML = '<strong style="color:#F0A500;">Good fit (6-12 months):</strong> <span style="color:rgba(255,255,255,.7);">Solid volume. You\'ll cycle through inventory within a year while building consistent recurring revenue.</span>';
-    verdEl.style.background = 'rgba(240,165,0,.09)';
-    verdEl.style.borderLeft = '3px solid #F0A500';
-  } else {
-    verdEl.innerHTML = '<strong style="color:#25908E;">Ideal fit (under 6 months):</strong> <span style="color:rgba(255,255,255,.7);">Strong patient volume. Fast inventory cycling means maximum ROI and consistent reorders from day one.</span>';
-    verdEl.style.background = 'rgba(26,107,94,.1)';
-    verdEl.style.borderLeft = '3px solid #25908E';
-  }
-}
-
-// --- SCROLL REVEAL ------------------------------------------
-// Fallback: ensure elements are visible if observer fails
-document.documentElement.classList.add('js-loaded');
-var revealObserver = new IntersectionObserver(function (entries) {
-  entries.forEach(function (e) {
-    if (e.isIntersecting) {
-      e.target.classList.add('revealed');
-      revealObserver.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.07 });
-
-// --- DOM READY ----------------------------------------------
-document.addEventListener('DOMContentLoaded', function () {
-  // Gate disabled — auto-pass always
-  try { sessionStorage.setItem('mp_access', '1'); } catch(e) {}
-  var gate = document.getElementById('early-access-gate');
-  var banner = document.getElementById('beta-banner');
-  if (gate) gate.style.display = 'none';
-  if (banner) { banner.style.display = 'none'; } // also hide beta banner
-  document.body.style.overflow = '';
-  calcResults();
-  var sel = '.why-card, .funnel-card, .metis-card, .research-card, .phase, .compound-row, .scenario-card, .roi-box';
-  document.querySelectorAll(sel).forEach(function (el) {
-    el.classList.add('reveal-pending');
-    revealObserver.observe(el);
-  });
-});
-</script>
-<script>
-
-// ============================================================
-// FEATURE 1: STICKY CTA BAR
-// ============================================================
-var stickyClosed = false;
-function hideStickyForever() {
-  stickyClosed = true;
-  var el = document.getElementById('sticky-cta');
-  if (el) el.classList.remove('visible');
-}
-window.addEventListener('scroll', function() {
-  if (stickyClosed) return;
-  var el = document.getElementById('sticky-cta');
-  if (!el) return;
-  var contact = document.getElementById('contact');
-  var contactTop = contact ? contact.getBoundingClientRect().top : 9999;
-  if (window.scrollY > 400 && contactTop > 200) {
-    el.classList.add('visible');
-  } else {
-    el.classList.remove('visible');
-  }
-}, { passive: true });
-
-// ============================================================
-// FEATURE 2: CALCULATOR LEAD CAPTURE
-// ============================================================
-function showCalcCapture() {
-  var el = document.getElementById('calc-capture');
-  if (el) el.style.display = 'block';
-}
-function submitCalcCapture() {
-  var emailEl = document.getElementById('calc-email');
-  var msgEl   = document.getElementById('calc-capture-msg');
-  var email   = emailEl ? emailEl.value.trim() : '';
-  if (!email || !email.includes('@')) {
-    msgEl.style.color = '#E74C3C';
-    msgEl.textContent = 'Please enter a valid email address.';
-    return;
-  }
-  var sema = document.getElementById('sema-pts') ? document.getElementById('sema-pts').value : '0';
-  var tirz = document.getElementById('tirz-pts') ? document.getElementById('tirz-pts').value : '0';
-  var reta = document.getElementById('reta-pts') ? document.getElementById('reta-pts').value : '0';
-  var rev  = document.getElementById('res-monthly-rev') ? document.getElementById('res-monthly-rev').textContent : '';
-  fetch('https://formspree.io/f/xojykarl', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify({
-      email: email,
-      first_name: 'Calculator Lead',
-      interest: 'Calculator results + Metis analysis',
-      message: 'Sema: ' + sema + ' pts | Tirz: ' + tirz + ' pts | Reta: ' + reta + ' pts | Est monthly rev: ' + rev
-    })
-  })
-  .then(function(r){ return r.json().then(function(j){ return {ok:r.ok,j:j}; }); })
-  .then(function(res){
-    if (res.ok) {
-      msgEl.style.color = '#259080';
-      msgEl.textContent = '\u2713 Sent. Metis will follow up within 48 hours.';
-      if (emailEl) emailEl.value = '';
-    } else { throw new Error(); }
-  })
-  .catch(function(){
-    msgEl.style.color = '#E74C3C';
-    msgEl.textContent = 'Something went wrong. Email majesticrdinfo@gmail.com directly.';
-  });
-}
-// Hook into calcResults to show capture on good results
-var origCalcResults = calcResults;
-calcResults = function() {
-  origCalcResults();
-  var burnEl = document.getElementById('res-burn');
-  if (burnEl && burnEl.textContent && burnEl.textContent !== '--') {
-    var months = parseFloat(burnEl.textContent);
-    if (!isNaN(months) && months > 0 && months <= 12) { showCalcCapture(); }
-  }
-};
-
-// ============================================================
-// FEATURE 3: EXIT INTENT POPUP
-// ============================================================
-var exitShown = false;
-var exitDismissed = false;
-function showExitPopup() {
-  if (exitShown || exitDismissed) return;
-  var gate = document.getElementById('early-access-gate');
-  if (gate && gate.style.display !== 'none') return;
-  exitShown = true;
-  var overlay = document.getElementById('exit-overlay');
-  if (overlay) overlay.classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-function closeExitPopup() {
-  exitDismissed = true;
-  var overlay = document.getElementById('exit-overlay');
-  if (overlay) overlay.classList.remove('active');
-  document.body.style.overflow = '';
-}
-function submitExitForm() {
-  var nameEl  = document.getElementById('exit-name');
-  var emailEl = document.getElementById('exit-email');
-  var email   = emailEl ? emailEl.value.trim() : '';
-  if (!email || !email.includes('@')) {
-    if (emailEl) { emailEl.style.borderColor = '#E74C3C'; setTimeout(function(){ emailEl.style.borderColor = ''; }, 2000); }
-    return;
-  }
-  fetch('https://formspree.io/f/xojykarl', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify({ first_name: nameEl ? nameEl.value.trim() : 'Exit Intent', email: email, interest: 'Free practice analysis (exit intent)' })
-  })
-  .then(function(r){ return r.json().then(function(j){ return {ok:r.ok,j:j}; }); })
-  .then(function(res){
-    if (res.ok) {
-      var s = document.getElementById('exit-success');
-      if (s) s.style.display = 'block';
-      if (nameEl) nameEl.style.display = 'none';
-      if (emailEl) emailEl.style.display = 'none';
-      var btn = document.querySelector('.exit-form .btn');
-      if (btn) btn.style.display = 'none';
-      var skip = document.querySelector('.exit-skip');
-      if (skip) skip.style.display = 'none';
-      setTimeout(closeExitPopup, 3000);
-    } else { throw new Error(); }
-  })
-  .catch(function(){ closeExitPopup(); });
-}
-document.addEventListener('mouseleave', function(e) {
-  if (e.clientY <= 0 && !exitDismissed && window.scrollY > 300) { showExitPopup(); }
-});
-var lastScrollY = 0, maxScrollY = 0;
-window.addEventListener('scroll', function() {
-  var sy = window.scrollY;
-  if (sy > maxScrollY) maxScrollY = sy;
-  if (maxScrollY > 600 && lastScrollY - sy > 80 && sy < 300 && !exitDismissed) { showExitPopup(); }
-  lastScrollY = sy;
-}, { passive: true });
-var exitOverlay = document.getElementById('exit-overlay');
-if (exitOverlay) { exitOverlay.addEventListener('click', function(e) { if (e.target === this) closeExitPopup(); }); }
-
-// ============================================================
-// FEATURE 4: CONTACT TAB SWITCHER
-// ============================================================
-function switchTab(tab) {
-  var formTab = document.getElementById('contact-tab-form');
-  var bookTab = document.getElementById('contact-tab-book');
-  var btnForm = document.getElementById('tab-form');
-  var btnBook = document.getElementById('tab-book');
-  if (!formTab || !bookTab) return;
-  if (tab === 'form') {
-    formTab.style.display = 'block'; bookTab.style.display = 'none';
-    btnForm.style.borderBottomColor = 'var(--gold)'; btnForm.style.color = '#fff';
-    btnBook.style.borderBottomColor = 'transparent'; btnBook.style.color = 'rgba(255,255,255,.4)';
-  } else {
-    formTab.style.display = 'none'; bookTab.style.display = 'block';
-    btnBook.style.borderBottomColor = 'var(--gold)'; btnBook.style.color = '#fff';
-    btnForm.style.borderBottomColor = 'transparent'; btnForm.style.color = 'rgba(255,255,255,.4)';
-  }
-}
-
-// ============================================================
-// FEATURE 5: SPECIALTY TOGGLE
-// ============================================================
+// --- SPECIALTY TOGGLE ---
 var specialtyContent = {
   general: {
     h: 'USA-Manufactured<br/><em>GLP Peptides</em> for<br/>Your <strong>Practice.</strong>',
@@ -2203,56 +1321,129 @@ var specialtyContent = {
     p: 'Compounded Semaglutide and Tirzepatide from a USP-797 certified, ISO Class 5 manufacturing facility \u2014 with independent third-party COAs verifiable at the issuing laboratory. Built for practitioners who hold their suppliers to a clinical standard.'
   }
 };
-function setSpecialty(key) {
+function setSpecialty(btn, key) {
   var data = specialtyContent[key];
   if (!data) return;
-  var h = document.getElementById('hero-headline');
-  var p = document.getElementById('hero-lead');
-  if (h) h.innerHTML = data.h;
-  if (p) p.textContent = data.p;
-  document.querySelectorAll('.spec-btn').forEach(function(b){ b.classList.remove('active'); });
-  if (event && event.currentTarget) event.currentTarget.classList.add('active');
+  document.getElementById('hero-headline').innerHTML = data.h;
+  document.getElementById('hero-lead').textContent = data.p;
+  document.querySelectorAll('.spec-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
 }
 
+// --- MINI CALCULATOR ---
+var MC = {
+  sema: { mg: 4,  costMg: 8.75, ptMg: 17.5 },
+  tirz: { mg: 30, costMg: 3.75, ptMg: 7.5  },
+  reta: { mg: 24, costMg: 8.75, ptMg: 17.5 }
+};
+function fmtMoney(n) {
+  if (!isFinite(n) || isNaN(n) || n === 0) return '$0';
+  return '$' + Math.round(n).toLocaleString();
+}
+function updateMiniCalc() {
+  var sema = parseInt(document.getElementById('sema-slider').value) || 0;
+  var tirz = parseInt(document.getElementById('tirz-slider').value) || 0;
+  var reta = parseInt(document.getElementById('reta-slider').value) || 0;
+  document.getElementById('sema-val').textContent = sema;
+  document.getElementById('tirz-val').textContent = tirz;
+  document.getElementById('reta-val').textContent = reta;
+  var rev  = sema*MC.sema.mg*MC.sema.ptMg + tirz*MC.tirz.mg*MC.tirz.ptMg + reta*MC.reta.mg*MC.reta.ptMg;
+  var cost = sema*MC.sema.mg*MC.sema.costMg + tirz*MC.tirz.mg*MC.tirz.costMg + reta*MC.reta.mg*MC.reta.costMg;
+  var profit = rev - cost;
+  var burn = cost > 0 ? (30000 / cost).toFixed(1) + ' mo' : '--';
+  document.getElementById('mini-rev').textContent    = fmtMoney(rev);
+  document.getElementById('mini-profit').textContent = fmtMoney(profit);
+  document.getElementById('mini-yr1').textContent    = fmtMoney(rev * 12);
+  document.getElementById('mini-burn').textContent   = burn;
+}
+
+// --- STICKY CTA ---
+var stickyClosed = false;
+function hideStickyForever() {
+  stickyClosed = true;
+  var el = document.getElementById('sticky-cta');
+  if (el) el.classList.remove('visible');
+}
+window.addEventListener('scroll', function() {
+  if (stickyClosed) return;
+  var el = document.getElementById('sticky-cta');
+  if (!el) return;
+  var contactTop = document.getElementById('contact-strip').getBoundingClientRect().top;
+  if (window.scrollY > 400 && contactTop > 200) {
+    el.classList.add('visible');
+  } else {
+    el.classList.remove('visible');
+  }
+}, { passive: true });
+
+// --- EXIT INTENT ---
+var exitShown = false, exitDismissed = false;
+function showExitPopup() {
+  if (exitShown || exitDismissed) return;
+  exitShown = true;
+  var overlay = document.getElementById('exit-overlay');
+  if (overlay) overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeExitPopup() {
+  exitDismissed = true;
+  var overlay = document.getElementById('exit-overlay');
+  if (overlay) overlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+function submitExitForm() {
+  var nameEl  = document.getElementById('exit-name');
+  var emailEl = document.getElementById('exit-email');
+  var email   = emailEl ? emailEl.value.trim() : '';
+  if (!email || !email.includes('@')) {
+    if (emailEl) { emailEl.style.borderColor = '#E74C3C'; setTimeout(function(){ emailEl.style.borderColor=''; }, 2000); }
+    return;
+  }
+  fetch('https://formspree.io/f/xojykarl', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({ first_name: nameEl ? nameEl.value.trim() : 'Exit Intent', email: email, interest: 'Free practice analysis (exit intent)' })
+  })
+  .then(function(r){ return r.json().then(function(j){ return {ok:r.ok,j:j}; }); })
+  .then(function(res){
+    if (res.ok) {
+      document.getElementById('exit-success').style.display = 'block';
+      setTimeout(closeExitPopup, 3000);
+    } else { throw new Error(); }
+  })
+  .catch(function(){ closeExitPopup(); });
+}
+document.addEventListener('mouseleave', function(e) {
+  if (e.clientY <= 0 && !exitDismissed && window.scrollY > 300) { showExitPopup(); }
+});
+var lastScrollY = 0, maxScrollY = 0;
+window.addEventListener('scroll', function() {
+  var sy = window.scrollY;
+  if (sy > maxScrollY) maxScrollY = sy;
+  if (maxScrollY > 600 && lastScrollY - sy > 80 && sy < 300 && !exitDismissed) { showExitPopup(); }
+  lastScrollY = sy;
+}, { passive: true });
+document.getElementById('exit-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closeExitPopup();
+});
+
+// --- SCROLL REVEAL ---
+document.documentElement.classList.add('js-loaded');
+var revealObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) { e.target.classList.add('revealed'); revealObs.unobserve(e.target); }
+  });
+}, { threshold: 0.07 });
+
+// --- DOM READY ---
+document.addEventListener('DOMContentLoaded', function() {
+  updateMiniCalc();
+  var sel = '.program-card,.compound-tile,.quality-tile,.news-card,.resource-tile,.calc-stat,.scenario-card';
+  document.querySelectorAll(sel).forEach(function(el) {
+    el.classList.add('reveal-pending');
+    revealObs.observe(el);
+  });
+});
 </script>
-
-
-<!-- WHATSAPP FLOATING BUTTON -->
-<a id="whatsapp-float" href="https://wa.me/19193334345?text=Hi%20Preet%2C%20I%27m%20interested%20in%20learning%20more%20about%20the%20Majestic%20Peptides%20physician%20program." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <div class="whatsapp-tooltip">Text Preet directly</div>
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
-</a>
-
-<!-- EXIT INTENT POPUP -->
-<div id="exit-overlay">
-  <div class="exit-modal">
-    <button class="exit-close" onclick="closeExitPopup()">&times;</button>
-    <span class="exit-label">BEFORE YOU GO</span>
-    <h2 class="exit-title">Get your free<br/><em>Practice Analysis.</em></h2>
-    <p class="exit-body">Enter your email and we'll have Metis build a personalized revenue projection for your practice — based on your patient volume, compound mix, and local market. No commitment. Takes 48 hours.</p>
-    <div class="exit-form">
-      <input type="text" id="exit-name" placeholder="Your first name" autocomplete="given-name"/>
-      <input type="email" id="exit-email" placeholder="your@practice.com" autocomplete="email"/>
-      <button class="btn btn-teal" style="width:100%;justify-content:center;" onclick="submitExitForm()">SEND MY FREE ANALYSIS</button>
-    </div>
-    <div class="exit-success" id="exit-success">✓ Got it. Metis will have your practice analysis ready within 48 hours.</div>
-    <button class="exit-skip" onclick="closeExitPopup()">No thanks, I'll skip the analysis</button>
-  </div>
-</div>
-
-<!-- STICKY CTA BAR -->
-<div id="sticky-cta">
-  <div class="sticky-cta-text">
-    <strong>Ready to add peptides to your practice?</strong> 15-minute intro call · No commitment required
-  </div>
-  <div class="sticky-cta-btns">
-    <button class="btn btn-gold btn-sm" onclick="navTo('contact');hideStickyForever()">Schedule Intro Call</button>
-    <button class="btn btn-sm" style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.15);" onclick="navTo('contact');hideStickyForever()">Get Free Analysis</button>
-  </div>
-  <button class="sticky-cta-close" onclick="hideStickyForever()" title="Dismiss">&times;</button>
-</div>
-
 </body>
 </html>

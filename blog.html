@@ -227,17 +227,22 @@ footer p{font-size:11px;letter-spacing:.1em;}
     </div>
   </div>
   <div class="nav-links" id="nav-links">
-    <a href="index.html">Program</a>
-    <a href="index.html#compounds">Compounds</a>
-    <a href="index.html#physicians">For Physicians</a>
-    <a href="index.html#calculator">Calculator</a>
-    <a href="index.html#financing">Financing</a>
-    <a href="team.html">Team</a>
-    <a href="resources.html">Resources</a>
-    <a href="blog.html" class="active">News</a>
-    <a href="affiliates.html">Partners</a>
+    <div class="nav-dropdown" id="nav-program-dd" style="position:relative;">
+      <button onclick="document.getElementById('nav-program-dd').classList.toggle('open')" style="background:none;border:none;cursor:pointer;font-size:11px;letter-spacing:.13em;color:var(--slate);font-family:inherit;font-weight:500;padding:8px 12px;display:inline-flex;align-items:center;gap:5px;min-height:44px;">Program <span style="display:inline-block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-bottom:2px;"></span></button>
+      <div id="prog-dd-menu" style="position:absolute;top:calc(100% + 4px);left:0;background:var(--paper);border:1px solid var(--border);box-shadow:0 12px 40px rgba(0,0,0,.12);min-width:220px;opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity .18s,transform .18s;z-index:999;">
+        <a href="index.html" style="display:flex;align-items:flex-start;gap:12px;padding:14px 18px;font-size:12px;color:var(--slate);border-bottom:1px solid var(--border);text-decoration:none;" onmouseover="this.style.background='var(--cream)'" onmouseout="this.style.background=''"><span>📋</span><span><b style="display:block;font-size:11px;letter-spacing:.1em;color:var(--ink);">HOW IT WORKS</b><span style="font-size:11px;color:var(--muted);">Program overview &amp; onboarding</span></span></a>
+        <a href="index.html#compounds-teaser" style="display:flex;align-items:flex-start;gap:12px;padding:14px 18px;font-size:12px;color:var(--slate);border-bottom:1px solid var(--border);text-decoration:none;" onmouseover="this.style.background='var(--cream)'" onmouseout="this.style.background=''"><span>💊</span><span><b style="display:block;font-size:11px;letter-spacing:.1em;color:var(--ink);">COMPOUNDS</b><span style="font-size:11px;color:var(--muted);">Sema · Tirz · Reta pricing &amp; specs</span></span></a>
+        <a href="index.html#quality-teaser" style="display:flex;align-items:flex-start;gap:12px;padding:14px 18px;font-size:12px;color:var(--slate);border-bottom:1px solid var(--border);text-decoration:none;" onmouseover="this.style.background='var(--cream)'" onmouseout="this.style.background=''"><span>🔬</span><span><b style="display:block;font-size:11px;letter-spacing:.1em;color:var(--ink);">QUALITY &amp; COMPLIANCE</b><span style="font-size:11px;color:var(--muted);">USP-797, COA verification, testing</span></span></a>
+        <a href="index.html#calculator-teaser" style="display:flex;align-items:flex-start;gap:12px;padding:14px 18px;font-size:12px;color:var(--slate);border-bottom:1px solid var(--border);text-decoration:none;" onmouseover="this.style.background='var(--cream)'" onmouseout="this.style.background=''"><span>📊</span><span><b style="display:block;font-size:11px;letter-spacing:.1em;color:var(--ink);">CALCULATOR</b><span style="font-size:11px;color:var(--muted);">Inventory &amp; revenue projections</span></span></a>
+        <a href="index.html#contact-strip" style="display:flex;align-items:flex-start;gap:12px;padding:14px 18px;font-size:12px;color:var(--slate);text-decoration:none;" onmouseover="this.style.background='var(--cream)'" onmouseout="this.style.background=''"><span>📞</span><span><b style="display:block;font-size:11px;letter-spacing:.1em;color:var(--ink);">CONTACT A REP</b><span style="font-size:11px;color:var(--muted);">Book intro call or get analysis</span></span></a>
+      </div>
+    </div>
+    <a href="resources.html" style="font-size:11px;letter-spacing:.13em;color:var(--slate);font-weight:500;padding:8px 10px;text-decoration:none;transition:color .2s;min-height:44px;display:inline-flex;align-items:center;">Resources</a>
+    <a href="blog.html" style="font-size:11px;letter-spacing:.13em;color:var(--teal);font-weight:600;padding:8px 10px;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;">News</a>
+    <a href="affiliates.html" style="font-size:11px;letter-spacing:.13em;color:var(--slate);font-weight:500;padding:8px 10px;text-decoration:none;transition:color .2s;min-height:44px;display:inline-flex;align-items:center;">Partners</a>
+    <a href="team.html" style="font-size:11px;letter-spacing:.13em;color:var(--slate);font-weight:500;padding:8px 10px;text-decoration:none;transition:color .2s;min-height:44px;display:inline-flex;align-items:center;">Team</a>
     <a href="index.html#investor-section" class="nav-investor btn btn-sm">Investor Access</a>
-    <a href="index.html#contact" class="nav-cta btn btn-sm">Contact Rep</a>
+    <a href="index.html#contact-strip" class="nav-cta btn btn-sm">Contact Rep</a>
   </div>
   <button id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu" style="display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;">
     <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
@@ -247,16 +252,12 @@ footer p{font-size:11px;letter-spacing:.1em;}
 <!-- MOBILE MENU -->
 <div id="mobile-menu" style="display:none;position:fixed;inset:0;background:var(--ink);z-index:850;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding-top:62px;">
   <a href="index.html" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Program</a>
-  <a href="index.html#compounds" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Compounds</a>
-  <a href="index.html#physicians" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">For Physicians</a>
-  <a href="index.html#calculator" style="font-size:22px;color:var(--teal-light);font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Calculator</a>
-  <a href="index.html#financing" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Financing</a>
-  <a href="team.html" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Team</a>
   <a href="resources.html" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Resources</a>
   <a href="blog.html" style="font-size:22px;color:var(--gold-lt);font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">News &amp; Insights</a>
   <a href="affiliates.html" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Partners</a>
+  <a href="team.html" style="font-size:22px;color:#fff;font-family:'Playfair Display',serif;font-weight:400;text-decoration:none;">Team</a>
   <a href="index.html#investor-section" style="background:var(--gold);font-size:14px;color:var(--ink);padding:12px 32px;letter-spacing:.14em;font-weight:700;margin-top:8px;">INVESTOR ACCESS</a>
-  <a href="index.html#contact" style="background:var(--teal);font-size:14px;color:#fff;padding:12px 32px;letter-spacing:.14em;font-weight:700;">CONTACT REP</a>
+  <a href="index.html#contact-strip" style="background:var(--teal);font-size:14px;color:#fff;padding:12px 32px;letter-spacing:.14em;font-weight:700;">CONTACT REP</a>
   <button onclick="toggleMobileMenu()" style="position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;">&times;</button>
 </div>
 
@@ -285,47 +286,47 @@ footer p{font-size:11px;letter-spacing:.1em;}
     <div class="blog-grid">
 
       <!-- FEATURED POST -->
-      <article class="post-featured" data-cat="physician" onclick="window.location.href='tirzepatide-vs-semaglutide.html'" style="cursor:pointer;">
-        <div class="post-featured-img" style="background:linear-gradient(135deg,#0D1117 0%,#1A2E28 100%);">
+      <article class="post-featured" data-cat="physician" onclick="window.location.href='retatrutide-vs-semaglutide.html'" style="cursor:pointer;">
+        <div class="post-featured-img" style="background:linear-gradient(135deg,#0D1117 0%,#1A1428 100%);">
           <div style="text-align:center;padding:48px 32px;">
-            <div style="font-size:52px;margin-bottom:12px;">⚗️</div>
-            <div style="font-size:10px;letter-spacing:.2em;color:var(--gold);font-weight:700;">CLINICAL COMPARISON</div>
+            <div style="font-size:52px;margin-bottom:12px;">🧬</div>
+            <div style="font-size:10px;letter-spacing:.2em;color:#b89cf5;font-weight:700;">CLINICAL COMPARISON · INVESTIGATIONAL</div>
           </div>
         </div>
         <div class="post-featured-body">
-          <span class="post-cat physician" style="margin-bottom:12px;display:inline-block;">PHYSICIAN EDUCATION</span>
-          <h2 class="post-title" style="font-size:clamp(20px,2.5vw,28px);margin-bottom:12px;">Tirzepatide vs. Semaglutide: Clinical Differences That Affect Patient Selection</h2>
-          <p class="post-excerpt">The mechanism differences between GLP-1 and dual GIP/GLP-1 agonism matter when matching compound to patient. Trial data, patient selection frameworks, side effect profiles, and what changes in the compounded context.</p>
+          <span class="post-cat" style="margin-bottom:12px;display:inline-block;background:#EEE5FF;color:#6A4CAB;font-size:9px;letter-spacing:.16em;font-weight:700;padding:4px 10px;">CLINICAL COMPARISON</span>
+          <h2 class="post-title" style="font-size:clamp(20px,2.5vw,28px);margin-bottom:12px;">Retatrutide vs. Semaglutide: What the Third Mechanism Actually Changes</h2>
+          <p class="post-excerpt">Retatrutide adds GIP and glucagon receptor agonism on top of GLP-1. What does the glucagon component actually do metabolically, what does the Phase 2 data show, and which patients does the third mechanism change the equation for?</p>
           <div class="post-meta" style="margin-bottom:20px;">
             <span>Majestic R&amp;D Editorial</span>
             <span class="post-meta-sep"></span>
-            <span>March 10, 2026</span>
+            <span>April 24, 2026</span>
             <span class="post-meta-sep"></span>
-            <span>7 min read</span>
+            <span>8 min read</span>
           </div>
-          <a href="tirzepatide-vs-semaglutide.html" class="post-read-more">Read Article →</a>
+          <a href="retatrutide-vs-semaglutide.html" class="post-read-more">Read Article →</a>
         </div>
       </article>
 
       <!-- SIDEBAR -->
       <div class="post-sidebar">
 
-        <article class="post-card-sm" data-cat="company" onclick="window.location.href='usp797.html'" style="cursor:pointer;">
-          <span class="post-cat company">COMPANY NEWS</span>
-          <h3 class="post-title">What USP-797 Certification Actually Means for Your Patients</h3>
-          <div class="post-meta"><span>April 2026</span><span class="post-meta-sep"></span><span>4 min read</span></div>
+        <article class="post-card-sm" data-cat="physician" onclick="window.location.href='retatrutide-vs-tirzepatide.html'" style="cursor:pointer;">
+          <span class="post-cat" style="background:#EEE5FF;color:#6A4CAB;font-size:9px;letter-spacing:.14em;font-weight:700;padding:3px 8px;">CLINICAL COMPARISON</span>
+          <h3 class="post-title">Retatrutide vs. Tirzepatide: When the Third Receptor Justifies the Step Up</h3>
+          <div class="post-meta"><span>April 2026</span><span class="post-meta-sep"></span><span>7 min read</span></div>
         </article>
 
-        <article class="post-card-sm" data-cat="physician" onclick="window.location.href='physician-questions.html'" style="cursor:pointer;">
-          <span class="post-cat physician">PHYSICIAN EDUCATION</span>
-          <h3 class="post-title">What Physicians Should Ask Peptide Suppliers</h3>
+        <article class="post-card-sm" data-cat="company" onclick="window.location.href='glp-program-business-economics.html'" style="cursor:pointer;">
+          <span class="post-cat" style="background:var(--gold-pale);color:var(--gold);font-size:9px;letter-spacing:.14em;font-weight:700;padding:3px 8px;">PRACTICE ECONOMICS</span>
+          <h3 class="post-title">The Economics of a GLP Peptide Program: What the Numbers Actually Look Like</h3>
+          <div class="post-meta"><span>April 2026</span><span class="post-meta-sep"></span><span>7 min read</span></div>
+        </article>
+
+        <article class="post-card-sm" data-cat="company" onclick="window.location.href='peptide-eligible-patients.html'" style="cursor:pointer;">
+          <span class="post-cat" style="background:var(--gold-pale);color:var(--gold);font-size:9px;letter-spacing:.14em;font-weight:700;padding:3px 8px;">PRACTICE GROWTH</span>
+          <h3 class="post-title">Why Most Practices Undercount Their GLP-Eligible Patients</h3>
           <div class="post-meta"><span>April 2026</span><span class="post-meta-sep"></span><span>6 min read</span></div>
-        </article>
-
-        <article class="post-card-sm" data-cat="physician" onclick="window.location.href='read-a-coa.html'" style="cursor:pointer;">
-          <span class="post-cat physician">PHYSICIAN EDUCATION</span>
-          <h3 class="post-title">How to Read a Peptide Certificate of Analysis</h3>
-          <div class="post-meta"><span>March 2026</span><span class="post-meta-sep"></span><span>6 min read</span></div>
         </article>
 
       </div>
@@ -369,6 +370,39 @@ footer p{font-size:11px;letter-spacing:.1em;}
         <a href="usp797.html" class="post-read-more">Read Article →</a>
       </article>
 
+
+      <article class="post-card" data-cat="physician">
+        <span class="post-cat" style="background:#EEE5FF;color:#6A4CAB;font-size:9px;letter-spacing:.14em;font-weight:700;padding:3px 8px;">CLINICAL COMPARISON</span>
+        <h3 class="post-title">Retatrutide vs. Semaglutide: What the Third Mechanism Actually Changes</h3>
+        <p class="post-excerpt">The glucagon receptor adds thermogenesis and direct hepatic effects that pure GLP-1 agonism cannot match. Phase 2 data, clinical differentiators, and a patient selection framework.</p>
+        <div class="post-meta"><span>April 2026</span><span class="post-meta-sep"></span><span>8 min read</span></div>
+        <a href="retatrutide-vs-semaglutide.html" class="post-read-more">Read Article →</a>
+      </article>
+
+      <article class="post-card" data-cat="physician">
+        <span class="post-cat" style="background:#EEE5FF;color:#6A4CAB;font-size:9px;letter-spacing:.14em;font-weight:700;padding:3px 8px;">CLINICAL COMPARISON</span>
+        <h3 class="post-title">Retatrutide vs. Tirzepatide: When the Third Receptor Justifies the Step Up</h3>
+        <p class="post-excerpt">Both compounds share GIP/GLP-1 dual agonism. The glucagon receptor is the differentiator — what it adds mechanistically, what the Phase 2 data shows, and the specific clinical scenarios where it changes the decision.</p>
+        <div class="post-meta"><span>April 2026</span><span class="post-meta-sep"></span><span>7 min read</span></div>
+        <a href="retatrutide-vs-tirzepatide.html" class="post-read-more">Read Article →</a>
+      </article>
+
+      <article class="post-card" data-cat="company">
+        <span class="post-cat" style="background:var(--gold-pale);color:var(--gold);font-size:9px;letter-spacing:.14em;font-weight:700;padding:3px 8px;">PRACTICE ECONOMICS</span>
+        <h3 class="post-title">The Economics of a GLP Peptide Program: What the Numbers Actually Look Like</h3>
+        <p class="post-excerpt">Cost structure, compound margin profiles, inventory velocity, and an honest look at where the financial model is strong and where the variables matter — by practice type.</p>
+        <div class="post-meta"><span>April 2026</span><span class="post-meta-sep"></span><span>7 min read</span></div>
+        <a href="glp-program-business-economics.html" class="post-read-more">Read Article →</a>
+      </article>
+
+      <article class="post-card" data-cat="company">
+        <span class="post-cat" style="background:var(--gold-pale);color:var(--gold);font-size:9px;letter-spacing:.14em;font-weight:700;padding:3px 8px;">PRACTICE GROWTH</span>
+        <h3 class="post-title">Why Most Practices Undercount Their GLP-Eligible Patients — And How to Find Them</h3>
+        <p class="post-excerpt">The eligible population in most practices is 3–5x larger than the intuitive estimate. Why documentation gaps and memory bias produce an undercount, and how a systematic EHR query closes it.</p>
+        <div class="post-meta"><span>April 2026</span><span class="post-meta-sep"></span><span>6 min read</span></div>
+        <a href="peptide-eligible-patients.html" class="post-read-more">Read Article →</a>
+      </article>
+
     </div>
 
   </div>
@@ -406,7 +440,8 @@ footer p{font-size:11px;letter-spacing:.1em;}
   </div>
   <div class="footer-links">
     <a href="index.html">Program</a>
-    <a href="index.html#compounds">Compounds</a>
+    <a href="index.html#compounds-teaser">Compounds</a>
+    <a href="index.html#quality-teaser">Quality</a>
     <a href="team.html">Team</a>
     <a href="resources.html">Resources</a>
     <a href="blog.html">News &amp; Insights</a>
@@ -473,6 +508,25 @@ function toggleMobileMenu() {
   btn.classList.toggle('open', !isOpen);
   document.body.style.overflow = isOpen ? '' : 'hidden';
 }
+</script>
+<script>
+(function(){
+  document.addEventListener('click', function(e) {
+    var dd = document.getElementById('nav-program-dd');
+    var menu = document.getElementById('prog-dd-menu');
+    if (!dd || !menu) return;
+    if (dd.contains(e.target)) {
+      var open = menu.style.opacity === '1';
+      menu.style.opacity = open ? '0' : '1';
+      menu.style.pointerEvents = open ? 'none' : 'auto';
+      menu.style.transform = open ? 'translateY(-8px)' : 'translateY(0)';
+    } else {
+      menu.style.opacity = '0';
+      menu.style.pointerEvents = 'none';
+      menu.style.transform = 'translateY(-8px)';
+    }
+  });
+})();
 </script>
 </body>
 </html>
