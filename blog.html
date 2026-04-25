@@ -107,9 +107,12 @@ a{color:inherit;text-decoration:none;}
 .post-featured-body{padding:32px;}
 .post-cat{display:inline-block;font-size:9px;letter-spacing:.18em;font-weight:700;
   padding:4px 10px;margin-bottom:14px;}
-.post-cat.physician{background:var(--teal-pale);color:var(--teal);}
+.post-cat.clinical{background:#EEE5FF;color:#6A4CAB;}
+.post-cat.compliance{background:var(--teal-pale);color:var(--teal);}
+.post-cat.business{background:var(--gold-pale);color:#7A5C00;}
+.post-cat.due-diligence{background:#E8F4E8;color:#2E6B2E;}
 .post-cat.regulatory{background:var(--gold-pale);color:var(--gold);}
-.post-cat.company{background:#EEE5FF;color:#6A4CAB;}
+
 .post-cat.news{background:var(--cream);color:var(--slate);}
 .post-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:400;
   color:var(--ink);line-height:1.25;margin-bottom:12px;}
@@ -273,8 +276,10 @@ footer p{font-size:11px;letter-spacing:.1em;}
 <div class="filter-section">
   <div style="max-width:1120px;margin:0 auto;display:flex;gap:4px;">
     <button class="filter-btn active" onclick="filterPosts('all',this)">All</button>
-    <button class="filter-btn" onclick="filterPosts('physician',this)">Physician Education</button>
-    <button class="filter-btn" onclick="filterPosts('company',this)">Company News</button>
+    <button class="filter-btn" onclick="filterPosts('clinical',this)">Clinical</button>
+    <button class="filter-btn" onclick="filterPosts('compliance',this)">Compliance</button>
+    <button class="filter-btn" onclick="filterPosts('business',this)">Business</button>
+    <button class="filter-btn" onclick="filterPosts('due-diligence',this)">Due Diligence</button>
   </div>
 </div>
 
@@ -286,7 +291,7 @@ footer p{font-size:11px;letter-spacing:.1em;}
     <div class="blog-grid">
 
       <!-- FEATURED POST -->
-      <article class="post-featured" data-cat="physician" onclick="window.location.href='retatrutide-vs-semaglutide.html'" style="cursor:pointer;">
+      <article class="post-featured" data-cat="clinical" onclick="window.location.href='retatrutide-vs-semaglutide.html'" style="cursor:pointer;">
         <div class="post-featured-img" style="background:linear-gradient(135deg,#0D1117 0%,#1A1428 100%);">
           <div style="text-align:center;padding:48px 32px;">
             <div style="font-size:52px;margin-bottom:12px;">🧬</div>
@@ -311,19 +316,19 @@ footer p{font-size:11px;letter-spacing:.1em;}
       <!-- SIDEBAR -->
       <div class="post-sidebar">
 
-        <article class="post-card-sm" data-cat="physician" onclick="window.location.href='retatrutide-vs-tirzepatide.html'" style="cursor:pointer;">
+        <article class="post-card-sm" data-cat="clinical" onclick="window.location.href='retatrutide-vs-tirzepatide.html'" style="cursor:pointer;">
           <span class="post-cat" style="background:#EEE5FF;color:#6A4CAB;font-size:9px;letter-spacing:.14em;font-weight:700;padding:3px 8px;">CLINICAL COMPARISON</span>
           <h3 class="post-title">Retatrutide vs. Tirzepatide: When the Third Receptor Justifies the Step Up</h3>
           <div class="post-meta"><span>April 2026</span><span class="post-meta-sep"></span><span>7 min read</span></div>
         </article>
 
-        <article class="post-card-sm" data-cat="company" onclick="window.location.href='glp-program-business-economics.html'" style="cursor:pointer;">
+        <article class="post-card-sm" data-cat="business" onclick="window.location.href='glp-program-business-economics.html'" style="cursor:pointer;">
           <span class="post-cat" style="background:var(--gold-pale);color:var(--gold);font-size:9px;letter-spacing:.14em;font-weight:700;padding:3px 8px;">PRACTICE ECONOMICS</span>
           <h3 class="post-title">The Economics of a GLP Peptide Program: What the Numbers Actually Look Like</h3>
           <div class="post-meta"><span>April 2026</span><span class="post-meta-sep"></span><span>7 min read</span></div>
         </article>
 
-        <article class="post-card-sm" data-cat="company" onclick="window.location.href='peptide-eligible-patients.html'" style="cursor:pointer;">
+        <article class="post-card-sm" data-cat="business" onclick="window.location.href='peptide-eligible-patients.html'" style="cursor:pointer;">
           <span class="post-cat" style="background:var(--gold-pale);color:var(--gold);font-size:9px;letter-spacing:.14em;font-weight:700;padding:3px 8px;">PRACTICE GROWTH</span>
           <h3 class="post-title">Why Most Practices Undercount Their GLP-Eligible Patients</h3>
           <div class="post-meta"><span>April 2026</span><span class="post-meta-sep"></span><span>6 min read</span></div>
@@ -338,32 +343,32 @@ footer p{font-size:11px;letter-spacing:.1em;}
     </div>
     <div class="all-posts-grid" id="all-posts-grid">
 
-      <article class="post-card" data-cat="physician">
-        <span class="post-cat physician">PHYSICIAN EDUCATION</span>
+      <article class="post-card" data-cat="clinical">
+        <span class="post-cat clinical">CLINICAL</span>
         <h3 class="post-title">Tirzepatide vs. Semaglutide: Clinical Differences That Affect Patient Selection</h3>
         <p class="post-excerpt">GLP-1 vs dual GIP/GLP-1 agonism — what it means for patient selection, trial data, tolerability, and compounded context.</p>
         <div class="post-meta"><span>March 2026</span><span class="post-meta-sep"></span><span>7 min read</span></div>
         <a href="tirzepatide-vs-semaglutide.html" class="post-read-more">Read Article →</a>
       </article>
 
-      <article class="post-card" data-cat="physician">
-        <span class="post-cat physician">PHYSICIAN EDUCATION</span>
+      <article class="post-card" data-cat="due-diligence">
+        <span class="post-cat due-diligence">DUE DILIGENCE</span>
         <h3 class="post-title">What Physicians Should Ask Any Peptide Supplier Before Signing</h3>
         <p class="post-excerpt">Seven questions every physician should be able to answer before committing to a supplier.</p>
         <div class="post-meta"><span>April 2026</span><span class="post-meta-sep"></span><span>6 min read</span></div>
         <a href="physician-questions.html" class="post-read-more">Read Article →</a>
       </article>
 
-      <article class="post-card" data-cat="physician">
-        <span class="post-cat physician">PHYSICIAN EDUCATION</span>
+      <article class="post-card" data-cat="compliance">
+        <span class="post-cat compliance">COMPLIANCE</span>
         <h3 class="post-title">How to Read a Peptide COA — And Why Most Physicians Don't</h3>
         <p class="post-excerpt">A Certificate of Analysis is only useful if you know what it's telling you. Every field explained, what to verify, and the red flags that indicate a COA isn't worth the paper it's printed on.</p>
         <div class="post-meta"><span>March 2026</span><span class="post-meta-sep"></span><span>6 min read</span></div>
         <a href="read-a-coa.html" class="post-read-more">Read Article →</a>
       </article>
 
-      <article class="post-card" data-cat="company" style="border-top-color:var(--teal);">
-        <span class="post-cat company">COMPANY NEWS</span>
+      <article class="post-card" data-cat="compliance" style="border-top-color:var(--teal);">
+        <span class="post-cat compliance">COMPLIANCE</span>
         <h3 class="post-title">What USP-797 Certification Actually Means for Your Patients</h3>
         <p class="post-excerpt">Our manufacturing partner operates under USP-797, the federal standard for sterile compounded injectables. What it means, why it matters to you.</p>
         <div class="post-meta"><span>April 2026</span><span class="post-meta-sep"></span><span>4 min read</span></div>
@@ -371,32 +376,31 @@ footer p{font-size:11px;letter-spacing:.1em;}
       </article>
 
 
-      <article class="post-card" data-cat="physician">
-        <span class="post-cat" style="background:#EEE5FF;color:#6A4CAB;font-size:9px;letter-spacing:.14em;font-weight:700;padding:3px 8px;">CLINICAL COMPARISON</span>
-        <h3 class="post-title">Retatrutide vs. Semaglutide: What the Third Mechanism Actually Changes</h3>
+      <article class="post-card" data-cat="clinical">
+        <span class="post-cat clinical">CLINICAL</span>
         <p class="post-excerpt">The glucagon receptor adds thermogenesis and direct hepatic effects that pure GLP-1 agonism cannot match. Phase 2 data, clinical differentiators, and a patient selection framework.</p>
         <div class="post-meta"><span>April 2026</span><span class="post-meta-sep"></span><span>8 min read</span></div>
         <a href="retatrutide-vs-semaglutide.html" class="post-read-more">Read Article →</a>
       </article>
 
-      <article class="post-card" data-cat="physician">
-        <span class="post-cat" style="background:#EEE5FF;color:#6A4CAB;font-size:9px;letter-spacing:.14em;font-weight:700;padding:3px 8px;">CLINICAL COMPARISON</span>
+      <article class="post-card" data-cat="clinical">
+        <span class="post-cat clinical">CLINICAL</span>
         <h3 class="post-title">Retatrutide vs. Tirzepatide: When the Third Receptor Justifies the Step Up</h3>
         <p class="post-excerpt">Both compounds share GIP/GLP-1 dual agonism. The glucagon receptor is the differentiator — what it adds mechanistically, what the Phase 2 data shows, and the specific clinical scenarios where it changes the decision.</p>
         <div class="post-meta"><span>April 2026</span><span class="post-meta-sep"></span><span>7 min read</span></div>
         <a href="retatrutide-vs-tirzepatide.html" class="post-read-more">Read Article →</a>
       </article>
 
-      <article class="post-card" data-cat="company">
-        <span class="post-cat" style="background:var(--gold-pale);color:var(--gold);font-size:9px;letter-spacing:.14em;font-weight:700;padding:3px 8px;">PRACTICE ECONOMICS</span>
+      <article class="post-card" data-cat="business">
+        <span class="post-cat business">BUSINESS</span>
         <h3 class="post-title">The Economics of a GLP Peptide Program: What the Numbers Actually Look Like</h3>
         <p class="post-excerpt">Cost structure, compound margin profiles, inventory velocity, and an honest look at where the financial model is strong and where the variables matter — by practice type.</p>
         <div class="post-meta"><span>April 2026</span><span class="post-meta-sep"></span><span>7 min read</span></div>
         <a href="glp-program-business-economics.html" class="post-read-more">Read Article →</a>
       </article>
 
-      <article class="post-card" data-cat="company">
-        <span class="post-cat" style="background:var(--gold-pale);color:var(--gold);font-size:9px;letter-spacing:.14em;font-weight:700;padding:3px 8px;">PRACTICE GROWTH</span>
+      <article class="post-card" data-cat="business">
+        <span class="post-cat business">BUSINESS</span>
         <h3 class="post-title">Why Most Practices Undercount Their GLP-Eligible Patients — And How to Find Them</h3>
         <p class="post-excerpt">The eligible population in most practices is 3–5x larger than the intuitive estimate. Why documentation gaps and memory bias produce an undercount, and how a systematic EHR query closes it.</p>
         <div class="post-meta"><span>April 2026</span><span class="post-meta-sep"></span><span>6 min read</span></div>
